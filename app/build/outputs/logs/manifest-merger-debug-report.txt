@@ -1,0 +1,170 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:1-22:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/86c6513cfdbd8fa7c70266720a645be0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/babfcdb0143a3ca73b016caa23d465d2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/e8c0b065464ac8e8e0f9cf92b6da90c4/AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/67311194ce894835ab76a470f8b8950d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/c8f5d5bc65a0330e42c1f577941782e1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/915d75dc2909c388ed92a3b601758b65/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/976087427ca2e2101d5df04d101e1603/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/458140d433dfb01129593259e78a6d9a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/5705e8a258225b87571c8e6048df66e5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/e992add4208f83a6ae733cc25ceaa0b3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/b815122d198aeefad1d779df67255d4e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5eafe445c22ec7fa6c8a681f6ae91546/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/155ae6ec068199fea493bcf4af6ec513/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0afdee6915028a0fc96c3fabdcb53266/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/6d2ac8b7d6fe43343cc46430f9738926/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/fde69813ac6dc841ec253cfbb6c41811/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/df921dfdc296975c9975051bd0491d8d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/060c35de5fd6c2c48f8b5fbe61db16ca/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/9471f30ac9a8949b2894d7b4aafc6b96/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8bab7a2d2e0ea5c03bd1c42d05da9cb7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/021731f2573c9c07d3b00d441b14f1f2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/056101cf8ece9eb2ab72c1fa011481de/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/c03a49ebf4ede1e619b6f611dad3492f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/f8cf6f0f3da72a85cc6bf87e81f24ded/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/7876ca636469d8234d61c103b8744824/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/3c1a810ee9c69b5245798926980ec407/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/d72bb6dfdf2e14f2db5ac46028c3966e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8dfaeca33e4ea74f9043a48059d628f0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:1-22:12
+	package
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:5:5-20:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:11:9-65
+activity#com.example.policephonebook2019.Activities.SplashScreenActivity
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:12:19-66
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.example.policephonebook2019.Activities.MainActivity
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:19:9-70
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml:19:19-58
+uses-sdk
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/86c6513cfdbd8fa7c70266720a645be0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/86c6513cfdbd8fa7c70266720a645be0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/babfcdb0143a3ca73b016caa23d465d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/babfcdb0143a3ca73b016caa23d465d2/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/e8c0b065464ac8e8e0f9cf92b6da90c4/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/e8c0b065464ac8e8e0f9cf92b6da90c4/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/67311194ce894835ab76a470f8b8950d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/67311194ce894835ab76a470f8b8950d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/c8f5d5bc65a0330e42c1f577941782e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/c8f5d5bc65a0330e42c1f577941782e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/915d75dc2909c388ed92a3b601758b65/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/915d75dc2909c388ed92a3b601758b65/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/976087427ca2e2101d5df04d101e1603/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/976087427ca2e2101d5df04d101e1603/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/458140d433dfb01129593259e78a6d9a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/458140d433dfb01129593259e78a6d9a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/5705e8a258225b87571c8e6048df66e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/5705e8a258225b87571c8e6048df66e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/e992add4208f83a6ae733cc25ceaa0b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/e992add4208f83a6ae733cc25ceaa0b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/b815122d198aeefad1d779df67255d4e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/b815122d198aeefad1d779df67255d4e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5eafe445c22ec7fa6c8a681f6ae91546/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5eafe445c22ec7fa6c8a681f6ae91546/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/155ae6ec068199fea493bcf4af6ec513/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/155ae6ec068199fea493bcf4af6ec513/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0afdee6915028a0fc96c3fabdcb53266/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0afdee6915028a0fc96c3fabdcb53266/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/6d2ac8b7d6fe43343cc46430f9738926/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/6d2ac8b7d6fe43343cc46430f9738926/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/fde69813ac6dc841ec253cfbb6c41811/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/fde69813ac6dc841ec253cfbb6c41811/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/df921dfdc296975c9975051bd0491d8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/df921dfdc296975c9975051bd0491d8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/060c35de5fd6c2c48f8b5fbe61db16ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/060c35de5fd6c2c48f8b5fbe61db16ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/9471f30ac9a8949b2894d7b4aafc6b96/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/9471f30ac9a8949b2894d7b4aafc6b96/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8bab7a2d2e0ea5c03bd1c42d05da9cb7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8bab7a2d2e0ea5c03bd1c42d05da9cb7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/021731f2573c9c07d3b00d441b14f1f2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/021731f2573c9c07d3b00d441b14f1f2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/056101cf8ece9eb2ab72c1fa011481de/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/056101cf8ece9eb2ab72c1fa011481de/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/c03a49ebf4ede1e619b6f611dad3492f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/c03a49ebf4ede1e619b6f611dad3492f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/f8cf6f0f3da72a85cc6bf87e81f24ded/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/f8cf6f0f3da72a85cc6bf87e81f24ded/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/7876ca636469d8234d61c103b8744824/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/7876ca636469d8234d61c103b8744824/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/3c1a810ee9c69b5245798926980ec407/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/3c1a810ee9c69b5245798926980ec407/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/d72bb6dfdf2e14f2db5ac46028c3966e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/d72bb6dfdf2e14f2db5ac46028c3966e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8dfaeca33e4ea74f9043a48059d628f0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8dfaeca33e4ea74f9043a48059d628f0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhonebook2019/app/src/main/AndroidManifest.xml

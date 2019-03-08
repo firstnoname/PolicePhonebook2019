@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">Police Phonebook 2019</string>
+
+    <!--Splash screen-->
+    <string name="splashTitle1">สมุดโทรศัพท์</string>
+    <string name="splashTitle2">สำนักงานตำรวจแห่งชาติ ประจำปี 2562</string>
+    <string name="splashTitle3">โดย</string>
+    <string name="splashTitle4">กองสารนิเทศ</string>
+
+    <!--Toolbar-->
+    <string name="toolbarTitle">สมุดโทรศัพท์ตำรวจ 2562</string>
+
+    <!--Menu-->
+    <string name="menuNameList">รายชื่อ</string>
+    <string name="menuSearch">ค้นหาขั้นสูง</string>
+    <string name="menuMap">แผนที่</string>
+    <string name="menuFavoriteList">รายการโปรด</string>
+    <string name="menuContactUs">ติดต่อเรา</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Provinces-->
+    <string-array name="province">
+        <item>กระบี่</item>
+        <item>กรุงเทพ</item>
+        <item>กาญจนบุรี</item>
+        <item>กาฬสินธุ์</item>
+        <item>กำแพงเพชร</item>
+        <item>ขอนแก่น</item>
+        <item>จันทบุรี</item>
+    </string-array>
+    <string name="krabi">กระบี่</string>
+    <string name="bangkok">กรุงเทพ</string>
+    <string name="kanchanaburi">กาญจนบุรี</string>
+    <string name="kalasin">กาฬสินธุ์</string>
+    <string name="kamphaengPhet">กำแพงเพชร</string>
+    <string name="khonKaen">ขอนแก่น</string>
+    <string name="chanthaburi">จันทบุรี</string>
+    <string name="chachoengsao">ฉะเชิงเทรา</string>
+    <string name="chonBuri">ชลบุรี</string>
+    <string name="chaiNat">ชัยนาท</string>
+    <string name="chaiyaphum">ชัยภูมิ</string>
+    <string name="chumphon">ชุมพร</string>
+    <string name="trang">ตรัง</string>
+    <string name="trat">ตราด</string>
+    <string name="tak">ตาก</string>
+    <string name="nakhonNayok">นครนายก</string>
+    <string name="nakhonPathom">นครปฐม</string>
+    <string name="nakhonPhanom">นครพนม</string>
+    <string name="nakhonRatchasima">นครราชสีมา</string>
+    <string name="nakhonSiThammarat">นครศรีธรรมราช</string>
+    <string name="nakhonSawan">นครสวรรค์</string>
+    <string name="nonthaburi">นนทบุรี</string>
+    <string name="narathiwat">นราธิวาส</string>
+    <string name="nan">น่าน</string>
+    <string name="buengKan">บึงกาฬ</string>
+    <string name="buriRam">บุรีรัมย์</string>
+    <string name="pathumThani">ปทุมธานี</string>
+    <string name="prachuapKhiriKhan">ประจวบคีรีขันธ์</string>
+    <string name="prachinBuri">ปราจีนบุรี</string>
+    <string name="pattani">ปัตตานี</string>
+    <string name="phraNakhonSiAtutthaya">พระนครศรีอยุธยา</string>
+    <string name="phayao">พะเยา</string>
+    <string name="phangnga">พังงา</string>
+    <string name="phatthalung">พัทลุง</string>
+    <string name="phichit">พิจิตร</string>
+    <string name="phitsanulok">พิษณุโลก</string>
+    <string name="phuket">ภูเก็ต</string>
+    <string name="mahaSarakham">มหาสาราคาม</string>
+    <string name="mukdahan">มุกดาหาร</string>
+    <string name="yala">ยะลา</string>
+    <string name="yasothon">ยโสธร</string>
+    <string name="ranong">ระนอง</string>
+    <string name="rayong">ระยอง</string>
+    <string name="ratchaburi">ราชบุรี</string>
+    <string name="roiet">ร้อยเอ็ด</string>
+    <string name="lopBuri">ลพบุรี</string>
+    <string name="lampang">ลำปาง</string>
+    <string name="lamphun">ลำพูน</string>
+    <string name="siSaKet">ศรีสะเกษ</string>
+    <string name="sakonNakhon">สกลนคร</string>
+    <string name="songkhla">สงขลา</string>
+    <string name="satun">สตูล</string>
+    <string name="samutPrakan">สมุทรปราการ</string>
+    <string name="samutSongkhram">สมุทรสงคราม</string>
+    <string name="samutSakhon">สมุทรสาคร</string>
+    <string name="saraburi">สระบุรี</string>
+    <string name="saKaeo">สระแก้ว</string>
+    <string name="singBuri">สิงห์บุรี</string>
+    <string name="suphanBuri">สุพรรณบุรี</string>
+    <string name="suratThani">สุราษฎร์ธานี</string>
+    <string name="surin">สุรินทร์</string>
+    <string name="sukhothai">สุโขทัย</string>
+    <string name="nongKhai">หนองคาย</string>
+    <string name="nongBuaLamPhu">หนองบัวลำภู</string>
+    <string name="amnatCharoen">อำนาจเจริญ</string>
+    <string name="udonThani">อุดรธานี</string>
+    <string name="uttaradit">อุตรดิตถ์</string>
+    <string name="uthaiThani">อุทัยธานี</string>
+    <string name="ubonRatchathani">อุบลราชธานี</string>
+    <string name="angThong">อ่างทอง</string>
+    <string name="chiangRai">เชียงราย</string>
+    <string name="chiangMai">เชียงใหม่</string>
+    <string name="phetchaburi">เพชรบุรี</string>
+    <string name="phetchabun">เพชรบูรณ์</string>
+    <string name="loei">เลย</string>
+    <string name="phrae">แพร่</string>
+    <string name="maeHongSon">แม่ฮ่องสอน</string>
+
+
+</resources>

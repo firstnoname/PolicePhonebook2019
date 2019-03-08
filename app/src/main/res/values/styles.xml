@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--<style name="tvOrange" parent="@android:style/TextAppearance">-->
+        <!--<item name="android:textColor">@color/fontWhite</item>-->
+        <!--<item name="android:background">@color/tagOrange</item>-->
+    <!--</style>-->
+
+    <!--<style name="tvRed" parent="@android:style/TextAppearance">-->
+        <!--<item name="android:textColor">@color/fontWhite</item>-->
+        <!--<item name="android:background">@color/tagRed</item>-->
+    <!--</style>-->
+
+</resources>
