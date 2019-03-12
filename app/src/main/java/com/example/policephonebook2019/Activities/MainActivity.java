@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+import com.example.policephonebook2019.Fragments.ContactUsFragment;
+import com.example.policephonebook2019.Fragments.FavoriteFragment;
 import com.example.policephonebook2019.Fragments.MapListFragment;
 import com.example.policephonebook2019.Fragments.PhoneListFragment;
 import com.example.policephonebook2019.Fragments.SearchFragment;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     PhoneListFragment phoneListFragment;
     SearchFragment searchFragment;
     MapListFragment mapListFragment;
+    ContactUsFragment contactUsFragment;
+    FavoriteFragment favoriteFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,10 +88,22 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_menu_favorite)
     public void onBtnMenuFavoriteClicked() {
+        favoriteFragment = FavoriteFragment.newInstance();
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, favoriteFragment, "FavoriteFragment");
+        transaction.commit();
     }
 
     @OnClick(R.id.btn_menu_contact_us)
     public void onBtnMenuContactUsClicked() {
+        contactUsFragment = ContactUsFragment.newInstance();
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, contactUsFragment, "ContactUsFragment");
+        transaction.commit();
+
+
     }
 
     private void setMenuIcon(String frag) {

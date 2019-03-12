@@ -37,9 +37,6 @@ public class MapListFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-
-
-
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_map_list, container, false);
 
@@ -50,9 +47,6 @@ public class MapListFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        TextView tvTest = getActivity().findViewById(R.id.testTV);
-        tvTest.setText("Hi");
 
         int[] resId = {R.drawable.policestation_ic,R.drawable.policestation_ic,R.drawable.policestation_ic};
         String[] list = {"ตำรวจภูธรภาค ๑-๘(ภใ๑-๘)", "ตำรวจภูธรภาค ๑-๘(ภใ๑-๘)", "ตำรวจภูธรภาค ๑-๘(ภใ๑-๘)"};

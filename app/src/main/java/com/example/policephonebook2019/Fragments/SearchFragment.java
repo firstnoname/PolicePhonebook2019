@@ -49,10 +49,5 @@ public class SearchFragment extends Fragment {
         return v;
     }
 
-    private void createProvinceData() {
-        mProvince.add("Hello");
-        mProvince.add("Hi");
-        mProvince.add("Pikachu");
-    }
 
 }

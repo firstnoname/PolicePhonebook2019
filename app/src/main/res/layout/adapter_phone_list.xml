@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/imgInfo"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/test_portrait"
+        app:civ_border_color="#FC0303"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/test_portrait" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvName"
@@ -25,8 +30,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="พล.ต.ท.ยสเอก รัษาสุวรรณ"
-        android:textSize="15sp"
         android:textColor="@color/fontBlack"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/textView10"
         app:layout_constraintStart_toEndOf="@+id/imgInfo"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,28 +40,28 @@
         android:id="@+id/tvPosition"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="ผกก. ผ่ายอำนวยการ 1"
         android:textColor="@color/fontGrey"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
     <TextView
         android:id="@+id/tvDepartment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง"
+        android:layout_marginBottom="8dp"
+            android:text="กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง"
         android:textColor="@color/fontGrey"
         android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvPosition"
         app:layout_constraintTop_toBottomOf="@+id/tvPosition" />
 
     <TextView
@@ -65,10 +70,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/tv_orange_tag"
         android:gravity="center"
         android:text="ตม."
         android:textColor="@color/fontWhite"
-        android:background="@drawable/tv_orange_tag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,10 +83,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/tv_red_tag"
         android:gravity="center"
         android:text="ผบก."
         android:textColor="@color/fontWhite"
-        android:background="@drawable/tv_red_tag"
         app:layout_constraintEnd_toStartOf="@+id/textView9"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
