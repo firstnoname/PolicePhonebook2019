@@ -29,7 +29,38 @@
         <item>กำแพงเพชร</item>
         <item>ขอนแก่น</item>
         <item>จันทบุรี</item>
+        <item>ฉะเชิงเทรา</item>
+        <item>ชลบุรี</item>
+        <item>ชัยนาท</item>
+        <item>ชัยภูมิ</item>
+        <item>ชุมพร</item>
+        <item>ตรัง</item>
+        <item>ตราด</item>
+        <item>ตาก</item>
+        <item>นครนายก</item>
+        <item>นครปฐม</item>
+        <item>นครพนม</item>
     </string-array>
+
+    <string-array name="departure">
+        <item>ตำรวจภูธรภาค ๑-๘ (ภ.๑-๘)</item>
+        <item>ตำรวจภูธร ๙ (ภ.๙)</item>
+        <item>กองบัญขาการตำรวจสอบสวนกลาง (บช.ก)</item>
+    </string-array>
+
+    <string-array name="rank">
+        <item>พลตำรวจเอก (พล.ต.อ.)</item>
+        <item>พลตำรวจโท (พล.ต.ท)</item>
+        <item>พลตำรวจตรี (พล.ต.ต)</item>
+        <item>พลตำรวจเอก (พล.ต.อ.)</item>
+    </string-array>
+
+    <string-array name="position">
+        <item>ผู้บัญชาการตำรวจแห่งชาติ (ผบ.ตร)</item>
+        <item>รองผู้บัญชาการตำรวจแห่งชาติ (รอง ผบ.ตร)</item>
+        <item>รองจเรตำรวจแห่งชาติ (สบ 9) / (รอง จตช.)</item>
+    </string-array>
+
     <string name="krabi">กระบี่</string>
     <string name="bangkok">กรุงเทพ</string>
     <string name="kanchanaburi">กาญจนบุรี</string>

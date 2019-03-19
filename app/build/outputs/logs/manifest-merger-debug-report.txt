@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\0753a293bd7ff308d3a745434eed7ab8\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\6e37efa6844ce7070b996523df25927f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\415ad81c75ff417bfc9885c575db470f\AndroidManifest.xml:2:1-11:12
@@ -46,20 +46,20 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\BlackClover\.grad
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\ae14530d36e772f892f13c851f7dc8e0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\472aa03d97a50481d013f956b2ef7058\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\55566588858a2db4c376aae77271d162\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:11-69
@@ -67,8 +67,32 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:5:5-79
 	android:name
 		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:6:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:7:22-64
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:8:5-98
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:8:22-95
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:9:22-78
 application
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:7:5-23:19
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:11:5-38:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\0753a293bd7ff308d3a745434eed7ab8\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\0753a293bd7ff308d3a745434eed7ab8\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\415ad81c75ff417bfc9885c575db470f\AndroidManifest.xml:9:5-20
@@ -96,39 +120,71 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\BlackClove
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\5dff4c8dbe113796dcf253165641a750\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:13:9-65
-activity#com.example.policephonebook2019.Activities.MapStationListActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:14:9-80
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:17:9-65
+	android:usesCleartextTraffic
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:18:9-44
+activity#com.zealtech.policephonebook2019.Activities.ContactDetailActivity
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:19:9-111
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:14:19-68
-activity#com.example.policephonebook2019.Activities.SplashScreenActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:15:9-21:20
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:19:19-99
+activity#com.zealtech.policephonebook2019.Activities.EditProfileActivity
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:20:9-100
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:15:19-66
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:20:19-97
+activity#com.zealtech.policephonebook2019.Activities.UserDetailActivity
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:21:9-99
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:21:19-96
+activity#com.zealtech.policephonebook2019.Activities.LoginActivity
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:22:9-94
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:22:19-91
+activity#com.zealtech.policephonebook2019.Activities.StationDetailActivity
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:23:9-102
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:23:19-99
+activity#com.zealtech.policephonebook2019.Activities.StationSubListActivity
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:24:9-103
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:24:19-100
+activity#com.zealtech.policephonebook2019.Activities.MapStationListActivity
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:25:9-103
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:25:19-100
+activity#com.zealtech.policephonebook2019.Activities.SplashScreenActivity
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:26:9-32:20
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:26:19-98
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:19:27-74
-activity#com.example.policephonebook2019.Activities.MainActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:22:9-61
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:30:27-74
+activity#com.zealtech.policephonebook2019.Activities.MainActivity
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:33:9-93
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:22:19-58
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:33:19-90
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:35:9-37:71
+	android:value
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:37:13-68
+	android:name
+		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:36:13-58
 uses-sdk
 INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
@@ -233,18 +289,6 @@ MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClov
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:23:5-82
 	android:name
 		ADDED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:23:22-79
-uses-permission#android.permission.INTERNET
-ADDED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:24:5-67
-	android:name
-		ADDED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:24:22-64
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:23:5-79
-	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:23:22-76
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion

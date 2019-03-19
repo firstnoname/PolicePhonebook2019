@@ -17,8 +17,8 @@
     <color name="colorGrey">#94AECA</color>
 
     <!--Actionbar gradient-->
-    <color name="actStartRed">#430012</color>
-    <color name="actEndRed">#8E0B18</color>
+    <color name="actStartRed">#65C7F7</color>
+    <color name="actEndRed">#156ADB</color>
 
     <!--Fonts color-->
     <color name="fontWhite">#ffffff</color>
@@ -28,7 +28,7 @@
     <!--Line-->
     <color name="line">#918F8F</color>
 
-    <color name="colorSearchbar">#DAD8D8</color>
+    <color name="colorSearchbar">#EFEFEF</color>
 
     <!--Tags-->
     <color name="tagRed">#8F0B18</color>

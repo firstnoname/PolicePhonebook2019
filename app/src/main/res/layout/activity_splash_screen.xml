@@ -4,11 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.SplashScreenActivity"
-    android:background="@drawable/bg01">
-
-
-
+    tools:context="com.zealtech.policephonebook2019.Activities.SplashScreenActivity"
+    android:background="@drawable/bg02">
 
     <TextView
         android:id="@+id/textView3"
