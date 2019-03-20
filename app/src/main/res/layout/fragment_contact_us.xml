@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/stationbanner" />
+        app:srcCompat="@mipmap/padtppic" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -91,7 +91,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/location" />
+                        android:src="@mipmap/location" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/location" />
+                        android:src="@mipmap/phone" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -222,7 +222,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginBottom="16dp"
-                        android:src="@drawable/location" />
+                        android:src="@mipmap/web" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -262,7 +262,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginBottom="16dp"
-                        android:src="@drawable/location" />
+                        android:src="@mipmap/mail" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -298,7 +298,7 @@
                     <com.google.android.gms.maps.MapView
                         android:id="@+id/map"
                         android:transitionName="com.google.android.gms.maps.SupportMapFragment"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp">
 
 
@@ -324,7 +324,7 @@
                     android:padding="12dip"
                     android:background="@drawable/button_custom_location"
                     android:clickable="true"
-                    android:drawableLeft="@android:drawable/btn_star_big_off"
+                    android:drawableLeft="@mipmap/location"
                     android:text="เปิดแผนที่"
                     android:elevation="3dp"/>
             </RelativeLayout>

@@ -27,6 +27,7 @@ public class AdapterFavoriteList extends RecyclerView.Adapter<AdapterFavoriteLis
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView tvName, tvPosition, tvDeparture, tvPosition1, tvPosition2;
+        public TextView viewTab;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -35,6 +36,7 @@ public class AdapterFavoriteList extends RecyclerView.Adapter<AdapterFavoriteLis
             tvDeparture = itemView.findViewById(R.id.tvDepartment);
             tvPosition1 = itemView.findViewById(R.id.tv_position_1);
             tvPosition2 = itemView.findViewById(R.id.tv_position_2);
+            viewTab = itemView.findViewById(R.id.view_tab);
         }
     }
 
@@ -57,6 +59,23 @@ public class AdapterFavoriteList extends RecyclerView.Adapter<AdapterFavoriteLis
         viewHolder.tvPosition.setText(polis.getPositionName());
         viewHolder.tvDeparture.setText(polis.getDepartmentName());
 
+        String rankName = polis.getRankName();
+//        Set view_tab color from rank.
+        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
+            //Gold
+            viewHolder.viewTab.setBackgroundResource(R.color.colorYellow);
+        } else if (rankName.equals("พล.ต.ต.")) {
+            //Blue sky
+            viewHolder.viewTab.setBackgroundResource(R.color.colorGreen);
+        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
+            //Blue
+            viewHolder.viewTab.setBackgroundResource(R.color.colorBlue);
+        } else {
+            //Red
+            viewHolder.viewTab.setBackgroundResource(R.color.colorGreen);
+        }
+
+//        Set label orange or red.
         for (int x = 0; x < polis.getTag().size(); x++) {
 //            Log.d("tag", i + " : " + x + " : " + polis.getTag().size());
 //            Log.d("tag", polis.getFirstName() + ":" + polis.getTag().get(x));
@@ -86,8 +105,7 @@ public class AdapterFavoriteList extends RecyclerView.Adapter<AdapterFavoriteLis
                 }
             }
 
-
-        }
+        }// end for loop.
 
     }
 

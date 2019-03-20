@@ -47,7 +47,7 @@ public class StationSubListActivity extends AppCompatActivity implements Adapter
 
         dataStation.add(ms);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 6; i++) {
             dataStation.add(ms);
             dataStation.add(ms2);
         }

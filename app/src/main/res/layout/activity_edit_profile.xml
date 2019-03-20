@@ -18,11 +18,11 @@ android:layout_height="match_parent"
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:layout_width="64dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/user_ic" />
+        android:src="@drawable/userfrofiledefualt"/>
 
     <TextView
         android:id="@+id/textView"
@@ -277,6 +277,11 @@ android:layout_height="match_parent"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:text="บันทึกข้อมูล"
+            android:drawableLeft="@mipmap/pencil"
+            android:layout_gravity="right|bottom"
+            android:gravity="center"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
             android:textColor="@color/fontWhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

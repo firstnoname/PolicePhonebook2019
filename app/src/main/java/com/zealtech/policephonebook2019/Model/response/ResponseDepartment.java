@@ -1,9 +1,7 @@
 package com.zealtech.policephonebook2019.Model.response;
 
-import com.zealtech.policephonebook2019.Model.Department;
+import com.zealtech.policephonebook2019.Model.DepartmentList;
 
-import java.util.ArrayList;
-
-public class ResponseDepartment extends ResponseBase<Department> {
+public class ResponseDepartment extends ResponseBase<DepartmentList> {
 
 }

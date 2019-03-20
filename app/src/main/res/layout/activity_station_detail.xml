@@ -50,7 +50,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/location" />
+                        android:src="@mipmap/phone" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -97,7 +97,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginBottom="16dp"
-                        android:src="@drawable/location" />
+                        android:src="@mipmap/location" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -137,7 +137,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginBottom="16dp"
-                        android:src="@drawable/location" />
+                        android:src="@mipmap/location" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -195,10 +195,13 @@
                     android:layout_marginBottom="20dip"
                     android:layout_gravity="right|bottom"
                     android:gravity="center"
-                    android:padding="12dip"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:paddingRight="50dp"
+                    android:paddingLeft="50dp"
                     android:background="@drawable/button_custom_location"
                     android:clickable="true"
-                    android:drawableLeft="@android:drawable/btn_star_big_off"
+                    android:drawableLeft="@mipmap/location"
                     android:text="เปิดแผนที่"
                     android:elevation="3dp"/>
             </RelativeLayout>
@@ -208,21 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:elevation="5dp"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dip"
-                    android:layout_gravity="right|bottom"
-                    android:gravity="center"
-                    android:padding="12dip"
-                    android:background="@drawable/button_custom_staff"
-                    android:clickable="true"
-                    android:drawableLeft="@android:drawable/star_big_off"
-                    android:text="เจ้าหน้าที่ในหน่วยงาน"
-                    android:elevation="3dp"/>
-            </RelativeLayout>
+                android:gravity="center"/>
 
         </LinearLayout>
     </ScrollView>

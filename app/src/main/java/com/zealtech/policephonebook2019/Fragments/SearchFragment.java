@@ -35,6 +35,7 @@ import retrofit2.Response;
  * A simple {@link Fragment} subclass.
  */
 public class SearchFragment extends Fragment {
+    private static final String TAG = "SearchFragment";
 
     ArrayList<Province> apiProvince = new ArrayList<>();
     ArrayList<Department> apiDepartment = new ArrayList<>();
@@ -73,8 +74,10 @@ public class SearchFragment extends Fragment {
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-//                            apiDepartment.setContent(response.body().getData());
+//                            apiDepartment.addAll(response.body().getData().getContent());
 //                            Log.d("response-department", );
+
+                            Log.d(TAG, String.valueOf(apiDepartment.size()));
                         } else {
                             Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -99,7 +102,7 @@ public class SearchFragment extends Fragment {
 
             @Override
             public void onFailure(Call<ResponseDepartment> call, Throwable t) {
-                Log.d("response-department", String.valueOf(t));
+                Log.d(TAG, String.valueOf(t));
             }
         });
     }

@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterFavoriteList;
+import com.zealtech.policephonebook2019.Adapters.AdapterPhoneList;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.MockPolistInfo;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
@@ -37,12 +38,15 @@ import retrofit2.Response;
  */
 public class PhoneListFragment extends Fragment {
 
+    private static final String TAG = "MainActivity";
+
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
     Api api = AppUtils.getApiService();
 
+    //Vars
     public ArrayList<PoliceMasterData> apiPoliceMasterData = new ArrayList<>();
 
     public PhoneListFragment() {
@@ -70,12 +74,9 @@ public class PhoneListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         recyclerView = view.findViewById(R.id.recycler_phone_list);
-
         recyclerView.setHasFixedSize(true);
-
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-
 
         //Fetch data from api.
         Call<ResponsePoliceMasterData> call = api.getPoliceMasterData();
@@ -93,8 +94,9 @@ public class PhoneListFragment extends Fragment {
                                     Log.d("response-police-tag", apiPoliceMasterData.get(i).getTag().get(x));
                                 }
                             }*/
-                            mAdapter = new AdapterFavoriteList(getActivity(), apiPoliceMasterData);
-                            recyclerView.setAdapter(mAdapter);
+                           /* mAdapter = new AdapterFavoriteList(getActivity(), apiPoliceMasterData);
+                            recyclerView.setAdapter(mAdapter);*/
+                            setAdapter(apiPoliceMasterData);
                         } else {
                             Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -125,6 +127,16 @@ public class PhoneListFragment extends Fragment {
 
     }
 
+    private void setAdapter(ArrayList<PoliceMasterData> dataSet) {
+        this.apiPoliceMasterData = dataSet;
+        Log.d(TAG, String.valueOf(apiPoliceMasterData.size()));
+        /*mAdapter = new AdapterFavoriteList(getActivity(), apiPoliceMasterData);
+        recyclerView.setAdapter(mAdapter);*/
+
+        mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
+        recyclerView.setAdapter(mAdapter);
+    }
+
     private List<MockPolistInfo> initPlayer() {
         MockPolistInfo m1 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง", "1", "1");
         MockPolistInfo m2 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง","", "1");
@@ -143,4 +155,6 @@ public class PhoneListFragment extends Fragment {
 
         return dataSet;
     }
+
+
 }

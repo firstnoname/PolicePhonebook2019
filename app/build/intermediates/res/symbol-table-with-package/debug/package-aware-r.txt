@@ -1317,6 +1317,7 @@ id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
 id layout_contact_detail
+id layout_item
 id left
 id light
 id line1
@@ -1430,7 +1431,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
-id textView10
 id textView2
 id textView3
 id textView4
@@ -1457,6 +1457,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id tvArea
+id tvBack
 id tvDepartment
 id tvName
 id tvPosition
@@ -1479,6 +1480,7 @@ id username_input
 id view
 id viewPager
 id view_offset_helper
+id view_tab
 id visible
 id wide
 id withText
@@ -1589,9 +1591,18 @@ layout select_dialog_singlechoice_material
 layout simple_spinner_dropdown
 layout spinner_text
 layout support_simple_spinner_dropdown_item
+mipmap address
 mipmap dropdown
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap icon_app
+mipmap location
+mipmap mail
+mipmap padtppic
+mipmap pencil
+mipmap phone
+mipmap test_profile
+mipmap web
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
