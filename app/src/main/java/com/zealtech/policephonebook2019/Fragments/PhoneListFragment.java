@@ -14,10 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
-import com.zealtech.policephonebook2019.Adapters.AdapterFavoriteList;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneList;
 import com.zealtech.policephonebook2019.Config.Api;
-import com.zealtech.policephonebook2019.Model.MockPolistInfo;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceMasterData;
 import com.zealtech.policephonebook2019.Util.AppUtils;
@@ -130,31 +128,11 @@ public class PhoneListFragment extends Fragment {
     private void setAdapter(ArrayList<PoliceMasterData> dataSet) {
         this.apiPoliceMasterData = dataSet;
         Log.d(TAG, String.valueOf(apiPoliceMasterData.size()));
-        /*mAdapter = new AdapterFavoriteList(getActivity(), apiPoliceMasterData);
-        recyclerView.setAdapter(mAdapter);*/
 
         mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
         recyclerView.setAdapter(mAdapter);
     }
 
-    private List<MockPolistInfo> initPlayer() {
-        MockPolistInfo m1 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง", "1", "1");
-        MockPolistInfo m2 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง","", "1");
-        MockPolistInfo m3 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง","1", "");
-        MockPolistInfo m4 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง","", "");
-
-        List<MockPolistInfo> dataSet = new ArrayList<>();
-
-        dataSet.add(m1);
-        for (int i = 0; i < 10; i++) {
-            dataSet.add(m1);
-            dataSet.add(m2);
-            dataSet.add(m3);
-            dataSet.add(m4);
-        }
-
-        return dataSet;
-    }
 
 
 }

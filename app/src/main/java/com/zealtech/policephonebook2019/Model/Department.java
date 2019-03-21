@@ -7,58 +7,24 @@ import java.util.ArrayList;
 
 public class Department {
 
-    @SerializedName("editBy")
+
     String editBy;
-
-    @SerializedName("level")
     int level;
-
-    @SerializedName("parentId")
     int parentId;
-
-    @SerializedName("departmentId")
-    int departmentId;
-
-    @SerializedName("departmentName")
     String departmentName;
-
-    @SerializedName("shortName")
     String shortName;
-
-    @SerializedName("tag")
     ArrayList<String> tag;
-
-    @SerializedName("phoneNumbers")
-    ArrayList<String> phoneNumbers;
-
-    @SerializedName("faxes")
-    ArrayList<String> faxes;
-
-    @SerializedName("address")
+    ArrayList<DepartmentPhoneNumbers> phoneNumbers;
+    ArrayList<DepartmentFaxes> faxes;
     String address;
-
-    @SerializedName("provinceId")
-    int provinceId;
-
-    @SerializedName("districtId")
-    int districtId;
-
-    @SerializedName("latitude")
+    String provinceId;
+    String districtId;
     String latitude;
-
-    @SerializedName("longitude")
     String longitude;
-
-    @SerializedName("flagTail")
+    int views;
     Boolean flagTail;
-
-    @SerializedName("id")
     String id;
-
-    @SerializedName("createDate")
     String createDate;
-
-    @SerializedName("updateDate")
     String updateDate;
 
     public String getEditBy() {
@@ -85,14 +51,6 @@ public class Department {
         this.parentId = parentId;
     }
 
-    public int getDepartmentId() {
-        return departmentId;
-    }
-
-    public void setDepartmentId(int departmentId) {
-        this.departmentId = departmentId;
-    }
-
     public String getDepartmentName() {
         return departmentName;
     }
@@ -117,19 +75,19 @@ public class Department {
         this.tag = tag;
     }
 
-    public ArrayList<String> getPhoneNumbers() {
+    public ArrayList<DepartmentPhoneNumbers> getPhoneNumbers() {
         return phoneNumbers;
     }
 
-    public void setPhoneNumbers(ArrayList<String> phoneNumbers) {
+    public void setPhoneNumbers(ArrayList<DepartmentPhoneNumbers> phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
     }
 
-    public ArrayList<String> getFaxes() {
+    public ArrayList<DepartmentFaxes> getFaxes() {
         return faxes;
     }
 
-    public void setFaxes(ArrayList<String> faxes) {
+    public void setFaxes(ArrayList<DepartmentFaxes> faxes) {
         this.faxes = faxes;
     }
 
@@ -141,19 +99,19 @@ public class Department {
         this.address = address;
     }
 
-    public int getProvinceId() {
+    public String getProvinceId() {
         return provinceId;
     }
 
-    public void setProvinceId(int provinceId) {
+    public void setProvinceId(String provinceId) {
         this.provinceId = provinceId;
     }
 
-    public int getDistrictId() {
+    public String getDistrictId() {
         return districtId;
     }
 
-    public void setDistrictId(int districtId) {
+    public void setDistrictId(String districtId) {
         this.districtId = districtId;
     }
 
@@ -171,6 +129,14 @@ public class Department {
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;
+    }
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
     }
 
     public Boolean getFlagTail() {

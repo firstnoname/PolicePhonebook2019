@@ -1,34 +1,26 @@
 package com.zealtech.policephonebook2019.Fragments;
 
-
-import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.Toast;
-
-import com.zealtech.policephonebook2019.Activities.StationSubListActivity;
 import com.zealtech.policephonebook2019.Adapters.AdapterMapList;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
 import com.zealtech.policephonebook2019.Util.AppUtils;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.util.ArrayList;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -58,37 +50,17 @@ public class MapListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_map_list, container, false);
-
 
         return view;
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        /*int[] resId = {R.drawable.policestation_ic, R.drawable.policestation_ic, R.drawable.policestation_ic};
-        String[] list = {"ตำรวจภูธรภาค ๑-๘(ภใ๑-๘)", "ตำรวจภูธรภาค ๑-๘(ภใ๑-๘)", "ตำรวจภูธรภาค ๑-๘(ภใ๑-๘)"};
-        String[] desc = {"นครบาล, ทั่วไป", "นครบาล, ทั่วไป", "นครบาล, ทั่วไป"};
-
-        final AdapterMapList adapterMapList = new AdapterMapList(getActivity(), list, desc, resId);
-
-        final ListView listView = getActivity().findViewById(R.id.lvStation);
-        listView.setAdapter(adapterMapList);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intentSubStation = new Intent(getActivity(), StationSubListActivity.class);
-                startActivity(intentSubStation);
-            }
-        });*/
-
-        Log.d(TAG, "loadDepartment method called");
-
+//        Log.d(TAG, "loadDepartment method called");
 
         Call<ResponseDepartment> call = api.getDepartment();
         call.enqueue(new Callback<ResponseDepartment>() {
@@ -100,7 +72,8 @@ public class MapListFragment extends Fragment {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
                             mDepartmentList.addAll(response.body().getData().getContent());
-//                            Log.d(TAG, mDepartmentList.get(0).getDepartmentName());
+//                            Log.d(TAG, String.valueOf(mDepartmentList.get(0).getFlagTail()));
+                            setAdapter(view, mDepartmentList);
                         } else {
                             Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -129,6 +102,15 @@ public class MapListFragment extends Fragment {
                 Log.d(TAG, String.valueOf(call));
             }
         });
+    }
+
+    private void setAdapter(View view, ArrayList<Department> mDepartmentList) {
+        Log.d(TAG, String.valueOf(mDepartmentList.size()));
+
+        RecyclerView recyclerView = view.findViewById(R.id.lvStation);
+        AdapterMapList adapter = new AdapterMapList(getActivity(), mDepartmentList);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
 }

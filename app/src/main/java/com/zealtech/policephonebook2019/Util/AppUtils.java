@@ -1,5 +1,6 @@
 package com.zealtech.policephonebook2019.Util;
 
+
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 
@@ -30,4 +31,5 @@ public class AppUtils {
 
         return client.create(Api.class);
     }
+
 }

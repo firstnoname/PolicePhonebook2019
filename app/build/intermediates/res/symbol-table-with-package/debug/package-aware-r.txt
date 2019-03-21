@@ -1316,6 +1316,8 @@ id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id layout_adapter_map_list
+id layout_adapter_station_sub_list
 id layout_contact_detail
 id layout_item
 id left

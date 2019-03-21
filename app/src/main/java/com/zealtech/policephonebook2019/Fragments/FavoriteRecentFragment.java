@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zealtech.policephonebook2019.Adapters.AdapterFavoriteList;
-import com.zealtech.policephonebook2019.Model.MockPolistInfo;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 
@@ -58,25 +57,6 @@ public class FavoriteRecentFragment extends Fragment {
 
         mAdapter = new AdapterFavoriteList(getActivity(), apiPoliceRecent);
         recyclerView.setAdapter(mAdapter);
-    }
-
-    private List<MockPolistInfo> initPlayer() {
-        MockPolistInfo m1 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง", "1", "1");
-        MockPolistInfo m2 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง","", "1");
-        MockPolistInfo m3 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง","1", "");
-        MockPolistInfo m4 = new MockPolistInfo("พล.ต.ท.ยสเอก รัษาสุวรรณ", "ผกก. ผ่ายอำนวยการ 1", "กองบังคับการอำนวยการ สำนักงานตรวจคนเข้าเมือง","", "");
-
-        List<MockPolistInfo> dataSet = new ArrayList<>();
-
-        dataSet.add(m1);
-        for (int i = 0; i < 10; i++) {
-            dataSet.add(m1);
-            dataSet.add(m2);
-            dataSet.add(m3);
-            dataSet.add(m4);
-        }
-
-        return dataSet;
     }
 
 }

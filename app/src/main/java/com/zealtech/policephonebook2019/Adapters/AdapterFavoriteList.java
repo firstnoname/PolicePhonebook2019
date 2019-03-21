@@ -3,18 +3,15 @@ package com.zealtech.policephonebook2019.Adapters;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.zealtech.policephonebook2019.Model.MockPolistInfo;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AdapterFavoriteList extends RecyclerView.Adapter<AdapterFavoriteList.ViewHolder> {
     private Context mContext;
