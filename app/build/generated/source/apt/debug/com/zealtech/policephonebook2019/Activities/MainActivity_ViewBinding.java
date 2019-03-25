@@ -5,6 +5,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
 import butterknife.internal.Utils;
@@ -15,11 +16,11 @@ import java.lang.Override;
 public class MainActivity_ViewBinding implements Unbinder {
   private MainActivity target;
 
-  private View view2131296377;
-
   private View view2131296380;
 
-  private View view2131296319;
+  private View view2131296383;
+
+  private View view2131296320;
 
   private View view2131296300;
 
@@ -46,8 +47,9 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.imgMap = Utils.findRequiredViewAsType(source, R.id.img_map, "field 'imgMap'", ImageView.class);
     target.imgFavorite = Utils.findRequiredViewAsType(source, R.id.img_favorite, "field 'imgFavorite'", ImageView.class);
     target.imgContactUs = Utils.findRequiredViewAsType(source, R.id.img_contact_us, "field 'imgContactUs'", ImageView.class);
+    target.tvActionbarTitle = Utils.findRequiredViewAsType(source, R.id.tv_actionbar, "field 'tvActionbarTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.imgNoti, "method 'onImgNotiClicked'");
-    view2131296377 = view;
+    view2131296380 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,7 +57,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.imgUser, "method 'onImgUserClicked'");
-    view2131296380 = view;
+    view2131296383 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,7 +65,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.container, "method 'onContainerClicked'");
-    view2131296319 = view;
+    view2131296320 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -124,13 +126,14 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.imgMap = null;
     target.imgFavorite = null;
     target.imgContactUs = null;
+    target.tvActionbarTitle = null;
 
-    view2131296377.setOnClickListener(null);
-    view2131296377 = null;
     view2131296380.setOnClickListener(null);
     view2131296380 = null;
-    view2131296319.setOnClickListener(null);
-    view2131296319 = null;
+    view2131296383.setOnClickListener(null);
+    view2131296383 = null;
+    view2131296320.setOnClickListener(null);
+    view2131296320 = null;
     view2131296300.setOnClickListener(null);
     view2131296300 = null;
     view2131296301.setOnClickListener(null);
