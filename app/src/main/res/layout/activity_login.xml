@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg02"
+    android:background="@mipmap/bg02"
     tools:context="com.zealtech.policephonebook2019.Activities.LoginActivity">
 
     <TextView
@@ -62,6 +62,7 @@
             android:layout_toEndOf="@+id/username_icon"
             android:layout_toRightOf="@+id/username_icon"
             android:hint="รหัสบัตรประชาชน"
+            android:text="dev1"
             android:textSize="15sp"
             android:padding="10dp"
             android:gravity="right" />
@@ -111,6 +112,7 @@
             android:layout_toRightOf="@+id/login_password"
             android:hint="รหัสผ่าน วันเดือนปีเกิด"
             android:padding="10dp"
+            android:text="zeal1tech"
             android:textSize="15sp"
             android:gravity="right"/>
 

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
@@ -19,8 +18,10 @@ public class ContactDetailActivity extends AppCompatActivity {
     private String fullName, strPosition, department, tel1, tel2;
     private TextView tvName, tvPosition, tvDepartment, tvTel1, tvTel2, tvBack;
     private ImageView imgFavorite, imgClose;
+    private int position;
 
     ArrayList<PoliceMasterData> policeMasterData = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         tvBack = findViewById(R.id.tvBack);
 
         policeMasterData = (ArrayList<PoliceMasterData>) getIntent().getSerializableExtra("contact_detail");
-        int position = getIntent().getIntExtra("position", 0);
+        position = getIntent().getIntExtra("position", 0);
 
         fullName = policeMasterData.get(position).getFirstName() + "  " + policeMasterData.get(position).getLastName();
         strPosition = policeMasterData.get(position).getPositionName();

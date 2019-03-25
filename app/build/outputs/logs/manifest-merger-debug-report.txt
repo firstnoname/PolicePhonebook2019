@@ -1,317 +1,331 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
-MERGED from [com.android.support:design:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\0753a293bd7ff308d3a745434eed7ab8\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\6e37efa6844ce7070b996523df25927f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\415ad81c75ff417bfc9885c575db470f\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:17:1-38:12
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\68b94eff5f5af048ce42d4acb571b942\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\c97d16d0b9a797ad4fa495adaac3f9de\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\68ec570e037f0c5bc54002e7f97d9050\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\f8d161349a0279bacc6321c43938935f\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\29172342c1bad21ce0b62d4f13754cf0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\61fff9c8ef280f477b11ed04b0abcd77\AndroidManifest.xml:2:1-7:12
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\3c3fd87ec7c883df73c338646891f37c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\49396186a2c1b0cb37a0fd3f2465216f\AndroidManifest.xml:17:1-22:12
-MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\2928a11ba3b1a1f37e6b26fed3384fef\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\88054427f4afee687a066f75cb33a88e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\e06cf569c085146d754f172ea04b3c71\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\526385d8231018aa5607756b12219c79\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\eeae4fb39c0f254f4c5162f5bcef8760\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\3e064e4e5b0e7ce2d7dd3d44158acf4b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\52e507c9b3bc957506ff32da114994b2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\d195d423b2941b4f0d1202b6956c2095\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\9a55f11725a4d985bfbb6b9e6f85449c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\54fa24778e553411ee43ba6be9546f07\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\d92bc9d4a264958e54ee29c8ad5e4755\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\b0742263790bc6747a8bf997a195619d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\97fc2a6899d665c4440863829010dfa8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\57233805ded2bccd9c2b38d10bb67b78\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\055a06c0edb5c28ab469da0a562f3ff7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\60c2ace9a669e4e3038e3dc222d355d8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\5dff4c8dbe113796dcf253165641a750\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f80ce89a37835de7ca09c2b9982bc06f\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\dcb03125673814f1f8331176d3913456\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3cc4c94fa29d187a68db06e93ee40e17\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\80fb02c905d424f00984c643590148ca\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\6f6e14491082d7a63523898646f0bc1a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\ff0141ac1dd9855d80af4cd8fb511b2d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\8fd9f0fec4f22193f77359d98b4b2eac\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\bb70ef1f34f53986220a80d819c32666\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\ae14530d36e772f892f13c851f7dc8e0\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\472aa03d97a50481d013f956b2ef7058\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\55566588858a2db4c376aae77271d162\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-41:12
+MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ef7f5c684f8b5bd8b65a8f59a5a94ae1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/86c6513cfdbd8fa7c70266720a645be0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/391adfc23863e18441e97e0702fedd9d/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/0fde506465dea33ec7112b6fe1091861/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07fa9b021456e65c7184b0963fbc29eb/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/0b7b9ff8c2a9b62c0f03910da4061a06/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/49631fe6a937d7fe5a12216670514db7/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/137bf34f829cf43dbc73b6fb79de7ef1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/babfcdb0143a3ca73b016caa23d465d2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/e8c0b065464ac8e8e0f9cf92b6da90c4/AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/67311194ce894835ab76a470f8b8950d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/766069d79e294e71fbd13fffd671b183/AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/dd0d3e422ed3e632701815415b36c35b/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/617eaba52f55a2a23b805257b66ed0d6/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/c8f5d5bc65a0330e42c1f577941782e1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/915d75dc2909c388ed92a3b601758b65/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/976087427ca2e2101d5df04d101e1603/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/458140d433dfb01129593259e78a6d9a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/5705e8a258225b87571c8e6048df66e5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/e992add4208f83a6ae733cc25ceaa0b3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/4f0bb591842f0063dac83723bd874f8e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/b815122d198aeefad1d779df67255d4e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5eafe445c22ec7fa6c8a681f6ae91546/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/155ae6ec068199fea493bcf4af6ec513/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0afdee6915028a0fc96c3fabdcb53266/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/6d2ac8b7d6fe43343cc46430f9738926/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/fde69813ac6dc841ec253cfbb6c41811/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/df921dfdc296975c9975051bd0491d8d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/060c35de5fd6c2c48f8b5fbe61db16ca/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/9471f30ac9a8949b2894d7b4aafc6b96/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/9f3c6e99419eb70e10d43691c4e5c412/AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8bab7a2d2e0ea5c03bd1c42d05da9cb7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/021731f2573c9c07d3b00d441b14f1f2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/056101cf8ece9eb2ab72c1fa011481de/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/c03a49ebf4ede1e619b6f611dad3492f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/f8cf6f0f3da72a85cc6bf87e81f24ded/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/7876ca636469d8234d61c103b8744824/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/3c1a810ee9c69b5245798926980ec407/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/d72bb6dfdf2e14f2db5ac46028c3966e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8dfaeca33e4ea74f9043a48059d628f0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-41:12
 	package
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:3:5-46
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-41:12
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-40:12
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-41:12
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:5:5-79
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:5:5-79
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:5:22-76
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:5:22-76
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:6:5-79
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:23:5-79
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:6:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:6:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:7:5-67
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:24:5-67
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/391adfc23863e18441e97e0702fedd9d/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/391adfc23863e18441e97e0702fedd9d/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/0fde506465dea33ec7112b6fe1091861/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/0fde506465dea33ec7112b6fe1091861/AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:7:22-64
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:7:22-64
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:8:5-98
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:8:5-98
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:8:22-95
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:8:22-95
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:9:5-81
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:9:22-78
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:9:22-78
 application
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:11:5-38:19
-MERGED from [com.android.support:design:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\0753a293bd7ff308d3a745434eed7ab8\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\0753a293bd7ff308d3a745434eed7ab8\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\415ad81c75ff417bfc9885c575db470f\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\415ad81c75ff417bfc9885c575db470f\AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\68b94eff5f5af048ce42d4acb571b942\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\68b94eff5f5af048ce42d4acb571b942\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\c97d16d0b9a797ad4fa495adaac3f9de\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\c97d16d0b9a797ad4fa495adaac3f9de\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\68ec570e037f0c5bc54002e7f97d9050\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\68ec570e037f0c5bc54002e7f97d9050\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\f8d161349a0279bacc6321c43938935f\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\f8d161349a0279bacc6321c43938935f\AndroidManifest.xml:22:5-26:19
-MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\2928a11ba3b1a1f37e6b26fed3384fef\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\2928a11ba3b1a1f37e6b26fed3384fef\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\5dff4c8dbe113796dcf253165641a750\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\5dff4c8dbe113796dcf253165641a750\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f80ce89a37835de7ca09c2b9982bc06f\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f80ce89a37835de7ca09c2b9982bc06f\AndroidManifest.xml:22:5-23:19
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:11:5-39:19
+MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ef7f5c684f8b5bd8b65a8f59a5a94ae1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ef7f5c684f8b5bd8b65a8f59a5a94ae1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/391adfc23863e18441e97e0702fedd9d/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/391adfc23863e18441e97e0702fedd9d/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/0fde506465dea33ec7112b6fe1091861/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/0fde506465dea33ec7112b6fe1091861/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07fa9b021456e65c7184b0963fbc29eb/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07fa9b021456e65c7184b0963fbc29eb/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/0b7b9ff8c2a9b62c0f03910da4061a06/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/0b7b9ff8c2a9b62c0f03910da4061a06/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/49631fe6a937d7fe5a12216670514db7/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/49631fe6a937d7fe5a12216670514db7/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/137bf34f829cf43dbc73b6fb79de7ef1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/137bf34f829cf43dbc73b6fb79de7ef1/AndroidManifest.xml:22:5-26:19
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/dd0d3e422ed3e632701815415b36c35b/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/dd0d3e422ed3e632701815415b36c35b/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/617eaba52f55a2a23b805257b66ed0d6/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/617eaba52f55a2a23b805257b66ed0d6/AndroidManifest.xml:10:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/9f3c6e99419eb70e10d43691c4e5c412/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/9f3c6e99419eb70e10d43691c4e5c412/AndroidManifest.xml:9:5-20
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\5dff4c8dbe113796dcf253165641a750\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:15:9-45
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:15:9-45
 	android:icon
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:13:9-40
 	android:allowBackup
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:17:9-65
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:17:9-65
 	android:usesCleartextTraffic
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:18:9-44
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:18:9-44
+activity#com.zealtech.policephonebook2019.Activities.FilterActivity
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:19:9-104
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:19:19-92
 activity#com.zealtech.policephonebook2019.Activities.ContactDetailActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:19:9-111
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:20:9-102
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:19:19-99
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:20:19-99
 activity#com.zealtech.policephonebook2019.Activities.EditProfileActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:20:9-100
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:21:9-100
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:20:19-97
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:21:19-97
 activity#com.zealtech.policephonebook2019.Activities.UserDetailActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:21:9-99
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:22:9-99
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:21:19-96
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:22:19-96
 activity#com.zealtech.policephonebook2019.Activities.LoginActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:22:9-94
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:9-94
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:22:19-91
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:19-91
 activity#com.zealtech.policephonebook2019.Activities.StationDetailActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:23:9-102
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:9-102
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:23:19-99
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:19-99
 activity#com.zealtech.policephonebook2019.Activities.StationSubListActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:24:9-103
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:25:9-103
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:24:19-100
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:25:19-100
 activity#com.zealtech.policephonebook2019.Activities.MapStationListActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:25:9-103
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:26:9-103
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:25:19-100
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:26:19-100
 activity#com.zealtech.policephonebook2019.Activities.SplashScreenActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:26:9-32:20
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:27:9-33:20
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:26:19-98
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:27:19-98
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:27:13-31:29
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:30:17-77
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:30:27-74
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:31:27-74
 activity#com.zealtech.policephonebook2019.Activities.MainActivity
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:33:9-93
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:34:9-93
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:33:19-90
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:34:19-90
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:35:9-37:71
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:36:9-38:71
 	android:value
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:37:13-68
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:38:13-68
 	android:name
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:36:13-58
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:37:13-58
 uses-sdk
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\0753a293bd7ff308d3a745434eed7ab8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\0753a293bd7ff308d3a745434eed7ab8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\6e37efa6844ce7070b996523df25927f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\6e37efa6844ce7070b996523df25927f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\415ad81c75ff417bfc9885c575db470f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\415ad81c75ff417bfc9885c575db470f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\68b94eff5f5af048ce42d4acb571b942\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\68b94eff5f5af048ce42d4acb571b942\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\c97d16d0b9a797ad4fa495adaac3f9de\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\c97d16d0b9a797ad4fa495adaac3f9de\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\68ec570e037f0c5bc54002e7f97d9050\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\68ec570e037f0c5bc54002e7f97d9050\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\f8d161349a0279bacc6321c43938935f\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\f8d161349a0279bacc6321c43938935f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\29172342c1bad21ce0b62d4f13754cf0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\29172342c1bad21ce0b62d4f13754cf0\AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\61fff9c8ef280f477b11ed04b0abcd77\AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\61fff9c8ef280f477b11ed04b0abcd77\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\3c3fd87ec7c883df73c338646891f37c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\3c3fd87ec7c883df73c338646891f37c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\49396186a2c1b0cb37a0fd3f2465216f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\49396186a2c1b0cb37a0fd3f2465216f\AndroidManifest.xml:20:5-44
-MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\2928a11ba3b1a1f37e6b26fed3384fef\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\2928a11ba3b1a1f37e6b26fed3384fef\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\88054427f4afee687a066f75cb33a88e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\88054427f4afee687a066f75cb33a88e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\e06cf569c085146d754f172ea04b3c71\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\e06cf569c085146d754f172ea04b3c71\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\526385d8231018aa5607756b12219c79\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\526385d8231018aa5607756b12219c79\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\eeae4fb39c0f254f4c5162f5bcef8760\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\eeae4fb39c0f254f4c5162f5bcef8760\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\3e064e4e5b0e7ce2d7dd3d44158acf4b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\3e064e4e5b0e7ce2d7dd3d44158acf4b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\52e507c9b3bc957506ff32da114994b2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\52e507c9b3bc957506ff32da114994b2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\d195d423b2941b4f0d1202b6956c2095\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\d195d423b2941b4f0d1202b6956c2095\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\9a55f11725a4d985bfbb6b9e6f85449c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\9a55f11725a4d985bfbb6b9e6f85449c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\54fa24778e553411ee43ba6be9546f07\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\54fa24778e553411ee43ba6be9546f07\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\d92bc9d4a264958e54ee29c8ad5e4755\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\d92bc9d4a264958e54ee29c8ad5e4755\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\b0742263790bc6747a8bf997a195619d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\b0742263790bc6747a8bf997a195619d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\97fc2a6899d665c4440863829010dfa8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\97fc2a6899d665c4440863829010dfa8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\57233805ded2bccd9c2b38d10bb67b78\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\57233805ded2bccd9c2b38d10bb67b78\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\055a06c0edb5c28ab469da0a562f3ff7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\055a06c0edb5c28ab469da0a562f3ff7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\60c2ace9a669e4e3038e3dc222d355d8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\60c2ace9a669e4e3038e3dc222d355d8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\5dff4c8dbe113796dcf253165641a750\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\5dff4c8dbe113796dcf253165641a750\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f80ce89a37835de7ca09c2b9982bc06f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\f80ce89a37835de7ca09c2b9982bc06f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\dcb03125673814f1f8331176d3913456\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\dcb03125673814f1f8331176d3913456\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3cc4c94fa29d187a68db06e93ee40e17\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3cc4c94fa29d187a68db06e93ee40e17\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\80fb02c905d424f00984c643590148ca\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\80fb02c905d424f00984c643590148ca\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\6f6e14491082d7a63523898646f0bc1a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\6f6e14491082d7a63523898646f0bc1a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\ff0141ac1dd9855d80af4cd8fb511b2d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\ff0141ac1dd9855d80af4cd8fb511b2d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\8fd9f0fec4f22193f77359d98b4b2eac\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\8fd9f0fec4f22193f77359d98b4b2eac\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\bb70ef1f34f53986220a80d819c32666\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\bb70ef1f34f53986220a80d819c32666\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\ae14530d36e772f892f13c851f7dc8e0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\ae14530d36e772f892f13c851f7dc8e0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\472aa03d97a50481d013f956b2ef7058\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\472aa03d97a50481d013f956b2ef7058\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\55566588858a2db4c376aae77271d162\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\55566588858a2db4c376aae77271d162\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ef7f5c684f8b5bd8b65a8f59a5a94ae1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ef7f5c684f8b5bd8b65a8f59a5a94ae1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/86c6513cfdbd8fa7c70266720a645be0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/86c6513cfdbd8fa7c70266720a645be0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5a1074484422743da4272aa473fe20ab/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/391adfc23863e18441e97e0702fedd9d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/391adfc23863e18441e97e0702fedd9d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/0fde506465dea33ec7112b6fe1091861/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/0fde506465dea33ec7112b6fe1091861/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07fa9b021456e65c7184b0963fbc29eb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07fa9b021456e65c7184b0963fbc29eb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/0b7b9ff8c2a9b62c0f03910da4061a06/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/0b7b9ff8c2a9b62c0f03910da4061a06/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/49631fe6a937d7fe5a12216670514db7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/49631fe6a937d7fe5a12216670514db7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/137bf34f829cf43dbc73b6fb79de7ef1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/137bf34f829cf43dbc73b6fb79de7ef1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/babfcdb0143a3ca73b016caa23d465d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/babfcdb0143a3ca73b016caa23d465d2/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/e8c0b065464ac8e8e0f9cf92b6da90c4/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/e8c0b065464ac8e8e0f9cf92b6da90c4/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/67311194ce894835ab76a470f8b8950d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/67311194ce894835ab76a470f8b8950d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/766069d79e294e71fbd13fffd671b183/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/766069d79e294e71fbd13fffd671b183/AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/dd0d3e422ed3e632701815415b36c35b/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/dd0d3e422ed3e632701815415b36c35b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/617eaba52f55a2a23b805257b66ed0d6/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/617eaba52f55a2a23b805257b66ed0d6/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/c8f5d5bc65a0330e42c1f577941782e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/c8f5d5bc65a0330e42c1f577941782e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/915d75dc2909c388ed92a3b601758b65/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/915d75dc2909c388ed92a3b601758b65/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/976087427ca2e2101d5df04d101e1603/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/976087427ca2e2101d5df04d101e1603/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/458140d433dfb01129593259e78a6d9a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/458140d433dfb01129593259e78a6d9a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/5705e8a258225b87571c8e6048df66e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/5705e8a258225b87571c8e6048df66e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/e992add4208f83a6ae733cc25ceaa0b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/e992add4208f83a6ae733cc25ceaa0b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/4f0bb591842f0063dac83723bd874f8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/4f0bb591842f0063dac83723bd874f8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/b815122d198aeefad1d779df67255d4e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/b815122d198aeefad1d779df67255d4e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5eafe445c22ec7fa6c8a681f6ae91546/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5eafe445c22ec7fa6c8a681f6ae91546/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/155ae6ec068199fea493bcf4af6ec513/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/155ae6ec068199fea493bcf4af6ec513/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0afdee6915028a0fc96c3fabdcb53266/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0afdee6915028a0fc96c3fabdcb53266/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/6d2ac8b7d6fe43343cc46430f9738926/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/6d2ac8b7d6fe43343cc46430f9738926/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/fde69813ac6dc841ec253cfbb6c41811/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/fde69813ac6dc841ec253cfbb6c41811/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/df921dfdc296975c9975051bd0491d8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/df921dfdc296975c9975051bd0491d8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/060c35de5fd6c2c48f8b5fbe61db16ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/060c35de5fd6c2c48f8b5fbe61db16ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/38072e4b3bf93d67f36fb21abb00f41e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/458bca1862581b204769a742db8139e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/9471f30ac9a8949b2894d7b4aafc6b96/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/9471f30ac9a8949b2894d7b4aafc6b96/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/9f3c6e99419eb70e10d43691c4e5c412/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/9f3c6e99419eb70e10d43691c4e5c412/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8bab7a2d2e0ea5c03bd1c42d05da9cb7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8bab7a2d2e0ea5c03bd1c42d05da9cb7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/021731f2573c9c07d3b00d441b14f1f2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/021731f2573c9c07d3b00d441b14f1f2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/056101cf8ece9eb2ab72c1fa011481de/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/056101cf8ece9eb2ab72c1fa011481de/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/c03a49ebf4ede1e619b6f611dad3492f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/c03a49ebf4ede1e619b6f611dad3492f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/f8cf6f0f3da72a85cc6bf87e81f24ded/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/f8cf6f0f3da72a85cc6bf87e81f24ded/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/7876ca636469d8234d61c103b8744824/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/7876ca636469d8234d61c103b8744824/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/3c1a810ee9c69b5245798926980ec407/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/3c1a810ee9c69b5245798926980ec407/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/d72bb6dfdf2e14f2db5ac46028c3966e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/d72bb6dfdf2e14f2db5ac46028c3966e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8dfaeca33e4ea74f9043a48059d628f0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/8dfaeca33e4ea74f9043a48059d628f0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\BlackClover\AndroidStudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:23:5-82
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:23:5-82
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\ea235c38fabf21e2932b07fd4497d844\AndroidManifest.xml:23:5-82
+ADDED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/391adfc23863e18441e97e0702fedd9d/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/0fde506465dea33ec7112b6fe1091861/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/0fde506465dea33ec7112b6fe1091861/AndroidManifest.xml:23:5-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\f4b020945918742587b91a1bf4d4ab27\AndroidManifest.xml:23:22-79
+		ADDED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/391adfc23863e18441e97e0702fedd9d/AndroidManifest.xml:23:22-79
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:26:5-28:35
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:27:9-41
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:27:9-41
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:28:9-32
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:28:9-32
 uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:33:9-35:40
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:33:9-35:40
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:35:13-37
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\70baddcfe2c90cbb0fa8b1b6d041e051\AndroidManifest.xml:34:13-50
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/529c2db401f3e225f484f89ced35dee3/AndroidManifest.xml:34:13-50
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\68b94eff5f5af048ce42d4acb571b942\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07fa9b021456e65c7184b0963fbc29eb/AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\68b94eff5f5af048ce42d4acb571b942\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07fa9b021456e65c7184b0963fbc29eb/AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\68b94eff5f5af048ce42d4acb571b942\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07fa9b021456e65c7184b0963fbc29eb/AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\68b94eff5f5af048ce42d4acb571b942\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07fa9b021456e65c7184b0963fbc29eb/AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\f8d161349a0279bacc6321c43938935f\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/137bf34f829cf43dbc73b6fb79de7ef1/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\f8d161349a0279bacc6321c43938935f\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/137bf34f829cf43dbc73b6fb79de7ef1/AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\BlackClover\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\f8d161349a0279bacc6321c43938935f\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/137bf34f829cf43dbc73b6fb79de7ef1/AndroidManifest.xml:24:13-58

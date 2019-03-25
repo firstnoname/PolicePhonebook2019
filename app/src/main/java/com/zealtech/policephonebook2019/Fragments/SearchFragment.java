@@ -1,18 +1,22 @@
 package com.zealtech.policephonebook2019.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Activities.FilterActivity;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.Province;
@@ -35,12 +39,21 @@ import retrofit2.Response;
  * A simple {@link Fragment} subclass.
  */
 public class SearchFragment extends Fragment {
+
     private static final String TAG = "SearchFragment";
+
+    String tagFilter = "";
+    String tagValue = "";
+    int level = 1;
+    String departmentId = "";
+
+    CardView cvProvince, cvRank, cvPosition;
+    TextView tvProvince, tvDepartment, tvRank, tvPosition;
 
     ArrayList<Province> apiProvince = new ArrayList<>();
     ArrayList<Department> apiDepartment = new ArrayList<>();
 
-    List<String> mProvince = new ArrayList<>();
+    ArrayList<String> mProvince = new ArrayList<>();
 
     Api api = AppUtils.getApiService();
 
@@ -67,7 +80,7 @@ public class SearchFragment extends Fragment {
     }
 
     private void fetchDepartment() {
-        Call<ResponseDepartment> call = api.getDepartment();
+        Call<ResponseDepartment> call = api.getDepartment(level, departmentId);
         call.enqueue(new Callback<ResponseDepartment>() {
             @Override
             public void onResponse(Call<ResponseDepartment> call, Response<ResponseDepartment> response) {
@@ -150,39 +163,49 @@ public class SearchFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        String[] mProvince = getResources().getStringArray(R.array.province);
-        String[] mDeparture = getResources().getStringArray(R.array.departure);
-        String[] mRank = getResources().getStringArray(R.array.rank);
-        String[] mPosition = getResources().getStringArray(R.array.position);
+        tvProvince = view.findViewById(R.id.tvProvince);
+        tvDepartment = view.findViewById(R.id.tvDepartment);
+        tvPosition = view.findViewById(R.id.tvPosition);
+        tvRank = view.findViewById(R.id.tvRank);
 
-//        Log.d("test", String.valueOf(test.size()));
-       Spinner spinner = view.findViewById(R.id.spnProvince);
-        /*ArrayAdapter<String> adapter = new ArrayAdapter<>(this.getActivity(),
-                android.R.layout.simple_spinner_item, test);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinner.setAdapter(adapter);*/
-        ArrayAdapter<String> provinceAdapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_text, mProvince);
-        provinceAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        spinner.setAdapter(provinceAdapter);
+        cvProvince = view.findViewById(R.id.cardViewProvince);
+        cvProvince.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iProvince = new Intent(getActivity(), FilterActivity.class);
+                iProvince.putExtra("tag", "province");
+//                startActivity(iProvince);
+                startActivityForResult(iProvince, 1);
+            }
+        });
 
-        Spinner spinnerDep = view.findViewById(R.id.spnDeparture);
-        ArrayAdapter<String> adapterDep = new ArrayAdapter<>(this.getActivity(),
-                android.R.layout.simple_spinner_item, mDeparture);
-        adapterDep.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinnerDep.setAdapter(adapterDep);
+        cvRank = view.findViewById(R.id.cardViewRank);
+        cvRank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iRank = new Intent(getActivity(), FilterActivity.class);
+                iRank.putExtra("tag", "rank");
+                startActivity(iRank);
+            }
+        });
 
-        Spinner spinnerRank = view.findViewById(R.id.spnRank);
-        ArrayAdapter<String> adapterRank = new ArrayAdapter<>(this.getActivity(),
-                android.R.layout.simple_spinner_item, mRank);
-        adapterRank.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinnerRank.setAdapter(adapterRank);
+        cvPosition = view.findViewById(R.id.cardViewPosition);
+        cvPosition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iPosition = new Intent(getActivity(), FilterActivity.class);
+                iPosition.putExtra("tag", "position");
+                startActivity(iPosition);
+            }
+        });
 
-        Spinner spinnerPosition = view.findViewById(R.id.spnPosition);
-        ArrayAdapter<String> adapterPosition = new ArrayAdapter<>(this.getActivity(),
-                android.R.layout.simple_spinner_item, mPosition);
-        adapterPosition.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinnerPosition.setAdapter(adapterPosition);
-
-
+        //If this activity has been call by adapter.
+        tagFilter = getActivity().getIntent().getStringExtra("tagFilter");
+        tagValue = getActivity().getIntent().getStringExtra("valueFilter");
+        if (tagFilter == "province") {
+            tvProvince.setText(tagValue);
+        } else {
+            tvPosition.setText(tagValue);
+        }
     }
 }

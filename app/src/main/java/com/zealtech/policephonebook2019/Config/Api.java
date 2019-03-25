@@ -1,6 +1,7 @@
 package com.zealtech.policephonebook2019.Config;
 
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
+import com.zealtech.policephonebook2019.Model.response.ResponseDepartmentRoot;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceMasterData;
 import com.zealtech.policephonebook2019.Model.response.ResponseProfile;
 import com.zealtech.policephonebook2019.Model.response.ResponseProvince;
@@ -15,14 +16,16 @@ public interface Api {
     Call<ResponseProvince> getProvince();
 
     @GET("getDepartment")
-    Call<ResponseDepartment> getDepartment();
+    Call<ResponseDepartment> getDepartment(@Query("level") int level, @Query("parentId") String departmentId);
 
-    @GET("getDepartment")
-    Call<ResponseDepartment> getDepartmentTail(@Query("parentId") String parentId);
+    @GET("getDepartmentRoot")
+    Call<ResponseDepartmentRoot> getDepartmentRoot(@Query("departmentId") String departmentId);
 
     @GET("getPoliceMasterData")
     Call<ResponsePoliceMasterData> getPoliceMasterData();
 
     @POST("login")
     Call<ResponseProfile> login(@Query("username") String username, @Query("password") String password);
+
+
 }

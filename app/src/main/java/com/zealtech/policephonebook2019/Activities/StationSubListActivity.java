@@ -30,20 +30,31 @@ public class StationSubListActivity extends AppCompatActivity {
 
     Api api = AppUtils.getApiService();
     ArrayList<Department> mDepartmentList = new ArrayList<>();
-    String parentId = "";
+    String departmentId = "";
+    int level = 2;
+    int checkLvl = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_station_sub_list);
 
-        parentId = getIntent().getExtras().getString("parentId");
+        departmentId = getIntent().getExtras().getString("parentId");
+        checkLvl = checkLvl + getIntent().getIntExtra("level", level);
+        if (checkLvl == 3) {
+            //level = level + getIntent().getExtras().getInt("level");
+            Log.d(TAG, "True : " +checkLvl + " : " + departmentId);
+            level = checkLvl;
+        } else if (checkLvl == 4) {
+            level = checkLvl;
+        }
+
         callApiGetDepartment();
 
     }
 
     private void callApiGetDepartment() {
-        Call<ResponseDepartment> call = api.getDepartmentTail(parentId);
+        Call<ResponseDepartment> call = api.getDepartment(level, departmentId);
         call.enqueue(new Callback<ResponseDepartment>() {
             @Override
             public void onResponse(Call<ResponseDepartment> call, Response<ResponseDepartment> response) {

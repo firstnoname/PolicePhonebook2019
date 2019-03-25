@@ -30,11 +30,14 @@ import retrofit2.Response;
  */
 public class MapListFragment extends Fragment {
 
-    private static final String TAG = "MapListFragment";
-
-    ArrayList<Department> mDepartmentList = new ArrayList<>();
-
     Api api = AppUtils.getApiService();
+
+//    vars
+    private static final String TAG = "MapListFragment";
+    ArrayList<Department> mDepartmentList = new ArrayList<>();
+    int level = 1;
+    String departmentId = "";
+
 
     public MapListFragment() {
         // Required empty public constructor
@@ -62,7 +65,7 @@ public class MapListFragment extends Fragment {
 
 //        Log.d(TAG, "loadDepartment method called");
 
-        Call<ResponseDepartment> call = api.getDepartment();
+        Call<ResponseDepartment> call = api.getDepartment(level, departmentId);
         call.enqueue(new Callback<ResponseDepartment>() {
             @Override
             public void onResponse(Call<ResponseDepartment> call, Response<ResponseDepartment> response) {

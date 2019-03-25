@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.ContactDetailActivity;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
@@ -26,6 +27,8 @@ public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.View
     private ArrayList<PoliceMasterData> mPoliceInfo;
     private Context mContext;
     private String fullName = "";
+    private String IMAGE_URL = "http://ztidev.com:8081/phonebook/download?file=";
+
 
     public AdapterPhoneList(Context mContext, ArrayList<PoliceMasterData> mPoliceInfo) {
         this.mPoliceInfo = mPoliceInfo;
@@ -44,8 +47,9 @@ public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.View
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
         Log.d(TAG, "onBindViewHolder: called");
 
-        holder.imgProfile.setImageResource(R.mipmap.test_profile);
-
+        Glide.with(mContext)
+                .load(IMAGE_URL+mPoliceInfo.get(i).getImageProfile())
+                .into(holder.imgProfile);
         fullName = mPoliceInfo.get(i).getFirstName() + "  " + mPoliceInfo.get(i).getLastName();
         holder.tvName.setText(fullName);
         holder.tvPosition.setText(mPoliceInfo.get(i).getPositionName());

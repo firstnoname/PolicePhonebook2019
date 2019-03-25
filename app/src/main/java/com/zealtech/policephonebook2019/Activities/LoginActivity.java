@@ -1,5 +1,6 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,7 +11,6 @@ import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Config.Api;
-import com.zealtech.policephonebook2019.Model.Profile;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.response.ResponseProfile;
 import com.zealtech.policephonebook2019.Util.AppUtils;
@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private String username, password;
 
-    ArrayList<Profile> mProfile = new ArrayList<>();
+    ProfileH profileH = new ProfileH();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,9 +70,40 @@ public class LoginActivity extends AppCompatActivity {
                     if (response.body() != null) {
                         if (response.body().getCode().equalsIgnoreCase("OK")) {
                             if (response.body().getCode().equals("OK")) {
-//                                mProfile.addAll(response.body().getData().);
-//                                mProfile.addAll(response.body().getData().getContent());
-                                Log.d(TAG, String.valueOf(response.body().getData().getContent().size()));
+                                profileH.setEditBy(response.body().getData().getEditBy());
+                                profileH.setImageProfile(response.body().getData().getImageProfile());
+                                profileH.setUserName(response.body().getData().getUserName());
+                                profileH.setFirstName(response.body().getData().getFirstName());
+                                profileH.setLastName(response.body().getData().getLastName());
+                                profileH.setSuperAdmin(response.body().getData().getSuperAdmin());
+                                profileH.setGender(response.body().getData().getGender());
+                                profileH.setDepartmentId(response.body().getData().getDepartmentId());
+                                profileH.setPositionId(response.body().getData().getPositionId());
+                                profileH.setRankId(response.body().getData().getRankId());
+                                profileH.setPhoneNumber(response.body().getData().getPhoneNumber());
+                                profileH.setTag(response.body().getData().getTag());
+                                profileH.setDepartmentName(response.body().getData().getDepartmentName());
+                                profileH.setPositionName(response.body().getData().getPositionName());
+                                profileH.setRankName(response.body().getData().getRankName());
+                                profileH.setViews(response.body().getData().getViews());
+                                profileH.setFavorites(response.body().getData().getFavorites());
+                                profileH.setToken(response.body().getData().getToken());
+                                profileH.setDepartmentPhoneNumber(response.body().getData().getDepartmentPhoneNumber());
+                                profileH.setSuperAdmin(response.body().getData().getSuperAdmin());
+                                profileH.setId(response.body().getData().getId());
+                                profileH.setCreateDate(response.body().getData().getCreateDate());
+                                profileH.setUpdateDate(response.body().getData().getUpdateDate());
+                                profileH.setEnable(response.body().getData().getEnable());
+
+//                                Log.d(TAG, profileH.getFavorites().get(0));
+                                Intent iUserDetail = new Intent(getApplicationContext(), UserDetailActivity.class);
+                                Bundle bundle = new Bundle();
+                                bundle.putSerializable("user_profile", profileH);
+                                iUserDetail.putExtras(bundle);
+                                startActivity(iUserDetail);
+
+                                finish();
+
                             } else {
                                 Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                             }

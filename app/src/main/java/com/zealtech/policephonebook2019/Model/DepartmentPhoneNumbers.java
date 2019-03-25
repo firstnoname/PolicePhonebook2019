@@ -1,6 +1,8 @@
 package com.zealtech.policephonebook2019.Model;
 
-public class DepartmentPhoneNumbers {
+import java.io.Serializable;
+
+public class DepartmentPhoneNumbers implements Serializable {
     String tel;
     String telTo;
 

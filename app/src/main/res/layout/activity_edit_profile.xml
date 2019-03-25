@@ -60,7 +60,7 @@ android:layout_height="match_parent"
         <RelativeLayout
             android:id="@+id/spnRank"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -111,14 +111,41 @@ android:layout_height="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:text="ชื่อ-นามสกุล"
+            android:text="ชื่อ"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <RelativeLayout
             android:id="@+id/edtName"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight=".28"
+            android:background="@drawable/spinner_border"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" >
+
+            <EditText
+                android:id="@+id/edtNameText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relatvieName"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -130,7 +157,7 @@ android:layout_height="match_parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" >
 
             <EditText
-                android:id="@+id/edtNameText"
+                android:id="@+id/edtLastname"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
@@ -155,7 +182,7 @@ android:layout_height="match_parent"
         <RelativeLayout
             android:id="@+id/spnPosition"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -200,7 +227,7 @@ android:layout_height="match_parent"
         <RelativeLayout
             android:id="@+id/spnDeparture"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -245,7 +272,7 @@ android:layout_height="match_parent"
         <RelativeLayout
             android:id="@+id/edtTel"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -300,6 +327,15 @@ android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnEdit" />
 
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="นามสกุล"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relatvieName" />
 
 
     </android.support.constraint.ConstraintLayout>

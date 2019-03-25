@@ -36,7 +36,7 @@ import retrofit2.Response;
  */
 public class PhoneListFragment extends Fragment {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "PhoneListFragment";
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -62,8 +62,6 @@ public class PhoneListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-
-
         return inflater.inflate(R.layout.fragment_phone_list, container, false);
     }
 
@@ -84,17 +82,10 @@ public class PhoneListFragment extends Fragment {
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+
                             apiPoliceMasterData.addAll(response.body().getData());
-//                            Log.d("response-policemaster", String.valueOf(apiPoliceMasterData.size()));
-                            /*for (int i = 0; i < apiPoliceMasterData.size(); i++) {
-                                Log.d("response-police", apiPoliceMasterData.get(i).getFirstName());
-                                for (int x = 0; x < apiPoliceMasterData.get(i).getTag().size(); x++) {
-                                    Log.d("response-police-tag", apiPoliceMasterData.get(i).getTag().get(x));
-                                }
-                            }*/
-                           /* mAdapter = new AdapterFavoriteList(getActivity(), apiPoliceMasterData);
-                            recyclerView.setAdapter(mAdapter);*/
                             setAdapter(apiPoliceMasterData);
+
                         } else {
                             Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -105,9 +96,9 @@ public class PhoneListFragment extends Fragment {
                     try {
                         JSONObject jObjError = new JSONObject(response.errorBody().string());
                         if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
-
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
                         } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
-
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -119,11 +110,12 @@ public class PhoneListFragment extends Fragment {
 
             @Override
             public void onFailure(Call<ResponsePoliceMasterData> call, Throwable t) {
-
+                Log.d(TAG, String.valueOf(call));
+                Log.d(TAG, String.valueOf(t));
             }
-        });
+        }); // end retrofit call.
 
-    }
+    }// end onCreate.
 
     private void setAdapter(ArrayList<PoliceMasterData> dataSet) {
         this.apiPoliceMasterData = dataSet;
@@ -132,7 +124,5 @@ public class PhoneListFragment extends Fragment {
         mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
         recyclerView.setAdapter(mAdapter);
     }
-
-
 
 }

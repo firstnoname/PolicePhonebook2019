@@ -9,6 +9,7 @@
 
     <!--Toolbar-->
     <string name="toolbarTitle">สมุดโทรศัพท์ตำรวจ 2562</string>
+    <string name="toolbarTitleMap">สถานีตำรวจ</string>
 
     <!--Menu-->
     <string name="menuNameList">รายชื่อ</string>

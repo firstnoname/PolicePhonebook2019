@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.zealtech.policephonebook2019.Activities.ContactDetailActivity"></activity>
+        <activity android:name="com.zealtech.policephonebook2019.Activities.FilterActivity"></activity>
+        <activity android:name="com.zealtech.policephonebook2019.Activities.ContactDetailActivity" />
         <activity android:name="com.zealtech.policephonebook2019.Activities.EditProfileActivity" />
         <activity android:name="com.zealtech.policephonebook2019.Activities.UserDetailActivity" />
         <activity android:name="com.zealtech.policephonebook2019.Activities.LoginActivity" />

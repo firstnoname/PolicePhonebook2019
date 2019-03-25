@@ -2,6 +2,7 @@ package com.zealtech.policephonebook2019.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
@@ -28,7 +29,7 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
     ArrayList<Department> mDepartment;
     int resId = R.drawable.policestation_ic;
     String tagArea = "นครบาล, ทั่วไป";
-    String parentId = "";
+    int level = 1;
 
     public AdapterMapList(Context mContext, ArrayList<Department> mDepartment) {
         this.mContext = mContext;
@@ -47,9 +48,8 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
 //        Log.d(TAG, "onBindViewHolder: called");
 
-
         holder.imgInfo.setImageResource(resId);
-        holder.tvStation.setText(mDepartment.get(i).getDepartmentName());
+        holder.tvStation.setText(mDepartment.get(i).getDepartmentName() + " " + mDepartment.get(i).getDepartmentId());
         holder.tvArea.setText(tagArea);
 
         holder.layout_adapter_map_list.setOnClickListener(new View.OnClickListener() {
@@ -57,13 +57,16 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
             public void onClick(View view) {
                 if (mDepartment.get(i).getFlagTail().equals(true)) {
 //                    Toast.makeText(mContext, mDepartment.get(i).getFlagTail() + " True", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(mContext, StationDetailActivity.class);
+                    String parentId = String.valueOf(mDepartment.get(i).getDepartmentId());
+                    Intent intent = new Intent(mContext, StationSubListActivity.class);
+                    intent.putExtra("level", level);
+                    intent.putExtra("parentId", parentId);
+
                     mContext.startActivity(intent);
                 } else {
 //                    Toast.makeText(mContext, mDepartment.get(i).getFlagTail() + " False", Toast.LENGTH_SHORT).show();
-                    parentId = String.valueOf(mDepartment.get(i).getParentId());
-                    Intent intent = new Intent(mContext, StationSubListActivity.class);
-                    intent.putExtra("parentId", parentId);
+                    Intent intent = new Intent(mContext, StationDetailActivity.class);
+                    intent.putExtra("departmentId", mDepartment.get(i).getDepartmentId());
                     mContext.startActivity(intent);
                 }
             }
@@ -80,7 +83,6 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
         ImageView imgInfo;
         TextView tvStation, tvArea;
         ConstraintLayout layout_adapter_map_list;
-
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

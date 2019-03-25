@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zealtech.policephonebook2019.Fragments.ContactUsFragment;
@@ -47,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView imgFavorite;
     @BindView(R.id.img_contact_us)
     ImageView imgContactUs;
+
+    @BindView(R.id.tv_actionbar)
+    TextView tvActionbarTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 imgMap.setImageResource(R.drawable.map);
                 imgFavorite.setImageResource(R.drawable.fav);
                 imgContactUs.setImageResource(R.drawable.contact);
+                tvActionbarTitle.setText(R.string.toolbarTitle);
                 break;
             case "Search":
                 imgSearch.setImageResource(R.drawable.advancesearch_ac);
@@ -163,14 +168,15 @@ public class MainActivity extends AppCompatActivity {
                 imgMap.setImageResource(R.drawable.map);
                 imgFavorite.setImageResource(R.drawable.fav);
                 imgContactUs.setImageResource(R.drawable.contact);
+                tvActionbarTitle.setText(R.string.toolbarTitle);
                 break;
             case "Map":
                 imgMap.setImageResource(R.drawable.map_ac);
-
                 imgSearch.setImageResource(R.drawable.advancesearch);
                 imgPhoneList.setImageResource(R.drawable.search);
                 imgFavorite.setImageResource(R.drawable.fav);
                 imgContactUs.setImageResource(R.drawable.contact);
+                tvActionbarTitle.setText(R.string.toolbarTitleMap);
                 break;
             case "Favorite":
                 imgFavorite.setImageResource(R.drawable.fav_ac);
@@ -179,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
                 imgPhoneList.setImageResource(R.drawable.search);
                 imgMap.setImageResource(R.drawable.map);
                 imgContactUs.setImageResource(R.drawable.contact);
+                tvActionbarTitle.setText(R.string.toolbarTitle);
                 break;
             case "ContactUs":
                 imgContactUs.setImageResource(R.drawable.contact_ac);
@@ -187,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
                 imgPhoneList.setImageResource(R.drawable.search);
                 imgMap.setImageResource(R.drawable.map);
                 imgFavorite.setImageResource(R.drawable.fav);
+                tvActionbarTitle.setText(R.string.toolbarTitle);
                 break;
         }
     }

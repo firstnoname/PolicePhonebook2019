@@ -1,6 +1,8 @@
 package com.zealtech.policephonebook2019.Model;
 
-public class DepartmentFaxes {
+import java.io.Serializable;
+
+public class DepartmentFaxes implements Serializable {
     String faxNo;
     String faxTo;
 
