@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 import android.widget.Toast;
 import com.zealtech.policephonebook2019.Adapters.AdapterMapList;
 import com.example.policephonebook2019.R;
@@ -28,11 +29,14 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MapListFragment extends Fragment {
+public class MapListFragment extends Fragment implements SearchView.OnQueryTextListener{
 
     Api api = AppUtils.getApiService();
 
-//    vars
+    SearchView searchView;
+    AdapterMapList adapter;
+
+    //    vars
     private static final String TAG = "MapListFragment";
     ArrayList<Department> mDepartmentList = new ArrayList<>();
     int level = 1;
@@ -64,6 +68,9 @@ public class MapListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 //        Log.d(TAG, "loadDepartment method called");
+
+        searchView = view.findViewById(R.id.search_station);
+        searchView.setOnQueryTextListener(this);
 
         Call<ResponseDepartment> call = api.getDepartment(level, departmentId);
         call.enqueue(new Callback<ResponseDepartment>() {
@@ -111,9 +118,29 @@ public class MapListFragment extends Fragment {
         Log.d(TAG, String.valueOf(mDepartmentList.size()));
 
         RecyclerView recyclerView = view.findViewById(R.id.lvStation);
-        AdapterMapList adapter = new AdapterMapList(getActivity(), mDepartmentList);
+        adapter = new AdapterMapList(getActivity(), mDepartmentList);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        String userInput = newText.toLowerCase();
+        ArrayList<Department> newList = new ArrayList<>();
+
+        for (int i = 0; i < mDepartmentList.size(); i++) {
+            if (mDepartmentList.get(i).getDepartmentName().contains(userInput)) {
+                newList.add(mDepartmentList.get(i));
+            }
+        }
+
+        adapter.updateStationList(newList);
+
+        return true;
+    }
 }

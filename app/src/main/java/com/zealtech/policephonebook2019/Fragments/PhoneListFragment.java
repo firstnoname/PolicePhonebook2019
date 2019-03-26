@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +35,7 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PhoneListFragment extends Fragment {
+public class PhoneListFragment extends Fragment implements SearchView.OnQueryTextListener{
 
     private static final String TAG = "PhoneListFragment";
 
@@ -46,6 +47,8 @@ public class PhoneListFragment extends Fragment {
 
     //Vars
     public ArrayList<PoliceMasterData> apiPoliceMasterData = new ArrayList<>();
+
+    SearchView actionSearch;
 
     public PhoneListFragment() {
         // Required empty public constructor
@@ -73,7 +76,15 @@ public class PhoneListFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
+        actionSearch = view.findViewById(R.id.search_view);
 
+        actionSearch.setOnQueryTextListener(this);
+
+        callApi();
+
+    }// end onCreate.
+
+    private void callApi() {
         //Fetch data from api.
         Call<ResponsePoliceMasterData> call = api.getPoliceMasterData();
         call.enqueue(new Callback<ResponsePoliceMasterData>() {
@@ -114,8 +125,8 @@ public class PhoneListFragment extends Fragment {
                 Log.d(TAG, String.valueOf(t));
             }
         }); // end retrofit call.
+    }
 
-    }// end onCreate.
 
     private void setAdapter(ArrayList<PoliceMasterData> dataSet) {
         this.apiPoliceMasterData = dataSet;
@@ -125,4 +136,43 @@ public class PhoneListFragment extends Fragment {
         recyclerView.setAdapter(mAdapter);
     }
 
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+
+        String userInput = s.toLowerCase();
+        ArrayList<PoliceMasterData> newList = new ArrayList<>();
+
+        for (int i = 0; i < apiPoliceMasterData.size(); i++) {
+            if (apiPoliceMasterData.get(i).getFirstName().contains(userInput)) {
+                newList.add(apiPoliceMasterData.get(i));
+            }
+
+            if (apiPoliceMasterData.get(i).getLastName().contains(userInput)) {
+                newList.add(apiPoliceMasterData.get(i));
+            }
+
+            if (apiPoliceMasterData.get(i).getPositionName().contains(userInput)) {
+                newList.add(apiPoliceMasterData.get(i));
+            }
+
+            if (apiPoliceMasterData.get(i).getDepartmentName().contains(userInput)) {
+                newList.add(apiPoliceMasterData.get(i));
+            }
+        }
+
+
+        mAdapter = new AdapterPhoneList(getActivity(), newList);
+        recyclerView.setAdapter(mAdapter);
+
+        if (userInput.equals("")) {
+            callApi();
+        }
+
+        return true;
+    }
 }

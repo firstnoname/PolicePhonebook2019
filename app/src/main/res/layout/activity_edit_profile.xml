@@ -16,13 +16,16 @@ android:layout_height="match_parent"
     app:layout_constraintTop_toTopOf="parent"
     android:background="#FDFDFE">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_profile"
         android:layout_width="64dp"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:layout_margin="8dp"
         android:layout_weight="1"
-        android:src="@drawable/userfrofiledefualt"/>
+        android:src="@drawable/test_portrait"
+        app:civ_border_color="#9D9D9D"
+        app:civ_border_width="2dp"
+        app:layout_constraintVertical_bias="0.533" />
 
     <TextView
         android:id="@+id/textView"
@@ -71,24 +74,28 @@ android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView2">
 
-            <Spinner
-                android:id="@+id/spnRankText"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:background="@android:color/transparent"
-                android:gravity="center"
-                android:spinnerMode="dropdown" />
-
-            <ImageView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:src="@mipmap/dropdown" />
+                android:layout_margin="4dp"
+                android:onClick="selectRank">
+
+                <TextView
+                    android:id="@+id/tv_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="ทดสอบ"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -130,14 +137,18 @@ android:layout_height="match_parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" >
 
             <EditText
-                android:id="@+id/edtNameText"
+                android:id="@+id/edt_lastname"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
+                android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginEnd="0dp"
                 android:background="@android:color/transparent"
-                android:gravity="center"
                 android:spinnerMode="dropdown" />
 
         </RelativeLayout>
@@ -157,14 +168,18 @@ android:layout_height="match_parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" >
 
             <EditText
-                android:id="@+id/edtLastname"
+                android:id="@+id/edt_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
+                android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginEnd="0dp"
                 android:background="@android:color/transparent"
-                android:gravity="center"
                 android:spinnerMode="dropdown" />
 
         </RelativeLayout>
@@ -193,24 +208,28 @@ android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5">
 
-            <Spinner
-                android:id="@+id/spnPositionText"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:background="@android:color/transparent"
-                android:gravity="center"
-                android:spinnerMode="dropdown" />
-
-            <ImageView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:src="@mipmap/dropdown" />
+                android:layout_margin="4dp"
+                android:onClick="selectPosition">
+
+                <TextView
+                    android:id="@+id/tv_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="ทดสอบ"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -238,24 +257,28 @@ android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" >
 
-            <Spinner
-                android:id="@+id/spnDepartureText"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:background="@android:color/transparent"
-                android:gravity="center"
-                android:spinnerMode="dropdown" />
-
-            <ImageView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:src="@mipmap/dropdown" />
+                android:layout_margin="4dp"
+                android:onClick="selectDepartment">
+
+                <TextView
+                    android:id="@+id/tv_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="ทดสอบ"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -277,6 +300,7 @@ android:layout_height="match_parent"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_weight=".28"
+            android:paddingLeft="4dp"
             android:background="@drawable/spinner_border"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -284,20 +308,24 @@ android:layout_height="match_parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7" >
 
             <EditText
-                android:id="@+id/edtTelText"
+                android:id="@+id/edt_phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="0dp"
                 android:background="@android:color/transparent"
-                android:gravity="center"
-                android:inputType="textPersonName|phone" />
+                android:inputType="textPersonName|phone"
+                android:textSize="13sp" />
 
         </RelativeLayout>
 
         <Button
-            android:id="@+id/btnEdit"
+            android:id="@+id/btn_edit"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -325,7 +353,7 @@ android:layout_height="match_parent"
             android:text="อัพเดตข้อมูลล่าสุดเมื่อ 19.02.2562 เวลา 13.26"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnEdit" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_edit" />
 
         <TextView
             android:id="@+id/textView9"

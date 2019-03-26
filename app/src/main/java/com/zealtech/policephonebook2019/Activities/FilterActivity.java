@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
@@ -22,13 +23,16 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class FilterActivity extends AppCompatActivity {
+public class FilterActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
 
     private static final String TAG = "FilterActivity";
 
     Api api = AppUtils.getApiService();
 
     private String tagFilter = "";
+
+    SearchView searchView;
+    AdapterFilterSearch adapter;
 
     //vars
     private ArrayList<Province> apiProvince = new ArrayList<>();
@@ -37,10 +41,15 @@ public class FilterActivity extends AppCompatActivity {
     private ArrayList<String> mPosition = new ArrayList<>();
     private ArrayList<String> mProvince = new ArrayList<>();
 
+    private ArrayList<String> mTagSearch = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter);
+
+        searchView = findViewById(R.id.search_filter);
+        searchView.setOnQueryTextListener(this);
 
         tagFilter = getIntent().getStringExtra("tag");
 
@@ -69,6 +78,7 @@ public class FilterActivity extends AppCompatActivity {
 
                             for (int i = 0; i < apiProvince.size(); i++) {
                                 mProvince.add(apiProvince.get(i).getProvinceName());
+                                mTagSearch.addAll(mProvince);
                             }
 
                             initRecyclerView(mProvince);
@@ -102,7 +112,7 @@ public class FilterActivity extends AppCompatActivity {
         mPosition.add("Position 2");
         mPosition.add("Position 3");
         mPosition.add("Position 4");
-
+        mTagSearch.addAll(mPosition);
         initRecyclerView(mPosition);
     }
 
@@ -111,15 +121,39 @@ public class FilterActivity extends AppCompatActivity {
         mRank.add("Rank 2");
         mRank.add("Rank 3");
         mRank.add("Rank 4");
-
+        mTagSearch.addAll(mRank);
         initRecyclerView(mRank);
     }
 
     private void initRecyclerView(ArrayList<String> dataSet) {
         ArrayList<String> data = dataSet;
         RecyclerView recyclerView = findViewById(R.id.recycler_filter);
-        AdapterFilterSearch adapter = new AdapterFilterSearch(this, data, tagFilter);
+        adapter = new AdapterFilterSearch(this, data, tagFilter);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        String userInput = newText.toLowerCase();
+        ArrayList<String> newList = new ArrayList<>();
+
+//        Log.d(TAG, String.valueOf(mTagSearch.size()));
+
+        for (String tag : mTagSearch) {
+            if (tag.toLowerCase().contains(userInput)) {
+                newList.addAll(newList);
+            }
+        }
+
+        adapter.updateList(newList);
+
+        return true;
     }
 }

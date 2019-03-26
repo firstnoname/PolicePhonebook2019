@@ -2,6 +2,7 @@ package com.zealtech.policephonebook2019.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -59,16 +60,21 @@ public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.View
 //        Set view_tab color from rank.
         if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
             //Gold
+
+            holder.imgProfile.setBorderColor(Color.YELLOW);
             holder.viewTab.setBackgroundResource(R.color.colorYellow);
         } else if (rankName.equals("พล.ต.ต.")) {
             //Blue sky
+            holder.imgProfile.setBorderColor(Color.GREEN);
             holder.viewTab.setBackgroundResource(R.color.colorGreen);
         } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
             //Blue
+            holder.imgProfile.setBorderColor(Color.BLUE);
             holder.viewTab.setBackgroundResource(R.color.colorBlue);
         } else {
             //Red
-            holder.viewTab.setBackgroundResource(R.color.colorGreen);
+            holder.imgProfile.setBorderColor(Color.RED);
+            holder.viewTab.setBackgroundResource(R.color.colorRed);
         }
 
 //        Set label orange or red.
@@ -139,6 +145,7 @@ public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.View
             tvPosition1 = itemView.findViewById(R.id.tv_position_1);
             tvPosition2 = itemView.findViewById(R.id.tv_position_2);
             viewTab = itemView.findViewById(R.id.view_tab);
+
         }
     }
 

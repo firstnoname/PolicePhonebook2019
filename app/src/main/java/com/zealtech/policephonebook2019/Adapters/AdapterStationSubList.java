@@ -91,4 +91,11 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
         }
     }
 
+    public void updateSubStation(ArrayList<Department> newList) {
+        mStationList = new ArrayList<>();
+        mStationList.addAll(newList);
+
+        notifyDataSetChanged();
+    }
+
 }

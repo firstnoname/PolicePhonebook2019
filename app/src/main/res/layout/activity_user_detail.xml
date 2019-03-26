@@ -86,7 +86,7 @@
                             android:layout_gravity="center_horizontal"/>
 
                         <TextView
-                            android:id="@+id/tv_rank_profile"
+                            android:id="@+id/tv_rank_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ผบช.ประจำ สง.ผบ.ตร."
@@ -96,7 +96,7 @@
                             android:layout_gravity="center_horizontal"/>
 
                         <TextView
-                            android:id="@+id/tv_department_profile"
+                            android:id="@+id/tv_position_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"

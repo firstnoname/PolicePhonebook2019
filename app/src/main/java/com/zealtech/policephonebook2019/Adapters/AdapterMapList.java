@@ -92,4 +92,10 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
             layout_adapter_map_list = itemView.findViewById(R.id.layout_adapter_map_list);
         }
     }
+
+    public void updateStationList(ArrayList<Department> newList) {
+        this.mDepartment = new ArrayList<>();
+        mDepartment.addAll(newList);
+        notifyDataSetChanged();
+    }
 }

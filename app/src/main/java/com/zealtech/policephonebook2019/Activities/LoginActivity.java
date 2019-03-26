@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Config.Api;
+import com.zealtech.policephonebook2019.Manager.UserManager;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.response.ResponseProfile;
 import com.zealtech.policephonebook2019.Util.AppUtils;
@@ -31,8 +32,8 @@ public class LoginActivity extends AppCompatActivity {
 
     Button btnLogin;
     EditText edtUsername, edtPassword;
-
     private String username, password;
+    private UserManager mManager;
 
     ProfileH profileH = new ProfileH();
 
@@ -44,6 +45,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btn_edit_profile);
         edtUsername = findViewById(R.id.username_input);
         edtPassword = findViewById(R.id.input_password);
+
+        mManager = new UserManager(this);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         username = edtUsername.getText().toString().trim();
         password = edtPassword.getText().toString().trim();
 
-        //Check empty field
+        //Check empty field.
         if (username.equals("") || password.equals("")) {
             Toast.makeText(this, "กรุณากรอกข้อมูลให้ครบ", Toast.LENGTH_SHORT).show();
         } else {
@@ -95,7 +98,10 @@ public class LoginActivity extends AppCompatActivity {
                                 profileH.setUpdateDate(response.body().getData().getUpdateDate());
                                 profileH.setEnable(response.body().getData().getEnable());
 
-//                                Log.d(TAG, profileH.getFavorites().get(0));
+
+//                                Save shared preferences.
+
+
                                 Intent iUserDetail = new Intent(getApplicationContext(), UserDetailActivity.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putSerializable("user_profile", profileH);

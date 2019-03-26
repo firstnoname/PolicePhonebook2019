@@ -9,6 +9,8 @@ public class UserManager {
     private final String KEY_PREFS = "prefs_user";
     private final String KEY_USERNAME = "username";
     private final String KEY_PASSWORD = "password";
+    private final String KEY_FIRSTNAME = "firstName";
+    private final String KEY_LASTNAME = "lastName";
 
     private SharedPreferences mPrefs;
     private SharedPreferences.Editor mEditor;
@@ -18,19 +20,7 @@ public class UserManager {
         mEditor = mPrefs.edit();
     }
 
-    public boolean checkLoginValidate(String username, String password) {
-        String realUsername = mPrefs.getString(KEY_USERNAME, "");
-        String realPassword = mPrefs.getString(KEY_PASSWORD, "");
-
-        if ((!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) &&
-        username.equals(realUsername) && password.equals(realPassword)) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public boolean registerUser(String username, String password) {
+    public boolean logedInUser(String username, String password) {
         if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
             return false;
         }
@@ -40,4 +30,8 @@ public class UserManager {
 
         return mEditor.commit();
     }
+
+
+
+
 }

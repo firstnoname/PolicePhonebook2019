@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +19,13 @@ import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.FilterActivity;
+import com.zealtech.policephonebook2019.Adapters.AdapterPhoneList;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
+import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 import com.zealtech.policephonebook2019.Model.Province;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
+import com.zealtech.policephonebook2019.Model.response.ResponsePoliceMasterData;
 import com.zealtech.policephonebook2019.Model.response.ResponseProvince;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
@@ -48,14 +53,19 @@ public class SearchFragment extends Fragment {
     String departmentId = "";
 
     CardView cvProvince, cvRank, cvPosition;
-    TextView tvProvince, tvDepartment, tvRank, tvPosition;
+    TextView tvProvince, tvDepartment, tvRank, tvPosition, tvListSize;
 
     ArrayList<Province> apiProvince = new ArrayList<>();
     ArrayList<Department> apiDepartment = new ArrayList<>();
-
     ArrayList<String> mProvince = new ArrayList<>();
+    ArrayList<PoliceMasterData> apiPoliceMasterData = new ArrayList<>();
 
     Api api = AppUtils.getApiService();
+
+    //Adapter
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -77,6 +87,117 @@ public class SearchFragment extends Fragment {
         fetchDepartment();
 
         return v;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        tvProvince = view.findViewById(R.id.tvProvince);
+        tvDepartment = view.findViewById(R.id.tvDepartment);
+        tvPosition = view.findViewById(R.id.tvPosition);
+        tvRank = view.findViewById(R.id.tvRank);
+        tvListSize = view.findViewById(R.id.tv_list_size);
+
+        recyclerView = view.findViewById(R.id.recyclerview);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+
+        cvProvince = view.findViewById(R.id.cardViewProvince);
+        cvProvince.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iProvince = new Intent(getActivity(), FilterActivity.class);
+                iProvince.putExtra("tag", "province");
+//                startActivity(iProvince);
+                startActivityForResult(iProvince, 1);
+            }
+        });
+
+        cvRank = view.findViewById(R.id.cardViewRank);
+        cvRank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iRank = new Intent(getActivity(), FilterActivity.class);
+                iRank.putExtra("tag", "rank");
+                startActivity(iRank);
+            }
+        });
+
+        cvPosition = view.findViewById(R.id.cardViewPosition);
+        cvPosition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iPosition = new Intent(getActivity(), FilterActivity.class);
+                iPosition.putExtra("tag", "position");
+                startActivity(iPosition);
+            }
+        });
+
+        //If this activity has been call by adapter.
+        tagFilter = getActivity().getIntent().getStringExtra("tagFilter");
+        tagValue = getActivity().getIntent().getStringExtra("valueFilter");
+        if (tagFilter == "province") {
+            tvProvince.setText(tagValue);
+        } else {
+            tvPosition.setText(tagValue);
+        }
+
+        callPhoneList();
+    }
+
+
+
+    private void callPhoneList() {
+        //Fetch data from api.
+        Call<ResponsePoliceMasterData> call = api.getPoliceMasterData();
+        call.enqueue(new Callback<ResponsePoliceMasterData>() {
+            @Override
+            public void onResponse(Call<ResponsePoliceMasterData> call, Response<ResponsePoliceMasterData> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+
+                            apiPoliceMasterData.addAll(response.body().getData());
+                            setAdapter(apiPoliceMasterData);
+
+                        } else {
+                            Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
+                        } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponsePoliceMasterData> call, Throwable t) {
+                Log.d(TAG, String.valueOf(call));
+                Log.d(TAG, String.valueOf(t));
+            }
+        }); // end retrofit call.
+    }
+
+    private void setAdapter(ArrayList<PoliceMasterData> dataSet) {
+        this.apiPoliceMasterData = dataSet;
+//        Log.d(TAG, String.valueOf(apiPoliceMasterData.size()));
+        tvListSize.setText(apiPoliceMasterData.size() + " รายการ");
+        mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
+        recyclerView.setAdapter(mAdapter);
     }
 
     private void fetchDepartment() {
@@ -159,53 +280,5 @@ public class SearchFragment extends Fragment {
         });
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
 
-        tvProvince = view.findViewById(R.id.tvProvince);
-        tvDepartment = view.findViewById(R.id.tvDepartment);
-        tvPosition = view.findViewById(R.id.tvPosition);
-        tvRank = view.findViewById(R.id.tvRank);
-
-        cvProvince = view.findViewById(R.id.cardViewProvince);
-        cvProvince.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent iProvince = new Intent(getActivity(), FilterActivity.class);
-                iProvince.putExtra("tag", "province");
-//                startActivity(iProvince);
-                startActivityForResult(iProvince, 1);
-            }
-        });
-
-        cvRank = view.findViewById(R.id.cardViewRank);
-        cvRank.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent iRank = new Intent(getActivity(), FilterActivity.class);
-                iRank.putExtra("tag", "rank");
-                startActivity(iRank);
-            }
-        });
-
-        cvPosition = view.findViewById(R.id.cardViewPosition);
-        cvPosition.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent iPosition = new Intent(getActivity(), FilterActivity.class);
-                iPosition.putExtra("tag", "position");
-                startActivity(iPosition);
-            }
-        });
-
-        //If this activity has been call by adapter.
-        tagFilter = getActivity().getIntent().getStringExtra("tagFilter");
-        tagValue = getActivity().getIntent().getStringExtra("valueFilter");
-        if (tagFilter == "province") {
-            tvProvince.setText(tagValue);
-        } else {
-            tvPosition.setText(tagValue);
-        }
-    }
 }

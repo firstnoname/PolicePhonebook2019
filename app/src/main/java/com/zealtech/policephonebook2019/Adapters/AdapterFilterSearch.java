@@ -21,13 +21,13 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
 
     private static final String TAG = "AdapterFilterSearch";
 
-    private ArrayList<String> mRank = new ArrayList<>();
+    private ArrayList<String> mTag = new ArrayList<>();
     private Context mContext;
     private String tagFilter;
     private String valueFilter = "";
 
     public AdapterFilterSearch(Context mContext, ArrayList<String> mRank, String tagFilter) {
-        this.mRank = mRank;
+        this.mTag = mRank;
         this.mContext = mContext;
         this.tagFilter = tagFilter;
     }
@@ -44,13 +44,13 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
         viewHolder.imgInfo.setImageResource(R.drawable.policestation_ic);
-        viewHolder.txtInfo.setText(mRank.get(i));
+        viewHolder.txtInfo.setText(mTag.get(i));
 
         viewHolder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                valueFilter = mRank.get(i);
-                Toast.makeText(mContext, mRank.get(i), Toast.LENGTH_SHORT).show();
+                valueFilter = mTag.get(i);
+                Toast.makeText(mContext, mTag.get(i), Toast.LENGTH_SHORT).show();
                 Intent iSearchFragment = new Intent(mContext, FilterActivity.class);
                 iSearchFragment.putExtra("tagFilter", tagFilter);
                 iSearchFragment.putExtra("valueFilter", valueFilter);
@@ -61,7 +61,7 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
 
     @Override
     public int getItemCount() {
-        return mRank.size();
+        return mTag.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -77,5 +77,11 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
             imgInfo = itemView.findViewById(R.id.img_info);
             txtInfo = itemView.findViewById(R.id.tv_info);
         }
+    }
+
+        public void updateList(ArrayList<String> newList) {
+        mTag = new ArrayList<>();
+        mTag.addAll(newList);
+        notifyDataSetChanged();
     }
 }

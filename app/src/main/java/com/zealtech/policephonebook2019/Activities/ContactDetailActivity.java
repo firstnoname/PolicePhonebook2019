@@ -16,7 +16,7 @@ public class ContactDetailActivity extends AppCompatActivity {
     private static final String TAG = "ContactDetailActivity";
 
     private String fullName, strPosition, department, tel1, tel2;
-    private TextView tvName, tvPosition, tvDepartment, tvTel1, tvTel2, tvBack;
+    private TextView tvName, tvPosition, tvDepartment, tvTel1, tvTel2, tvBack, tvUpdatedate;
     private ImageView imgFavorite, imgClose;
     private int position;
 
@@ -35,6 +35,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         imgFavorite = findViewById(R.id.imgFavorite);
         imgClose = findViewById(R.id.imgBack);
         tvBack = findViewById(R.id.tvBack);
+        tvUpdatedate = findViewById(R.id.tv_contact_update_date);
 
         policeMasterData = (ArrayList<PoliceMasterData>) getIntent().getSerializableExtra("contact_detail");
         position = getIntent().getIntExtra("position", 0);
@@ -46,6 +47,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
         tvDepartment.setText(department);
+//        Todo: Don't have update date in PoliceMasterData.
 
         imgClose.setOnClickListener(new View.OnClickListener() {
             @Override
