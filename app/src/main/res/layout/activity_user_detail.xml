@@ -2,9 +2,10 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background_user_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg09">
+    android:background="@mipmap/bg09">
 
     <View
         android:id="@+id/view"
@@ -39,7 +40,7 @@
                 android:id="@+id/img_close"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/close" />
+                android:src="@mipmap/close" />
         </LinearLayout>
 
         <RelativeLayout
@@ -51,7 +52,7 @@
                 android:id="@+id/img_user_profile"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/userfrofiledefualt"
+                android:src="@mipmap/userfrofiledefualt"
                 android:layout_centerHorizontal="true"
                 android:elevation="1dp"/>
 

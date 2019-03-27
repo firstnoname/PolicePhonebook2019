@@ -153,47 +153,47 @@ public class MainActivity extends AppCompatActivity {
         //Set icon color when was clicked
         switch (current_frag) {
             case "PhoneList":
-                imgPhoneList.setImageResource(R.drawable.search_ac);
+                imgPhoneList.setImageResource(R.mipmap.search_ac);
 
-                imgSearch.setImageResource(R.drawable.advancesearch);
-                imgMap.setImageResource(R.drawable.map);
-                imgFavorite.setImageResource(R.drawable.fav);
-                imgContactUs.setImageResource(R.drawable.contact);
+                imgSearch.setImageResource(R.mipmap.advancesearch);
+                imgMap.setImageResource(R.mipmap.map);
+                imgFavorite.setImageResource(R.mipmap.fav);
+                imgContactUs.setImageResource(R.mipmap.contact);
                 tvActionbarTitle.setText(R.string.toolbarTitle);
                 break;
             case "Search":
-                imgSearch.setImageResource(R.drawable.advancesearch_ac);
+                imgSearch.setImageResource(R.mipmap.advancesearch_ac);
 
-                imgPhoneList.setImageResource(R.drawable.search);
-                imgMap.setImageResource(R.drawable.map);
-                imgFavorite.setImageResource(R.drawable.fav);
-                imgContactUs.setImageResource(R.drawable.contact);
+                imgPhoneList.setImageResource(R.mipmap.search);
+                imgMap.setImageResource(R.mipmap.map);
+                imgFavorite.setImageResource(R.mipmap.fav);
+                imgContactUs.setImageResource(R.mipmap.contact);
                 tvActionbarTitle.setText(R.string.toolbarTitle);
                 break;
             case "Map":
-                imgMap.setImageResource(R.drawable.map_ac);
-                imgSearch.setImageResource(R.drawable.advancesearch);
-                imgPhoneList.setImageResource(R.drawable.search);
-                imgFavorite.setImageResource(R.drawable.fav);
-                imgContactUs.setImageResource(R.drawable.contact);
+                imgMap.setImageResource(R.mipmap.map_ac);
+                imgSearch.setImageResource(R.mipmap.advancesearch);
+                imgPhoneList.setImageResource(R.mipmap.search);
+                imgFavorite.setImageResource(R.mipmap.fav);
+                imgContactUs.setImageResource(R.mipmap.contact);
                 tvActionbarTitle.setText(R.string.toolbarTitleMap);
                 break;
             case "Favorite":
-                imgFavorite.setImageResource(R.drawable.fav_ac);
+                imgFavorite.setImageResource(R.mipmap.fav_ac);
 
-                imgSearch.setImageResource(R.drawable.advancesearch);
-                imgPhoneList.setImageResource(R.drawable.search);
-                imgMap.setImageResource(R.drawable.map);
-                imgContactUs.setImageResource(R.drawable.contact);
+                imgSearch.setImageResource(R.mipmap.advancesearch);
+                imgPhoneList.setImageResource(R.mipmap.search);
+                imgMap.setImageResource(R.mipmap.map);
+                imgContactUs.setImageResource(R.mipmap.contact);
                 tvActionbarTitle.setText(R.string.toolbarTitle);
                 break;
             case "ContactUs":
-                imgContactUs.setImageResource(R.drawable.contact_ac);
+                imgContactUs.setImageResource(R.mipmap.contact_ac);
 
-                imgSearch.setImageResource(R.drawable.advancesearch);
-                imgPhoneList.setImageResource(R.drawable.search);
-                imgMap.setImageResource(R.drawable.map);
-                imgFavorite.setImageResource(R.drawable.fav);
+                imgSearch.setImageResource(R.mipmap.advancesearch);
+                imgPhoneList.setImageResource(R.mipmap.search);
+                imgMap.setImageResource(R.mipmap.map);
+                imgFavorite.setImageResource(R.mipmap.fav);
                 tvActionbarTitle.setText(R.string.toolbarTitle);
                 break;
         }

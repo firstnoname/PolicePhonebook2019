@@ -1,12 +1,16 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 
 import java.util.ArrayList;
@@ -15,10 +19,13 @@ public class ContactDetailActivity extends AppCompatActivity {
 
     private static final String TAG = "ContactDetailActivity";
 
-    private String fullName, strPosition, department, tel1, tel2;
+
     private TextView tvName, tvPosition, tvDepartment, tvTel1, tvTel2, tvBack, tvUpdatedate;
-    private ImageView imgFavorite, imgClose;
+    private ImageView imgFavorite, imgClose, imgProfile;
+    private RelativeLayout relativeLayoutBackground;
     private int position;
+    private String image_url;
+    private String fullName, strPosition, department, tel1, tel2, rankName;
 
     ArrayList<PoliceMasterData> policeMasterData = new ArrayList<>();
 
@@ -27,6 +34,8 @@ public class ContactDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_detail);
 
+        relativeLayoutBackground = findViewById(R.id.layout_contact_detail);
+        imgProfile = findViewById(R.id.img_contact_profile);
         tvName = findViewById(R.id.tv_contact_name);
         tvPosition = findViewById(R.id.tv_contact_position);
         tvDepartment = findViewById(R.id.tv_contact_department);
@@ -40,10 +49,25 @@ public class ContactDetailActivity extends AppCompatActivity {
         policeMasterData = (ArrayList<PoliceMasterData>) getIntent().getSerializableExtra("contact_detail");
         position = getIntent().getIntExtra("position", 0);
 
+        image_url = ApplicationConfig.getImageUrl() + policeMasterData.get(position).getImageProfile();
         fullName = policeMasterData.get(position).getFirstName() + "  " + policeMasterData.get(position).getLastName();
         strPosition = policeMasterData.get(position).getPositionName();
         department = policeMasterData.get(position).getDepartmentName();
-
+        rankName = policeMasterData.get(position).getRankName();
+        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
+            //Gold
+            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg01);
+        } else if (rankName.equals("พล.ต.ต.")) {
+            //Blue sky
+            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg02);
+        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
+            //Blue
+            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg03);
+        } else {
+            //Red
+            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg04);
+        }
+        Glide.with(this).load(image_url).into(imgProfile);
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
         tvDepartment.setText(department);
@@ -66,7 +90,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         imgFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imgFavorite.setImageResource(R.drawable.star_ac);
+                imgFavorite.setImageResource(R.mipmap.star_ac);
             }
         });
     }

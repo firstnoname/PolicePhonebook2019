@@ -27,7 +27,7 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
 
     Context mContext;
     ArrayList<Department> mDepartment;
-    int resId = R.drawable.policestation_ic;
+    int resId = R.mipmap.policestation_ic;
     String tagArea = "นครบาล, ทั่วไป";
     int level = 1;
 

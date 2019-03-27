@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/stationbanner" />
+        app:srcCompat="@mipmap/stationbanner" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -72,7 +72,7 @@
                             android:id="@+id/img_station_call"
                             android:layout_width="54dp"
                             android:layout_height="54dp"
-                            android:src="@drawable/call" />
+                            android:src="@mipmap/call" />
 
                     </LinearLayout>
 

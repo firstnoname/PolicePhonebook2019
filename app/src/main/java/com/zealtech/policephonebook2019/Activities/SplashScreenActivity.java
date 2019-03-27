@@ -17,6 +17,22 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         ButterKnife.bind(this);
 
+        Thread timer = new Thread() {
+            public void run() {
+                try {
+                    sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+            }
+        };
+
+        timer.start();
 
     }
 
@@ -26,4 +42,6 @@ public class SplashScreenActivity extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+
 }

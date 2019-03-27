@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toStartOf="@+id/tvStationSubList"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/policestation_ic" />
+        app:srcCompat="@mipmap/policestation_ic" />
 
     <TextView
         android:id="@+id/tvStationSubList"

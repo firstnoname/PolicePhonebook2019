@@ -47,7 +47,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:src="@drawable/logopadtp" />
+                        android:src="@mipmap/logopadtp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -155,7 +155,7 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            android:src="@drawable/call" />
+                            android:src="@mipmap/call" />
 
                     </LinearLayout>
 
@@ -182,7 +182,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginBottom="16dp"
-                        android:src="@drawable/location" />
+                        android:src="@mipmap/location" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

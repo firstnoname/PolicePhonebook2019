@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/policestation_ic" />
+        app:srcCompat="@mipmap/policestation_ic" />
 
     <TextView
         android:id="@+id/tvStationPosition"

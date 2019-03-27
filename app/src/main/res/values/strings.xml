@@ -139,6 +139,7 @@
     <string name="loei">เลย</string>
     <string name="phrae">แพร่</string>
     <string name="maeHongSon">แม่ฮ่องสอน</string>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>

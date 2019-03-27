@@ -27,7 +27,7 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
 
     private Context mContext;
     private ArrayList<Department> mStationList;
-    int resId = R.drawable.policestation_ic;
+    int resId = R.mipmap.policestation_ic;
     String parentId = "";
     int level = 2;
 

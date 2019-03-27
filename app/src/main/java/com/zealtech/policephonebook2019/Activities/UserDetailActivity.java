@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 
 public class UserDetailActivity extends AppCompatActivity {
@@ -17,9 +19,11 @@ public class UserDetailActivity extends AppCompatActivity {
     private Button btnEditProfile;
     private ImageView imgProfile, btnClose;
     private TextView tvName, tvRank, tvPosition, tvTel, tvPhone, tvUpdateDate;
+    private RelativeLayout relative_background;
 
 //    vars
-    private String IMAGE_URL = "http://ztidev.com:8081/phonebook/download?file=";
+    private String image_url;
+    private String rankName;
     private ProfileH mProfile = new ProfileH();
 
     @Override
@@ -28,6 +32,7 @@ public class UserDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_detail);
 
 //        Bind widget.
+        relative_background = findViewById(R.id.background_user_detail);
         imgProfile = findViewById(R.id.img_user_profile);
         tvName = findViewById(R.id.tv_name_user_profile);
         tvRank = findViewById(R.id.tv_rank_name);
@@ -42,7 +47,23 @@ public class UserDetailActivity extends AppCompatActivity {
         mProfile = (ProfileH) getIntent().getSerializableExtra("user_profile");
 
 //        Set value into view.
-        Glide.with(this).load(IMAGE_URL + mProfile.getImageProfile()).into(imgProfile);
+        image_url = ApplicationConfig.getImageUrl() + mProfile.getImageProfile();
+        rankName = mProfile.getRankName();
+        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
+            //Gold
+            relative_background.setBackgroundResource(R.mipmap.bg01);
+        } else if (rankName.equals("พล.ต.ต.")) {
+            //Blue sky
+            relative_background.setBackgroundResource(R.mipmap.bg02);
+        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
+            //Blue
+            relative_background.setBackgroundResource(R.mipmap.bg03);
+        } else {
+            //Red
+            relative_background.setBackgroundResource(R.mipmap.bg04);
+        }
+
+        Glide.with(this).load(image_url).into(imgProfile);
         tvName.setText(mProfile.getFirstName() + "  " + mProfile.getLastName());
         tvRank.setText(mProfile.getRankName());
         tvPosition.setText(mProfile.getPositionName());

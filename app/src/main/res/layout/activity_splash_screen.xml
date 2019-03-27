@@ -48,10 +48,10 @@
 
         <ImageView
             android:id="@+id/imgLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
 
-            app:srcCompat="@drawable/logoheader" />
+            app:srcCompat="@mipmap/logoheader" />
 
         <TextView
             android:id="@+id/textView"

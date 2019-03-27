@@ -43,7 +43,7 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
-        viewHolder.imgInfo.setImageResource(R.drawable.policestation_ic);
+        viewHolder.imgInfo.setImageResource(R.mipmap.policestation_ic);
         viewHolder.txtInfo.setText(mTag.get(i));
 
         viewHolder.constraintLayout.setOnClickListener(new View.OnClickListener() {

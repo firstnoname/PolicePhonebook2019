@@ -5,7 +5,7 @@
     android:id="@+id/layout_contact_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg09">
+    android:background="@mipmap/bg09">
 
     <View
         android:id="@+id/view"
@@ -32,7 +32,7 @@
                 android:layout_height="150dp"
                 android:layout_centerHorizontal="true"
                 android:elevation="1dp"
-                android:src="@drawable/userfrofiledefualt" />
+                android:src="@mipmap/userfrofiledefualt" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -117,7 +117,7 @@
                                     android:layout_height="64dp"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginTop="8dp"
-                                    android:src="@drawable/call" />
+                                    android:src="@mipmap/call" />
 
                             </LinearLayout>
 
@@ -152,7 +152,7 @@
                                     android:layout_height="64dp"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginTop="8dp"
-                                    android:src="@drawable/call" />
+                                    android:src="@mipmap/call" />
 
                             </LinearLayout>
 
@@ -206,7 +206,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/star" />
+            app:srcCompat="@mipmap/star" />
 
         <ImageView
             android:id="@+id/imgBack"
@@ -214,7 +214,7 @@
             android:layout_height="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:src="@drawable/close"
+            android:src="@mipmap/close"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
