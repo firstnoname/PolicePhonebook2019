@@ -16,9 +16,9 @@ import java.lang.Override;
 public class MainActivity_ViewBinding implements Unbinder {
   private MainActivity target;
 
-  private View view2131296384;
+  private View view2131296388;
 
-  private View view2131296387;
+  private View view2131296385;
 
   private View view2131296323;
 
@@ -48,20 +48,21 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.imgFavorite = Utils.findRequiredViewAsType(source, R.id.img_favorite, "field 'imgFavorite'", ImageView.class);
     target.imgContactUs = Utils.findRequiredViewAsType(source, R.id.img_contact_us, "field 'imgContactUs'", ImageView.class);
     target.tvActionbarTitle = Utils.findRequiredViewAsType(source, R.id.tv_actionbar, "field 'tvActionbarTitle'", TextView.class);
-    view = Utils.findRequiredView(source, R.id.imgNoti, "method 'onImgNotiClicked'");
-    view2131296384 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.onImgNotiClicked();
-      }
-    });
-    view = Utils.findRequiredView(source, R.id.imgUser, "method 'onImgUserClicked'");
-    view2131296387 = view;
+    view = Utils.findRequiredView(source, R.id.imgUser, "field 'imgProfile' and method 'onImgUserClicked'");
+    target.imgProfile = Utils.castView(view, R.id.imgUser, "field 'imgProfile'", ImageView.class);
+    view2131296388 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.onImgUserClicked();
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.imgNoti, "method 'onImgNotiClicked'");
+    view2131296385 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.onImgNotiClicked();
       }
     });
     view = Utils.findRequiredView(source, R.id.container, "method 'onContainerClicked'");
@@ -127,11 +128,12 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.imgFavorite = null;
     target.imgContactUs = null;
     target.tvActionbarTitle = null;
+    target.imgProfile = null;
 
-    view2131296384.setOnClickListener(null);
-    view2131296384 = null;
-    view2131296387.setOnClickListener(null);
-    view2131296387 = null;
+    view2131296388.setOnClickListener(null);
+    view2131296388 = null;
+    view2131296385.setOnClickListener(null);
+    view2131296385 = null;
     view2131296323.setOnClickListener(null);
     view2131296323 = null;
     view2131296301.setOnClickListener(null);

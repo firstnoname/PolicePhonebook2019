@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "493163200700",
+    "firebase_url": "https://police-phone-book-2019-99726.firebaseio.com",
+    "project_id": "police-phone-book-2019-99726",
+    "storage_bucket": "police-phone-book-2019-99726.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493163200700:android:915f0254871d37ff",
+        "android_client_info": {
+          "package_name": "com.example.policephonebook2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493163200700-30b1dluagqdgnn7ues88hmse6baui5a2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAToucQ5js3vEWJuerPupyPOM3hhJ1Qs84"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

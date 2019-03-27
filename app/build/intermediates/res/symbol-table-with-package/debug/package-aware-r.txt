@@ -1256,6 +1256,7 @@ id ifRoom
 id image
 id imageView
 id imageView2
+id imageView3
 id imgBack
 id imgFavorite
 id imgInfo
@@ -1264,12 +1265,14 @@ id imgNoti
 id imgStation
 id imgStationSubList
 id imgUser
+id img_back
 id img_close
 id img_contact_profile
 id img_contact_us
 id img_favorite
 id img_info
 id img_map
+id img_noti
 id img_phone_list
 id img_profile
 id img_search
@@ -1402,6 +1405,9 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView11
+id textView12
+id textView13
+id textView14
 id textView2
 id textView3
 id textView4
@@ -1438,6 +1444,7 @@ id tvRank
 id tvStationPosition
 id tvStationSubList
 id tv_actionbar
+id tv_actionbar_back
 id tv_contact_department
 id tv_contact_name
 id tv_contact_phone
@@ -1448,6 +1455,8 @@ id tv_department
 id tv_info
 id tv_list_size
 id tv_name_user_profile
+id tv_noti_department
+id tv_noti_detail
 id tv_phone_profile
 id tv_position
 id tv_position_1
@@ -1531,6 +1540,7 @@ layout activity_login
 layout activity_main
 layout activity_map_station_list
 layout activity_maps
+layout activity_notification_detail
 layout activity_splash_screen
 layout activity_station_detail
 layout activity_station_sub_list
@@ -1540,6 +1550,7 @@ layout adapter_map_list
 layout adapter_phone_list
 layout adapter_station_sub_list
 layout custom_ab
+layout custom_ab_back
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1717,10 +1728,18 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string default_web_client_id
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fcm_fallback_notification_channel_label
+string firebase_database_url
+string gcm_defaultSenderId
 string gcm_fallback_notification_channel_label
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
 string google_maps_key
+string google_storage_bucket
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string kalasin
@@ -1771,6 +1790,7 @@ string phrae
 string phuket
 string prachinBuri
 string prachuapKhiriKhan
+string project_id
 string ranong
 string ratchaburi
 string rayong

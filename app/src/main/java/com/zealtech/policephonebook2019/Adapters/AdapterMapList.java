@@ -61,7 +61,7 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
                     Intent intent = new Intent(mContext, StationSubListActivity.class);
                     intent.putExtra("level", level);
                     intent.putExtra("parentId", parentId);
-
+                    intent.putExtra("subTitle", mDepartment.get(i).getDepartmentName());
                     mContext.startActivity(intent);
                 } else {
 //                    Toast.makeText(mContext, mDepartment.get(i).getFlagTail() + " False", Toast.LENGTH_SHORT).show();

@@ -1,9 +1,13 @@
 package com.zealtech.policephonebook2019.Util;
 
 
+import android.app.ActivityManager;
+import android.content.Context;
+
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -30,6 +34,20 @@ public class AppUtils {
                 .build();
 
         return client.create(Api.class);
+    }
+
+    public static boolean isAppRunning(final Context context, final String packageName) {
+        final ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        final List<ActivityManager.RunningAppProcessInfo> procInfos = activityManager.getRunningAppProcesses();
+        if (procInfos != null)
+        {
+            for (final ActivityManager.RunningAppProcessInfo processInfo : procInfos) {
+                if (processInfo.processName.equals(packageName)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 }

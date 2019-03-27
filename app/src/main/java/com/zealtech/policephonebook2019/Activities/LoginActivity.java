@@ -1,6 +1,8 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Manager.UserManager;
 import com.zealtech.policephonebook2019.Model.ProfileH;
@@ -33,7 +37,6 @@ public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     EditText edtUsername, edtPassword;
     private String username, password;
-    private UserManager mManager;
 
     ProfileH profileH = new ProfileH();
 
@@ -45,8 +48,6 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btn_edit_profile);
         edtUsername = findViewById(R.id.username_input);
         edtPassword = findViewById(R.id.input_password);
-
-        mManager = new UserManager(this);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +74,8 @@ public class LoginActivity extends AppCompatActivity {
                     if (response.body() != null) {
                         if (response.body().getCode().equalsIgnoreCase("OK")) {
                             if (response.body().getCode().equals("OK")) {
+
+//                              Get data from api.
                                 profileH.setEditBy(response.body().getData().getEditBy());
                                 profileH.setImageProfile(response.body().getData().getImageProfile());
                                 profileH.setUserName(response.body().getData().getUserName());
@@ -98,10 +101,19 @@ public class LoginActivity extends AppCompatActivity {
                                 profileH.setUpdateDate(response.body().getData().getUpdateDate());
                                 profileH.setEnable(response.body().getData().getEnable());
 
-
 //                                Save shared preferences.
+                                SharedPreferences mPrefs = getSharedPreferences("user_info", MODE_PRIVATE);
+                                SharedPreferences.Editor prefsEditor = mPrefs.edit();
+                                Gson gson = new Gson();
+                                String json = gson.toJson(profileH);
+                                prefsEditor.putString("ProfileObject", json);
+                                prefsEditor.putInt("Subscription", 2);
+                                prefsEditor.commit();
 
+                                FirebaseMessaging.getInstance().unsubscribeFromTopic("1");
+                                FirebaseMessaging.getInstance().subscribeToTopic("2");
 
+//                              Display user detail page.
                                 Intent iUserDetail = new Intent(getApplicationContext(), UserDetailActivity.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putSerializable("user_profile", profileH);
@@ -138,6 +150,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             });
         }
+
     }
 
 }

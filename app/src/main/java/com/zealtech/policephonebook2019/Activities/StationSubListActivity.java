@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
@@ -38,25 +42,40 @@ public class StationSubListActivity extends AppCompatActivity implements SearchV
     SearchView searchView;
     AdapterStationSubList adapter;
 
+    private TextView tvAbTitle;
+    private ImageView imgBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_station_sub_list);
 
+        tvAbTitle = findViewById(R.id.tv_actionbar_back);
+        imgBack = findViewById(R.id.img_back);
         searchView = findViewById(R.id.search_sub_station);
         searchView.setOnQueryTextListener(this);
 
+
+        //Check level and departmentId to query.
+        tvAbTitle.setText(getIntent().getExtras().getString("subTitle"));
         departmentId = getIntent().getExtras().getString("parentId");
         checkLvl = checkLvl + getIntent().getIntExtra("level", level);
         if (checkLvl == 3) {
             //level = level + getIntent().getExtras().getInt("level");
-            Log.d(TAG, "True : " +checkLvl + " : " + departmentId);
+//            Log.d(TAG, "True : " + checkLvl + " : " + departmentId);
             level = checkLvl;
         } else if (checkLvl == 4) {
             level = checkLvl;
         }
 
         callApiGetDepartment();
+
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 

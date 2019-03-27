@@ -3,6 +3,7 @@ package com.zealtech.policephonebook2019.Activities;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,12 +12,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.gson.Gson;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Fragments.ContactUsFragment;
 import com.zealtech.policephonebook2019.Fragments.FavoriteFragment;
 import com.zealtech.policephonebook2019.Fragments.MapListFragment;
 import com.zealtech.policephonebook2019.Fragments.PhoneListFragment;
 import com.zealtech.policephonebook2019.Fragments.SearchFragment;
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Model.ProfileH;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
     Context context;
 
     String current_frag = "";
-
-    public static FragmentManager fragmentManager;
+    ProfileH mProfile = new ProfileH();
+    private int subscription;
 
     PhoneListFragment phoneListFragment;
     SearchFragment searchFragment;
@@ -52,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tv_actionbar)
     TextView tvActionbarTitle;
 
+    @BindView(R.id.imgUser)
+    ImageView imgProfile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,8 +76,36 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.container, phoneListFragment, "PhoneListFragment");
         transaction.commit();
 
+        //Set icon bottom of the view
         current_frag = "PhoneList";
         setMenuIcon();
+
+        //Check login
+        checkLogin();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        checkLogin();
+    }
+
+    private void checkLogin() {
+        SharedPreferences mPref = getSharedPreferences("user_info", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = mPref.getString("ProfileObject", "");
+        subscription = mPref.getInt("Subscription", 0);
+        mProfile = gson.fromJson(json, ProfileH.class);
+
+        if (json.equals("")) {
+            imgProfile.setImageResource(R.mipmap.userfrofiledefualt);
+        } else {
+            Toast.makeText(activity, "User " + mProfile.getFirstName() + "has been log in", Toast.LENGTH_SHORT).show();
+            String image_url = ApplicationConfig.getImageUrl() + mProfile.getImageProfile();
+            Glide.with(this).load(image_url).into(imgProfile);
+        }
     }
 
 
@@ -80,8 +117,18 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.imgUser)
     public void onImgUserClicked() {
 //        Toast.makeText(this, "User login has clicked", Toast.LENGTH_SHORT).show();
-        Intent intentLogin = new Intent(this, LoginActivity.class);
-        startActivity(intentLogin);
+        if (subscription == 2) {
+            //User are loged in.
+            Intent iUserDetail = new Intent(this, UserDetailActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("user_profile", mProfile);
+            iUserDetail.putExtras(bundle);
+            startActivity(iUserDetail);
+        } else {
+            Intent intentLogin = new Intent(this, LoginActivity.class);
+            startActivity(intentLogin);
+        }
+
     }
 
     @OnClick(R.id.container)

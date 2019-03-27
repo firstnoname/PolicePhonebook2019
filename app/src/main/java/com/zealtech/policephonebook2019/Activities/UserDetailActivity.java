@@ -1,6 +1,7 @@
 package com.zealtech.policephonebook2019.Activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +12,13 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 
 public class UserDetailActivity extends AppCompatActivity {
 
-    private Button btnEditProfile;
+    private Button btnEditProfile, btnLogout;
     private ImageView imgProfile, btnClose;
     private TextView tvName, tvRank, tvPosition, tvTel, tvPhone, tvUpdateDate;
     private RelativeLayout relative_background;
@@ -42,6 +44,7 @@ public class UserDetailActivity extends AppCompatActivity {
         tvUpdateDate = findViewById(R.id.tv_update_profile);
         btnEditProfile = findViewById(R.id.btn_edit_profile);
         btnClose = findViewById(R.id.img_close);
+        btnLogout = findViewById(R.id.btn_logout);
 
 //        Get data from LoginActivity.
         mProfile = (ProfileH) getIntent().getSerializableExtra("user_profile");
@@ -85,7 +88,29 @@ public class UserDetailActivity extends AppCompatActivity {
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
                 finish();
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iLogin = new Intent(getApplicationContext(), LoginActivity.class);
+                FirebaseMessaging.getInstance().unsubscribeFromTopic("2");
+                FirebaseMessaging.getInstance().subscribeToTopic("1");
+
+                SharedPreferences mPref = getSharedPreferences("user_info", MODE_PRIVATE);
+                SharedPreferences.Editor prefsEditor = mPref.edit();
+                prefsEditor.putString("ProfileObject", "");
+                prefsEditor.putInt("Subscription", 1);
+                prefsEditor.commit();
+
+                startActivity(iLogin);
+
+                finish();
+
             }
         });
 
