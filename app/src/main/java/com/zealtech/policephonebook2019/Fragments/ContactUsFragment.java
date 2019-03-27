@@ -65,9 +65,9 @@ public class ContactUsFragment extends Fragment{
             @Override
             public void onMapReady(GoogleMap googleMap) {
                 googleMap = mMap;
-                LatLng contactUsLocatoin = new LatLng(latitude, longitude);
-                googleMap.addMarker(new MarkerOptions().position(contactUsLocatoin).title("Contact us"));
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(contactUsLocatoin).zoom(12).build();
+                LatLng contactUsLocation = new LatLng(latitude, longitude);
+                googleMap.addMarker(new MarkerOptions().position(contactUsLocation).title("Contact us"));
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(contactUsLocation).zoom(12).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
             }
