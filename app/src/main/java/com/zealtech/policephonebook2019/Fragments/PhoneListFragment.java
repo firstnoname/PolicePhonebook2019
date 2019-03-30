@@ -136,6 +136,7 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
         recyclerView.setAdapter(mAdapter);
     }
 
+
     @Override
     public boolean onQueryTextSubmit(String s) {
         return false;
@@ -143,7 +144,6 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
 
     @Override
     public boolean onQueryTextChange(String s) {
-
         String userInput = s.toLowerCase();
         ArrayList<PoliceMasterData> newList = new ArrayList<>();
 

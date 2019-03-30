@@ -11,6 +11,9 @@
     <string name="toolbarTitle">สมุดโทรศัพท์ตำรวจ 2562</string>
     <string name="toolbarTitleMap">สถานีตำรวจ</string>
 
+    <!--​Searchview-->
+    <string name="searchviewPhoneList">ใส่ข้อมูลเช่น ชื่อ ยศ ตำแหน่ง</string>
+
     <!--Menu-->
     <string name="menuNameList">รายชื่อ</string>
     <string name="menuSearch">ค้นหาขั้นสูง</string>
@@ -140,6 +143,8 @@
     <string name="phrae">แพร่</string>
     <string name="maeHongSon">แม่ฮ่องสอน</string>
     <string name="title_activity_maps">Map</string>
+
+
 
 
 </resources>

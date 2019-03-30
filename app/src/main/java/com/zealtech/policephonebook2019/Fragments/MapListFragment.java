@@ -6,11 +6,11 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
 import android.widget.Toast;
 import com.zealtech.policephonebook2019.Adapters.AdapterMapList;
 import com.example.policephonebook2019.R;
@@ -29,11 +29,11 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MapListFragment extends Fragment implements SearchView.OnQueryTextListener{
+public class MapListFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     Api api = AppUtils.getApiService();
 
-    SearchView searchView;
+    android.support.v7.widget.SearchView searchView;
     AdapterMapList adapter;
 
     //    vars
@@ -143,4 +143,5 @@ public class MapListFragment extends Fragment implements SearchView.OnQueryTextL
 
         return true;
     }
+
 }

@@ -11,6 +11,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.zealtech.policephonebook2019.Adapters.PagerAdapter;
 import com.example.policephonebook2019.R;
@@ -53,27 +54,6 @@ public class FavoriteFragment extends Fragment {
         viewPager = view.findViewById(R.id.viewPager);
         tabFavoriteList = view.findViewById(R.id.tabList);
 
-        pagerAdapter = new PagerAdapter(getActivity().getSupportFragmentManager(),
-                tabLayout.getTabCount());
-        viewPager.setAdapter(pagerAdapter);
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }
 }

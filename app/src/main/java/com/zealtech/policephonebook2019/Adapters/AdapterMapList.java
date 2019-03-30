@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.StationDetailActivity;
+import com.zealtech.policephonebook2019.Activities.StationDetailTabviewActivity;
 import com.zealtech.policephonebook2019.Activities.StationSubListActivity;
 import com.zealtech.policephonebook2019.Model.Department;
 
@@ -65,8 +66,10 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
                     mContext.startActivity(intent);
                 } else {
 //                    Toast.makeText(mContext, mDepartment.get(i).getFlagTail() + " False", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(mContext, StationDetailActivity.class);
+//                    Intent intent = new Intent(mContext, StationDetailActivity.class);
+                    Intent intent = new Intent(mContext, StationDetailTabviewActivity.class);
                     intent.putExtra("departmentId", mDepartment.get(i).getDepartmentId());
+                    intent.putExtra("departmentName", mDepartment.get(i).getDepartmentName());
                     mContext.startActivity(intent);
                 }
             }

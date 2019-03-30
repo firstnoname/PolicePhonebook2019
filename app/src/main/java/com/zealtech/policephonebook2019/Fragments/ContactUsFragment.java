@@ -28,10 +28,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ContactUsFragment extends Fragment{
+public class ContactUsFragment extends Fragment {
 
     private MapView mMapView;
-    private GoogleMap mMap;
     private Double latitude = 18.7988609;
     private Double longitude = 99.0238646;
 
@@ -51,7 +50,7 @@ public class ContactUsFragment extends Fragment{
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
 
-        mMapView = view.findViewById(R.id.map);
+        mMapView = view.findViewById(R.id.map_contact_us);
         mMapView.onCreate(savedInstanceState);
         mMapView.onResume();
 
@@ -64,14 +63,26 @@ public class ContactUsFragment extends Fragment{
         mMapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap googleMap) {
-                googleMap = mMap;
+                googleMap = googleMap;
+
+                if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                googleMap.setMyLocationEnabled(true);
                 LatLng contactUsLocation = new LatLng(latitude, longitude);
-                googleMap.addMarker(new MarkerOptions().position(contactUsLocation).title("Contact us"));
+                googleMap.addMarker(new MarkerOptions().position(contactUsLocation).title("Contact us").snippet(""));
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(contactUsLocation).zoom(12).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-
             }
         });
+
         return view;
     }
 

@@ -87,9 +87,9 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
                     try {
                         JSONObject jObjError = new JSONObject(response.errorBody().string());
                         if (jObjError.has("code") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
-                            Log.d(TAG, "ไม่พบผู้ใช้งาน");
+//                            Log.d(TAG, "ไม่พบผู้ใช้งาน");
                         } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
-                            Log.d(TAG, "ไม่พบผู้ใช้งาน");
+//                            Log.d(TAG, "ไม่พบผู้ใช้งาน");
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -103,8 +103,8 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
 
             @Override
             public void onFailure(Call<ResponseDepartmentRoot> call, Throwable t) {
-                Log.d(TAG, String.valueOf(call));
-                Log.d(TAG, String.valueOf(t));
+                /*Log.d(TAG, String.valueOf(call));
+                Log.d(TAG, String.valueOf(t));*/
             }
         });
 
@@ -158,7 +158,7 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
         builder.include(stationLocation);
         final LatLngBounds bounds = builder.build();
-        final CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngBounds(bounds, 80);
+        final CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngBounds(bounds, 10);
         mMap.animateCamera(cameraUpdate);
     }
 }

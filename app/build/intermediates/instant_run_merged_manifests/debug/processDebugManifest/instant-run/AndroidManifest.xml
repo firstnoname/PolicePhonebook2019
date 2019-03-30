@@ -7,7 +7,6 @@
     <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="28" />
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -40,7 +39,8 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true" >
-
+        <activity android:name="com.zealtech.policephonebook2019.Activities.NotificationActivity" />
+        <activity android:name="com.zealtech.policephonebook2019.Activities.StationDetailTabviewActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -53,6 +53,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name="com.zealtech.policephonebook2019.Activities.StationStaffDetailActivity" />
         <activity
             android:name="com.zealtech.policephonebook2019.Activities.MapsActivity"
             android:label="@string/title_activity_maps" />

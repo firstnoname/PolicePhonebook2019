@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +30,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
 
     Activity activity;
     Context context;
@@ -83,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         //Check login
         checkLogin();
 
+
     }
 
     @Override
@@ -102,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         if (json.equals("")) {
             imgProfile.setImageResource(R.mipmap.userfrofiledefualt);
         } else {
-            Toast.makeText(activity, "User " + mProfile.getFirstName() + "has been log in", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(activity, "User " + mProfile.getFirstName() + "has been log in", Toast.LENGTH_SHORT).show();
             String image_url = ApplicationConfig.getImageUrl() + mProfile.getImageProfile();
             Glide.with(this).load(image_url).into(imgProfile);
         }
@@ -111,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.imgNoti)
     public void onImgNotiClicked() {
-        Toast.makeText(this, "Noti has clicked", Toast.LENGTH_SHORT).show();
+        Intent iNoti = new Intent(this, NotificationDetail.class);
+        startActivity(iNoti);
     }
 
     @OnClick(R.id.imgUser)

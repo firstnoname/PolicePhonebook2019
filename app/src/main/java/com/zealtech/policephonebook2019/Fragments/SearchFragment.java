@@ -147,8 +147,6 @@ public class SearchFragment extends Fragment {
         callPhoneList();
     }
 
-
-
     private void callPhoneList() {
         //Fetch data from api.
         Call<ResponsePoliceMasterData> call = api.getPoliceMasterData();
@@ -196,7 +194,7 @@ public class SearchFragment extends Fragment {
         this.apiPoliceMasterData = dataSet;
 //        Log.d(TAG, String.valueOf(apiPoliceMasterData.size()));
         tvListSize.setText(apiPoliceMasterData.size() + " รายการ");
-        mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
+            mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
         recyclerView.setAdapter(mAdapter);
     }
 

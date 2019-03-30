@@ -1256,7 +1256,6 @@ id ifRoom
 id image
 id imageView
 id imageView2
-id imageView3
 id imgBack
 id imgFavorite
 id imgInfo
@@ -1270,6 +1269,7 @@ id img_close
 id img_contact_profile
 id img_contact_us
 id img_favorite
+id img_icon_noti
 id img_info
 id img_map
 id img_noti
@@ -1301,6 +1301,7 @@ id login_password
 id lvStation
 id main_content
 id map
+id map_contact_us
 id map_station_detail
 id masked
 id media_actions
@@ -1319,6 +1320,7 @@ id notification_main_column
 id notification_main_column_container
 id outline
 id packed
+id pager
 id parallax
 id parent
 id parentPanel
@@ -1329,7 +1331,9 @@ id progress_circular
 id progress_horizontal
 id radio
 id recycler_filter
+id recycler_noti
 id recycler_phone_list
+id recycler_station_staff
 id recycler_sub_station
 id recyclerview
 id relativePassword
@@ -1394,6 +1398,7 @@ id tabLayout
 id tabList
 id tabMode
 id tabRecent
+id tabStationDetail
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -1404,9 +1409,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView10
 id textView11
-id textView12
-id textView13
 id textView14
 id textView2
 id textView3
@@ -1445,12 +1449,15 @@ id tvStationPosition
 id tvStationSubList
 id tv_actionbar
 id tv_actionbar_back
+id tv_actionbar_close
+id tv_alert_update_application
 id tv_contact_department
 id tv_contact_name
 id tv_contact_phone
 id tv_contact_position
 id tv_contact_tel
 id tv_contact_update_date
+id tv_create_date
 id tv_department
 id tv_info
 id tv_list_size
@@ -1464,6 +1471,7 @@ id tv_position_2
 id tv_position_name
 id tv_rank
 id tv_rank_name
+id tv_select_photo
 id tv_station_address
 id tv_station_phone2
 id tv_statoin_phone1
@@ -1540,17 +1548,21 @@ layout activity_login
 layout activity_main
 layout activity_map_station_list
 layout activity_maps
+layout activity_notification
 layout activity_notification_detail
 layout activity_splash_screen
 layout activity_station_detail
+layout activity_station_detail_tabview
 layout activity_station_sub_list
 layout activity_user_detail
 layout adapter_filter_search
 layout adapter_map_list
 layout adapter_phone_list
+layout adapter_station_staff
 layout adapter_station_sub_list
 layout custom_ab
 layout custom_ab_back
+layout custom_ab_close
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1572,6 +1584,9 @@ layout fragment_favorite_recent
 layout fragment_map_list
 layout fragment_phone_list
 layout fragment_search
+layout fragment_station_detail
+layout fragment_station_staff
+layout layout_tab
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1599,6 +1614,7 @@ mipmap address
 mipmap advancesearch
 mipmap advancesearch_ac
 mipmap all_ic
+mipmap bg
 mipmap bg01
 mipmap bg02
 mipmap bg03
@@ -1803,6 +1819,7 @@ string samutSongkhram
 string saraburi
 string satun
 string search_menu_title
+string searchviewPhoneList
 string siSaKet
 string singBuri
 string songkhla

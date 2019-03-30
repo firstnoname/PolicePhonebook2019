@@ -16,6 +16,7 @@ import com.example.policephonebook2019.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.zealtech.policephonebook2019.Activities.MainActivity;
+import com.zealtech.policephonebook2019.Activities.NotificationDetail;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import java.util.Map;
@@ -90,14 +91,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         } else {
 //            openMain = true;
             intent = new Intent(this, MainActivity.class);
+
         }
 
         Bundle bundle = new Bundle();
-        bundle.putString("notification", "notification");
-        bundle.putString("messageBody", message);
+//        bundle.putString("notification", "notification");
+//        bundle.putString("messageBody", message);
         bundle.putString("id", id);
-        bundle.putString("contentType", contentType);
-        bundle.putBoolean("openMain", openMain);
+//        bundle.putString("contentType", contentType);
+//        bundle.putBoolean("openMain", openMain);
         intent.putExtras(bundle);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent,
@@ -125,14 +127,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     }
 
-    private void sendNotificationFromWeb(String messageBody) {
+    /*private void sendNotificationFromWeb(String messageBody) {
 
-        /*sharedPref = this.getSharedPreferences(
+        *//*sharedPref = this.getSharedPreferences(
                 getString(R.string.pref_id), Context.MODE_PRIVATE);
 
         String editGroup = sharedPref.getString(getString(R.string.pref_editGroup), "");
         ArrayList<String> editGroupArray = new ArrayList<String>(Arrays.asList(editGroup.split(",")));
-*/
+*//*
         Intent intent;
 //
 
@@ -142,7 +144,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         bundle.putString("messageBody", messageBody);
 //        intent.putExtras(bundle);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 *//* Request code *//*, intent,
                 PendingIntent.FLAG_ONE_SHOT);
 
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
@@ -157,6 +159,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
-    }
+        notificationManager.notify(0 *//* ID of notification *//*, notificationBuilder.build());
+    }*/
 }

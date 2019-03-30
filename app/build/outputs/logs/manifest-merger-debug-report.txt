@@ -80,27 +80,27 @@ INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2
 	xmlns:android
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:24:5-79
 	android:name
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:10:22-76
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:11:5-79
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:24:5-79
-	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:11:22-76
 uses-permission#android.permission.INTERNET
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:12:5-67
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:24:5-67
@@ -118,17 +118,17 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /User
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:12:22-64
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:11:22-64
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:13:5-98
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:12:5-98
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:13:22-95
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:12:22-95
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:14:5-81
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:14:22-78
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:13:22-78
 application
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:16:5-68:19
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:15:5-68:19
 MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/8c8c522e1615ab863f7d243fd9b92859/AndroidManifest.xml:9:5-20
@@ -188,27 +188,39 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/c
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c7990bbe638ad236d33cee3d06848b6a/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:19:9-41
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:18:9-41
 	android:roundIcon
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:20:9-45
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:19:9-45
 	android:icon
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:18:9-40
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:17:9-40
 	android:allowBackup
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:17:9-35
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:22:9-65
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:21:9-65
 	android:usesCleartextTraffic
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:9-44
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:22:9-44
+activity#com.zealtech.policephonebook2019.Activities.NotificationActivity
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:9-110
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:19-98
+activity#com.zealtech.policephonebook2019.Activities.StationDetailTabviewActivity
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:9-109
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:19-106
 meta-data#com.google.android.geo.API_KEY
 ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:33:9-35:55
 	android:value
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:35:13-52
 	android:name
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:34:13-58
+activity#com.zealtech.policephonebook2019.Activities.StationStaffDetailActivity
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:36:9-106
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:36:19-104
 activity#com.zealtech.policephonebook2019.Activities.MapsActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:37:9-39:68
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:37:9-39:59
 	android:label
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:39:13-56
 	android:name

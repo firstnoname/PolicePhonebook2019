@@ -16,12 +16,12 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -48,20 +48,20 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-v21/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
-        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png"
-    },
-    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
+        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_bg01.png.flat",
@@ -92,12 +92,12 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_design_text_input_password_icon.xml.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/res/layout/design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/color_abc_tint_btn_checkable.xml.flat",
@@ -120,12 +120,12 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
-        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
-    },
-    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
+        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_design_ic_visibility.png.flat",
@@ -140,12 +140,12 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/animator_mtrl_chip_state_list_anim.xml.flat",
-        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/res/animator/mtrl_chip_state_list_anim.xml"
-    },
-    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_bg03.png.flat",
         "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/mipmap-xxhdpi/bg03.png"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/animator_mtrl_chip_state_list_anim.xml.flat",
+        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/res/animator/mtrl_chip_state_list_anim.xml"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -200,20 +200,20 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
-        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/40caaf8e4161cdf7ee80888b01c253b2/res/layout/notification_template_lines_media.xml"
-    },
-    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_search.png.flat",
         "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/mipmap-xxhdpi/search.png"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
-        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
+        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/40caaf8e4161cdf7ee80888b01c253b2/res/layout/notification_template_lines_media.xml"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_text_material.xml.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
+        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_borderless_text_material.xml.flat",
@@ -600,6 +600,10 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable/abc_btn_borderless_material.xml"
     },
     {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_adapter_station_staff.xml.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/layout/adapter_station_staff.xml"
+    },
+    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
@@ -722,6 +726,10 @@
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_background_transition_holo_light.xml.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_activity_station_detail_tabview.xml.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/layout/activity_station_detail_tabview.xml"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -856,12 +864,12 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/40caaf8e4161cdf7ee80888b01c253b2/res/layout/notification_template_media_custom.xml"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/color_mtrl_tabs_legacy_text_color_selector.xml.flat",
-        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/res/color/mtrl_tabs_legacy_text_color_selector.xml"
-    },
-    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_activity_notification_detail.xml.flat",
         "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/layout/activity_notification_detail.xml"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/color_mtrl_tabs_legacy_text_color_selector.xml.flat",
+        "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/res/color/mtrl_tabs_legacy_text_color_selector.xml"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
@@ -1228,12 +1236,12 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/res/drawable/common_google_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_map.png.flat",
-        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/generated/res/pngs/debug/drawable-ldpi/ic_map.png"
-    },
-    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_activity_maps.xml.flat",
         "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/layout/activity_maps.xml"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_map.png.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/generated/res/pngs/debug/drawable-ldpi/ic_map.png"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_locationarrow.png.flat",
@@ -1266,6 +1274,10 @@
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_fragment_station_detail.xml.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/layout/fragment_station_detail.xml"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_simple_spinner_dropdown.xml.flat",
@@ -1302,6 +1314,10 @@
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_abc_activity_chooser_view_list_item.xml.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_custom_ab_close.xml.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/layout/custom_ab_close.xml"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -2132,6 +2148,10 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_layout_tab.xml.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/layout/layout_tab.xml"
+    },
+    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
@@ -2356,6 +2376,10 @@
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/40caaf8e4161cdf7ee80888b01c253b2/res/layout/notification_media_action.xml"
     },
     {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_fragment_station_staff.xml.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/layout/fragment_station_staff.xml"
+    },
+    {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_design_layout_tab_icon.xml.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/res/layout/design_layout_tab_icon.xml"
     },
@@ -2474,6 +2498,10 @@
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_abc_action_mode_bar.xml.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/layout_activity_notification.xml.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/layout/activity_notification.xml"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -2654,6 +2682,10 @@
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_bg.png.flat",
+        "source": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/res/mipmap-xxxhdpi/bg.png"
     },
     {
         "merged": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
