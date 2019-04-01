@@ -12,24 +12,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.FilterActivity;
-import com.zealtech.policephonebook2019.Adapters.AdapterPhoneList;
+import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
+import com.zealtech.policephonebook2019.Model.Police;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.Province;
 import com.zealtech.policephonebook2019.Model.Rank;
-import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
-import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
-import com.zealtech.policephonebook2019.Model.response.ResponsePoliceMasterData;
-import com.zealtech.policephonebook2019.Model.response.ResponseProvince;
+import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import org.json.JSONException;
@@ -37,7 +33,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -55,6 +50,8 @@ public class SearchFragment extends Fragment {
     int level = 1;
     String departmentId = "";
     String provinceId = "";
+    String positionId = "";
+    String rankId = "";
 
     Province selectProvince = null;
     Department selectDepartment = null;
@@ -64,10 +61,8 @@ public class SearchFragment extends Fragment {
     CardView cvProvince, cvRank, cvPosition, cvDepartment;
     TextView tvProvince, tvDepartment, tvRank, tvPosition, tvListSize;
 
-    ArrayList<Province> apiProvince = new ArrayList<>();
-    ArrayList<Department> apiDepartment = new ArrayList<>();
-    ArrayList<String> mProvince = new ArrayList<>();
     ArrayList<PoliceMasterData> apiPoliceMasterData = new ArrayList<>();
+    ArrayList<Police> apiPoliceList = new ArrayList<>();
 
     Api api = AppUtils.getApiService();
 
@@ -91,8 +86,6 @@ public class SearchFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_search, container, false);
 
-//        fetchProvince();
-//        fetchDepartment();
 
         return v;
     }
@@ -103,7 +96,7 @@ public class SearchFragment extends Fragment {
 
         tvProvince = view.findViewById(R.id.tvProvince);
         tvDepartment = view.findViewById(R.id.tvDepartment);
-        tvPosition = view.findViewById(R.id.tvPosition);
+        tvPosition = view.findViewById(R.id.tv_noti_date);
         tvRank = view.findViewById(R.id.tvRank);
         tvListSize = view.findViewById(R.id.tv_list_size);
 
@@ -162,27 +155,27 @@ public class SearchFragment extends Fragment {
         }
 
 //        This method are for test. please delete when connect api successful.
-        callPhoneList();
+//        callPhoneList();
+        onRefreshView();
     }
 
-    private void setAdapter(ArrayList<PoliceMasterData> dataSet) {
-        this.apiPoliceMasterData = dataSet;
+    private void setAdapter(ArrayList<Police> dataSet) {
+        this.apiPoliceList = dataSet;
 //        Log.d(TAG, String.valueOf(apiPoliceMasterData.size()));
-        tvListSize.setText(apiPoliceMasterData.size() + " รายการ");
-        mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
+        tvListSize.setText(apiPoliceList.size() + " รายการ");
+        mAdapter = new AdapterPhoneListFilter(getActivity(), apiPoliceList);
         recyclerView.setAdapter(mAdapter);
     }
 
     private void callPhoneList() {
         //Fetch data from api.
-        Call<ResponsePoliceMasterData> call = api.getPoliceMasterData();
+        /*Call<ResponsePoliceMasterData> call = api.getPoliceMasterData();
         call.enqueue(new Callback<ResponsePoliceMasterData>() {
             @Override
             public void onResponse(Call<ResponsePoliceMasterData> call, Response<ResponsePoliceMasterData> response) {
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-
                             apiPoliceMasterData.addAll(response.body().getData());
                             setAdapter(apiPoliceMasterData);
 
@@ -213,37 +206,79 @@ public class SearchFragment extends Fragment {
                 Log.d(TAG, String.valueOf(call));
                 Log.d(TAG, String.valueOf(t));
             }
-        }); // end retrofit call.
+        }); // end retrofit call.*/
     }
 
     public void setDropDownProvince(Province item) {
         selectProvince = item;
         tvProvince.setText(selectProvince.getProvinceName());
-        onRefreshView();
+        provinceId = selectProvince.getProvinceId();
+
+        //Set department dropdown.
+
     }
 
     public void setDropDownDepartment(Department item){
         selectDepartment = item;
         tvDepartment.setText(selectDepartment.getDepartmentName());
+        departmentId = String.valueOf(selectDepartment.getDepartmentId());
         onRefreshView();
     }
 
     public void setDropDownRank(Rank item) {
         selectRank = item;
         tvRank.setText(selectRank.getRankName());
+        rankId = String.valueOf(selectRank.getRankId());
         onRefreshView();
     }
 
     public void setDropDownPosition(Position item) {
         selectPosition = item;
         tvPosition.setText(selectPosition.getPositionName());
+        positionId = String.valueOf(selectPosition.getPositionId());
         onRefreshView();
     }
 
     private void onRefreshView(){
-        /*if(selectProvince != null){
 
-        }else*/
+        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId);
+        call.enqueue(new Callback<ResponsePoliceList>() {
+            @Override
+            public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            apiPoliceList.addAll(response.body().getData().getContent());
+                            tvListSize.setText(apiPoliceList.size() + "รายการ");
+                            setAdapter(apiPoliceList);
+                        } else {
+                            Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
+                        } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponsePoliceList> call, Throwable t) {
+                Log.d(TAG, String.valueOf(call));
+                Log.d(TAG, String.valueOf(t));
+            }
+        });
     }
 
 }

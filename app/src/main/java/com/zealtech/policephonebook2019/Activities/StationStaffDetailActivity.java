@@ -56,11 +56,13 @@ public class StationStaffDetailActivity extends AppCompatActivity {
         strPosition = policeData.get(position).getPositionName();
         department = policeData.get(position).getDepartmentName();
         rankName = policeData.get(position).getRankName();
-        if (policeData.get(position).getDepartmentPhoneNumber().size() == 0) {
-            tel1 = " - ";
-        } else {
-            tel1 = policeData.get(position).getDepartmentPhoneNumber().get(0);
-        }
+
+//        TODO Change the departmentPhoneNumber to Object.
+//        if (policeData.get(position).getDepartmentPhoneNumber().size() == 0) {
+//            tel1 = " - ";
+//        } else {
+//            tel1 = policeData.get(position).getDepartmentPhoneNumber().get(0);
+//        }
 
         tel2 = policeData.get(position).getPhoneNumber();
 

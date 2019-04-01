@@ -18,7 +18,7 @@ public class Police implements Serializable {
     String departmentName;
     String positionName;
     String rankName;
-    ArrayList<String> departmentPhoneNumber;
+    ArrayList<DepartmentPhoneNumbers> departmentPhoneNumber;
     String id;
     String createDate;
     String updateDate;
@@ -135,11 +135,11 @@ public class Police implements Serializable {
         this.rankName = rankName;
     }
 
-    public ArrayList<String> getDepartmentPhoneNumber() {
+    public ArrayList<DepartmentPhoneNumbers> getDepartmentPhoneNumber() {
         return departmentPhoneNumber;
     }
 
-    public void setDepartmentPhoneNumber(ArrayList<String> departmentPhoneNumber) {
+    public void setDepartmentPhoneNumber(ArrayList<DepartmentPhoneNumbers> departmentPhoneNumber) {
         this.departmentPhoneNumber = departmentPhoneNumber;
     }
 

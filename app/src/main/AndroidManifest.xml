@@ -21,6 +21,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity android:name="com.zealtech.policephonebook2019.Activities.NotificationActivity"></activity>
+        <activity android:name="com.zealtech.policephonebook2019.Activities.ContactDetailFilterActivity"></activity>
         <activity android:name="com.zealtech.policephonebook2019.Activities.StationDetailTabviewActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

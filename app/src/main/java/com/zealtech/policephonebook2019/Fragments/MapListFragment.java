@@ -115,7 +115,7 @@ public class MapListFragment extends Fragment implements SearchView.OnQueryTextL
     }
 
     private void setAdapter(View view, ArrayList<Department> mDepartmentList) {
-        Log.d(TAG, String.valueOf(mDepartmentList.size()));
+//        Log.d(TAG, String.valueOf(mDepartmentList.size()));
 
         RecyclerView recyclerView = view.findViewById(R.id.lvStation);
         adapter = new AdapterMapList(getActivity(), mDepartmentList);

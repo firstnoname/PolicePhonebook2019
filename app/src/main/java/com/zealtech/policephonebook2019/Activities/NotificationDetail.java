@@ -34,7 +34,7 @@ public class NotificationDetail extends AppCompatActivity {
 
     private Api api = AppUtils.getApiService();
     private ArrayList<String> readGroups;
-    private String id = "5c9c9a82c9e77c00016d43e9";
+    private String noti_id = "";
     ArrayList<Notification> mNotification = new ArrayList<>();
 
     @Override
@@ -72,11 +72,13 @@ public class NotificationDetail extends AppCompatActivity {
 //            Log.d(TAG, "bundle null");
 //        }
 
-        callApiNoti();
+        Notification noti = (Notification) getIntent().getSerializableExtra("noti_detail");
+        noti_id = noti.getId();
+        callApiNoti(noti_id);
 
     }
 
-    private void callApiNoti() {
+    private void callApiNoti(String id) {
         Call<ResponseNotification> call = api.getNotifications(id);
         call.enqueue(new Callback<ResponseNotification>() {
             @Override

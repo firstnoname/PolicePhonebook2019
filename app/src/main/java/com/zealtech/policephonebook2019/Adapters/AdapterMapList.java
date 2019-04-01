@@ -50,14 +50,13 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
 //        Log.d(TAG, "onBindViewHolder: called");
 
         holder.imgInfo.setImageResource(resId);
-        holder.tvStation.setText(mDepartment.get(i).getDepartmentName() + " " + mDepartment.get(i).getDepartmentId());
+        holder.tvStation.setText(mDepartment.get(i).getDepartmentName());
         holder.tvArea.setText(tagArea);
 
         holder.layout_adapter_map_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (mDepartment.get(i).getFlagTail().equals(true)) {
-//                    Toast.makeText(mContext, mDepartment.get(i).getFlagTail() + " True", Toast.LENGTH_SHORT).show();
                     String parentId = String.valueOf(mDepartment.get(i).getDepartmentId());
                     Intent intent = new Intent(mContext, StationSubListActivity.class);
                     intent.putExtra("level", level);
@@ -65,8 +64,6 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
                     intent.putExtra("subTitle", mDepartment.get(i).getDepartmentName());
                     mContext.startActivity(intent);
                 } else {
-//                    Toast.makeText(mContext, mDepartment.get(i).getFlagTail() + " False", Toast.LENGTH_SHORT).show();
-//                    Intent intent = new Intent(mContext, StationDetailActivity.class);
                     Intent intent = new Intent(mContext, StationDetailTabviewActivity.class);
                     intent.putExtra("departmentId", mDepartment.get(i).getDepartmentId());
                     intent.putExtra("departmentName", mDepartment.get(i).getDepartmentName());

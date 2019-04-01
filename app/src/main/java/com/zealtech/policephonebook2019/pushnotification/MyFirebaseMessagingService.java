@@ -1,5 +1,6 @@
 package com.zealtech.policephonebook2019.pushnotification;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -90,7 +91,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 //            intent=AppUtils.openShop(this,contentType);
         } else {
 //            openMain = true;
-            intent = new Intent(this, MainActivity.class);
+            intent = new Intent(this, Notification.class);
 
         }
 

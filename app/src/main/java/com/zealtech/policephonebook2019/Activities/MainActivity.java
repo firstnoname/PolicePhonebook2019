@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
         //Check login
         checkLogin();
 
-
     }
 
     @Override
@@ -121,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.imgNoti)
     public void onImgNotiClicked() {
-        Intent iNoti = new Intent(this, NotificationDetail.class);
+        Intent iNoti = new Intent(this, NotificationActivity.class);
         startActivity(iNoti);
     }
 

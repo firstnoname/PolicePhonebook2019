@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/imgInfo"
+        android:id="@+id/img_noti"
         android:layout_width="54dp"
         android:layout_height="54dp"
         android:layout_marginStart="8dp"
@@ -29,13 +29,13 @@
         app:civ_border_color="#9D9D9D"
         app:civ_border_width="2dp"
         app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toStartOf="@+id/tvName"
+        app:layout_constraintEnd_toStartOf="@+id/tv_noti_title"
         app:layout_constraintStart_toEndOf="@+id/view_tab"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.533" />
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/tv_noti_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -45,11 +45,11 @@
         android:textColor="@color/fontBlack"
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/tv_position_1"
-        app:layout_constraintStart_toEndOf="@+id/imgInfo"
+        app:layout_constraintStart_toEndOf="@+id/img_noti"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvPosition"
+        android:id="@+id/tv_noti_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -58,8 +58,8 @@
         android:textColor="@color/fontGrey"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+        app:layout_constraintStart_toStartOf="@+id/tv_noti_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_noti_title" />
 
     <TextView
         android:id="@+id/tvDepartment"
@@ -74,8 +74,8 @@
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/tvPosition"
-        app:layout_constraintTop_toBottomOf="@+id/tvPosition"
+        app:layout_constraintStart_toStartOf="@+id/tv_noti_date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_noti_date"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView

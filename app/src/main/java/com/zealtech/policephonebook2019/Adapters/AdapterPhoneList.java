@@ -77,37 +77,41 @@ public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.View
             holder.viewTab.setBackgroundResource(R.color.colorRed);
         }
 
-//        Set label orange or red.
-        for (int x = 0; x < mPoliceInfo.get(i).getTag().size(); x++) {
+        if (mPoliceInfo.get(i).getTag() != null) {
+            //        Set label orange or red.
+            for (int x = 0; x < mPoliceInfo.get(i).getTag().size(); x++) {
 //            Log.d("tag", i + " : " + x + " : " + polis.getTag().size());
 //            Log.d("tag", polis.getFirstName() + ":" + polis.getTag().get(x));
-            if (x == 0) {
-                if (mPoliceInfo.get(i).getTag().get(x).equals("ตม.")) {
-                    holder.tvPosition2.setVisibility(View.VISIBLE);
-                    holder.tvPosition2.setBackgroundResource(R.drawable.tv_red_tag);
-                    holder.tvPosition2.setText(mPoliceInfo.get(i).getTag().get(x));
+                if (x == 0) {
+                    if (mPoliceInfo.get(i).getTag().get(x).equals("ตม.")) {
+                        holder.tvPosition2.setVisibility(View.VISIBLE);
+                        holder.tvPosition2.setBackgroundResource(R.drawable.tv_red_tag);
+                        holder.tvPosition2.setText(mPoliceInfo.get(i).getTag().get(x));
+                    }
+                    if (mPoliceInfo.get(i).getTag().get(x).equals("ผบก.")) {
+                        holder.tvPosition2.setVisibility(View.VISIBLE);
+                        holder.tvPosition2.setBackgroundResource(R.drawable.tv_orange_tag);
+                        holder.tvPosition2.setText(mPoliceInfo.get(i).getTag().get(x));
+                    }
                 }
-                if (mPoliceInfo.get(i).getTag().get(x).equals("ผบก.")) {
-                    holder.tvPosition2.setVisibility(View.VISIBLE);
-                    holder.tvPosition2.setBackgroundResource(R.drawable.tv_orange_tag);
-                    holder.tvPosition2.setText(mPoliceInfo.get(i).getTag().get(x));
-                }
-            }
 
-            if (x == 1) {
-                if (mPoliceInfo.get(i).getTag().get(x).equals("ผบก.")) {
-                    holder.tvPosition1.setVisibility(View.VISIBLE);
-                    holder.tvPosition1.setBackgroundResource(R.drawable.tv_orange_tag);
-                    holder.tvPosition1.setText(mPoliceInfo.get(i).getTag().get(x));
+                if (x == 1) {
+                    if (mPoliceInfo.get(i).getTag().get(x).equals("ผบก.")) {
+                        holder.tvPosition1.setVisibility(View.VISIBLE);
+                        holder.tvPosition1.setBackgroundResource(R.drawable.tv_orange_tag);
+                        holder.tvPosition1.setText(mPoliceInfo.get(i).getTag().get(x));
+                    }
+                    if (mPoliceInfo.get(i).getTag().get(x).equals("ตม.")) {
+                        holder.tvPosition1.setVisibility(View.VISIBLE);
+                        holder.tvPosition1.setBackgroundResource(R.drawable.tv_red_tag);
+                        holder.tvPosition1.setText(mPoliceInfo.get(i).getTag().get(x));
+                    }
                 }
-                if (mPoliceInfo.get(i).getTag().get(x).equals("ตม.")) {
-                    holder.tvPosition1.setVisibility(View.VISIBLE);
-                    holder.tvPosition1.setBackgroundResource(R.drawable.tv_red_tag);
-                    holder.tvPosition1.setText(mPoliceInfo.get(i).getTag().get(x));
-                }
-            }
 
-        }// end for loop.
+            }// end for loop.
+        }
+
+
 
         holder.parent_layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,9 +142,9 @@ public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.View
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             parent_layout = itemView.findViewById(R.id.layout_item);
-            imgProfile = itemView.findViewById(R.id.imgInfo);
-            tvName = itemView.findViewById(R.id.tvName);
-            tvPosition = itemView.findViewById(R.id.tvPosition);
+            imgProfile = itemView.findViewById(R.id.img_noti);
+            tvName = itemView.findViewById(R.id.tv_noti_title);
+            tvPosition = itemView.findViewById(R.id.tv_noti_date);
             tvDeparture = itemView.findViewById(R.id.tvDepartment);
             tvPosition1 = itemView.findViewById(R.id.tv_position_1);
             tvPosition2 = itemView.findViewById(R.id.tv_position_2);

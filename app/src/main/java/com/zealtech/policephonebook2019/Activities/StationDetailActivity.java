@@ -1,6 +1,8 @@
 package com.zealtech.policephonebook2019.Activities;
 
 import android.Manifest;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,7 +41,7 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
     private static final String TAG = "StationDetailActivity";
 
     private TextView tvStationPhone1, tvStationPhone2, tvStationAddress, btnOpenMap, tvAbTitle;
-    private ImageView imgBack;
+    private ImageView imgBack, phoneCall;
 
     private String departmentId = "";
     private ArrayList<DepartmentRoot> mDepartmentRoot = new ArrayList<>();
@@ -61,6 +63,7 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
         btnOpenMap = findViewById(R.id.btn_station_open_map);
         tvAbTitle = findViewById(R.id.tv_actionbar_back);
         imgBack = findViewById(R.id.img_back);
+        phoneCall = findViewById(R.id.img_station_call);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_station_detail);
         mapFragment.getMapAsync(this);
@@ -112,8 +115,6 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
             @Override
             public void onClick(View v) {
                 requestPermission();
-
-
             }
         });
 
@@ -125,6 +126,13 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
             }
         });
 
+        phoneCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(StationDetailActivity.this, "Call", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
     private void requestPermission() {
@@ -134,9 +142,6 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
     private void setDataToLayout(ArrayList<DepartmentRoot> dataDepartmentRoot) {
         this.mDepartmentRoot = dataDepartmentRoot;
         this.stationName = mDepartmentRoot.get(0).getDepartmentName();
-        /*this.latitude = Double.valueOf(mDepartmentRoot.get(0).getLatitude());
-        this.longitude = Double.valueOf(mDepartmentRoot.get(0).getLongitude());*/
-
         String fullAddress = mDepartmentRoot.get(0).getAddress() + " ถ." + mDepartmentRoot.get(0).getRoad() + " แขวง " + mDepartmentRoot.get(0).getPostcode();
 
         //Customize action bar.

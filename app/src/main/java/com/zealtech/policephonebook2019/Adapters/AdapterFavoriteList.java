@@ -28,8 +28,8 @@ public class AdapterFavoriteList extends RecyclerView.Adapter<AdapterFavoriteLis
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvName = itemView.findViewById(R.id.tvName);
-            tvPosition = itemView.findViewById(R.id.tvPosition);
+            tvName = itemView.findViewById(R.id.tv_noti_title);
+            tvPosition = itemView.findViewById(R.id.tv_noti_date);
             tvDeparture = itemView.findViewById(R.id.tvDepartment);
             tvPosition1 = itemView.findViewById(R.id.tv_position_1);
             tvPosition2 = itemView.findViewById(R.id.tv_position_2);

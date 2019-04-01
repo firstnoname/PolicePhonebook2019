@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\iFirst\\StudioProjects\\PolicePhonebook2019\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
+            "outputFile": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ar/values-ar.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-17.4.0.aar\\92fdeec0d00e9ac64e0a2606125bff45\\res\\values-ar\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "100",
-                        "endOffsets": "305"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5364",
-                        "endColumns": "104",
-                        "endOffsets": "5464"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7396ef315538fc26b3c9917606ffd2e1\\res\\values-ar\\values-ar.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/9079451388cbff1f7e25d1137ced50d3/res/values-ar/values-ar.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-gcm-16.1.0.aar\\a2dab5760ec9fca5b8192a073cb0cb97\\res\\values-ar\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "190",
-                        "endColumns": "97",
-                        "endOffsets": "287"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5469",
-                        "endColumns": "101",
-                        "endOffsets": "5566"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\54ec4b208e7c6ed79343a6bc43af6c2e\\res\\values-ar\\values.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/07454b9a2c3d6af3ed3331e072f33122/res/values-ar/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -72,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\4852ee78ead38ef5105e05788c7243ad\\res\\values-ar\\values-ar.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/d7b59d88bb895eb9abfb08747e307b03/res/values-ar/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "190",
+                        "endColumns": "97",
+                        "endOffsets": "287"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "5469",
+                        "endColumns": "101",
+                        "endOffsets": "5566"
+                    }
+                },
+                {
+                    "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8424456367b327d589421010c51b57bf/res/values-ar/values-ar.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -89,7 +72,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.2.0.aar\\4c76ed8f87a395ffc5c2f6b0ae2a77b5\\res\\values-ar\\values.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.4.0.aar/9641cb75064a966c2f128ae8e6506a69/res/values-ar/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "100",
+                        "endOffsets": "305"
+                    },
+                    "to": {
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "5364",
+                        "endColumns": "104",
+                        "endOffsets": "5464"
+                    }
+                },
+                {
+                    "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/4dce83b60f3232d20521fe7c5250cfa9/res/values-ar/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

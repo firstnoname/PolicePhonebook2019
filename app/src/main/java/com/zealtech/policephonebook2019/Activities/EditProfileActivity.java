@@ -17,7 +17,12 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Model.Department;
+import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.ProfileH;
+import com.zealtech.policephonebook2019.Model.Province;
+import com.zealtech.policephonebook2019.Model.Rank;
+import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +34,11 @@ public class EditProfileActivity extends AppCompatActivity {
     private EditText edtName, edtLastname, edtPhone;
     private Button btnEdit;
     private ImageView imgInfo;
-    private TextView tvSelectPhoto;
+    private TextView tvSelectPhoto, tvRank, tvDepartment, tvPosition, tvUpdateDate;
 
     private String IMAGE_URL = "http://ztidev.com:8081/phonebook/download?file=";
+
+    private String updateDate, updateTime;
 
     private ProfileH mProfile = new ProfileH();
 
@@ -49,6 +56,10 @@ public class EditProfileActivity extends AppCompatActivity {
         edtPhone = findViewById(R.id.edt_phone);
         btnEdit = findViewById(R.id.btn_edit);
         tvSelectPhoto = findViewById(R.id.tv_select_photo);
+        tvRank = findViewById(R.id.tv_rank);
+        tvPosition = findViewById(R.id.tv_position);
+        tvDepartment = findViewById(R.id.tv_department);
+        tvUpdateDate = findViewById(R.id.tv_update_date);
 
         //Get value from UserDetailActivity.
         mProfile = (ProfileH) getIntent().getSerializableExtra("user_profile");
@@ -58,7 +69,12 @@ public class EditProfileActivity extends AppCompatActivity {
         edtName.setText(mProfile.getFirstName());
         edtLastname.setText(mProfile.getLastName());
         edtPhone.setText(mProfile.getPhoneNumber());
-
+        tvRank.setText(mProfile.getRankName());
+        tvPosition.setText(mProfile.getPositionName());
+        tvDepartment.setText(mProfile.getDepartmentName());
+        updateDate = mProfile.getUpdateDate().substring(0,10);
+        updateTime = mProfile.getUpdateDate().substring(0, 0);
+        tvUpdateDate.setText("อัพเดตข้อมูลล่าสุดเมื่อ " + updateDate + " เวลา " + updateTime);
         tvSelectPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,33 +96,42 @@ public class EditProfileActivity extends AppCompatActivity {
             imageUri = data.getData();
             imgInfo.setImageURI(imageUri);
         }
+
+        if (data != null) {
+            BaseFilterItem item = (BaseFilterItem) data.getSerializableExtra("valueFilter");
+
+            if(item instanceof Province){
+
+            } else if (item instanceof Department) {
+
+            } else if (item instanceof Rank) {
+                tvRank.setText(((Rank) item).getRankName());
+            } else if (item instanceof Position) {
+
+            }
+
+        }
     }
 
     public void selectRank(View view) {
-        Toast.makeText(this, "Rank", Toast.LENGTH_SHORT).show();
-
         //Call api.
-
-        //Set ArrayList to adapter.
-
+        Intent iRank = new Intent(this, FilterActivity.class);
+        iRank.putExtra("tag", "rank");
+        this.startActivityForResult(iRank, 1);
     }
     
     public void selectPosition(View view) {
-        Toast.makeText(this, "Position", Toast.LENGTH_SHORT).show();
-
         //Call api.
-
-        //Set ArrayList to adapter.
-
+        Intent iPosition = new Intent(this, FilterActivity.class);
+        iPosition.putExtra("tag", "position");
+        this.startActivityForResult(iPosition, 1);
     }
     
     public void selectDepartment(View view) {
-        Toast.makeText(this, "Department", Toast.LENGTH_SHORT).show();
-
         //Call api.
-
-        //Set ArrayList to adapter.
-
+        Intent iDepartment = new Intent(this, FilterActivity.class);
+        iDepartment.putExtra("tag", "department");
+        this.startActivityForResult(iDepartment, 1);
     }
 
 }

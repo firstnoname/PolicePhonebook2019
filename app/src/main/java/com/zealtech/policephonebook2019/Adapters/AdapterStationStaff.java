@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -140,9 +139,9 @@ public class AdapterStationStaff extends RecyclerView.Adapter<AdapterStationStaf
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             parent_layout = itemView.findViewById(R.id.layout_item);
-            imgProfile = itemView.findViewById(R.id.imgInfo);
-            tvName = itemView.findViewById(R.id.tvName);
-            tvPosition = itemView.findViewById(R.id.tvPosition);
+            imgProfile = itemView.findViewById(R.id.img_noti);
+            tvName = itemView.findViewById(R.id.tv_noti_title);
+            tvPosition = itemView.findViewById(R.id.tv_noti_date);
             tvDeparture = itemView.findViewById(R.id.tvDepartment);
             tvPosition1 = itemView.findViewById(R.id.tv_position_1);
             tvPosition2 = itemView.findViewById(R.id.tv_position_2);

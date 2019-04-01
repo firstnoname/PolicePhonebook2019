@@ -1258,7 +1258,6 @@ id imageView
 id imageView2
 id imgBack
 id imgFavorite
-id imgInfo
 id imgLogo
 id imgNoti
 id imgStation
@@ -1273,6 +1272,7 @@ id img_icon_noti
 id img_info
 id img_map
 id img_noti
+id img_phone_call
 id img_phone_list
 id img_profile
 id img_search
@@ -1441,8 +1441,6 @@ id transition_transform
 id tvArea
 id tvBack
 id tvDepartment
-id tvName
-id tvPosition
 id tvProvince
 id tvRank
 id tvStationPosition
@@ -1462,8 +1460,10 @@ id tv_department
 id tv_info
 id tv_list_size
 id tv_name_user_profile
+id tv_noti_date
 id tv_noti_department
 id tv_noti_detail
+id tv_noti_title
 id tv_phone_profile
 id tv_position
 id tv_position_1
@@ -1476,6 +1476,7 @@ id tv_station_address
 id tv_station_phone2
 id tv_statoin_phone1
 id tv_tel_profile
+id tv_update_date
 id tv_update_profile
 id uniform
 id unlabeled
@@ -1557,6 +1558,7 @@ layout activity_station_sub_list
 layout activity_user_detail
 layout adapter_filter_search
 layout adapter_map_list
+layout adapter_notifications
 layout adapter_phone_list
 layout adapter_station_staff
 layout adapter_station_sub_list
@@ -1649,6 +1651,7 @@ mipmap mail
 mipmap map
 mipmap map_ac
 mipmap noti
+mipmap noti_bl
 mipmap padtppic
 mipmap password_ic
 mipmap pencil

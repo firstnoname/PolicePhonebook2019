@@ -153,6 +153,7 @@
                             android:layout_weight="1"/>
 
                         <ImageView
+                            android:id="@+id/img_phone_call"
                             android:layout_width="64dp"
                             android:layout_height="64dp"
                             android:src="@mipmap/call" />

@@ -2,7 +2,9 @@ package com.zealtech.policephonebook2019.Fragments;
 
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,6 +13,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.policephonebook2019.R;
 import com.google.android.gms.maps.CameraUpdate;
@@ -30,9 +33,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
  */
 public class ContactUsFragment extends Fragment {
 
+    private ImageView imgPhoneCall;
+
     private MapView mMapView;
     private Double latitude = 18.7988609;
     private Double longitude = 99.0238646;
+    private String telNo = "0-2252-9888";
 
     public ContactUsFragment() {
         // Required empty public constructor
@@ -50,6 +56,7 @@ public class ContactUsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
 
+        imgPhoneCall = view.findViewById(R.id.img_phone_call);
         mMapView = view.findViewById(R.id.map_contact_us);
         mMapView.onCreate(savedInstanceState);
         mMapView.onResume();
@@ -91,6 +98,15 @@ public class ContactUsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
+        imgPhoneCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:" + telNo));
+                startActivity(i
+                );
+            }
+        });
 
     }
 

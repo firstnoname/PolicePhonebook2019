@@ -18,12 +18,12 @@
             android:id="@+id/cardViewProvince"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-           <!--<LinearLayout
+            <!--<LinearLayout
                android:layout_width="wrap_content"
                android:layout_height="wrap_content">
 
@@ -62,7 +62,7 @@
                 <TextView
                     android:id="@+id/tvProvince"
                     android:layout_width="76dp"
-                    android:layout_height="15dp"
+                    android:layout_height="17dp"
                     android:gravity="center"
                     android:text="ทั้งหมด"
                     android:textSize="12sp" />
@@ -103,10 +103,11 @@
                 <TextView
                     android:id="@+id/tvDepartment"
                     android:layout_width="wrap_content"
-                    android:layout_height="15dp"
-                    android:textSize="12sp"
-
-                    android:layout_weight="1"/>
+                    android:layout_height="17dp"
+                    android:layout_weight="1"
+                    android:text="ทั้งหมด"
+                    android:gravity="center"
+                    android:textSize="12sp" />
 
                 <ImageView
                     android:layout_width="24dp"
@@ -121,7 +122,7 @@
             android:id="@+id/cardViewRank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -143,7 +144,9 @@
                 <TextView
                     android:id="@+id/tvRank"
                     android:layout_width="76dp"
-                    android:layout_height="15dp"
+                    android:layout_height="17dp"
+                    android:gravity="center"
+                    android:text="ทั้งหมด"
                     android:textSize="12sp" />
 
                 <ImageView
@@ -184,10 +187,12 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tvPosition"
+                    android:id="@+id/tv_noti_date"
                     android:layout_width="wrap_content"
-                    android:layout_height="15dp"
+                    android:layout_height="17dp"
                     android:layout_weight="1"
+                    android:text="ทั้งหมด"
+                    android:gravity="center"
                     android:textSize="12sp" />
 
                 <ImageView

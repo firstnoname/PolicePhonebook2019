@@ -49,7 +49,7 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
         holder.imgInfo.setImageResource(resId);
-        holder.tvStationName.setText(mStationList.get(i).getDepartmentName() + " : " + mStationList.get(i).getParentId());
+        holder.tvStationName.setText(mStationList.get(i).getDepartmentName());
 
         holder.layout_adapter_station_sub_list.setOnClickListener(new View.OnClickListener() {
             @Override

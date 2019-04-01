@@ -2,7 +2,9 @@ package com.zealtech.policephonebook2019.Fragments;
 
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -53,7 +55,7 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
     public static final String KEY_MESSAGE = "message";
 
     private TextView tvStationPhone1, tvStationPhone2, tvStationAddress, btnOpenMap, tvAbTitle;
-    private ImageView imgBack;
+    private ImageView imgBack, imgPhoneCall;
 
     private String departmentId = "";
     private ArrayList<DepartmentRoot> mDepartmentRoot = new ArrayList<>();
@@ -90,6 +92,7 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
         btnOpenMap = view.findViewById(R.id.btn_station_open_map);
         tvAbTitle = view.findViewById(R.id.tv_actionbar_back);
         imgBack = view.findViewById(R.id.img_back);
+        imgPhoneCall = view.findViewById(R.id.img_station_call);
 
         departmentId = getArguments().getString(KEY_MESSAGE);
 
@@ -173,6 +176,20 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
                 googleMap.addMarker(new MarkerOptions().position(contactUsLocation).title("Contact us").snippet(""));
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(contactUsLocation).zoom(12).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+            }
+        });
+
+        imgPhoneCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgPhoneCall.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(Intent.ACTION_DIAL);
+                        i.setData(Uri.parse("tel:" + mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTel()));
+                        startActivity(i);
+                    }
+                });
             }
         });
 

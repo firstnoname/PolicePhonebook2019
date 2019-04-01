@@ -66,7 +66,7 @@ public class StationStaffFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId);
+        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, "" ,"");
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
