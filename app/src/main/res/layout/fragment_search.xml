@@ -23,14 +23,39 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+           <!--<LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="45dp"
+                   android:layout_height="wrap_content"
+                   android:text="จังหวัด : "
+                   android:textSize="12sp"/>
+
+               <TextView
+                   android:id="@+id/tvProvince"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="กรุงเทพ"
+                   android:textSize="12sp" />
+
+               <ImageView
+                   android:layout_width="24dp"
+                   android:layout_height="24dp"
+                   android:src="@mipmap/dropdown_blue"/>
+
+           </LinearLayout>-->
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp">
+                android:layout_margin="4dp"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="45dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="15dp"
                     android:text="จังหวัด : "
                     android:textSize="12sp" />
 
@@ -38,6 +63,8 @@
                     android:id="@+id/tvProvince"
                     android:layout_width="76dp"
                     android:layout_height="15dp"
+                    android:gravity="center"
+                    android:text="ทั้งหมด"
                     android:textSize="12sp" />
 
                 <ImageView
@@ -45,13 +72,13 @@
                     android:layout_height="24dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/dropdown" />
+                    android:src="@mipmap/dropdown_blue" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cardView2"
+            android:id="@+id/cardViewDepartment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -59,31 +86,33 @@
             android:layout_marginEnd="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cardViewProvince"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent">q
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp">
+                android:layout_margin="4dp"
+                android:gravity="center_vertical">
 
                 <TextView
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
                     android:text="หน่วยงาน : "
                     android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/tvDepartment"
-                    android:layout_width="130dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="15dp"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+
+                    android:layout_weight="1"/>
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/dropdown" />
+                    android:src="@mipmap/dropdown_blue" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -102,11 +131,12 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp">
+                android:layout_margin="4dp"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="45dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="15dp"
                     android:text="ยศ : "
                     android:textSize="12sp" />
 
@@ -121,7 +151,7 @@
                     android:layout_height="24dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/dropdown" />
+                    android:src="@mipmap/dropdown_blue" />
 
             </LinearLayout>
 
@@ -138,31 +168,33 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cardViewRank"
-            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+            app:layout_constraintTop_toBottomOf="@+id/cardViewDepartment">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp">
+                android:layout_margin="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
                 <TextView
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
                     android:text="ตำแหน่ง : "
                     android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/tvPosition"
-                    android:layout_width="130dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="15dp"
+                    android:layout_weight="1"
                     android:textSize="12sp" />
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/dropdown" />
+                    android:src="@mipmap/dropdown_blue" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

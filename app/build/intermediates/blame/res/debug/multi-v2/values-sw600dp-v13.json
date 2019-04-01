@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\iFirst\\StudioProjects\\PolicePhonebook2019\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\93b4993508064545ab3cd313a4834450\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7396ef315538fc26b3c9917606ffd2e1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

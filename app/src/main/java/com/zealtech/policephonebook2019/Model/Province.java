@@ -1,15 +1,18 @@
 package com.zealtech.policephonebook2019.Model;
 
+import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Province implements Serializable {
+public class Province extends BaseFilterItem implements Serializable {
 
     String provinceId = "";
     String provinceName = "";
 
     public String getProvinceId() {
-        return provinceId; }
+        return provinceId;
+    }
 
     public void setProvinceId(String provinceId) {
         this.provinceId = provinceId;
@@ -21,5 +24,15 @@ public class Province implements Serializable {
 
     public void setProvinceName(String provinceName) {
         this.provinceName = provinceName;
+    }
+
+    @Override
+    protected String setId() {
+        return provinceId;
+    }
+
+    @Override
+    protected String setName() {
+        return provinceName;
     }
 }

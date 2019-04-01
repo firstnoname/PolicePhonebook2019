@@ -12,12 +12,17 @@ import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterFilterSearch;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Province;
+import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
+import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
+import com.zealtech.policephonebook2019.Model.response.ResponsePosition;
 import com.zealtech.policephonebook2019.Model.response.ResponseProvince;
+import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,18 +35,15 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
     Api api = AppUtils.getApiService();
 
     private String tagFilter = "";
+    private String provinceId = "";
+    private String rankId = "";
+    private String positionId = "";
 
     SearchView searchView;
     AdapterFilterSearch adapter;
 
     //vars
-    private ArrayList<Province> apiProvince = new ArrayList<>();
-
-    private ArrayList<String> mRank = new ArrayList<>();
-    private ArrayList<String> mPosition = new ArrayList<>();
-    private ArrayList<String> mProvince = new ArrayList<>();
-
-    private ArrayList<String> mTagSearch = new ArrayList<>();
+    private ArrayList<BaseFilterItem> apiItemFilter = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,13 +62,47 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
                 initPosition();
             } else if (tagFilter.equals("province")) {
                 initProvince();
+            } else if (tagFilter.equals("department")) {
+                initDepartment();
             }
         }
+    }
 
+
+    private void initDepartment() {
+        Call<ResponseDepartment> call = api.getDepartment(1, "", getIntent().getStringExtra(provinceId));
+        call.enqueue(new Callback<ResponseDepartment>() {
+            @Override
+            public void onResponse(Call<ResponseDepartment> call, Response<ResponseDepartment> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            apiItemFilter.addAll(response.body().getData().getContent());
+                            initRecyclerView(apiItemFilter);
+                        } else {
+                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseDepartment> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
+            }
+        });
     }
 
     private void initProvince() {
-
         Call<ResponseProvince> call = api.getProvince();
         call.enqueue(new Callback<ResponseProvince>() {
             @Override
@@ -74,14 +110,8 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-                            apiProvince.addAll(response.body().getData());
-
-                            for (int i = 0; i < apiProvince.size(); i++) {
-                                mProvince.add(apiProvince.get(i).getProvinceName());
-                                mTagSearch.addAll(mProvince);
-                            }
-
-                            initRecyclerView(mProvince);
+                            apiItemFilter.addAll(response.body().getData());
+                            initRecyclerView(apiItemFilter);
                         } else {
                             Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -104,31 +134,82 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
             }
         });
 
-
     }
 
     private void initPosition() {
-        mPosition.add("Position 1");
-        mPosition.add("Position 2");
-        mPosition.add("Position 3");
-        mPosition.add("Position 4");
-        mTagSearch.addAll(mPosition);
-        initRecyclerView(mPosition);
+        Call<ResponsePosition> call = api.getPositionMasterData(positionId);
+        call.enqueue(new Callback<ResponsePosition>() {
+            @Override
+            public void onResponse(Call<ResponsePosition> call, Response<ResponsePosition> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            apiItemFilter.addAll(response.body().getData());
+                            initRecyclerView(apiItemFilter);
+                        } else {
+                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponsePosition> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
+            }
+        });
     }
 
     private void initRank() {
-        mRank.add("Rank 1");
-        mRank.add("Rank 2");
-        mRank.add("Rank 3");
-        mRank.add("Rank 4");
-        mTagSearch.addAll(mRank);
-        initRecyclerView(mRank);
+        Call<ResponseRank> call = api.getRankMasterData(rankId);
+        call.enqueue(new Callback<ResponseRank>() {
+            @Override
+            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            apiItemFilter.addAll(response.body().getData());
+                            initRecyclerView(apiItemFilter);
+                        } else {
+                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseRank> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
+            }
+        });
     }
 
-    private void initRecyclerView(ArrayList<String> dataSet) {
-        ArrayList<String> data = dataSet;
+    private  <T extends BaseFilterItem> void initRecyclerView(ArrayList<T> dataSet) {
         RecyclerView recyclerView = findViewById(R.id.recycler_filter);
-        adapter = new AdapterFilterSearch(this, data, tagFilter);
+
+        ArrayList<BaseFilterItem> baseFilterItems = new ArrayList<>();
+        baseFilterItems.addAll(dataSet);
+
+        adapter = new AdapterFilterSearch(this, baseFilterItems, tagFilter);
+
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -142,13 +223,11 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
     @Override
     public boolean onQueryTextChange(String newText) {
         String userInput = newText.toLowerCase();
-        ArrayList<String> newList = new ArrayList<>();
+        ArrayList<BaseFilterItem> newList = new ArrayList<>();
 
-//        Log.d(TAG, String.valueOf(mTagSearch.size()));
-
-        for (String tag : mTagSearch) {
-            if (tag.toLowerCase().contains(userInput)) {
-                newList.addAll(newList);
+        for (int i = 0; i < apiItemFilter.size(); i++) {
+            if (apiItemFilter.get(i).getName().contains(userInput)) {
+                newList.add(apiItemFilter.get(i));
             }
         }
 

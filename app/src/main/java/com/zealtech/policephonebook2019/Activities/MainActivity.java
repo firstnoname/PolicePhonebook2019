@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -23,7 +24,12 @@ import com.zealtech.policephonebook2019.Fragments.MapListFragment;
 import com.zealtech.policephonebook2019.Fragments.PhoneListFragment;
 import com.zealtech.policephonebook2019.Fragments.SearchFragment;
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Model.Department;
+import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.ProfileH;
+import com.zealtech.policephonebook2019.Model.Province;
+import com.zealtech.policephonebook2019.Model.Rank;
+import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -199,6 +205,25 @@ public class MainActivity extends AppCompatActivity {
 
         current_frag = "ContactUs";
         setMenuIcon();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (data != null) {
+            BaseFilterItem item = (BaseFilterItem) data.getSerializableExtra("valueFilter");
+
+            if(item instanceof Province){
+                searchFragment.setDropDownProvince((Province) item);
+            } else if (item instanceof Department) {
+                searchFragment.setDropDownDepartment((Department) item);
+            } else if (item instanceof Rank) {
+                searchFragment.setDropDownRank((Rank) item);
+            } else if (item instanceof Position) {
+                searchFragment.setDropDownPosition((Position) item);
+            }
+
+        }
     }
 
     private void setMenuIcon() {

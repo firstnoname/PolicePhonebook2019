@@ -5,8 +5,10 @@ import com.zealtech.policephonebook2019.Model.response.ResponseDepartmentRoot;
 import com.zealtech.policephonebook2019.Model.response.ResponseNotification;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceMasterData;
+import com.zealtech.policephonebook2019.Model.response.ResponsePosition;
 import com.zealtech.policephonebook2019.Model.response.ResponseProfile;
 import com.zealtech.policephonebook2019.Model.response.ResponseProvince;
+import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 
 import java.util.ArrayList;
 
@@ -22,6 +24,9 @@ public interface Api {
     @GET("getDepartment")
     Call<ResponseDepartment> getDepartment(@Query("level") int level, @Query("parentId") String departmentId);
 
+    @GET("getDepartment")
+    Call<ResponseDepartment> getDepartment(@Query("level") int level, @Query("parentId") String departmentId, @Query("provinceId") String provinceId);
+
     @GET("getDepartmentRoot")
     Call<ResponseDepartmentRoot> getDepartmentRoot(@Query("departmentId") String departmentId);
 
@@ -36,5 +41,11 @@ public interface Api {
 
     @GET("getPolice")
     Call<ResponsePoliceList> getPoliceList(@Query("departmentId") String departmentId);
+
+    @GET("getRankMasterData")
+    Call<ResponseRank> getRankMasterData(@Query("id") String id);
+
+    @GET("getPositionMasterData")
+    Call<ResponsePosition> getPositionMasterData(@Query("id") String id);
 
 }

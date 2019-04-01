@@ -1,583 +1,583 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-70:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-70:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-70:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-70:12
-MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/8c8c522e1615ab863f7d243fd9b92859/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:17:1-38:12
-MERGED from [com.google.firebase:firebase-messaging:17.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.4.0.aar/f62bb76c76b05d8ef12e9d0713bf6aa8/AndroidManifest.xml:17:1-37:12
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/366d26d860a3cf356e123a9660386f5b/AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.firebase:firebase-core:16.0.8] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.8.aar/bd7490528428a56478a600aa0bb9812f/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-analytics:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.4.0.aar/d3cb46f0af553edc3ad30415fe2c9671/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:17:1-36:12
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:17:1-59:12
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/3cff5a22ca4fabfbfe5f95cb0cf3c993/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:17:1-55:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-16.4.0.aar/e6f850c1de50d7717b337649ff619544/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/c8c255ea58a91e1a5f0ee9c2e58c0b1c/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:2:1-17:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/a33514289518061119f44a27ce2e7861/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/6d2e20f0533260c61f649f3c7de77489/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:17:1-30:12
-MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.4.0.aar/d94abffbacfb028120f1190a313f0868/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/8f6e2bc3fe475fe232da90b7660298d1/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/832262a75272fed469c44ef086d927b0/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/e5b6ab9166e428fe4a78f23e8d2b7dab/AndroidManifest.xml:17:1-22:12
-MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/cb8ad7d392b14991386aedf65836064c/AndroidManifest.xml:2:1-7:12
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/7730a1835124741c6970bbb2e5223e8f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/f01fc498ef9fee18acdfc3b8069941e0/AndroidManifest.xml:17:1-22:12
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/606a15de368ee54cacb056e3ef7f06fa/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/1cdb84d5a764b9c53cc1e68e62071f79/AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/534f69b049d7bc37ca4b4237eb0e539e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/8888c724d8ca4ed2f5bf3b8680afbec1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/939f52c1d2f97663835cfb26a9171e53/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/3cadf3537eb06b2b9414dced936cb0f6/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/7cfadb6fe0a5cfb2af00398f08262ec6/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/40caaf8e4161cdf7ee80888b01c253b2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/acac7c929f982520e82fd959ad4aea63/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/92eaf93fae437e9487a22e60566feb4c/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/70d3d9c5874302704089c3262bade5e4/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/2a82014e2c2db6280b274d812f1a5224/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/7ac563fe7614082ee773ddf2dd31fe63/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/370fe9fbc1c671c717665268bc8e8a47/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/5cc8e55313ab9ef7763b1b3da5d0bef9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bd3ea35d95b993b69968826dd826da86/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/dfc6db94e6105b6c383115ef7c3a2d22/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c7990bbe638ad236d33cee3d06848b6a/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/7ebf0944e8387d505187b98d263f1306/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/eaf06e3fd18cd7090aca8538c11f89b0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/8feca3e301a6f8473225da75ff5139bb/AndroidManifest.xml:2:1-11:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/796b30d6bd663178d7fa575344246b9e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5d1cb0942d0d48d618a2276f433d4c34/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/b3123aa1ebeb76eaa58b3a6c644cbfe2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/8df81ce7e7775a8ea492af60193fd881/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/7a2cc9955e526a3f25239e5ec09d8d30/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/dc1cd877630291f7049b0ca04156c8aa/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/ec1e4476c83b0af7a38472c13613e189/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/7e7fde61687e0067ddef1eeaf93a64ae/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6374f70c356b2b0699904f357c8c4067/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-70:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-70:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-70:12
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-70:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\93b4993508064545ab3cd313a4834450\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\7396ef315538fc26b3c9917606ffd2e1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8af1ba9d6826978e2e6f686846b97b08\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\a2dab5760ec9fca5b8192a073cb0cb97\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\92fdeec0d00e9ac64e0a2606125bff45\AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\dee8b5f35cbc9428ec9e51ab65b3a853\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.firebase:firebase-core:16.0.8] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.8.aar\83e6002b8a1c352efca0472a206e0cbd\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-analytics:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.4.0.aar\14c99d806c415ae72469fd0502bdf6ad\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\98f232107b480652a3695bba26bc6369\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\54ec4b208e7c6ed79343a6bc43af6c2e\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-16.4.0.aar\96a1eb7f76112ca019e71a81e891bb05\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\bd7aa5606fd141be61026954e7dbb414\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\152773bf666a2ebb9174c77e71210a46\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\17d51aa23806046ddba9601d3c58653f\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:17:1-30:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.4.0.aar\f8037552ba94b3ecdc3cfacf506aab5f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\2ae178ce8599ecaabf86fdbd66651982\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\4c76ed8f87a395ffc5c2f6b0ae2a77b5\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\193e284af60884081cf39e45e4659c73\AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\5ead8ac2eb2d821d1ef3b40daea0df1a\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\ef0689d71366d8bba83443bf418ce833\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\f6643301cc3fead8fbaf3f0ac2aaf3c9\AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\be5f8d8f7ff918d6ed34cfda1db8c865\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\b8beeb3ee0cab449d1466b053a6fc017\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\acadc68763c56a5ffd864960e50825da\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6ecce6e9311522fda166b9cfe4ad557a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\a5330bd347008d76d21b2e3c8eeecac2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\7d8345826837ca3a07819e798625863b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\b8f0a6da3c94da7a6005c7be613132dd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\05e94ce5ebd8a4e878ce76e1ea87eb3a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\25b53b487a9c285d37653b66cde61cb3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\ace3b18b9e5c0dbfa5292d5f77e6fd4c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\66bff83bb8130b76e6e72ff0e80404f0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\ef213a2d68ab3b4704a8f355481a1fc5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\f5ca8fd3eaea2d9bfb85b219275e436b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\1a18f2714d8c914c8f0613b36208c5df\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\2a182395a382751ac84a34fa335b2cd0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\64c4bec971d5f2bfe4d18431059a23fe\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\4867d7300c7b3d7f28addd40fbfbd84b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4852ee78ead38ef5105e05788c7243ad\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\a673f6c6d3f728e5f1f1f3c1b3e67af0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\973972401e5fbbe15683763e63f15361\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\a10fab9777c5bd4209271b9fc94ff49d\AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\19f18833bb0ae871e844a442f026c437\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\883406f3e11400b9a5681a47e7e61164\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\3dd717a3621f4c684c2c8135e13ef271\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\45ff130bb109d85af17a5ceee3ed573e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\0a3d995117c068676a532b68860cc692\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\04dca4464ba08089daf784749bfe728f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9a44726f6d6d906a3c5640799d5be2f5\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\59be405479126115ae460de55faed219\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\11976d4c3820da937420a9070d1b6126\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-70:12
 	package
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:3:5-46
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:3:5-46
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-70:12
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-70:12
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-70:12
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:1-70:12
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:9:5-79
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:9:22-76
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:9:22-76
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:10:5-79
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:24:5-79
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:10:22-76
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:10:22-76
 uses-permission#android.permission.INTERNET
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/366d26d860a3cf356e123a9660386f5b/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/366d26d860a3cf356e123a9660386f5b/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:23:5-67
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\a2dab5760ec9fca5b8192a073cb0cb97\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\a2dab5760ec9fca5b8192a073cb0cb97\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\dee8b5f35cbc9428ec9e51ab65b3a853\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\dee8b5f35cbc9428ec9e51ab65b3a853\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:11:22-64
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:11:22-64
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:12:5-98
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:12:5-98
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:12:22-95
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:12:22-95
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:13:5-81
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:13:22-78
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:13:22-78
 application
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:15:5-68:19
-MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/8c8c522e1615ab863f7d243fd9b92859/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/8c8c522e1615ab863f7d243fd9b92859/AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.firebase:firebase-messaging:17.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.4.0.aar/f62bb76c76b05d8ef12e9d0713bf6aa8/AndroidManifest.xml:22:5-35:19
-MERGED from [com.google.firebase:firebase-messaging:17.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.4.0.aar/f62bb76c76b05d8ef12e9d0713bf6aa8/AndroidManifest.xml:22:5-35:19
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/366d26d860a3cf356e123a9660386f5b/AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/366d26d860a3cf356e123a9660386f5b/AndroidManifest.xml:26:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.8] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.8.aar/bd7490528428a56478a600aa0bb9812f/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.8] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.8.aar/bd7490528428a56478a600aa0bb9812f/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.4.0.aar/d3cb46f0af553edc3ad30415fe2c9671/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.4.0.aar/d3cb46f0af553edc3ad30415fe2c9671/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/3cff5a22ca4fabfbfe5f95cb0cf3c993/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/3cff5a22ca4fabfbfe5f95cb0cf3c993/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-16.4.0.aar/e6f850c1de50d7717b337649ff619544/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-16.4.0.aar/e6f850c1de50d7717b337649ff619544/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/c8c255ea58a91e1a5f0ee9c2e58c0b1c/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/c8c255ea58a91e1a5f0ee9c2e58c0b1c/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/a33514289518061119f44a27ce2e7861/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/a33514289518061119f44a27ce2e7861/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/6d2e20f0533260c61f649f3c7de77489/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/6d2e20f0533260c61f649f3c7de77489/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:27:5-28:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:27:5-28:19
-MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.4.0.aar/d94abffbacfb028120f1190a313f0868/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.4.0.aar/d94abffbacfb028120f1190a313f0868/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/8f6e2bc3fe475fe232da90b7660298d1/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/8f6e2bc3fe475fe232da90b7660298d1/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/832262a75272fed469c44ef086d927b0/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/832262a75272fed469c44ef086d927b0/AndroidManifest.xml:22:5-26:19
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/606a15de368ee54cacb056e3ef7f06fa/AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/606a15de368ee54cacb056e3ef7f06fa/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/1cdb84d5a764b9c53cc1e68e62071f79/AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/1cdb84d5a764b9c53cc1e68e62071f79/AndroidManifest.xml:10:5-20
-MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c7990bbe638ad236d33cee3d06848b6a/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c7990bbe638ad236d33cee3d06848b6a/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/7ebf0944e8387d505187b98d263f1306/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/7ebf0944e8387d505187b98d263f1306/AndroidManifest.xml:22:5-23:19
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/8feca3e301a6f8473225da75ff5139bb/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/8feca3e301a6f8473225da75ff5139bb/AndroidManifest.xml:9:5-20
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:15:5-68:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\93b4993508064545ab3cd313a4834450\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\93b4993508064545ab3cd313a4834450\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8af1ba9d6826978e2e6f686846b97b08\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8af1ba9d6826978e2e6f686846b97b08\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\a2dab5760ec9fca5b8192a073cb0cb97\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\a2dab5760ec9fca5b8192a073cb0cb97\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\92fdeec0d00e9ac64e0a2606125bff45\AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\92fdeec0d00e9ac64e0a2606125bff45\AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\dee8b5f35cbc9428ec9e51ab65b3a853\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\dee8b5f35cbc9428ec9e51ab65b3a853\AndroidManifest.xml:26:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.8] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.8.aar\83e6002b8a1c352efca0472a206e0cbd\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.8] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.8.aar\83e6002b8a1c352efca0472a206e0cbd\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.4.0.aar\14c99d806c415ae72469fd0502bdf6ad\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.4.0.aar\14c99d806c415ae72469fd0502bdf6ad\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\98f232107b480652a3695bba26bc6369\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\98f232107b480652a3695bba26bc6369\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\54ec4b208e7c6ed79343a6bc43af6c2e\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\54ec4b208e7c6ed79343a6bc43af6c2e\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-16.4.0.aar\96a1eb7f76112ca019e71a81e891bb05\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-16.4.0.aar\96a1eb7f76112ca019e71a81e891bb05\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\bd7aa5606fd141be61026954e7dbb414\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\bd7aa5606fd141be61026954e7dbb414\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\152773bf666a2ebb9174c77e71210a46\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\152773bf666a2ebb9174c77e71210a46\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\17d51aa23806046ddba9601d3c58653f\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\17d51aa23806046ddba9601d3c58653f\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:27:5-28:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:27:5-28:19
+MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.4.0.aar\f8037552ba94b3ecdc3cfacf506aab5f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.4.0.aar\f8037552ba94b3ecdc3cfacf506aab5f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\2ae178ce8599ecaabf86fdbd66651982\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\2ae178ce8599ecaabf86fdbd66651982\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\4c76ed8f87a395ffc5c2f6b0ae2a77b5\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\4c76ed8f87a395ffc5c2f6b0ae2a77b5\AndroidManifest.xml:22:5-26:19
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\be5f8d8f7ff918d6ed34cfda1db8c865\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\be5f8d8f7ff918d6ed34cfda1db8c865\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\b8beeb3ee0cab449d1466b053a6fc017\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\b8beeb3ee0cab449d1466b053a6fc017\AndroidManifest.xml:10:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4852ee78ead38ef5105e05788c7243ad\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4852ee78ead38ef5105e05788c7243ad\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\a673f6c6d3f728e5f1f1f3c1b3e67af0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\a673f6c6d3f728e5f1f1f3c1b3e67af0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\a10fab9777c5bd4209271b9fc94ff49d\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\a10fab9777c5bd4209271b9fc94ff49d\AndroidManifest.xml:9:5-20
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c7990bbe638ad236d33cee3d06848b6a/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4852ee78ead38ef5105e05788c7243ad\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:20:9-35
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:18:9-41
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:18:9-41
 	android:roundIcon
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:19:9-45
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:19:9-45
 	android:icon
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:17:9-40
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:17:9-40
 	android:allowBackup
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:21:9-65
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:21:9-65
 	android:usesCleartextTraffic
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:22:9-44
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:22:9-44
 activity#com.zealtech.policephonebook2019.Activities.NotificationActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:9-110
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:23:9-110
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:19-98
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:23:19-98
 activity#com.zealtech.policephonebook2019.Activities.StationDetailTabviewActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:9-109
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:24:9-109
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:19-106
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:24:19-106
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:33:9-35:55
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:33:9-35:55
 	android:value
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:35:13-52
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:35:13-52
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:34:13-58
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:34:13-58
 activity#com.zealtech.policephonebook2019.Activities.StationStaffDetailActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:36:9-106
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:36:9-106
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:36:19-104
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:36:19-104
 activity#com.zealtech.policephonebook2019.Activities.MapsActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:37:9-39:59
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:37:9-39:59
 	android:label
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:39:13-56
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:39:13-56
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:38:13-84
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:38:13-84
 activity#com.zealtech.policephonebook2019.Activities.NotificationDetail
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:40:9-99
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:40:9-99
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:40:19-96
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:40:19-96
 activity#com.zealtech.policephonebook2019.Activities.FilterActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:41:9-95
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:41:9-95
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:41:19-92
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:41:19-92
 activity#com.zealtech.policephonebook2019.Activities.ContactDetailActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:42:9-102
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:42:9-102
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:42:19-99
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:42:19-99
 activity#com.zealtech.policephonebook2019.Activities.EditProfileActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:43:9-100
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:43:9-100
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:43:19-97
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:43:19-97
 activity#com.zealtech.policephonebook2019.Activities.UserDetailActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:44:9-99
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:44:9-99
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:44:19-96
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:44:19-96
 activity#com.zealtech.policephonebook2019.Activities.LoginActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:45:9-94
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:45:9-94
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:45:19-91
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:45:19-91
 activity#com.zealtech.policephonebook2019.Activities.StationDetailActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:46:9-102
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:46:9-102
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:46:19-99
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:46:19-99
 activity#com.zealtech.policephonebook2019.Activities.StationSubListActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:47:9-103
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:47:9-103
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:47:19-100
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:47:19-100
 activity#com.zealtech.policephonebook2019.Activities.MapStationListActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:48:9-103
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:48:9-103
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:48:19-100
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:48:19-100
 activity#com.zealtech.policephonebook2019.Activities.SplashScreenActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:49:9-55:20
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:49:9-55:20
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:49:19-98
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:49:19-98
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:50:13-54:29
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:50:13-54:29
 action#android.intent.action.MAIN
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:51:17-69
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:51:17-69
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:51:25-66
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:51:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:53:17-77
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:53:17-77
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:53:27-74
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:53:27-74
 activity#com.zealtech.policephonebook2019.Activities.MainActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:56:9-93
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:56:9-93
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:56:19-90
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:56:19-90
 service#com.zealtech.policephonebook2019.pushnotification.FirebaseIDService
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:58:9-62:19
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:58:9-62:19
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:58:18-100
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:58:18-100
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:59:13-61:29
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:59:13-61:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:60:17-80
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:60:17-80
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:60:25-77
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:60:25-77
 service#com.zealtech.policephonebook2019.pushnotification.MyFirebaseMessagingService
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:63:9-67:19
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:63:9-67:19
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:63:18-109
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:63:18-109
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:64:13-66:29
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:64:13-66:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:65:17-78
+ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:65:17-78
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:65:25-75
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml:65:25-75
 uses-sdk
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/50da830a42be0b3fdb05c531c8af750f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c0af1ad4081cfd854d6c31d77f3dbd20/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/8c8c522e1615ab863f7d243fd9b92859/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/8c8c522e1615ab863f7d243fd9b92859/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-messaging:17.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.4.0.aar/f62bb76c76b05d8ef12e9d0713bf6aa8/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-messaging:17.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.4.0.aar/f62bb76c76b05d8ef12e9d0713bf6aa8/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/366d26d860a3cf356e123a9660386f5b/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/366d26d860a3cf356e123a9660386f5b/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.8] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.8.aar/bd7490528428a56478a600aa0bb9812f/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.8] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.8.aar/bd7490528428a56478a600aa0bb9812f/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.4.0.aar/d3cb46f0af553edc3ad30415fe2c9671/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.4.0.aar/d3cb46f0af553edc3ad30415fe2c9671/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/3cff5a22ca4fabfbfe5f95cb0cf3c993/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/3cff5a22ca4fabfbfe5f95cb0cf3c993/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-16.4.0.aar/e6f850c1de50d7717b337649ff619544/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-16.4.0.aar/e6f850c1de50d7717b337649ff619544/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/c8c255ea58a91e1a5f0ee9c2e58c0b1c/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/c8c255ea58a91e1a5f0ee9c2e58c0b1c/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/a33514289518061119f44a27ce2e7861/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/a33514289518061119f44a27ce2e7861/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/6d2e20f0533260c61f649f3c7de77489/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/6d2e20f0533260c61f649f3c7de77489/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.4.0.aar/d94abffbacfb028120f1190a313f0868/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.4.0.aar/d94abffbacfb028120f1190a313f0868/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/8f6e2bc3fe475fe232da90b7660298d1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/8f6e2bc3fe475fe232da90b7660298d1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/832262a75272fed469c44ef086d927b0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/832262a75272fed469c44ef086d927b0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/e5b6ab9166e428fe4a78f23e8d2b7dab/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/e5b6ab9166e428fe4a78f23e8d2b7dab/AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/cb8ad7d392b14991386aedf65836064c/AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/cb8ad7d392b14991386aedf65836064c/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/7730a1835124741c6970bbb2e5223e8f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/7730a1835124741c6970bbb2e5223e8f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/f01fc498ef9fee18acdfc3b8069941e0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/f01fc498ef9fee18acdfc3b8069941e0/AndroidManifest.xml:20:5-44
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/606a15de368ee54cacb056e3ef7f06fa/AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:3.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/circleimageview-3.0.0.aar/606a15de368ee54cacb056e3ef7f06fa/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/1cdb84d5a764b9c53cc1e68e62071f79/AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/1cdb84d5a764b9c53cc1e68e62071f79/AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/534f69b049d7bc37ca4b4237eb0e539e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/534f69b049d7bc37ca4b4237eb0e539e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/8888c724d8ca4ed2f5bf3b8680afbec1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/8888c724d8ca4ed2f5bf3b8680afbec1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/939f52c1d2f97663835cfb26a9171e53/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/939f52c1d2f97663835cfb26a9171e53/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/3cadf3537eb06b2b9414dced936cb0f6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/3cadf3537eb06b2b9414dced936cb0f6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/7cfadb6fe0a5cfb2af00398f08262ec6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/7cfadb6fe0a5cfb2af00398f08262ec6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/40caaf8e4161cdf7ee80888b01c253b2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/40caaf8e4161cdf7ee80888b01c253b2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/acac7c929f982520e82fd959ad4aea63/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/acac7c929f982520e82fd959ad4aea63/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/92eaf93fae437e9487a22e60566feb4c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/92eaf93fae437e9487a22e60566feb4c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/70d3d9c5874302704089c3262bade5e4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/70d3d9c5874302704089c3262bade5e4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/2a82014e2c2db6280b274d812f1a5224/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/2a82014e2c2db6280b274d812f1a5224/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/7ac563fe7614082ee773ddf2dd31fe63/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/7ac563fe7614082ee773ddf2dd31fe63/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/370fe9fbc1c671c717665268bc8e8a47/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/370fe9fbc1c671c717665268bc8e8a47/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/5cc8e55313ab9ef7763b1b3da5d0bef9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/5cc8e55313ab9ef7763b1b3da5d0bef9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bd3ea35d95b993b69968826dd826da86/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bd3ea35d95b993b69968826dd826da86/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/dfc6db94e6105b6c383115ef7c3a2d22/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/dfc6db94e6105b6c383115ef7c3a2d22/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c7990bbe638ad236d33cee3d06848b6a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c7990bbe638ad236d33cee3d06848b6a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/7ebf0944e8387d505187b98d263f1306/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/7ebf0944e8387d505187b98d263f1306/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/eaf06e3fd18cd7090aca8538c11f89b0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/eaf06e3fd18cd7090aca8538c11f89b0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/8feca3e301a6f8473225da75ff5139bb/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/8feca3e301a6f8473225da75ff5139bb/AndroidManifest.xml:5:5-7:41
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/796b30d6bd663178d7fa575344246b9e/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/796b30d6bd663178d7fa575344246b9e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5d1cb0942d0d48d618a2276f433d4c34/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5d1cb0942d0d48d618a2276f433d4c34/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/b3123aa1ebeb76eaa58b3a6c644cbfe2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/b3123aa1ebeb76eaa58b3a6c644cbfe2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/8df81ce7e7775a8ea492af60193fd881/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/8df81ce7e7775a8ea492af60193fd881/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/7a2cc9955e526a3f25239e5ec09d8d30/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/7a2cc9955e526a3f25239e5ec09d8d30/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/dc1cd877630291f7049b0ca04156c8aa/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/dc1cd877630291f7049b0ca04156c8aa/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/ec1e4476c83b0af7a38472c13613e189/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/ec1e4476c83b0af7a38472c13613e189/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/7e7fde61687e0067ddef1eeaf93a64ae/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/7e7fde61687e0067ddef1eeaf93a64ae/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6374f70c356b2b0699904f357c8c4067/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6374f70c356b2b0699904f357c8c4067/AndroidManifest.xml:20:5-44
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\93b4993508064545ab3cd313a4834450\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\93b4993508064545ab3cd313a4834450\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\7396ef315538fc26b3c9917606ffd2e1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\7396ef315538fc26b3c9917606ffd2e1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8af1ba9d6826978e2e6f686846b97b08\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8af1ba9d6826978e2e6f686846b97b08\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\a2dab5760ec9fca5b8192a073cb0cb97\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\a2dab5760ec9fca5b8192a073cb0cb97\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\92fdeec0d00e9ac64e0a2606125bff45\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\92fdeec0d00e9ac64e0a2606125bff45\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\dee8b5f35cbc9428ec9e51ab65b3a853\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\dee8b5f35cbc9428ec9e51ab65b3a853\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.8] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.8.aar\83e6002b8a1c352efca0472a206e0cbd\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.8] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.8.aar\83e6002b8a1c352efca0472a206e0cbd\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.4.0.aar\14c99d806c415ae72469fd0502bdf6ad\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.4.0.aar\14c99d806c415ae72469fd0502bdf6ad\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\98f232107b480652a3695bba26bc6369\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\98f232107b480652a3695bba26bc6369\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\54ec4b208e7c6ed79343a6bc43af6c2e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\54ec4b208e7c6ed79343a6bc43af6c2e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-16.4.0.aar\96a1eb7f76112ca019e71a81e891bb05\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-16.4.0.aar\96a1eb7f76112ca019e71a81e891bb05\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\bd7aa5606fd141be61026954e7dbb414\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\bd7aa5606fd141be61026954e7dbb414\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\152773bf666a2ebb9174c77e71210a46\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\152773bf666a2ebb9174c77e71210a46\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\17d51aa23806046ddba9601d3c58653f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\17d51aa23806046ddba9601d3c58653f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.4.0.aar\f8037552ba94b3ecdc3cfacf506aab5f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.4.0.aar\f8037552ba94b3ecdc3cfacf506aab5f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\2ae178ce8599ecaabf86fdbd66651982\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\2ae178ce8599ecaabf86fdbd66651982\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\4c76ed8f87a395ffc5c2f6b0ae2a77b5\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\4c76ed8f87a395ffc5c2f6b0ae2a77b5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\193e284af60884081cf39e45e4659c73\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\193e284af60884081cf39e45e4659c73\AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\5ead8ac2eb2d821d1ef3b40daea0df1a\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\5ead8ac2eb2d821d1ef3b40daea0df1a\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\ef0689d71366d8bba83443bf418ce833\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\ef0689d71366d8bba83443bf418ce833\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\f6643301cc3fead8fbaf3f0ac2aaf3c9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\f6643301cc3fead8fbaf3f0ac2aaf3c9\AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\be5f8d8f7ff918d6ed34cfda1db8c865\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\circleimageview-3.0.0.aar\be5f8d8f7ff918d6ed34cfda1db8c865\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\b8beeb3ee0cab449d1466b053a6fc017\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\b8beeb3ee0cab449d1466b053a6fc017\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\acadc68763c56a5ffd864960e50825da\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\acadc68763c56a5ffd864960e50825da\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6ecce6e9311522fda166b9cfe4ad557a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6ecce6e9311522fda166b9cfe4ad557a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\a5330bd347008d76d21b2e3c8eeecac2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\a5330bd347008d76d21b2e3c8eeecac2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\7d8345826837ca3a07819e798625863b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\7d8345826837ca3a07819e798625863b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\b8f0a6da3c94da7a6005c7be613132dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\b8f0a6da3c94da7a6005c7be613132dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\05e94ce5ebd8a4e878ce76e1ea87eb3a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\05e94ce5ebd8a4e878ce76e1ea87eb3a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\25b53b487a9c285d37653b66cde61cb3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\25b53b487a9c285d37653b66cde61cb3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\ace3b18b9e5c0dbfa5292d5f77e6fd4c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\ace3b18b9e5c0dbfa5292d5f77e6fd4c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\66bff83bb8130b76e6e72ff0e80404f0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\66bff83bb8130b76e6e72ff0e80404f0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\ef213a2d68ab3b4704a8f355481a1fc5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\ef213a2d68ab3b4704a8f355481a1fc5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\f5ca8fd3eaea2d9bfb85b219275e436b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\f5ca8fd3eaea2d9bfb85b219275e436b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\1a18f2714d8c914c8f0613b36208c5df\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\1a18f2714d8c914c8f0613b36208c5df\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\2a182395a382751ac84a34fa335b2cd0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\2a182395a382751ac84a34fa335b2cd0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\64c4bec971d5f2bfe4d18431059a23fe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\64c4bec971d5f2bfe4d18431059a23fe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\4867d7300c7b3d7f28addd40fbfbd84b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\4867d7300c7b3d7f28addd40fbfbd84b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4852ee78ead38ef5105e05788c7243ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4852ee78ead38ef5105e05788c7243ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\a673f6c6d3f728e5f1f1f3c1b3e67af0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\a673f6c6d3f728e5f1f1f3c1b3e67af0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\973972401e5fbbe15683763e63f15361\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\973972401e5fbbe15683763e63f15361\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\a10fab9777c5bd4209271b9fc94ff49d\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\a10fab9777c5bd4209271b9fc94ff49d\AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\19f18833bb0ae871e844a442f026c437\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\19f18833bb0ae871e844a442f026c437\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\883406f3e11400b9a5681a47e7e61164\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\883406f3e11400b9a5681a47e7e61164\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\3dd717a3621f4c684c2c8135e13ef271\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\3dd717a3621f4c684c2c8135e13ef271\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\45ff130bb109d85af17a5ceee3ed573e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\45ff130bb109d85af17a5ceee3ed573e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\0a3d995117c068676a532b68860cc692\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\0a3d995117c068676a532b68860cc692\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\04dca4464ba08089daf784749bfe728f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\04dca4464ba08089daf784749bfe728f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9a44726f6d6d906a3c5640799d5be2f5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9a44726f6d6d906a3c5640799d5be2f5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\59be405479126115ae460de55faed219\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\59be405479126115ae460de55faed219\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\11976d4c3820da937420a9070d1b6126\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\11976d4c3820da937420a9070d1b6126\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\iFirst\StudioProjects\PolicePhonebook2019\app\src\main\AndroidManifest.xml
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:23:5-82
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/366d26d860a3cf356e123a9660386f5b/AndroidManifest.xml:23:5-82
-MERGED from [com.google.android.gms:play-services-iid:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-iid-16.0.1.aar/366d26d860a3cf356e123a9660386f5b/AndroidManifest.xml:23:5-82
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:26:5-82
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:26:5-82
+ADDED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\a2dab5760ec9fca5b8192a073cb0cb97\AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\dee8b5f35cbc9428ec9e51ab65b3a853\AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\dee8b5f35cbc9428ec9e51ab65b3a853\AndroidManifest.xml:23:5-82
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:26:5-82
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:26:5-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-gcm:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-gcm-16.1.0.aar/9088330934ca092623c9a45a7cfc25f7/AndroidManifest.xml:23:22-79
+		ADDED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\a2dab5760ec9fca5b8192a073cb0cb97\AndroidManifest.xml:23:22-79
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:26:5-28:35
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:27:9-41
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:27:9-41
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:28:9-32
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:28:9-32
 uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:33:9-35:40
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:33:9-35:40
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:35:13-37
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.1.0.aar/af162e3a69e49a54466c660668c8ded4/AndroidManifest.xml:34:13-50
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\fe3faf164dea0d04ec71b4a6a222864a\AndroidManifest.xml:34:13-50
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:17.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.4.0.aar/f62bb76c76b05d8ef12e9d0713bf6aa8/AndroidManifest.xml:28:9-34:19
+ADDED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\92fdeec0d00e9ac64e0a2606125bff45\AndroidManifest.xml:28:9-34:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:17.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.4.0.aar/f62bb76c76b05d8ef12e9d0713bf6aa8/AndroidManifest.xml:30:13-36
+		ADDED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\92fdeec0d00e9ac64e0a2606125bff45\AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:17.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.4.0.aar/f62bb76c76b05d8ef12e9d0713bf6aa8/AndroidManifest.xml:29:13-82
+		ADDED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\92fdeec0d00e9ac64e0a2606125bff45\AndroidManifest.xml:29:13-82
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.4.0.aar/7f69aa291c9ec6405865ed86749e25bc/AndroidManifest.xml:25:5-68
+ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.4.0.aar\98b24e0179ceb0c3f4e052265710b3ba\AndroidManifest.xml:25:5-68
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:24:22-65
+		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:24:22-65
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:27:9-33:19
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:29:9-35:19
+ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:29:9-35:19
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:29:13-37
+		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:28:13-84
+		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:28:13-84
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:30:13-32:85
+ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:30:13-32:85
 	android:value
-		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:32:17-82
+		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:32:17-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.4.0.aar/0b1537c012ecac3822e8d7b0f5ace921/AndroidManifest.xml:31:17-139
+		ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.4.0.aar\e466c34be99478ce6464878164d03b20\AndroidManifest.xml:31:17-139
 meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
-ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:32:13-34:85
+ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:32:13-34:85
 	android:value
-		ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:34:17-82
+		ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:34:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:33:17-96
+		ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:33:17-96
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:37:9-44:20
+ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:37:9-44:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:39:13-36
+		ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:39:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:40:13-73
+		ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:40:13-73
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:38:13-78
+		ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:38:13-78
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:41:13-43:29
+ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:41:13-43:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:42:17-81
+ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:42:17-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:42:25-78
+		ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:42:25-78
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:50:9-56:19
+ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:50:9-56:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:52:13-36
+		ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.1.0.aar/2149aaebd3a17b26177095c8ea3d330b/AndroidManifest.xml:51:13-77
+		ADDED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\699286f78148d15cca02d673fef3611d\AndroidManifest.xml:51:13-77
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\54ec4b208e7c6ed79343a6bc43af6c2e\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\54ec4b208e7c6ed79343a6bc43af6c2e\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\54ec4b208e7c6ed79343a6bc43af6c2e\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6e68e06b5247a3eccd3fe394b49bc02b/AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\54ec4b208e7c6ed79343a6bc43af6c2e\AndroidManifest.xml:24:13-79
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:26:5-110
+ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:26:5-110
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:26:22-107
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:26:22-107
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:29:9-33:20
+ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:29:9-33:20
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:31:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:32:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:30:13-85
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:30:13-85
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:34:9-42:20
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:29:9-37:20
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-16.4.0.aar/9852850cb8b5e84ddfb82094c889ca62/AndroidManifest.xml:29:9-37:20
+ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.4.0.aar\cbd88aba3ed1c2bd79d5fd84a114a50c\AndroidManifest.xml:29:9-37:20
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:36:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:36:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:37:13-36
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:37:13-36
 	android:permission
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:38:13-69
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:38:13-69
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:35:13-100
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:35:13-100
 intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:39:13-41:29
+ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:39:13-41:29
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:40:17-79
+ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:40:17-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:40:25-76
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:40:25-76
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:44:9-47:40
+ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:44:9-47:40
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:46:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:46:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:47:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:45:13-84
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:45:13-84
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:48:9-52:72
+ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:48:9-52:72
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:50:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:50:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:51:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:51:13-37
 	android:permission
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:52:13-69
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:52:13-69
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-measurement-16.4.0.aar/d0a19d762676357a77ebb5959bf09c86/AndroidManifest.xml:49:13-87
+		ADDED from [com.google.android.gms:play-services-measurement:16.4.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.4.0.aar\bca0f79678061c44ed1c75210fec2d4f\AndroidManifest.xml:49:13-87
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:10:9-14:39
+ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:10:9-14:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:12:13-72
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:12:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:13:13-37
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:13:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:14:13-36
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:14:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/f71e18d3b2c147ea8270c98692bfda92/AndroidManifest.xml:11:13-77
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.3.aar\d25ac50a44a57c57dcd7e1cc76ad754d\AndroidManifest.xml:11:13-77
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.2.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/832262a75272fed469c44ef086d927b0/AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\4c76ed8f87a395ffc5c2f6b0ae2a77b5\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.2.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/832262a75272fed469c44ef086d927b0/AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\4c76ed8f87a395ffc5c2f6b0ae2a77b5\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.2.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/832262a75272fed469c44ef086d927b0/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\iFirst\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\4c76ed8f87a395ffc5c2f6b0ae2a77b5\AndroidManifest.xml:24:13-58

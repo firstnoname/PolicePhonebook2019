@@ -1,9 +1,11 @@
 package com.zealtech.policephonebook2019.Model;
 
+import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Department implements Serializable {
+public class Department extends BaseFilterItem implements Serializable {
 
     String address;
     String createDate;
@@ -130,6 +132,16 @@ public class Department implements Serializable {
 
     public void setGroupId(int groupId) {
         this.groupId = groupId;
+    }
+
+    @Override
+    protected String setId() {
+        return id;
+    }
+
+    @Override
+    protected String setName() {
+        return departmentName;
     }
 
     public String getId() {

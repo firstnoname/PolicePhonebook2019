@@ -23,7 +23,10 @@ import com.zealtech.policephonebook2019.Adapters.AdapterPhoneList;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
+import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.Province;
+import com.zealtech.policephonebook2019.Model.Rank;
+import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceMasterData;
 import com.zealtech.policephonebook2019.Model.response.ResponseProvince;
@@ -51,8 +54,14 @@ public class SearchFragment extends Fragment {
     String tagValue = "";
     int level = 1;
     String departmentId = "";
+    String provinceId = "";
 
-    CardView cvProvince, cvRank, cvPosition;
+    Province selectProvince = null;
+    Department selectDepartment = null;
+    Rank selectRank = null;
+    Position selectPosition = null;
+
+    CardView cvProvince, cvRank, cvPosition, cvDepartment;
     TextView tvProvince, tvDepartment, tvRank, tvPosition, tvListSize;
 
     ArrayList<Province> apiProvince = new ArrayList<>();
@@ -76,15 +85,14 @@ public class SearchFragment extends Fragment {
 
         return searchFragment;
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_search, container, false);
 
-        fetchProvince();
-        fetchDepartment();
+//        fetchProvince();
+//        fetchDepartment();
 
         return v;
     }
@@ -110,8 +118,7 @@ public class SearchFragment extends Fragment {
             public void onClick(View v) {
                 Intent iProvince = new Intent(getActivity(), FilterActivity.class);
                 iProvince.putExtra("tag", "province");
-//                startActivity(iProvince);
-                startActivityForResult(iProvince, 1);
+                getActivity().startActivityForResult(iProvince, 1);
             }
         });
 
@@ -121,7 +128,7 @@ public class SearchFragment extends Fragment {
             public void onClick(View v) {
                 Intent iRank = new Intent(getActivity(), FilterActivity.class);
                 iRank.putExtra("tag", "rank");
-                startActivity(iRank);
+                getActivity().startActivityForResult(iRank, 1);
             }
         });
 
@@ -131,7 +138,17 @@ public class SearchFragment extends Fragment {
             public void onClick(View v) {
                 Intent iPosition = new Intent(getActivity(), FilterActivity.class);
                 iPosition.putExtra("tag", "position");
-                startActivity(iPosition);
+                getActivity().startActivityForResult(iPosition, 1);
+            }
+        });
+
+        cvDepartment = view.findViewById(R.id.cardViewDepartment);
+        cvDepartment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iDepartment = new Intent(getActivity(), FilterActivity.class);
+                iDepartment.putExtra("tag", "department");
+                getActivity().startActivityForResult(iDepartment, 1);
             }
         });
 
@@ -144,7 +161,16 @@ public class SearchFragment extends Fragment {
             tvPosition.setText(tagValue);
         }
 
+//        This method are for test. please delete when connect api successful.
         callPhoneList();
+    }
+
+    private void setAdapter(ArrayList<PoliceMasterData> dataSet) {
+        this.apiPoliceMasterData = dataSet;
+//        Log.d(TAG, String.valueOf(apiPoliceMasterData.size()));
+        tvListSize.setText(apiPoliceMasterData.size() + " รายการ");
+        mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
+        recyclerView.setAdapter(mAdapter);
     }
 
     private void callPhoneList() {
@@ -190,93 +216,34 @@ public class SearchFragment extends Fragment {
         }); // end retrofit call.
     }
 
-    private void setAdapter(ArrayList<PoliceMasterData> dataSet) {
-        this.apiPoliceMasterData = dataSet;
-//        Log.d(TAG, String.valueOf(apiPoliceMasterData.size()));
-        tvListSize.setText(apiPoliceMasterData.size() + " รายการ");
-            mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
-        recyclerView.setAdapter(mAdapter);
+    public void setDropDownProvince(Province item) {
+        selectProvince = item;
+        tvProvince.setText(selectProvince.getProvinceName());
+        onRefreshView();
     }
 
-    private void fetchDepartment() {
-        Call<ResponseDepartment> call = api.getDepartment(level, departmentId);
-        call.enqueue(new Callback<ResponseDepartment>() {
-            @Override
-            public void onResponse(Call<ResponseDepartment> call, Response<ResponseDepartment> response) {
-                if (response.body() != null) {
-                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-                        if (response.body().getCode().equals("OK")) {
-//                            apiDepartment.addAll(response.body().getData().getContent());
-//                            Log.d("response-department", );
-
-                            Log.d(TAG, String.valueOf(apiDepartment.size()));
-                        } else {
-                            Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(getContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    try {
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-                        if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
-
-                        } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
-
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseDepartment> call, Throwable t) {
-                Log.d(TAG, String.valueOf(t));
-            }
-        });
+    public void setDropDownDepartment(Department item){
+        selectDepartment = item;
+        tvDepartment.setText(selectDepartment.getDepartmentName());
+        onRefreshView();
     }
 
-    private void fetchProvince() {
-        Call<ResponseProvince> call = api.getProvince();
-        call.enqueue(new Callback<ResponseProvince>() {
-            @Override
-            public void onResponse(Call<ResponseProvince> call, Response<ResponseProvince> response) {
-                if (response.body() != null) {
-                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-                        if (response.body().getCode().equals("OK")) {
-                            apiProvince.addAll(response.body().getData());
-//                            Log.d("response", String.valueOf(response.body().getData()));
-//                            Log.d("response", String.valueOf(response));
-//                            Log.d("response", String.valueOf(apiProvince.size()));
-                            for (int i = 0; i < apiProvince.size(); i++) {
-//                                Log.d("response", apiProvince.get(i).getProvinceName());
-                                mProvince.add(apiProvince.get(i).getProvinceName());
-                            }
-                        } else {
-                            Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    try {
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-
-                    } catch (Exception e) {
-                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseProvince> call, Throwable t) {
-                Log.d("response", String.valueOf(t));
-            }
-        });
+    public void setDropDownRank(Rank item) {
+        selectRank = item;
+        tvRank.setText(selectRank.getRankName());
+        onRefreshView();
     }
 
+    public void setDropDownPosition(Position item) {
+        selectPosition = item;
+        tvPosition.setText(selectPosition.getPositionName());
+        onRefreshView();
+    }
+
+    private void onRefreshView(){
+        /*if(selectProvince != null){
+
+        }else*/
+    }
 
 }

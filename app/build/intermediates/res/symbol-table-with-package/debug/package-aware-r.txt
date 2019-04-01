@@ -1182,9 +1182,9 @@ id btn_menu_search
 id btn_station_open_map
 id buttonPanel
 id cancel_action
-id cardView2
 id cardView3
 id cardView6
+id cardViewDepartment
 id cardViewPosition
 id cardViewProvince
 id cardViewRank
@@ -1634,6 +1634,7 @@ mipmap close
 mipmap contact
 mipmap contact_ac
 mipmap dropdown
+mipmap dropdown_blue
 mipmap fav
 mipmap fav_ac
 mipmap flag_ic
