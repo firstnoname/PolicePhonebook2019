@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
 //            Toast.makeText(activity, "User " + mProfile.getFirstName() + "has been log in", Toast.LENGTH_SHORT).show();
             String image_url = ApplicationConfig.getImageUrl() + mProfile.getImageProfile();
             Glide.with(this).load(image_url).into(imgProfile);
+
         }
     }
 

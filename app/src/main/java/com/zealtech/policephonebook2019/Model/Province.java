@@ -35,4 +35,12 @@ public class Province extends BaseFilterItem implements Serializable {
     protected String setName() {
         return provinceName;
     }
+
+    @Override
+    public BaseFilterItem createTotalItem() {
+        Province province = new Province();
+        province.provinceId = "0";
+        province.provinceName = "ทั้งหมด";
+        return province;
+    }
 }

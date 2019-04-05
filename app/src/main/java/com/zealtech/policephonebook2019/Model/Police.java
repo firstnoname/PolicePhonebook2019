@@ -9,7 +9,7 @@ public class Police implements Serializable {
     String userName;
     String firstName;
     String lastName;
-    String gender;
+    int gender;
     int departmentId;
     int positionId;
     int rankId;
@@ -63,11 +63,11 @@ public class Police implements Serializable {
         this.lastName = lastName;
     }
 
-    public String getGender() {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 

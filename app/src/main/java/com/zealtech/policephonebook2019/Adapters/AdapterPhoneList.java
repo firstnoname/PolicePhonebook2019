@@ -12,24 +12,38 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.ContactDetailActivity;
+import com.zealtech.policephonebook2019.Config.Api;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
+import com.zealtech.policephonebook2019.Model.Rank;
+import com.zealtech.policephonebook2019.Model.response.ResponseRank;
+import com.zealtech.policephonebook2019.Util.AppUtils;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.ViewHolder> {
 
     private static final String TAG = "AdapterPhoneList";
     private ArrayList<PoliceMasterData> mPoliceInfo;
     private Context mContext;
+    private String rankName;
     private String fullName = "";
-    private String IMAGE_URL = "http://ztidev.com:8081/phonebook/download?file=";
+    private String IMAGE_URL = ApplicationConfig.getImageUrl();
+    private ArrayList<Rank> ranks = new ArrayList<>();
 
+    Api api = AppUtils.getApiService();
 
     public AdapterPhoneList(Context mContext, ArrayList<PoliceMasterData> mPoliceInfo) {
         this.mPoliceInfo = mPoliceInfo;
@@ -46,7 +60,44 @@ public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
-        Log.d(TAG, "onBindViewHolder: called");
+//        Log.d(TAG, "onBindViewHolder: called");
+
+        rankName = mPoliceInfo.get(i).getRankName();
+        Call<ResponseRank> call = api.getRankMasterData("");
+        call.enqueue(new Callback<ResponseRank>() {
+            @Override
+            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            ranks = response.body().getData();
+                        } else {
+                            Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseRank> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
+            }
+        });
+
+        for (int x = 0; x < ranks.size(); x++) {
+            if (rankName.equals(ranks.get(x).getShortName())) {
+                holder.viewTab.setBackgroundColor(Color.parseColor(ranks.get(x).getColor()));
+            }
+        }
 
         Glide.with(mContext)
                 .load(IMAGE_URL+mPoliceInfo.get(i).getImageProfile())
@@ -56,32 +107,9 @@ public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.View
         holder.tvPosition.setText(mPoliceInfo.get(i).getPositionName());
         holder.tvDeparture.setText(mPoliceInfo.get(i).getDepartmentName());
 
-        String rankName = mPoliceInfo.get(i).getRankName();
-//        Set view_tab color from rank.
-        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
-            //Gold
-
-            holder.imgProfile.setBorderColor(Color.YELLOW);
-            holder.viewTab.setBackgroundResource(R.color.colorYellow);
-        } else if (rankName.equals("พล.ต.ต.")) {
-            //Blue sky
-            holder.imgProfile.setBorderColor(Color.GREEN);
-            holder.viewTab.setBackgroundResource(R.color.colorGreen);
-        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
-            //Blue
-            holder.imgProfile.setBorderColor(Color.BLUE);
-            holder.viewTab.setBackgroundResource(R.color.colorBlue);
-        } else {
-            //Red
-            holder.imgProfile.setBorderColor(Color.RED);
-            holder.viewTab.setBackgroundResource(R.color.colorRed);
-        }
-
         if (mPoliceInfo.get(i).getTag() != null) {
             //        Set label orange or red.
             for (int x = 0; x < mPoliceInfo.get(i).getTag().size(); x++) {
-//            Log.d("tag", i + " : " + x + " : " + polis.getTag().size());
-//            Log.d("tag", polis.getFirstName() + ":" + polis.getTag().get(x));
                 if (x == 0) {
                     if (mPoliceInfo.get(i).getTag().get(x).equals("ตม.")) {
                         holder.tvPosition2.setVisibility(View.VISIBLE);
@@ -110,8 +138,6 @@ public class AdapterPhoneList extends RecyclerView.Adapter<AdapterPhoneList.View
 
             }// end for loop.
         }
-
-
 
         holder.parent_layout.setOnClickListener(new View.OnClickListener() {
             @Override

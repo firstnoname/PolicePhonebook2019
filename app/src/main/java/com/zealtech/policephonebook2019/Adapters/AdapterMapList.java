@@ -29,7 +29,6 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
     Context mContext;
     ArrayList<Department> mDepartment;
     int resId = R.mipmap.policestation_ic;
-    String tagArea = "นครบาล, ทั่วไป";
     int level = 1;
 
     public AdapterMapList(Context mContext, ArrayList<Department> mDepartment) {
@@ -51,6 +50,13 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
 
         holder.imgInfo.setImageResource(resId);
         holder.tvStation.setText(mDepartment.get(i).getDepartmentName());
+
+        String tagArea = "";
+        if (mDepartment.get(i).getTag() != null) {
+            for (int x = 0; x < mDepartment.get(i).getTag().size(); x++) {
+                tagArea += mDepartment.get(i).getTag().get(x) + ", ";
+            }
+        }
         holder.tvArea.setText(tagArea);
 
         holder.layout_adapter_map_list.setOnClickListener(new View.OnClickListener() {

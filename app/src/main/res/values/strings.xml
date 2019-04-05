@@ -13,6 +13,10 @@
 
     <!--​Searchview-->
     <string name="searchviewPhoneList">ใส่ข้อมูลเช่น ชื่อ ยศ ตำแหน่ง</string>
+    <string name="hint_search_department">ค้นหาหน่วยงาน</string>
+    <string name="hint_search_position">ค้นหาตำแหน่ง</string>
+    <string name="hint_search_rank">ค้นหายศ</string>
+    <string name="hint_search_province">ค้นหาจังหวัด</string>
 
     <!--Menu-->
     <string name="menuNameList">รายชื่อ</string>
@@ -143,8 +147,6 @@
     <string name="phrae">แพร่</string>
     <string name="maeHongSon">แม่ฮ่องสอน</string>
     <string name="title_activity_maps">Map</string>
-
-
 
 
 </resources>

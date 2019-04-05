@@ -27,6 +27,15 @@ public class Rank extends BaseFilterItem implements Serializable {
         return rankName;
     }
 
+    @Override
+    public BaseFilterItem createTotalItem() {
+        Rank rank = new Rank();
+        rank.rankId = 0;
+        rank.rankName = "ทั้งหมด";
+
+        return rank;
+    }
+
     public String getColor() {
         return color;
     }

@@ -144,6 +144,15 @@ public class Department extends BaseFilterItem implements Serializable {
         return departmentName;
     }
 
+    @Override
+    public BaseFilterItem createTotalItem() {
+        Department department = new Department();
+        department.departmentId = 0;
+        department.departmentName = "ทั้งหมด";
+
+        return department;
+    }
+
     public String getId() {
         return id;
     }

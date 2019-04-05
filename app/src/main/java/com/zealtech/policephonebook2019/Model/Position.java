@@ -24,6 +24,15 @@ public class Position extends BaseFilterItem implements Serializable {
         return positionName;
     }
 
+    @Override
+    public BaseFilterItem createTotalItem() {
+        Position position = new Position();
+        position.positionId = 0;
+        position.positionName = "ทั้งหมด";
+
+        return position;
+    }
+
     public String getCreateDate() {
         return createDate;
     }

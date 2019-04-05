@@ -12,15 +12,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.ContactDetailFilterActivity;
+import com.zealtech.policephonebook2019.Config.Api;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Police;
+import com.zealtech.policephonebook2019.Model.Rank;
+import com.zealtech.policephonebook2019.Model.response.ResponseRank;
+import com.zealtech.policephonebook2019.Util.AppUtils;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneListFilter.ViewHolder> {
 
@@ -28,7 +39,9 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
     private ArrayList<Police> mPoliceInfo;
     private Context mContext;
     private String fullName = "";
-    private String IMAGE_URL = "http://ztidev.com:8081/phonebook/download?file=";
+    private String IMAGE_URL = ApplicationConfig.getImageUrl();
+    private ArrayList<Rank> ranks = new ArrayList<>();
+    Api api = AppUtils.getApiService();
 
 
     public AdapterPhoneListFilter(Context mContext, ArrayList<Police> mPoliceInfo) {
@@ -58,24 +71,58 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
 
         String rankName = mPoliceInfo.get(i).getRankName();
 //        Set view_tab color from rank.
-        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
-            //Gold
+        Call<ResponseRank> call = api.getRankMasterData("");
+        call.enqueue(new Callback<ResponseRank>() {
+            @Override
+            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            ranks = response.body().getData();
+                        } else {
+                            Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
 
-            holder.imgProfile.setBorderColor(Color.YELLOW);
-            holder.viewTab.setBackgroundResource(R.color.colorYellow);
-        } else if (rankName.equals("พล.ต.ต.")) {
-            //Blue sky
-            holder.imgProfile.setBorderColor(Color.GREEN);
-            holder.viewTab.setBackgroundResource(R.color.colorGreen);
-        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
-            //Blue
-            holder.imgProfile.setBorderColor(Color.BLUE);
-            holder.viewTab.setBackgroundResource(R.color.colorBlue);
-        } else {
-            //Red
-            holder.imgProfile.setBorderColor(Color.RED);
-            holder.viewTab.setBackgroundResource(R.color.colorRed);
+                    } catch (Exception e) {
+                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseRank> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
+            }
+        });
+
+        for (int x = 0; x < ranks.size(); x++) {
+            if (rankName.equals(ranks.get(x).getShortName())) {
+                holder.viewTab.setBackgroundColor(Color.parseColor(ranks.get(x).getColor()));
+            }
         }
+//        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
+//            //Gold
+////            holder.imgProfile.setBorderColor(Color.YELLOW);
+//            holder.viewTab.setBackgroundResource(R.color.colorYellow);
+//        } else if (rankName.equals("พล.ต.ต.")) {
+//            //Blue sky
+////            holder.imgProfile.setBorderColor(Color.GREEN);
+//            holder.viewTab.setBackgroundResource(R.color.colorGreen);
+//        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
+//            //Blue
+////            holder.imgProfile.setBorderColor(Color.BLUE);
+//            holder.viewTab.setBackgroundResource(R.color.colorBlue);
+//        } else {
+//            //Red
+////            holder.imgProfile.setBorderColor(Color.RED);
+//            holder.viewTab.setBackgroundResource(R.color.colorRed);
+//        }
 
         if (mPoliceInfo.get(i).getTag() != null) {
             //        Set label orange or red.

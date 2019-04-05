@@ -1132,6 +1132,9 @@ drawable tooltip_frame_light
 drawable tv_orange_tag
 drawable tv_red_tag
 drawable user_ic
+font chatthai
+font cschatthai
+font cschatthai_ui
 id ALT
 id CTRL
 id FUNCTION
@@ -1166,9 +1169,11 @@ id all
 id always
 id async
 id auto
+id background_rank_color
 id background_user_detail
 id barrier
 id beginning
+id bg_user_detail_color
 id blocking
 id bottom
 id btn_edit
@@ -1185,7 +1190,7 @@ id cancel_action
 id cardView3
 id cardView6
 id cardViewDepartment
-id cardViewPosition
+id cardViewPosition1
 id cardViewProvince
 id cardViewRank
 id center
@@ -1441,6 +1446,7 @@ id transition_transform
 id tvArea
 id tvBack
 id tvDepartment
+id tvHistory
 id tvProvince
 id tvRank
 id tvStationPosition
@@ -1545,6 +1551,7 @@ layout abc_tooltip
 layout activity_contact_detail
 layout activity_edit_profile
 layout activity_filter
+layout activity_filter_department
 layout activity_login
 layout activity_main
 layout activity_map_station_list
@@ -1762,6 +1769,10 @@ string google_maps_key
 string google_storage_bucket
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
+string hint_search_department
+string hint_search_position
+string hint_search_province
+string hint_search_rank
 string kalasin
 string kamphaengPhet
 string kanchanaburi

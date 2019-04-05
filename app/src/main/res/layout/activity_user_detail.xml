@@ -2,232 +2,238 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/background_user_detail"
+    android:id="@+id/bg_user_detail_color"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@mipmap/bg09">
+    android:layout_height="match_parent" >
 
-    <View
-        android:id="@+id/view"
+    <RelativeLayout
+        android:id="@+id/background_user_detail"
         android:layout_width="match_parent"
-        android:layout_height="210dp" />
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp">
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="210dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ผู้ใช้งาน"
-                android:textColor="@color/fontWhite"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginLeft="24dp"
-                android:layout_weight="1"/>
-
-            <ImageView
-                android:id="@+id/img_close"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@mipmap/close" />
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/img_user_profile"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@mipmap/userfrofiledefualt"
-                android:layout_centerHorizontal="true"
-                android:elevation="1dp"/>
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:gravity="center">
 
-                <android.support.v7.widget.CardView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ผู้ใช้งาน"
+                    android:textColor="@color/fontWhite"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/img_close"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/close" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_user_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@mipmap/userfrofiledefualt"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="1dp"/>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="75dp"
-                    app:contentPaddingTop="15dp"
-                    app:contentPaddingRight="15dp"
-                    app:contentPaddingLeft="15dp"
-                    app:contentPaddingBottom="15dp"
-                    app:cardCornerRadius="10dp">
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/tv_name_user_profile"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ชัชณัฐพล รัตน์นราทร"
-                            android:textStyle="bold"
-                            android:textSize="17sp"
-                            android:layout_marginTop="80dp"
-                            android:layout_gravity="center_horizontal"/>
-
-                        <TextView
-                            android:id="@+id/tv_rank_name"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ผบช.ประจำ สง.ผบ.ตร."
-                            android:textColor="#A6181D"
-                            android:textSize="14sp"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center_horizontal"/>
-
-                        <TextView
-                            android:id="@+id/tv_position_name"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
-                            android:textStyle="italic"
-                            android:textSize="14sp"
-                            android:layout_marginTop="20dp"
-                            android:layout_gravity="center_horizontal"/>
+                        android:layout_marginTop="75dp"
+                        app:contentPaddingTop="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingBottom="15dp"
+                        app:cardCornerRadius="10dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            android:layout_gravity="center"
-                            android:padding="5dp"
-                            android:layout_marginTop="16dp">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                            <LinearLayout
+                            <TextView
+                                android:id="@+id/tv_name_user_profile"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_weight="1">
+                                android:text="ชัชณัฐพล รัตน์นราทร"
+                                android:textStyle="bold"
+                                android:textSize="17sp"
+                                android:layout_marginTop="80dp"
+                                android:layout_gravity="center_horizontal"/>
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="ที่ทำงาน (ภายใน)"
-                                    android:layout_gravity="center_horizontal"/>
-                                <TextView
-                                    android:id="@+id/tv_tel_profile"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="0968899061"
-                                    android:textColor="#000000"
-                                    android:layout_gravity="center_horizontal"/>
-
-                            </LinearLayout>
-                            <LinearLayout
+                            <TextView
+                                android:id="@+id/tv_rank_name"
                                 android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ผบช.ประจำ สง.ผบ.ตร."
+                                android:textColor="#A6181D"
+                                android:textSize="14sp"
+                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center_horizontal"/>
+
+                            <TextView
+                                android:id="@+id/tv_position_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
+                                android:textStyle="italic"
+                                android:textSize="14sp"
+                                android:layout_marginTop="20dp"
+                                android:layout_gravity="center_horizontal"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:padding="1dp"
-                                android:background="#B6B6B6"></LinearLayout>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_weight="1">
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginTop="16dp">
 
-                                <TextView
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="มือถือ"
-                                    android:layout_gravity="center_horizontal"/>
-                                <TextView
-                                    android:id="@+id/tv_phone_profile"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="ที่ทำงาน (ภายใน)"
+                                        android:layout_gravity="center_horizontal"/>
+                                    <TextView
+                                        android:id="@+id/tv_tel_profile"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0968899061"
+                                        android:textColor="#000000"
+                                        android:layout_gravity="center_horizontal"/>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:padding="1dp"
+                                    android:background="#B6B6B6"></LinearLayout>
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="0968899061"
-                                    android:textColor="#000000"
-                                    android:layout_gravity="center_horizontal"/>
+                                    android:orientation="vertical"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="มือถือ"
+                                        android:layout_gravity="center_horizontal"/>
+                                    <TextView
+                                        android:id="@+id/tv_phone_profile"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0968899061"
+                                        android:textColor="#000000"
+                                        android:layout_gravity="center_horizontal"/>
+
+                                </LinearLayout>
 
                             </LinearLayout>
-
                         </LinearLayout>
-                    </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_update_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="right"
+                    android:text="วันที่อัพเดตข้อมูล 15 กุมภาพันธ์ 2562"
+                    android:textColor="#A7A7A7" />
             </LinearLayout>
 
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tv_update_profile"
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="right"
-                android:text="วันที่อัพเดตข้อมูล 15 กุมภาพันธ์ 2562"
-                android:textColor="#A7A7A7" />
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btn_edit_profile"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/button_custom_staff"
+                    android:text="แก้ไขข้อมูล"
+                    android:drawableLeft="@mipmap/pencil"
+                    android:layout_gravity="right|bottom"
+                    android:gravity="center"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:textColor="@color/fontWhite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="ออกจากระบบ"
+
+                    android:textColor="#FF9F9F"
+                    android:background="@drawable/button_custom_location"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
         </LinearLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
-
-            <Button
-                android:id="@+id/btn_edit_profile"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_custom_staff"
-                android:text="แก้ไขข้อมูล"
-                android:drawableLeft="@mipmap/pencil"
-                android:layout_gravity="right|bottom"
-                android:gravity="center"
-                android:paddingLeft="80dp"
-                android:paddingRight="80dp"
-                android:textColor="@color/fontWhite"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btn_logout"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="ออกจากระบบ"
-
-                android:textColor="#FF9F9F"
-                android:background="@drawable/button_custom_location"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile" />
-
-
-        </android.support.constraint.ConstraintLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </RelativeLayout>

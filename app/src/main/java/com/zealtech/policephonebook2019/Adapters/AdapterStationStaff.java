@@ -79,37 +79,38 @@ public class AdapterStationStaff extends RecyclerView.Adapter<AdapterStationStaf
         }
 
 //        Set label orange or red.
-        for (int x = 0; x < mPoliceList.get(i).getTag().size(); x++) {
+        if (mPoliceList.get(i).getTag() != null) {
+            for (int x = 0; x < mPoliceList.get(i).getTag().size(); x++) {
 //            Log.d("tag", i + " : " + x + " : " + polis.getTag().size());
 //            Log.d("tag", polis.getFirstName() + ":" + polis.getTag().get(x));
-            if (x == 0) {
-                if (mPoliceList.get(i).getTag().get(x).equals("ตม.")) {
-                    viewHolder.tvPosition2.setVisibility(View.VISIBLE);
-                    viewHolder.tvPosition2.setBackgroundResource(R.drawable.tv_red_tag);
-                    viewHolder.tvPosition2.setText(mPoliceList.get(i).getTag().get(x));
+                if (x == 0) {
+                    if (mPoliceList.get(i).getTag().get(x).equals("ตม.")) {
+                        viewHolder.tvPosition2.setVisibility(View.VISIBLE);
+                        viewHolder.tvPosition2.setBackgroundResource(R.drawable.tv_red_tag);
+                        viewHolder.tvPosition2.setText(mPoliceList.get(i).getTag().get(x));
+                    }
+                    if (mPoliceList.get(i).getTag().get(x).equals("ผบก.")) {
+                        viewHolder.tvPosition2.setVisibility(View.VISIBLE);
+                        viewHolder.tvPosition2.setBackgroundResource(R.drawable.tv_orange_tag);
+                        viewHolder.tvPosition2.setText(mPoliceList.get(i).getTag().get(x));
+                    }
                 }
-                if (mPoliceList.get(i).getTag().get(x).equals("ผบก.")) {
-                    viewHolder.tvPosition2.setVisibility(View.VISIBLE);
-                    viewHolder.tvPosition2.setBackgroundResource(R.drawable.tv_orange_tag);
-                    viewHolder.tvPosition2.setText(mPoliceList.get(i).getTag().get(x));
-                }
-            }
 
-            if (x == 1) {
-                if (mPoliceList.get(i).getTag().get(x).equals("ผบก.")) {
-                    viewHolder.tvPosition1.setVisibility(View.VISIBLE);
-                    viewHolder.tvPosition1.setBackgroundResource(R.drawable.tv_orange_tag);
-                    viewHolder.tvPosition1.setText(mPoliceList.get(i).getTag().get(x));
+                if (x == 1) {
+                    if (mPoliceList.get(i).getTag().get(x).equals("ผบก.")) {
+                        viewHolder.tvPosition1.setVisibility(View.VISIBLE);
+                        viewHolder.tvPosition1.setBackgroundResource(R.drawable.tv_orange_tag);
+                        viewHolder.tvPosition1.setText(mPoliceList.get(i).getTag().get(x));
+                    }
+                    if (mPoliceList.get(i).getTag().get(x).equals("ตม.")) {
+                        viewHolder.tvPosition1.setVisibility(View.VISIBLE);
+                        viewHolder.tvPosition1.setBackgroundResource(R.drawable.tv_red_tag);
+                        viewHolder.tvPosition1.setText(mPoliceList.get(i).getTag().get(x));
+                    }
                 }
-                if (mPoliceList.get(i).getTag().get(x).equals("ตม.")) {
-                    viewHolder.tvPosition1.setVisibility(View.VISIBLE);
-                    viewHolder.tvPosition1.setBackgroundResource(R.drawable.tv_red_tag);
-                    viewHolder.tvPosition1.setText(mPoliceList.get(i).getTag().get(x));
-                }
-            }
 
-        }// end for loop.
-
+            }// end for loop.
+        }
         viewHolder.parent_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

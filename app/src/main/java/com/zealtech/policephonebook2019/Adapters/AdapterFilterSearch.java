@@ -28,7 +28,7 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
 
     private static final String TAG = "AdapterFilterSearch";
 
-    private List<BaseFilterItem> mTag;
+                        private List<BaseFilterItem> mTag;
     private Activity mActivity;
     private String tagFilter;
     private String valueFilter = "";

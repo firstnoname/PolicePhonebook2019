@@ -1,31 +1,52 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.gson.Gson;
+import com.zealtech.policephonebook2019.Config.Api;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.Province;
 import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
+import com.zealtech.policephonebook2019.Model.response.ResponseProfile;
+import com.zealtech.policephonebook2019.Util.AppUtils;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.json.JSONException;
+import org.json.JSONObject;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class EditProfileActivity extends AppCompatActivity {
 
@@ -36,14 +57,22 @@ public class EditProfileActivity extends AppCompatActivity {
     private ImageView imgInfo;
     private TextView tvSelectPhoto, tvRank, tvDepartment, tvPosition, tvUpdateDate;
 
-    private String IMAGE_URL = "http://ztidev.com:8081/phonebook/download?file=";
+    private String IMAGE_URL = ApplicationConfig.getImageUrl();
 
     private String updateDate, updateTime;
+
+//    Selected list
+    private String editedName, id, editedLastname, editedPhoneNumber, token;
+    private int selectedDepartment, positionId, rankId;
+    MultipartBody.Part imgProfile;
 
     private ProfileH mProfile = new ProfileH();
 
     private static final int PICK_IMAGE = 100;
+    private static final int PICK_DEPARTMENT = 2;
     Uri imageUri;
+
+    private Api api = AppUtils.getApiService();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +111,200 @@ public class EditProfileActivity extends AppCompatActivity {
             }
         });
 
+        selectedDepartment = mProfile.getDepartmentId();
+        editedName = mProfile.getFirstName();
+        id = mProfile.getId();
+        editedLastname = mProfile.getLastName();
+        editedPhoneNumber = mProfile.getPhoneNumber();
+        positionId = mProfile.getPositionId();
+        rankId = mProfile.getRankId();
+        token = mProfile.getToken();
+
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editedName = edtName.getText().toString().trim();
+                editedLastname = edtLastname.getText().toString().trim();
+                editedPhoneNumber = edtPhone.getText().toString().trim();
+
+//                if (imgProfile.equals(null)) {
+//                    pushEditedProfileWithoutImgProfile();
+//                } else {
+//                    pushEditedProfile();
+//                }
+
+                pushEditedProfileWithoutImgProfile();
+
+            }
+        });
+    }
+
+    private void pushEditedProfileWithoutImgProfile() {
+        Call<ResponseProfile> call = api.editProfileWithoutImageProfile(selectedDepartment, editedName, id,
+                editedLastname, editedPhoneNumber, positionId, rankId, token);
+        call.enqueue(new Callback<ResponseProfile>() {
+            @Override
+            public void onResponse(Call<ResponseProfile> call, Response<ResponseProfile> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+//                              Get data from api.
+                            mProfile.setEditBy(response.body().getData().getEditBy());
+                            mProfile.setImageProfile(response.body().getData().getImageProfile());
+                            mProfile.setUserName(response.body().getData().getUserName());
+                            mProfile.setFirstName(response.body().getData().getFirstName());
+                            mProfile.setLastName(response.body().getData().getLastName());
+                            mProfile.setSuperAdmin(response.body().getData().getSuperAdmin());
+                            mProfile.setGender(response.body().getData().getGender());
+                            mProfile.setDepartmentId(response.body().getData().getDepartmentId());
+                            mProfile.setPositionId(response.body().getData().getPositionId());
+                            mProfile.setRankId(response.body().getData().getRankId());
+                            mProfile.setPhoneNumber(response.body().getData().getPhoneNumber());
+                            mProfile.setTag(response.body().getData().getTag());
+                            mProfile.setDepartmentName(response.body().getData().getDepartmentName());
+                            mProfile.setPositionName(response.body().getData().getPositionName());
+                            mProfile.setRankName(response.body().getData().getRankName());
+                            mProfile.setViews(response.body().getData().getViews());
+                            mProfile.setFavorites(response.body().getData().getFavorites());
+                            mProfile.setToken(token);
+                            mProfile.setDepartmentPhoneNumber(response.body().getData().getDepartmentPhoneNumber());
+                            mProfile.setSuperAdmin(response.body().getData().getSuperAdmin());
+                            mProfile.setId(response.body().getData().getId());
+                            mProfile.setCreateDate(response.body().getData().getCreateDate());
+                            mProfile.setUpdateDate(response.body().getData().getUpdateDate());
+                            mProfile.setEnable(response.body().getData().getEnable());
+
+//                                Save shared preferences.
+                            SharedPreferences mPrefs = getSharedPreferences("user_info", MODE_PRIVATE);
+                            SharedPreferences.Editor prefsEditor = mPrefs.edit();
+                            Gson gson = new Gson();
+                            String json = gson.toJson(mProfile);
+                            prefsEditor.putString("ProfileObject", json);
+                            prefsEditor.putInt("Subscription", 2);
+                            prefsEditor.commit();
+
+                            FirebaseMessaging.getInstance().unsubscribeFromTopic("1");
+                            FirebaseMessaging.getInstance().subscribeToTopic("2");
+
+//                              Display user detail page.
+                            Intent iUserDetail = new Intent(getApplicationContext(), UserDetailActivity.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("user_profile", mProfile);
+                            iUserDetail.putExtras(bundle);
+                            startActivity(iUserDetail);
+
+                            finish();
+
+                        } else {
+                            Toast.makeText(EditProfileActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(EditProfileActivity.this, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        if (jObjError.has("code") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                            Log.d(TAG, response.errorBody().string());
+                        } else {
+                            Log.d(TAG, response.errorBody().string());
+                        }
+                    } catch (JSONException e) {
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseProfile> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void pushEditedProfile() {
+        Call<ResponseProfile> call = api.editProfile(selectedDepartment, editedName, id, imgProfile,
+                editedLastname, editedPhoneNumber, positionId, rankId, token);
+        call.enqueue(new Callback<ResponseProfile>() {
+            @Override
+            public void onResponse(Call<ResponseProfile> call, Response<ResponseProfile> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+//                              Get data from api.
+                            mProfile.setEditBy(response.body().getData().getEditBy());
+                            mProfile.setImageProfile(response.body().getData().getImageProfile());
+                            mProfile.setUserName(response.body().getData().getUserName());
+                            mProfile.setFirstName(response.body().getData().getFirstName());
+                            mProfile.setLastName(response.body().getData().getLastName());
+                            mProfile.setSuperAdmin(response.body().getData().getSuperAdmin());
+                            mProfile.setGender(response.body().getData().getGender());
+                            mProfile.setDepartmentId(response.body().getData().getDepartmentId());
+                            mProfile.setPositionId(response.body().getData().getPositionId());
+                            mProfile.setRankId(response.body().getData().getRankId());
+                            mProfile.setPhoneNumber(response.body().getData().getPhoneNumber());
+                            mProfile.setTag(response.body().getData().getTag());
+                            mProfile.setDepartmentName(response.body().getData().getDepartmentName());
+                            mProfile.setPositionName(response.body().getData().getPositionName());
+                            mProfile.setRankName(response.body().getData().getRankName());
+                            mProfile.setViews(response.body().getData().getViews());
+                            mProfile.setFavorites(response.body().getData().getFavorites());
+                            mProfile.setToken(token);
+                            mProfile.setDepartmentPhoneNumber(response.body().getData().getDepartmentPhoneNumber());
+                            mProfile.setSuperAdmin(response.body().getData().getSuperAdmin());
+                            mProfile.setId(response.body().getData().getId());
+                            mProfile.setCreateDate(response.body().getData().getCreateDate());
+                            mProfile.setUpdateDate(response.body().getData().getUpdateDate());
+                            mProfile.setEnable(response.body().getData().getEnable());
+
+//                                Save shared preferences.
+                            SharedPreferences mPrefs = getSharedPreferences("user_info", MODE_PRIVATE);
+                            SharedPreferences.Editor prefsEditor = mPrefs.edit();
+                            Gson gson = new Gson();
+                            String json = gson.toJson(mProfile);
+                            prefsEditor.putString("ProfileObject", json);
+                            prefsEditor.putInt("Subscription", 2);
+                            prefsEditor.commit();
+
+                            FirebaseMessaging.getInstance().unsubscribeFromTopic("1");
+                            FirebaseMessaging.getInstance().subscribeToTopic("2");
+
+//                              Display user detail page.
+                            Intent iUserDetail = new Intent(getApplicationContext(), UserDetailActivity.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("user_profile", mProfile);
+                            iUserDetail.putExtras(bundle);
+                            startActivity(iUserDetail);
+
+                            finish();
+
+                        } else {
+                            Toast.makeText(EditProfileActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(EditProfileActivity.this, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        if (jObjError.has("code") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                            Log.d(TAG, response.errorBody().string());
+                        } else {
+                            Log.d(TAG, response.errorBody().string());
+                        }
+                    } catch (JSONException e) {
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseProfile> call, Throwable t) {
+
+            }
+        });
     }
 
     private void openGallery() {
@@ -95,8 +318,11 @@ public class EditProfileActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
             imageUri = data.getData();
             imgInfo.setImageURI(imageUri);
+
+            setValueImage(data);
         }
 
+        //Check return dropdown result.
         if (data != null) {
             BaseFilterItem item = (BaseFilterItem) data.getSerializableExtra("valueFilter");
 
@@ -106,11 +332,50 @@ public class EditProfileActivity extends AppCompatActivity {
 
             } else if (item instanceof Rank) {
                 tvRank.setText(((Rank) item).getRankName());
+                rankId = ((Rank) item).getRankId();
             } else if (item instanceof Position) {
-
+                tvPosition.setText(((Position) item).getPositionName());
+                positionId = ((Position) item).getPositionId();
             }
 
         }
+
+        if (requestCode == PICK_DEPARTMENT) {
+            if(resultCode == Activity.RESULT_OK){
+                Log.d(TAG, "resultCode = "  + resultCode);
+                tvDepartment.setText(data.getStringExtra("departmentName"));
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+                Log.d(TAG, "resultCode = " + resultCode);
+            }
+        }
+
+    }
+
+    private void setValueImage(Intent data) {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        byte[] newImage = outputStream.toByteArray();
+
+        Uri uri = data.getData();
+        String path = uri.getPath();
+
+        File uploadFile = new File(getApplicationContext().getCacheDir(), path);
+        try {
+            FileOutputStream fos = new FileOutputStream(uploadFile);
+            fos.write(newImage);
+            fos.flush();
+            fos.close();
+
+            RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"), uploadFile);
+            imgProfile = MultipartBody.Part.createFormData("imageProfile", uploadFile.getName(), requestBody);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void selectRank(View view) {
@@ -129,9 +394,13 @@ public class EditProfileActivity extends AppCompatActivity {
     
     public void selectDepartment(View view) {
         //Call api.
-        Intent iDepartment = new Intent(this, FilterActivity.class);
+        Intent iDepartment = new Intent(this, FilterDepartmentActivity.class);
         iDepartment.putExtra("tag", "department");
-        this.startActivityForResult(iDepartment, 1);
+        iDepartment.putExtra("provinceId", "");
+        iDepartment.putExtra("level", 1);
+        iDepartment.putExtra("departmentId", "");
+        this.startActivityForResult(iDepartment, PICK_DEPARTMENT);
     }
+
 
 }

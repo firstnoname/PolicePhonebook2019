@@ -9,10 +9,13 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Adapters.AdapterDepartmentSearchFilter;
 import com.zealtech.policephonebook2019.Adapters.AdapterFilterSearch;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
+import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.Province;
+import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
 import com.zealtech.policephonebook2019.Model.response.ResponsePosition;
@@ -39,12 +42,31 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
     private String provinceId = "";
     private String rankId = "";
     private String positionId = "";
+    private int level = 1;
 
     SearchView searchView;
     AdapterFilterSearch adapter;
 
     //vars
     private ArrayList<BaseFilterItem> apiItemFilter = new ArrayList<>();
+
+    //Department filter vars
+    ArrayList<Department> mDepartmentList = new ArrayList<>();
+    AdapterDepartmentSearchFilter mAdapterDepartment;
+
+
+    /*BaseFilterItem baseFilterItem = new BaseFilterItem() {
+        @Override
+        protected String setId() {
+            return String.valueOf(0);
+        }
+
+        @Override
+        protected String setName() {
+            return "ทั้งหมด";
+        }
+    };*/
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,22 +86,30 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
             } else if (tagFilter.equals("province")) {
                 initProvince();
             } else if (tagFilter.equals("department")) {
+                provinceId = getIntent().getStringExtra("provinceId");
+                if (provinceId.equals("0")) {
+                    provinceId = "";
+                }
                 initDepartment();
             }
         }
     }
 
-
     private void initDepartment() {
-        Call<ResponseDepartment> call = api.getDepartment(1, "", getIntent().getStringExtra(provinceId));
+        Call<ResponseDepartment> call = api.getDepartment(level, "", provinceId);
         call.enqueue(new Callback<ResponseDepartment>() {
             @Override
             public void onResponse(Call<ResponseDepartment> call, Response<ResponseDepartment> response) {
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+                            /*apiItemFilter.add(0, new Department().createTotalItem());
                             apiItemFilter.addAll(response.body().getData().getContent());
-                            initRecyclerView(apiItemFilter);
+                            initRecyclerView(apiItemFilter);*/
+
+                            mDepartmentList.addAll(response.body().getData().getContent());
+                            setAdapter(mDepartmentList);
+
                         } else {
                             Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -103,6 +133,13 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
         });
     }
 
+    private void setAdapter(ArrayList<Department> mDepartmentList) {
+        RecyclerView recyclerView = findViewById(R.id.recycler_filter);
+        mAdapterDepartment = new AdapterDepartmentSearchFilter(this, mDepartmentList);
+        recyclerView.setAdapter(mAdapterDepartment);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
     private void initProvince() {
         Call<ResponseProvince> call = api.getProvince();
         call.enqueue(new Callback<ResponseProvince>() {
@@ -111,6 +148,7 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+                            apiItemFilter.add(0, new Province().createTotalItem());
                             apiItemFilter.addAll(response.body().getData());
                             initRecyclerView(apiItemFilter);
                         } else {
@@ -145,6 +183,7 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+                            apiItemFilter.add(0, new Position().createTotalItem());
                             apiItemFilter.addAll(response.body().getData());
                             initRecyclerView(apiItemFilter);
                         } else {
@@ -178,6 +217,7 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+                            apiItemFilter.add(0, new Rank().createTotalItem());
                             apiItemFilter.addAll(response.body().getData());
                             initRecyclerView(apiItemFilter);
                         } else {
