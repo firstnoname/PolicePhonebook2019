@@ -25,14 +25,14 @@ import java.util.ArrayList;
 public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterDepartmentSearchFilter.ViewHolder>{
     private static final String TAG = "AdapterDepartmentSearch";
 
-    private Activity activity;
+    private Activity mActivity;
     private ArrayList<Department> mDepartment;
 
     int resId = R.mipmap.policestation_ic;
     int level = 1;
 
     public AdapterDepartmentSearchFilter(Activity activity, ArrayList<Department> mDepartment) {
-        this.activity = activity;
+        this.mActivity = activity;
         this.mDepartment = mDepartment;
     }
 
@@ -56,6 +56,7 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
                 tagArea += mDepartment.get(i).getTag().get(x) + ", ";
             }
         }
+
         holder.tvArea.setText(tagArea);
 
         holder.layout_adapter_map_list.setOnClickListener(new View.OnClickListener() {
@@ -64,12 +65,12 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
                 if (mDepartment.get(i).getFlagTail().equals(true)) {
                     level += 1;
                     String parentId = String.valueOf(mDepartment.get(i).getDepartmentId());
-                    Intent intent = new Intent(activity, FilterDepartmentActivity.class);
+                    Intent intent = new Intent(mActivity, FilterDepartmentActivity.class);
                     intent.putExtra("level", level);
                     intent.putExtra("parentId", parentId);
                     intent.putExtra("subTitle", mDepartment.get(i).getDepartmentName());
-                    activity.startActivity(intent);
-                    activity.finish();
+                    mActivity.startActivity(intent);
+                    mActivity.finish();
                 } else {
                     int departmentId = mDepartment.get(i).getDepartmentId();
                     String departmentName = mDepartment.get(i).getDepartmentName();
@@ -77,8 +78,8 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
                     Intent iEditProfile = new Intent();
                     iEditProfile.putExtra("departmentId", departmentId);
                     iEditProfile.putExtra("departmentName", departmentName);
-                    activity.setResult(Activity.RESULT_OK, iEditProfile);
-                    activity.finish();
+                    mActivity.setResult(Activity.RESULT_OK, iEditProfile);
+                    mActivity.finish();
                 }
             }
         });

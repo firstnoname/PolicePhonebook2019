@@ -1,8 +1,9 @@
 package com.zealtech.policephonebook2019.Activities;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
@@ -70,6 +71,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private static final int PICK_IMAGE = 100;
     private static final int PICK_DEPARTMENT = 2;
+    private String img_path;
     Uri imageUri;
 
     private Api api = AppUtils.getApiService();
@@ -134,6 +136,7 @@ public class EditProfileActivity extends AppCompatActivity {
 //                }
 
                 pushEditedProfileWithoutImgProfile();
+//                pushEditedProfile();
 
             }
         });
@@ -310,16 +313,24 @@ public class EditProfileActivity extends AppCompatActivity {
     private void openGallery() {
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(gallery, PICK_IMAGE);
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
-            imageUri = data.getData();
-            imgInfo.setImageURI(imageUri);
+        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE && data != null) {
 
-            setValueImage(data);
+            imgInfo.setImageURI(data.getData());
+
+            imageUri = data.getData();
+            img_path = getRealPathFromURI(imageUri);
+            if (img_path != null) {
+                File f = new File(img_path);
+                imageUri = Uri.fromFile(f);
+                setValueImage(imageUri);
+            }
+
         }
 
         //Check return dropdown result.
@@ -340,24 +351,33 @@ public class EditProfileActivity extends AppCompatActivity {
 
         }
 
-        if (requestCode == PICK_DEPARTMENT) {
-            if(resultCode == Activity.RESULT_OK){
-                Log.d(TAG, "resultCode = "  + resultCode);
-                tvDepartment.setText(data.getStringExtra("departmentName"));
-            }
-            if (resultCode == Activity.RESULT_CANCELED) {
-                //Write your code if there's no result
-                Log.d(TAG, "resultCode = " + resultCode);
-            }
+        if (resultCode == RESULT_OK && requestCode == PICK_DEPARTMENT) {
+            tvDepartment.setText(data.getStringExtra("departmentName"));
+        } else {
+            tvDepartment.setText(resultCode+"");
         }
 
     }
 
-    private void setValueImage(Intent data) {
+    public String getRealPathFromURI(Uri uri) {
+        String path = "";
+        if (getContentResolver() != null) {
+            Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+            if (cursor != null) {
+                cursor.moveToFirst();
+                int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+                path = cursor.getString(idx);
+                cursor.close();
+            }
+        }
+
+        return path;
+    }
+
+    private void setValueImage(Uri uri) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         byte[] newImage = outputStream.toByteArray();
 
-        Uri uri = data.getData();
         String path = uri.getPath();
 
         File uploadFile = new File(getApplicationContext().getCacheDir(), path);
@@ -401,6 +421,5 @@ public class EditProfileActivity extends AppCompatActivity {
         iDepartment.putExtra("departmentId", "");
         this.startActivityForResult(iDepartment, PICK_DEPARTMENT);
     }
-
 
 }

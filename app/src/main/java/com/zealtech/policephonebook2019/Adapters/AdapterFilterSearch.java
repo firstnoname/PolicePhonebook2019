@@ -42,7 +42,8 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.adapter_filter_search, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.adapter_filter_search,
+                viewGroup, false);
         ViewHolder holder = new ViewHolder(view);
 
         return holder;
@@ -61,7 +62,7 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
                 Intent iSearchFragment = new Intent();
                 iSearchFragment.putExtra("tagFilter", tagFilter);
                 iSearchFragment.putExtra("valueFilter", mTag.get(i));
-                mActivity.setResult(Activity.RESULT_OK,iSearchFragment);
+                mActivity.setResult(Activity.RESULT_OK, iSearchFragment);
                 mActivity.finish();
 
             }
