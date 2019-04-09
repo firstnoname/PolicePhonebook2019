@@ -132,7 +132,7 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
         this.apiPoliceMasterData = dataSet;
 //        Log.d(TAG, String.valueOf(apiPoliceMasterData.size()));
 
-        mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData);
+        mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData, true);
 
         recyclerView.setAdapter(mAdapter);
     }

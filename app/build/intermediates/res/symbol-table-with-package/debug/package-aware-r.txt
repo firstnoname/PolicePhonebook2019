@@ -1287,6 +1287,7 @@ id info
 id input_password
 id invisible
 id italic
+id item_row_letter
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
@@ -1595,6 +1596,7 @@ layout fragment_phone_list
 layout fragment_search
 layout fragment_station_detail
 layout fragment_station_staff
+layout item_row
 layout layout_tab
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include

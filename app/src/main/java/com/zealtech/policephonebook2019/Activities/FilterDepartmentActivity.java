@@ -48,6 +48,10 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
         //get data
         level = getIntent().getIntExtra("level", 1);
         departmentId = getIntent().getStringExtra("parentId");
+        provinceId = getIntent().getStringExtra("provinceId");
+        if (provinceId.equals("0")) {
+            provinceId = "";
+        }
 
         Call<ResponseDepartment> call = api.getDepartment(level, departmentId, provinceId);
         call.enqueue(new Callback<ResponseDepartment>() {

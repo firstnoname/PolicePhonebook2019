@@ -54,6 +54,14 @@ public interface Api {
     @GET("getFavorite")
     Call<ResponseFavorite> getFavorite(@Header("token") String token);
 
+    @POST("addFavorite")
+    Call<ResponseFavorite> addFavorite(@Query("id") String id, @Header("token") String token);
+
+    @POST("removeFavorite")
+    Call<ResponseFavorite> removeFavorite(@Query("id") String id, @Header("token") String token);
+
+    /*@POST("addFavorite")
+    Call<Response>*/
     /*@Multipart
     @POST("upload")
     Call<ResponseUpload> upload(@Header("token") String token

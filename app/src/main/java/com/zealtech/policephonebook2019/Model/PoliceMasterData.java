@@ -1,9 +1,11 @@
 package com.zealtech.policephonebook2019.Model;
 
+import com.zealtech.policephonebook2019.Model.base.BaseItem;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PoliceMasterData implements Serializable {
+public class PoliceMasterData extends BaseItem implements Serializable {
     ArrayList<PoliceMasterData> content;
     PoliceMasterData policeMasterData;
 
@@ -88,6 +90,17 @@ public class PoliceMasterData implements Serializable {
         this.tag = tag;
     }
 
+    @Override
+    protected String setId() {
+        return id;
+    }
+
+    @Override
+    protected String setName() {
+        return firstName;
+    }
+
+
     public String getId() {
         return id;
     }
@@ -96,5 +109,8 @@ public class PoliceMasterData implements Serializable {
         this.id = id;
     }
 
+    public String getFirstNameAlphabetOnly() {
+        return getFirstName().replaceAll("[^a-zA-Z0-9ก-ฮ]", "");
+    }
 
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="20dp"
+
+    android:background="#E6E6E6">
+
+    <TextView
+        android:id="@+id/item_row_letter"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="ก"
+        android:textColor="#21B8FA"
+        android:layout_marginLeft="4dp"/>
+</LinearLayout>

@@ -38,6 +38,7 @@ public class ContactDetailActivity extends AppCompatActivity {
     private int position;
     private String image_url;
     private String fullName, strPosition, department, tel1, tel2, rankName;
+    private Boolean favTag = false;
 
     ArrayList<PoliceMasterData> policeMasterData = new ArrayList<>();
 
@@ -116,7 +117,13 @@ public class ContactDetailActivity extends AppCompatActivity {
         imgFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imgFavorite.setImageResource(R.mipmap.star_ac);
+                if (favTag.equals(true)) {
+                    imgFavorite.setImageResource(R.mipmap.star);
+                    favTag = false;
+                } else {
+                    imgFavorite.setImageResource(R.mipmap.star_ac);
+                    favTag = true;
+                }
             }
         });
     }

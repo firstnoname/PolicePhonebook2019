@@ -210,20 +210,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (data != null) {
-            BaseFilterItem item = (BaseFilterItem) data.getSerializableExtra("valueFilter");
 
-            if(item instanceof Province){
-                searchFragment.setDropDownProvince((Province) item);
-            } else if (item instanceof Department) {
-                searchFragment.setDropDownDepartment((Department) item);
-            } else if (item instanceof Rank) {
-                searchFragment.setDropDownRank((Rank) item);
-            } else if (item instanceof Position) {
-                searchFragment.setDropDownPosition((Position) item);
+        if (requestCode == 1) {
+            if (data != null) {
+                BaseFilterItem item = (BaseFilterItem) data.getSerializableExtra("valueFilter");
+
+                if(item instanceof Province){
+                    searchFragment.setDropDownProvince((Province) item);
+                } else if (item instanceof Department) {
+                    searchFragment.setDropDownDepartment((Department) item);
+                } else if (item instanceof Rank) {
+                    searchFragment.setDropDownRank((Rank) item);
+                } else if (item instanceof Position) {
+                    searchFragment.setDropDownPosition((Position) item);
+                }
             }
-
+        } else if (requestCode == 2) {
+            if (data != null) {
+                searchFragment.setDropDownDepartment((Department) data.getSerializableExtra("departmentSelected"));
+            }
         }
+
     }
 
     private void setMenuIcon() {

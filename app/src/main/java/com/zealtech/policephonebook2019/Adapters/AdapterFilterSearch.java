@@ -1,24 +1,17 @@
 package com.zealtech.policephonebook2019.Adapters;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
-import com.zealtech.policephonebook2019.Activities.FilterActivity;
-import com.zealtech.policephonebook2019.Activities.MainActivity;
-import com.zealtech.policephonebook2019.Fragments.SearchFragment;
 import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 
 import java.util.ArrayList;
@@ -28,7 +21,7 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
 
     private static final String TAG = "AdapterFilterSearch";
 
-                        private List<BaseFilterItem> mTag;
+    private List<BaseFilterItem> mTag;
     private Activity mActivity;
     private String tagFilter;
     private String valueFilter = "";
@@ -74,6 +67,12 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
         return mTag.size();
     }
 
+    public void updateList(ArrayList<BaseFilterItem> newList) {
+        mTag = new ArrayList<>();
+        mTag.addAll(newList);
+        notifyDataSetChanged();
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imgInfo;
@@ -87,11 +86,5 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
             imgInfo = itemView.findViewById(R.id.img_info);
             txtInfo = itemView.findViewById(R.id.tv_info);
         }
-    }
-
-    public void updateList(ArrayList<BaseFilterItem> newList) {
-        mTag = new ArrayList<>();
-        mTag.addAll(newList);
-        notifyDataSetChanged();
     }
 }

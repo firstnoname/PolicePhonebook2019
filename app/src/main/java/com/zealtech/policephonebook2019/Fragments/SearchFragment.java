@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.FilterActivity;
+import com.zealtech.policephonebook2019.Activities.FilterDepartmentActivity;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
@@ -139,7 +140,7 @@ public class SearchFragment extends Fragment {
                 Intent iDepartment = new Intent(getActivity(), FilterActivity.class);
                 iDepartment.putExtra("tag", "department");
                 iDepartment.putExtra("provinceId", provinceId);
-                getActivity().startActivityForResult(iDepartment, 1);
+                getActivity().startActivityForResult(iDepartment, 2);
             }
         });
 

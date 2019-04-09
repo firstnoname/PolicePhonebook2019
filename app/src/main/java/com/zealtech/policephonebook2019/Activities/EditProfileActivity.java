@@ -144,7 +144,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private void pushEditedProfileWithoutImgProfile() {
         Call<ResponseProfile> call = api.editProfileWithoutImageProfile(selectedDepartment, editedName, id,
-                editedLastname, editedPhoneNumber, positionId, rankId, token);
+                    editedLastname, editedPhoneNumber, positionId, rankId, token);
         call.enqueue(new Callback<ResponseProfile>() {
             @Override
             public void onResponse(Call<ResponseProfile> call, Response<ResponseProfile> response) {
@@ -353,8 +353,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
         if (resultCode == RESULT_OK && requestCode == PICK_DEPARTMENT) {
             tvDepartment.setText(data.getStringExtra("departmentName"));
-        } else {
-            tvDepartment.setText(resultCode+"");
+            selectedDepartment = data.getIntExtra("departmentId", 0);
         }
 
     }
@@ -380,8 +379,9 @@ public class EditProfileActivity extends AppCompatActivity {
 
         String path = uri.getPath();
 
-        File uploadFile = new File(getApplicationContext().getCacheDir(), path);
+//        Create temp file to write new bitmap(scale/compress image) for upload
         try {
+            File uploadFile = new File(getApplicationContext().getCacheDir(), path);
             FileOutputStream fos = new FileOutputStream(uploadFile);
             fos.write(newImage);
             fos.flush();
