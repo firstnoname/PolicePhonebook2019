@@ -1,5 +1,6 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,15 +13,20 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
+import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.Rank;
+import com.zealtech.policephonebook2019.Model.response.ResponseFavorite;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -39,6 +45,8 @@ public class ContactDetailActivity extends AppCompatActivity {
     private String image_url;
     private String fullName, strPosition, department, tel1, tel2, rankName;
     private Boolean favTag = false;
+    private String token = "";
+    private String id = "";
 
     ArrayList<PoliceMasterData> policeMasterData = new ArrayList<>();
 
@@ -63,6 +71,7 @@ public class ContactDetailActivity extends AppCompatActivity {
 
         policeMasterData = (ArrayList<PoliceMasterData>) getIntent().getSerializableExtra("contact_detail");
         position = getIntent().getIntExtra("position", 0);
+        id = policeMasterData.get(position).getId();
 
 //        Set rank color
         callRankApi();
@@ -100,6 +109,8 @@ public class ContactDetailActivity extends AppCompatActivity {
 
 //        Todo: Don't have update date in PoliceMasterData.
 
+        isFavorite();
+
         imgClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -120,12 +131,78 @@ public class ContactDetailActivity extends AppCompatActivity {
                 if (favTag.equals(true)) {
                     imgFavorite.setImageResource(R.mipmap.star);
                     favTag = false;
+                    addFavorite();
                 } else {
                     imgFavorite.setImageResource(R.mipmap.star_ac);
                     favTag = true;
+                    addFavorite();
                 }
             }
         });
+
+
+    }
+
+    private void isFavorite() {
+
+        checkLogin();
+
+        Call<ResponseFavorite> call = api.getFavorite(token);
+        call.enqueue(new Callback<ResponseFavorite>() {
+            @Override
+            public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            for (int i = 0; i < response.body().getData().size(); i++) {
+                                String apiId = response.body().getData().get(i).getId();
+                                String selectedId = policeMasterData.get(position).getId();
+                                if (selectedId.equals(apiId)) {
+//                                    Toast.makeText(ContactDetailFilterActivity.this, "True", Toast.LENGTH_SHORT).show();
+                                    imgFavorite.setImageResource(R.mipmap.star_ac);
+                                } else {
+//                                    Toast.makeText(ContactDetailFilterActivity.this, selectedId + " : " + apiId, Toast.LENGTH_SHORT).show();
+                                    imgFavorite.setImageResource(R.mipmap.star);
+                                }
+                            }
+                        } else {
+                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
+                        } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseFavorite> call, Throwable t) {
+                Log.d(TAG, String.valueOf(call));
+                Log.d(TAG, String.valueOf(t));
+            }
+        });
+    }
+
+    private void checkLogin() {
+        SharedPreferences mPref = getSharedPreferences("user_info", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = mPref.getString("ProfileObject", "");
+        ProfileH mProfile = gson.fromJson(json, ProfileH.class);
+
+        token = mProfile.getToken();
+
     }
 
     private void callRankApi() {
@@ -165,6 +242,90 @@ public class ContactDetailActivity extends AppCompatActivity {
             if (rankName.equals(data.get(i).getShortName())) {
                 relativeLayoutBackground.setBackgroundColor(Color.parseColor(data.get(i).getColor()));
             }
+        }
+    }
+
+    private void addFavorite() {
+        //Call api add fav.
+//        Toast.makeText(this, policeMasterData.get(position).getId(), Toast.LENGTH_SHORT).show();
+        if (favTag.equals(true)) {
+            Call<ResponseFavorite> call = api.addFavorite(id, token);
+            call.enqueue(new Callback<ResponseFavorite>() {
+                @Override
+                public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
+                    if (response.body() != null) {
+                        if (response.body().getCode().equalsIgnoreCase("OK")) {
+                            if (response.body().getCode().equals("OK")) {
+                                Toast.makeText(ContactDetailActivity.this, "Save favorite successful", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        try {
+                            JSONObject jObjError = new JSONObject(response.errorBody().string());
+                            if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
+                                Log.d(TAG, String.valueOf(jObjError.get("code")));
+                            } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                                Log.d(TAG, String.valueOf(jObjError.get("code")));
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Log.d(TAG, String.valueOf(e));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            Log.d(TAG, String.valueOf(e));
+
+                        }
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<ResponseFavorite> call, Throwable t) {
+
+                }
+            });
+        } else {
+            Call<ResponseFavorite> call = api.removeFavorite(id, token);
+            call.enqueue(new Callback<ResponseFavorite>() {
+                @Override
+                public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
+                    if (response.body() != null) {
+                        if (response.body().getCode().equalsIgnoreCase("OK")) {
+                            if (response.body().getCode().equals("OK")) {
+//                                Toast.makeText(ContactDetailFilterActivity.this, "Remove favorite successful", Toast.LENGTH_SHORT).show();
+                            } else {
+//                                Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        try {
+                            JSONObject jObjError = new JSONObject(response.errorBody().string());
+                            if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
+                                Log.d(TAG, String.valueOf(jObjError.get("code")));
+                            } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                                Log.d(TAG, String.valueOf(jObjError.get("code")));
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Log.d(TAG, String.valueOf(e));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            Log.d(TAG, String.valueOf(e));
+
+                        }
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<ResponseFavorite> call, Throwable t) {
+
+                }
+            });
         }
     }
 

@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SearchFragment extends Fragment {
+public class SearchFragment extends Fragment{
 
     private static final String TAG = "SearchFragment";
 
@@ -60,6 +61,7 @@ public class SearchFragment extends Fragment {
 
     CardView cvProvince, cvRank, cvPosition, cvDepartment;
     TextView tvProvince, tvDepartment, tvRank, tvPosition, tvListSize;
+    SearchView searchView;
 
     Api api = AppUtils.getApiService();
 
@@ -67,6 +69,7 @@ public class SearchFragment extends Fragment {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    ArrayList<Police> mPolice = new ArrayList<>();
 
     public SearchFragment() {
         // Required empty public constructor
@@ -102,6 +105,8 @@ public class SearchFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
+
+        searchView = view.findViewById(R.id.search_view);
 
         cvProvince = view.findViewById(R.id.cardViewProvince);
         cvProvince.setOnClickListener(new View.OnClickListener() {
@@ -222,7 +227,8 @@ public class SearchFragment extends Fragment {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
                             tvListSize.setText(response.body().getData().getContent().size() + "รายการ");
-                            setAdapter(response.body().getData().getContent());
+                            mPolice.addAll(response.body().getData().getContent());
+                            setAdapter(mPolice);
                         } else {
                             Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -252,5 +258,6 @@ public class SearchFragment extends Fragment {
             }
         });
     }
+
 
 }

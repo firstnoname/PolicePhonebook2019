@@ -132,7 +132,7 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
                             if (response.body().getCode().equalsIgnoreCase("OK")) {
                                 if (response.body().getCode().equals("OK")) {
                                     ranks = response.body().getData();
-                                    AdapterPhoneList.this.notifyDataSetChanged();
+//                                    AdapterPhoneList.this.notifyDataSetChanged();
                                 } else {
                                     Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                                 }
@@ -161,9 +161,12 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
                     }
                 }
 
-                Glide.with(mContext)
-                        .load(IMAGE_URL + data.getImageProfile())
-                        .into(holder.imgProfile);
+                if (data.getImageProfile() != null) {
+                    Glide.with(mContext)
+                            .load(IMAGE_URL + data.getImageProfile())
+                            .into(holder.imgProfile);
+                }
+
                 fullName = data.getFirstName() + "  " + data.getLastName();
                 holder.tvName.setText(fullName);
                 holder.tvPosition.setText(data.getPositionName());

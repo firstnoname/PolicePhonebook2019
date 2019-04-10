@@ -2,14 +2,15 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_adapter_map_list"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imgStation"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
@@ -25,10 +26,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:maxLines="1"
         android:text="ตำรวจภูธรภาค ๑-๘ (ภ.๑-๘)"
-        android:textColor="@color/fontBlack"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgNext"
         app:layout_constraintStart_toEndOf="@+id/imgStation"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,9 +40,23 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="นครบาล, ทั่วไป"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgNext"
         app:layout_constraintStart_toEndOf="@+id/imgStation"
         app:layout_constraintTop_toBottomOf="@+id/tvStationPosition" />
+
+    <ImageButton
+        android:id="@+id/imgNext"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@mipmap/next"/>
 </android.support.constraint.ConstraintLayout>

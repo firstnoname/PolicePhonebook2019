@@ -20,9 +20,10 @@
             android:layout_height="33dp"
             android:background="@color/colorSearchbar"
             android:layout_margin="8dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/searchviewPhoneList"
+            app:queryBackground="@android:color/transparent"/>
 
-            app:actionViewClass="android.support.v7.widget.SearchView"
-            app:queryHint="@string/searchviewPhoneList" />
     </android.support.v7.widget.CardView>
 
     <android.support.constraint.ConstraintLayout
@@ -50,6 +51,7 @@
 
             <!--Insert section here-->
         </RelativeLayout>
+
     </android.support.constraint.ConstraintLayout>
 
 

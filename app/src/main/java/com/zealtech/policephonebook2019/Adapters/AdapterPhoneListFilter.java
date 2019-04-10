@@ -61,9 +61,12 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
     public void onBindViewHolder(@NonNull AdapterPhoneListFilter.ViewHolder holder, final int i) {
         Log.d(TAG, "onBindViewHolder: called");
 
-        Glide.with(mContext)
-                .load(IMAGE_URL+mPoliceInfo.get(i).getImageProfile())
-                .into(holder.imgProfile);
+        if (mPoliceInfo.get(i).getImageProfile() != null) {
+            Glide.with(mContext)
+                    .load(IMAGE_URL + mPoliceInfo.get(i).getImageProfile())
+                    .into(holder.imgProfile);
+        }
+
         fullName = mPoliceInfo.get(i).getFirstName() + "  " + mPoliceInfo.get(i).getLastName();
         holder.tvName.setText(fullName);
         holder.tvPosition.setText(mPoliceInfo.get(i).getPositionName());
@@ -196,6 +199,12 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
             viewTab = itemView.findViewById(R.id.view_tab);
 
         }
+    }
+
+    public void updateList(ArrayList<Police> newList) {
+        mPoliceInfo = new ArrayList<>();
+        mPoliceInfo.addAll(newList);
+        notifyDataSetChanged();
     }
 
 }

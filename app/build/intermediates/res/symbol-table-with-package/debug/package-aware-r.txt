@@ -1264,6 +1264,7 @@ id imageView2
 id imgBack
 id imgFavorite
 id imgLogo
+id imgNext
 id imgNoti
 id imgStation
 id imgStationSubList
@@ -1659,6 +1660,7 @@ mipmap logopadtp
 mipmap mail
 mipmap map
 mipmap map_ac
+mipmap next
 mipmap noti
 mipmap noti_bl
 mipmap padtppic
@@ -1675,6 +1677,7 @@ mipmap star
 mipmap star_ac
 mipmap star_ic
 mipmap stationbanner
+mipmap stationbanner_grey
 mipmap tag01
 mipmap tag02
 mipmap test_portrait

@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,6 +60,10 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
         }
         holder.tvArea.setText(tagArea);
 
+        if (mDepartment.get(i).getFlagTail().equals(false)) {
+            holder.imgNext.setVisibility(View.INVISIBLE);
+        }
+
         holder.layout_adapter_map_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,6 +94,7 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
         ImageView imgInfo;
         TextView tvStation, tvArea;
         ConstraintLayout layout_adapter_map_list;
+        ImageButton imgNext;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -96,6 +102,7 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
             tvStation = itemView.findViewById(R.id.tvStationPosition);
             tvArea = itemView.findViewById(R.id.tvArea);
             layout_adapter_map_list = itemView.findViewById(R.id.layout_adapter_map_list);
+            imgNext = itemView.findViewById(R.id.imgNext);
         }
     }
 

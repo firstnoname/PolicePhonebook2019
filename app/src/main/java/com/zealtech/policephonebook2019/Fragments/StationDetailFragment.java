@@ -55,12 +55,12 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
     public static final String KEY_MESSAGE = "message";
 
     private TextView tvStationPhone1, tvStationPhone2, tvStationAddress, btnOpenMap, tvAbTitle;
-    private ImageView imgBack, imgPhoneCall;
+    private ImageView imgPhoneCall;
 
     private String departmentId = "";
     private ArrayList<DepartmentRoot> mDepartmentRoot = new ArrayList<>();
-    private Double latitude = 18.7988609;
-    private Double longitude = 99.0238646;
+    private Double latitude = 0.0;
+    private Double longitude = 0.0;
 
     Api api = AppUtils.getApiService();
 
@@ -91,7 +91,6 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
         tvStationAddress = view.findViewById(R.id.tv_station_address);
         btnOpenMap = view.findViewById(R.id.btn_station_open_map);
         tvAbTitle = view.findViewById(R.id.tv_actionbar_back);
-        imgBack = view.findViewById(R.id.img_back);
         imgPhoneCall = view.findViewById(R.id.img_station_call);
 
         departmentId = getArguments().getString(KEY_MESSAGE);
@@ -201,9 +200,28 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
 
         String fullAddress = mDepartmentRoot.get(0).getAddress() + " ถ." + mDepartmentRoot.get(0).getRoad() + " แขวง " + mDepartmentRoot.get(0).getPostcode();
 
-        tvStationPhone1.setText(mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTel() + " ต่อ " + mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTelTo());
-        tvStationPhone2.setText(mDepartmentRoot.get(0).getFaxes().get(0).getFaxNo());
+        if (!mDepartmentRoot.get(0).getPhoneNumbers().isEmpty()) {
+            tvStationPhone1.setText(mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTel() + " ต่อ " + mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTelTo());
+        } else {
+            tvStationPhone1.setText(" - ");
+        }
+
+        if (!mDepartmentRoot.get(0).getFaxes().isEmpty()) {
+            tvStationPhone2.setText(mDepartmentRoot.get(0).getFaxes().get(0).getFaxNo());
+        } else {
+            tvStationPhone2.setText(" - ");
+        }
+
         tvStationAddress.setText(fullAddress);
+
+        if (mDepartmentRoot.get(0).getLatitude() != null && mDepartmentRoot.get(0).getLongitude() != null) {
+            latitude = Double.valueOf(mDepartmentRoot.get(0).getLatitude());
+            longitude = Double.valueOf(mDepartmentRoot.get(0).getLongitude());
+        } else {
+            latitude = 18.7988609;
+            longitude = 99.0238646;
+        }
+
     }
 
     @Override
@@ -221,4 +239,6 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
         final CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngBounds(bounds, 10);
         googleMap.animateCamera(cameraUpdate);
     }
+
+
 }

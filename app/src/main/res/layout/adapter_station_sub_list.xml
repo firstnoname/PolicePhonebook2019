@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imgStationSubList"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -29,9 +29,22 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:maxLines="1"
         android:text="ส.ร.ฟ.ธนบุรี"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgNext"
         app:layout_constraintStart_toEndOf="@+id/imgStationSubList"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgNext"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@mipmap/next"/>
 </android.support.constraint.ConstraintLayout>

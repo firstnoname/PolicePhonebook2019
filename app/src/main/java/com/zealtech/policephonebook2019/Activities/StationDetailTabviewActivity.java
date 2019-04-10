@@ -59,6 +59,13 @@ public class StationDetailTabviewActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
     }
 
 }

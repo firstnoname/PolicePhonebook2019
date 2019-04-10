@@ -67,12 +67,6 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
         return mTag.size();
     }
 
-    public void updateList(ArrayList<BaseFilterItem> newList) {
-        mTag = new ArrayList<>();
-        mTag.addAll(newList);
-        notifyDataSetChanged();
-    }
-
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imgInfo;
@@ -86,5 +80,11 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
             imgInfo = itemView.findViewById(R.id.img_info);
             txtInfo = itemView.findViewById(R.id.tv_info);
         }
+    }
+
+    public void updateList(ArrayList<BaseFilterItem> newList) {
+        mTag = new ArrayList<>();
+        mTag.addAll(newList);
+        notifyDataSetChanged();
     }
 }

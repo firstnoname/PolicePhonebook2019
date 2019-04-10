@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,6 +51,9 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
         holder.imgInfo.setImageResource(resId);
         holder.tvStationName.setText(mStationList.get(i).getDepartmentName());
+        if (mStationList.get(i).getFlagTail().equals(false)) {
+            holder.imgNext.setVisibility(View.INVISIBLE);
+        }
 
         holder.layout_adapter_station_sub_list.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +88,7 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
         ImageView imgInfo;
         TextView tvStationName;
         ConstraintLayout layout_adapter_station_sub_list;
+        ImageButton imgNext;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -91,6 +96,8 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
             imgInfo = itemView.findViewById(R.id.imgStationSubList);
             tvStationName = itemView.findViewById(R.id.tvStationSubList);
             layout_adapter_station_sub_list = itemView.findViewById(R.id.layout_adapter_station_sub_list);
+            imgNext = itemView.findViewById(R.id.imgNext);
+
         }
     }
 

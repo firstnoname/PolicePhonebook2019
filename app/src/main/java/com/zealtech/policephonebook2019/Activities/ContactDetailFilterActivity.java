@@ -51,7 +51,6 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
     private String id = "";
 
     ArrayList<Police> policeMasterData = new ArrayList<>();
-    ArrayList<Favorite> favoriteList = new ArrayList<>();
 
     Api api = AppUtils.getApiService();
 
@@ -83,23 +82,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         id = policeMasterData.get(position).getId();
 
         callRankApi();
-//        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
-//            //Gold
-//            //relativeLayoutBackground.setBackgroundResource(R.mipmap.bg01);
-//            relativeLayoutBackground.setBackgroundColor(0xFF00FF00);
-//        } else if (rankName.equals("พล.ต.ต.")) {
-//            //Blue sky
-////            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg02);
-//            relativeLayoutBackground.setBackgroundColor(0xFF00FF00);
-//        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
-//            //Blue
-////            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg03);
-//            relativeLayoutBackground.setBackgroundColor(0xFF00FF00);
-//        } else {
-//            //Red
-////            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg04);
-//            relativeLayoutBackground.setBackgroundColor(0xFF00FF00);
-//        }
+
         Glide.with(this).load(image_url).into(imgProfile);
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
@@ -237,7 +220,6 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         ProfileH mProfile = gson.fromJson(json, ProfileH.class);
 
         token = mProfile.getToken();
-        
 
     }
 

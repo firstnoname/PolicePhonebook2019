@@ -4,11 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,7 +39,7 @@ public class StationSubListActivity extends AppCompatActivity implements SearchV
     int level = 2;
     int checkLvl = 0;
 
-    SearchView searchView;
+    android.support.v7.widget.SearchView searchView;
     AdapterStationSubList adapter;
 
     private TextView tvAbTitle;

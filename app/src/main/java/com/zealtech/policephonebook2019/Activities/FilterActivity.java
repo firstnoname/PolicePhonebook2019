@@ -4,8 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
-import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
@@ -44,7 +44,7 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
     private String positionId = "";
     private int level = 1;
 
-    SearchView searchView;
+    android.support.v7.widget.SearchView searchView;
     AdapterFilterSearch adapter;
 
     //vars
@@ -53,20 +53,6 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
     //Department filter vars
     ArrayList<Department> mDepartmentList = new ArrayList<>();
     AdapterDepartmentSearchFilter mAdapterDepartment;
-
-
-    /*BaseFilterItem baseFilterItem = new BaseFilterItem() {
-        @Override
-        protected String setId() {
-            return String.valueOf(0);
-        }
-
-        @Override
-        protected String setName() {
-            return "ทั้งหมด";
-        }
-    };*/
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,12 +66,16 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
 
         if (tagFilter != null) {
             if (tagFilter.equals("rank")) {
+                searchView.setQueryHint("ค้นหายศ");
                 initRank();
             } else if (tagFilter.equals("position")) {
+                searchView.setQueryHint("ค้นหาตำแหน่ง");
                 initPosition();
             } else if (tagFilter.equals("province")) {
+                searchView.setQueryHint("ค้นหาจังหวัด");
                 initProvince();
             } else if (tagFilter.equals("department")) {
+                searchView.setQueryHint("ค้นหาหน่วยงาน");
                 provinceId = getIntent().getStringExtra("provinceId");
                 if (provinceId.equals("0")) {
                     provinceId = "";
@@ -263,6 +253,7 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
 
     @Override
     public boolean onQueryTextChange(String newText) {
+
         String userInput = newText.toLowerCase();
         ArrayList<BaseFilterItem> newList = new ArrayList<>();
 

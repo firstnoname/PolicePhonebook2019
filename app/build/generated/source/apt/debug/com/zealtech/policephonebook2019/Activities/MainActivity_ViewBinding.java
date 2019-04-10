@@ -16,9 +16,9 @@ import java.lang.Override;
 public class MainActivity_ViewBinding implements Unbinder {
   private MainActivity target;
 
-  private View view2131361924;
+  private View view2131361925;
 
-  private View view2131361921;
+  private View view2131361922;
 
   private View view2131361861;
 
@@ -50,7 +50,7 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.tvActionbarTitle = Utils.findRequiredViewAsType(source, R.id.tv_actionbar, "field 'tvActionbarTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.imgUser, "field 'imgProfile' and method 'onImgUserClicked'");
     target.imgProfile = Utils.castView(view, R.id.imgUser, "field 'imgProfile'", ImageView.class);
-    view2131361924 = view;
+    view2131361925 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,7 +58,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.imgNoti, "method 'onImgNotiClicked'");
-    view2131361921 = view;
+    view2131361922 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -130,10 +130,10 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.tvActionbarTitle = null;
     target.imgProfile = null;
 
-    view2131361924.setOnClickListener(null);
-    view2131361924 = null;
-    view2131361921.setOnClickListener(null);
-    view2131361921 = null;
+    view2131361925.setOnClickListener(null);
+    view2131361925 = null;
+    view2131361922.setOnClickListener(null);
+    view2131361922 = null;
     view2131361861.setOnClickListener(null);
     view2131361861 = null;
     view2131361839.setOnClickListener(null);
