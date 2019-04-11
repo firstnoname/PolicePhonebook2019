@@ -88,11 +88,11 @@ public class UserDetailActivity extends AppCompatActivity {
         Glide.with(this).load(image_url).into(imgProfile);
         tvName.setText(mProfile.getFirstName() + "  " + mProfile.getLastName());
         tvPosition.setText(mProfile.getPositionName());
-        if (mProfile.getWorkPhoneNumber().isEmpty()) {
+        /*if (mProfile.getWorkPhoneNumber().isEmpty()) {
             tvTel.setText(R.string.dont_have_data);
         } else {
             tvTel.setText(mProfile.getWorkPhoneNumber());
-        }
+        }*/
 
         tvPhone.setText(mProfile.getPhoneNumber());
         tvUpdateDate.setText(mProfile.getUpdateDate());

@@ -17,6 +17,7 @@ import com.example.policephonebook2019.R;
 import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
+import com.zealtech.policephonebook2019.Model.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.Rank;
@@ -30,6 +31,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import io.realm.Realm;
+import io.realm.RealmResults;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -53,6 +56,8 @@ public class ContactDetailActivity extends AppCompatActivity {
     ArrayList<PoliceMasterData> policeMasterData = new ArrayList<>();
 
     Api api = AppUtils.getApiService();
+
+    private Realm mRealm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,6 +154,24 @@ public class ContactDetailActivity extends AppCompatActivity {
             }
         });
 
+        Realm.init(this);
+        mRealm = Realm.getDefaultInstance();
+        final RealmResults<PoliceHistory> policeHistories = mRealm.where(PoliceHistory.class).contains("id", policeMasterData.get(position).getId()).findAll();
+
+        if (policeHistories.size() == 0) {
+            mRealm.beginTransaction();
+            //        mRealm.deleteAll();
+            PoliceHistory mPoliceHistory = mRealm.createObject(PoliceHistory.class);
+            mPoliceHistory.setImageProfile(policeMasterData.get(position).getImageProfile());
+            mPoliceHistory.setFirstName(policeMasterData.get(position).getFirstName());
+            mPoliceHistory.setLastName(policeMasterData.get(position).getLastName());
+            mPoliceHistory.setDepartmentName(policeMasterData.get(position).getDepartmentName());
+            mPoliceHistory.setPositionName(policeMasterData.get(position).getDepartmentName());
+            mPoliceHistory.setRankName(policeMasterData.get(position).getRankName());
+            mPoliceHistory.setRankId(policeMasterData.get(position).getRankId());
+            mPoliceHistory.setId(policeMasterData.get(position).getId());
+            mRealm.commitTransaction();
+        }
 
     }
 
