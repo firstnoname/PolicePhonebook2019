@@ -6,6 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
@@ -36,6 +38,9 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
 
     private static final String TAG = "FilterActivity";
 
+    private TextView tvAbTitle;
+    private ImageView imgBack;
+
     Api api = AppUtils.getApiService();
 
     private String tagFilter = "";
@@ -59,23 +64,31 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter);
 
+        tvAbTitle = findViewById(R.id.tv_actionbar_back);
+        imgBack = findViewById(R.id.img_back);
         searchView = findViewById(R.id.search_filter);
         searchView.setOnQueryTextListener(this);
+
+
 
         tagFilter = getIntent().getStringExtra("tag");
 
         if (tagFilter != null) {
             if (tagFilter.equals("rank")) {
                 searchView.setQueryHint("ค้นหายศ");
+                tvAbTitle.setText("ค้นหายศ");
                 initRank();
             } else if (tagFilter.equals("position")) {
                 searchView.setQueryHint("ค้นหาตำแหน่ง");
+                tvAbTitle.setText("ค้นหาตำแหน่ง");
                 initPosition();
             } else if (tagFilter.equals("province")) {
                 searchView.setQueryHint("ค้นหาจังหวัด");
+                tvAbTitle.setText("ค้นหาจังหวัด");
                 initProvince();
             } else if (tagFilter.equals("department")) {
                 searchView.setQueryHint("ค้นหาหน่วยงาน");
+                tvAbTitle.setText("ค้นหาหน่วยงาน");
                 provinceId = getIntent().getStringExtra("provinceId");
                 if (provinceId.equals("0")) {
                     provinceId = "";

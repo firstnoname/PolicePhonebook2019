@@ -53,7 +53,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private static final String TAG = "EditProfileActivity";
 
-    private EditText edtName, edtLastname, edtPhone;
+    private EditText edtName, edtLastname, edtPhone, edtTelWork;
     private Button btnEdit;
     private ImageView imgInfo;
     private TextView tvSelectPhoto, tvRank, tvDepartment, tvPosition, tvUpdateDate;
@@ -91,6 +91,7 @@ public class EditProfileActivity extends AppCompatActivity {
         tvPosition = findViewById(R.id.tv_position);
         tvDepartment = findViewById(R.id.tv_department);
         tvUpdateDate = findViewById(R.id.tv_update_date);
+        edtTelWork = findViewById(R.id.edt_tel_work);
 
         //Get value from UserDetailActivity.
         mProfile = (ProfileH) getIntent().getSerializableExtra("user_profile");
@@ -112,6 +113,8 @@ public class EditProfileActivity extends AppCompatActivity {
                 openGallery();
             }
         });
+        edtTelWork.setText(mProfile.getWorkPhoneNumber());
+
 
         selectedDepartment = mProfile.getDepartmentId();
         editedName = mProfile.getFirstName();
@@ -170,6 +173,7 @@ public class EditProfileActivity extends AppCompatActivity {
                             mProfile.setViews(response.body().getData().getViews());
                             mProfile.setFavorites(response.body().getData().getFavorites());
                             mProfile.setToken(token);
+                            mProfile.setWorkPhoneNumber(response.body().getData().getWorkPhoneNumber());
                             mProfile.setDepartmentPhoneNumber(response.body().getData().getDepartmentPhoneNumber());
                             mProfile.setSuperAdmin(response.body().getData().getSuperAdmin());
                             mProfile.setId(response.body().getData().getId());
@@ -254,6 +258,7 @@ public class EditProfileActivity extends AppCompatActivity {
                             mProfile.setViews(response.body().getData().getViews());
                             mProfile.setFavorites(response.body().getData().getFavorites());
                             mProfile.setToken(token);
+                            mProfile.setWorkPhoneNumber(response.body().getData().getWorkPhoneNumber());
                             mProfile.setDepartmentPhoneNumber(response.body().getData().getDepartmentPhoneNumber());
                             mProfile.setSuperAdmin(response.body().getData().getSuperAdmin());
                             mProfile.setId(response.body().getData().getId());

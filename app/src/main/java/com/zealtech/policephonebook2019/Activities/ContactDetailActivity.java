@@ -102,7 +102,9 @@ public class ContactDetailActivity extends AppCompatActivity {
 //        } else if (rankName.equals())
 
 
-        Glide.with(this).load(image_url).into(imgProfile);
+        if (policeMasterData.get(position).getImageProfile() != null) {
+            Glide.with(this).load(image_url).into(imgProfile);
+        }
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
         tvDepartment.setText(department);

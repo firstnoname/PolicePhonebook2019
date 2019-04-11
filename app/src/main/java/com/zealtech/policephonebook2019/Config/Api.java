@@ -2,6 +2,7 @@ package com.zealtech.policephonebook2019.Config;
 
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartmentRoot;
+import com.zealtech.policephonebook2019.Model.response.ResponseEditPassword;
 import com.zealtech.policephonebook2019.Model.response.ResponseFavorite;
 import com.zealtech.policephonebook2019.Model.response.ResponseNotification;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
@@ -38,6 +39,12 @@ public interface Api {
 
     @POST("login")
     Call<ResponseProfile> login(@Query("username") String username, @Query("password") String password);
+
+    @POST("editPassword")
+    Call<ResponseEditPassword> editPassword(@Query("newPassword") String newPassword,
+                                            @Query("newPasswordConfirm") String newPasswordConfirm,
+                                            @Query("oldPassword") String oldPassword,
+                                            @Header("token") String token);
 
     @GET("getNotifications")
     Call<ResponseNotification> getNotifications(@Query("id") String id);

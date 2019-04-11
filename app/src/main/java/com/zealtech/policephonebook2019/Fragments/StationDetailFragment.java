@@ -215,8 +215,10 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
         tvStationAddress.setText(fullAddress);
 
         if (mDepartmentRoot.get(0).getLatitude() != null && mDepartmentRoot.get(0).getLongitude() != null) {
-            latitude = Double.valueOf(mDepartmentRoot.get(0).getLatitude());
-            longitude = Double.valueOf(mDepartmentRoot.get(0).getLongitude());
+            if (!mDepartmentRoot.get(0).getLatitude().isEmpty() && !mDepartmentRoot.get(0).getLongitude().isEmpty()) {
+                latitude = Double.valueOf(mDepartmentRoot.get(0).getLatitude());
+                longitude = Double.valueOf(mDepartmentRoot.get(0).getLongitude());
+            }
         } else {
             latitude = 18.7988609;
             longitude = 99.0238646;

@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bg_user_detail_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
@@ -92,17 +93,17 @@
                                 android:layout_gravity="center_horizontal"/>
 
                             <TextView
-                                android:id="@+id/tv_rank_name"
+                                android:id="@+id/tv_position_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
                                 android:text="ผบช.ประจำ สง.ผบ.ตร."
                                 android:textColor="#A6181D"
-                                android:textSize="14sp"
-                                android:layout_marginTop="10dp"
-                                android:layout_gravity="center_horizontal"/>
+                                android:textSize="14sp" />
 
                             <TextView
-                                android:id="@+id/tv_position_name"
+                                android:id="@+id/tv_department_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
@@ -130,13 +131,14 @@
                                         android:layout_height="wrap_content"
                                         android:text="ที่ทำงาน (ภายใน)"
                                         android:layout_gravity="center_horizontal"/>
+
                                     <TextView
-                                        android:id="@+id/tv_tel_profile"
+                                        android:id="@+id/tv_tel_work"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="0968899061"
-                                        android:textColor="#000000"
-                                        android:layout_gravity="center_horizontal"/>
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="@string/dont_have_data"
+                                        android:textColor="#000000" />
 
                                 </LinearLayout>
                                 <LinearLayout
@@ -155,13 +157,14 @@
                                         android:layout_height="wrap_content"
                                         android:text="มือถือ"
                                         android:layout_gravity="center_horizontal"/>
+
                                     <TextView
                                         android:id="@+id/tv_phone_profile"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="0968899061"
-                                        android:textColor="#000000"
-                                        android:layout_gravity="center_horizontal"/>
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="@string/dont_have_data"
+                                        android:textColor="#000000" />
 
                                 </LinearLayout>
 
@@ -217,14 +220,27 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="ออกจากระบบ"
-
-                    android:textColor="#FF9F9F"
                     android:background="@drawable/button_custom_location"
+
+                    android:text="ออกจากระบบ"
+                    android:textColor="#FF9F9F"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_change_password" />
+
+                <TextView
+                    android:id="@+id/tv_change_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="เปลี่ยนรหัสผ่าน"
+                    android:textColor="@color/fontWhite"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile" />

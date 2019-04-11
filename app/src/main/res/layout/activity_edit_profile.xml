@@ -335,24 +335,66 @@ android:layout_height="match_parent"
 
         </RelativeLayout>
 
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="เบอร์โทร(ที่ทำงาน)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTel" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight=".28"
+            android:paddingLeft="4dp"
+            android:background="@drawable/spinner_border"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" >
+
+            <EditText
+                android:id="@+id/edt_tel_work"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="0dp"
+                android:background="@android:color/transparent"
+                android:inputType="textPersonName|phone"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
         <Button
             android:id="@+id/btn_edit"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:text="บันทึกข้อมูล"
-            android:drawableLeft="@mipmap/pencil"
             android:layout_gravity="right|bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_custom_staff"
+            android:drawableLeft="@mipmap/pencil"
             android:gravity="center"
             android:paddingLeft="80dp"
             android:paddingRight="80dp"
+            android:text="บันทึกข้อมูล"
             android:textColor="@color/fontWhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtTel"
-            android:background="@drawable/button_custom_staff"/>
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
         <TextView
             android:id="@+id/tv_update_date"
@@ -375,7 +417,6 @@ android:layout_height="match_parent"
             android:text="นามสกุล"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/relatvieName" />
-
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

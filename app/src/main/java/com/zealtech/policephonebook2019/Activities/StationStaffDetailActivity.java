@@ -79,7 +79,11 @@ public class StationStaffDetailActivity extends AppCompatActivity {
             //Red
             relativeLayoutBackground.setBackgroundResource(R.mipmap.bg04);
         }
-        Glide.with(this).load(image_url).into(imgProfile);
+
+        if (policeData.get(position).getImageProfile() != null) {
+            Glide.with(this).load(image_url).into(imgProfile);
+        }
+
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
         tvDepartment.setText(department);

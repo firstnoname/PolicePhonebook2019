@@ -77,6 +77,7 @@ public class FavoriteFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
     }
 
     private void callFragment() {

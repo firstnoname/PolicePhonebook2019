@@ -6,17 +6,26 @@
     android:layout_height="match_parent"
     tools:context="com.zealtech.policephonebook2019.Activities.FilterActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_ab_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <android.support.v7.widget.SearchView
         android:id="@+id/search_filter"
         android:layout_width="match_parent"
         android:layout_height="33dp"
         android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorSearchbar"
-        app:queryBackground="@android:color/transparent"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:queryBackground="@android:color/transparent" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_filter"

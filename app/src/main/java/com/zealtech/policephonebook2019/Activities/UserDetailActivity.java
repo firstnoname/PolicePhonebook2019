@@ -35,7 +35,7 @@ public class UserDetailActivity extends AppCompatActivity {
 
     private Button btnEditProfile, btnLogout;
     private ImageView imgProfile, btnClose;
-    private TextView tvName, tvRank, tvPosition, tvTel, tvPhone, tvUpdateDate;
+    private TextView tvName, tvPosition, tvTel, tvPhone, tvUpdateDate, tvChangePass;
     private RelativeLayout relative_background;
 
 //    vars
@@ -55,14 +55,14 @@ public class UserDetailActivity extends AppCompatActivity {
         relative_background = findViewById(R.id.bg_user_detail_color);
         imgProfile = findViewById(R.id.img_user_profile);
         tvName = findViewById(R.id.tv_name_user_profile);
-        tvRank = findViewById(R.id.tv_rank_name);
         tvPosition = findViewById(R.id.tv_position_name);
-        tvTel = findViewById(R.id.tv_tel_profile);
+        tvTel = findViewById(R.id.tv_tel_work);
         tvPhone = findViewById(R.id.tv_phone_profile);
         tvUpdateDate = findViewById(R.id.tv_update_profile);
         btnEditProfile = findViewById(R.id.btn_edit_profile);
         btnClose = findViewById(R.id.img_close);
         btnLogout = findViewById(R.id.btn_logout);
+        tvChangePass = findViewById(R.id.tv_change_password);
 
 //        Get data from LoginActivity.
         mProfile = (ProfileH) getIntent().getSerializableExtra("user_profile");
@@ -87,9 +87,13 @@ public class UserDetailActivity extends AppCompatActivity {
 
         Glide.with(this).load(image_url).into(imgProfile);
         tvName.setText(mProfile.getFirstName() + "  " + mProfile.getLastName());
-        tvRank.setText(mProfile.getRankName());
         tvPosition.setText(mProfile.getPositionName());
-        tvTel.setText(mProfile.getPhoneNumber());
+        if (mProfile.getWorkPhoneNumber().isEmpty()) {
+            tvTel.setText(R.string.dont_have_data);
+        } else {
+            tvTel.setText(mProfile.getWorkPhoneNumber());
+        }
+
         tvPhone.setText(mProfile.getPhoneNumber());
         tvUpdateDate.setText(mProfile.getUpdateDate());
         callRankApi();
@@ -131,6 +135,17 @@ public class UserDetailActivity extends AppCompatActivity {
 
                 finish();
 
+            }
+        });
+
+        tvChangePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iChangePass = new Intent(getApplicationContext(), ChangePasswordActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("user_profile", mProfile);
+                iChangePass.putExtras(bundle);
+                startActivity(iChangePass);
             }
         });
 

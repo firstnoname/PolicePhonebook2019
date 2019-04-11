@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
@@ -57,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                 checkLogin();
             }
         });
+
     }
 
     private void checkLogin() {
@@ -113,6 +115,7 @@ public class LoginActivity extends AppCompatActivity {
                                         profileH.setFavorites(response.body().getData().getFavorites());
                                         profileH.setToken(response.body().getData().getToken());
                                         profileH.setDepartmentPhoneNumber(response.body().getData().getDepartmentPhoneNumber());
+                                        profileH.setWorkPhoneNumber(response.body().getData().getWorkPhoneNumber());
                                         profileH.setSuperAdmin(response.body().getData().getSuperAdmin());
                                         profileH.setId(response.body().getData().getId());
                                         profileH.setCreateDate(response.body().getData().getCreateDate());

@@ -48,9 +48,12 @@ public class AdapterStationStaff extends RecyclerView.Adapter<AdapterStationStaf
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
-        Glide.with(mContext)
-                .load(IMAGE_URL + mPoliceList.get(i).getImageProfile())
-                .into(viewHolder.imgProfile);
+
+        if (mPoliceList.get(i).getImageProfile() != null) {
+            Glide.with(mContext)
+                    .load(IMAGE_URL + mPoliceList.get(i).getImageProfile())
+                    .into(viewHolder.imgProfile);
+        }
 //        Log.d(TAG, IMAGE_URL + mPoliceList.get(i).getImageProfile());
         fullName = mPoliceList.get(i).getFirstName() + "  " + mPoliceList.get(i).getLastName();
         viewHolder.tvName.setText(fullName);

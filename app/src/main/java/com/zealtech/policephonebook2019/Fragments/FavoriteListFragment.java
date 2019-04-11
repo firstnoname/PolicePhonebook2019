@@ -83,6 +83,7 @@ public class FavoriteListFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
+        callApi();
 //        callApi();
     }
 
