@@ -83,10 +83,36 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="20dp"
+                                android:layout_marginTop="10dp"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
                                 android:textSize="14sp"
                                 android:textStyle="italic" />
+
+                            <LinearLayout
+                                android:id="@+id/position_section"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="4dp">
+
+                                <TextView
+                                    android:id="@+id/user_rank"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="14sp"
+                                    android:text="ทดสอบ"
+                                    android:background="@drawable/tv_red_tag"
+                                    android:textColor="@color/fontWhite"
+                                    android:paddingLeft="4dp"
+                                    android:paddingRight="4dp"
+                                    android:paddingTop="1dp"
+                                    android:paddingBottom="1dp"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -113,10 +139,11 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:text="0968899061"
+                                        android:text="ไม่มีข้อมูล"
                                         android:textColor="#000000" />
 
                                     <ImageView
+                                        android:id="@+id/img_tel_work"
                                         android:layout_width="64dp"
                                         android:layout_height="64dp"
                                         android:layout_gravity="center_horizontal"
@@ -148,10 +175,11 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:text="0968899061"
+                                        android:text="ไม่มีข้อมูล"
                                         android:textColor="#000000" />
 
                                     <ImageView
+                                        android:id="@+id/img_tel"
                                         android:layout_width="64dp"
                                         android:layout_height="64dp"
                                         android:layout_gravity="center_horizontal"

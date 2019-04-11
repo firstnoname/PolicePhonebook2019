@@ -15,10 +15,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Activities.StationDetailActivity;
 import com.zealtech.policephonebook2019.Activities.StationDetailTabviewActivity;
 import com.zealtech.policephonebook2019.Activities.StationSubListActivity;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Department;
 
 import java.util.ArrayList;
@@ -32,6 +35,7 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
     int resId = R.mipmap.policestation_ic;
     String parentId = "";
     int level = 2;
+    private String image_url;
 
     public AdapterStationSubList(Context mContext, ArrayList<Department> mStationList) {
         this.mContext = mContext;
@@ -49,7 +53,14 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
-        holder.imgInfo.setImageResource(resId);
+
+        if (mStationList.get(i).getIcon() != null) {
+            image_url = ApplicationConfig.getImageUrl() + mStationList.get(i).getIcon();
+            Glide.with(mContext).load(image_url).into(holder.imgInfo);
+        } else {
+            holder.imgInfo.setImageResource(resId);
+        }
+
         holder.tvStationName.setText(mStationList.get(i).getDepartmentName());
         if (mStationList.get(i).getFlagTail().equals(false)) {
             holder.imgNext.setVisibility(View.INVISIBLE);
@@ -58,13 +69,17 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
         holder.layout_adapter_station_sub_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (mStationList.get(i).getFlagTail().equals(true)) {
 //                    Toast.makeText(mContext, mStationList.get(i).getFlagTail().toString(), Toast.LENGTH_SHORT).show();
+                    String object = new Gson().toJson(mStationList.get(i));
                     level = level + 1;
                     parentId = String.valueOf(mStationList.get(i).getDepartmentId());
                     Intent intent = new Intent(mContext, StationSubListActivity.class);
                     intent.putExtra("parentId", parentId);
                     intent.putExtra("level", level);
+                    intent.putExtra("subTitle", mStationList.get(i).getDepartmentName());
+                    intent.putExtra("parentDepartment", object);
                     mContext.startActivity(intent);
                 } else {
 //                    Toast.makeText(mContext, mStationList.get(i).getFlagTail().toString(), Toast.LENGTH_SHORT).show();

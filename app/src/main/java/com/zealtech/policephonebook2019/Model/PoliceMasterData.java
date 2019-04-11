@@ -15,6 +15,7 @@ public class PoliceMasterData extends BaseItem implements Serializable {
     String departmentName;
     String positionName;
     String rankName;
+    int rankId;
     ArrayList<String> tag;
     String id;
 
@@ -80,6 +81,14 @@ public class PoliceMasterData extends BaseItem implements Serializable {
 
     public void setRankName(String rankName) {
         this.rankName = rankName;
+    }
+
+    public int getRankId() {
+        return rankId;
+    }
+
+    public void setRankId(int rankId) {
+        this.rankId = rankId;
     }
 
     public ArrayList<String> getTag() {

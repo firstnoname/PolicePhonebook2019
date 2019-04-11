@@ -3,6 +3,7 @@ package com.zealtech.policephonebook2019.Model;
 import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Position extends BaseFilterItem implements Serializable {
 
@@ -11,8 +12,11 @@ public class Position extends BaseFilterItem implements Serializable {
     String id;
     int positionId;
     String positionName;
-    String shorName;
+    String shortName;
     String updateDate;
+    ArrayList<String> tag;
+    String icon;
+
 
     @Override
     protected String setId() {
@@ -73,12 +77,12 @@ public class Position extends BaseFilterItem implements Serializable {
         this.positionName = positionName;
     }
 
-    public String getShorName() {
-        return shorName;
+    public String getShortName() {
+        return shortName;
     }
 
-    public void setShorName(String shorName) {
-        this.shorName = shorName;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 
     public String getUpdateDate() {
@@ -87,5 +91,21 @@ public class Position extends BaseFilterItem implements Serializable {
 
     public void setUpdateDate(String updateDate) {
         this.updateDate = updateDate;
+    }
+
+    public ArrayList<String> getTag() {
+        return tag;
+    }
+
+    public void setTag(ArrayList<String> tag) {
+        this.tag = tag;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }

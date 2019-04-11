@@ -1,7 +1,9 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -41,7 +43,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
 
 
     private TextView tvName, tvPosition, tvDepartment, tvTel1, tvTel2, tvBack, tvUpdatedate;
-    private ImageView imgFavorite, imgClose, imgProfile;
+    private ImageView imgFavorite, imgClose, imgProfile, imgTelWork, imgTel;
     private RelativeLayout relativeLayoutBackground;
     private int position;
     private String image_url;
@@ -70,16 +72,31 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         imgClose = findViewById(R.id.imgBack);
         tvBack = findViewById(R.id.tvBack);
         tvUpdatedate = findViewById(R.id.tv_contact_update_date);
+        imgTelWork = findViewById(R.id.img_tel_work);
+        imgTel = findViewById(R.id.img_tel);
 
         policeMasterData = (ArrayList<Police>) getIntent().getSerializableExtra("contact_detail");
         position = getIntent().getIntExtra("position", 0);
 
         image_url = ApplicationConfig.getImageUrl() + policeMasterData.get(position).getImageProfile();
-        fullName = policeMasterData.get(position).getFirstName() + "  " + policeMasterData.get(position).getLastName();
+        fullName = policeMasterData.get(position).getRankName() + " " + policeMasterData.get(position).getFirstName() + "  " + policeMasterData.get(position).getLastName();
         strPosition = policeMasterData.get(position).getPositionName();
         department = policeMasterData.get(position).getDepartmentName();
         rankName = policeMasterData.get(position).getRankName();
         id = policeMasterData.get(position).getId();
+
+        tel1 = policeMasterData.get(position).getWorkPhoneNumber();
+        if (tel1 != null) {
+            tvTel1.setText(tel1);
+        } else {
+            imgTelWork.setClickable(false);
+        }
+        tel2 = policeMasterData.get(position).getPhoneNumber();
+        if (tel1 != null) {
+            tvTel2.setText(tel2);
+        } else {
+            imgTel.setClickable(false);
+        }
 
         callRankApi();
 
@@ -119,6 +136,24 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
                     favTag = true;
                     addFavorite();
                 }
+            }
+        });
+
+        imgTel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:" + tel2));
+                startActivity(i);
+            }
+        });
+
+        imgTelWork.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:" + tel1));
+                startActivity(i);
             }
         });
     }

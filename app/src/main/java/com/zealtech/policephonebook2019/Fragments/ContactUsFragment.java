@@ -103,8 +103,7 @@ public class ContactUsFragment extends Fragment {
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_DIAL);
                 i.setData(Uri.parse("tel:" + telNo));
-                startActivity(i
-                );
+                startActivity(i);
             }
         });
 

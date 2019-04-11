@@ -67,7 +67,7 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
                     .into(holder.imgProfile);
         }
 
-        fullName = mPoliceInfo.get(i).getFirstName() + "  " + mPoliceInfo.get(i).getLastName();
+        fullName = mPoliceInfo.get(i).getRankName() + " " + mPoliceInfo.get(i).getFirstName() + "  " + mPoliceInfo.get(i).getLastName();
         holder.tvName.setText(fullName);
         holder.tvPosition.setText(mPoliceInfo.get(i).getPositionName());
         holder.tvDeparture.setText(mPoliceInfo.get(i).getDepartmentName());

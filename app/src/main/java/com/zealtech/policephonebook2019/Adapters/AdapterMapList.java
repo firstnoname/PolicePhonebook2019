@@ -15,10 +15,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Activities.StationDetailActivity;
 import com.zealtech.policephonebook2019.Activities.StationDetailTabviewActivity;
 import com.zealtech.policephonebook2019.Activities.StationSubListActivity;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Department;
 
 import java.util.ArrayList;
@@ -31,6 +34,7 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
     ArrayList<Department> mDepartment;
     int resId = R.mipmap.policestation_ic;
     int level = 1;
+    private String image_url;
 
     public AdapterMapList(Context mContext, ArrayList<Department> mDepartment) {
         this.mContext = mContext;
@@ -49,7 +53,14 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
 //        Log.d(TAG, "onBindViewHolder: called");
 
-        holder.imgInfo.setImageResource(resId);
+
+        if (mDepartment.get(i).getIcon() != null) {
+            image_url = ApplicationConfig.getImageUrl() + mDepartment.get(i).getIcon();
+            Glide.with(mContext).load(image_url).into(holder.imgInfo);
+        } else {
+            holder.imgInfo.setImageResource(resId);
+        }
+
         holder.tvStation.setText(mDepartment.get(i).getDepartmentName());
 
         String tagArea = "";
@@ -67,12 +78,15 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
         holder.layout_adapter_map_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (mDepartment.get(i).getFlagTail().equals(true)) {
+                    String object = new Gson().toJson(mDepartment.get(i));
                     String parentId = String.valueOf(mDepartment.get(i).getDepartmentId());
                     Intent intent = new Intent(mContext, StationSubListActivity.class);
                     intent.putExtra("level", level);
                     intent.putExtra("parentId", parentId);
                     intent.putExtra("subTitle", mDepartment.get(i).getDepartmentName());
+                    intent.putExtra("parentDepartment", object);
                     mContext.startActivity(intent);
                 } else {
                     Intent intent = new Intent(mContext, StationDetailTabviewActivity.class);

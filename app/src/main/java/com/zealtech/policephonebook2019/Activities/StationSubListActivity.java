@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
+import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Adapters.AdapterStationSubList;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
@@ -35,6 +36,7 @@ public class StationSubListActivity extends AppCompatActivity implements SearchV
 
     Api api = AppUtils.getApiService();
     ArrayList<Department> mDepartmentList = new ArrayList<>();
+    Department parentDepartment = new Department();
     String departmentId = "";
     int level = 2;
     int checkLvl = 0;
@@ -55,6 +57,10 @@ public class StationSubListActivity extends AppCompatActivity implements SearchV
         searchView = findViewById(R.id.search_sub_station);
         searchView.setOnQueryTextListener(this);
 
+        String object = getIntent().getExtras().getString("parentDepartment");
+        parentDepartment = new Gson().fromJson(object, Department.class);
+        parentDepartment.setFlagTail(false);
+        mDepartmentList.add(parentDepartment);
 
         //Check level and departmentId to query.
         tvAbTitle.setText(getIntent().getExtras().getString("subTitle"));

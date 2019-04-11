@@ -188,6 +188,7 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
                         if (response.body().getCode().equals("OK")) {
                             apiItemFilter.add(0, new Position().createTotalItem());
                             apiItemFilter.addAll(response.body().getData());
+
                             initRecyclerView(apiItemFilter);
                         } else {
                             Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();

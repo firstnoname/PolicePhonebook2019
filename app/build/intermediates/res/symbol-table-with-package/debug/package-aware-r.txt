@@ -1284,6 +1284,8 @@ id img_phone_list
 id img_profile
 id img_search
 id img_station_call
+id img_tel
+id img_tel_work
 id img_user_profile
 id info
 id input_password
@@ -1335,6 +1337,7 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id position_section
 id progress_circular
 id progress_horizontal
 id radio
@@ -1500,6 +1503,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_rank
 id username_icon
 id username_input
 id view

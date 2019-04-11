@@ -167,7 +167,7 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
                             .into(holder.imgProfile);
                 }
 
-                fullName = data.getFirstName() + "  " + data.getLastName();
+                fullName = data.getRankName() + " " + data.getFirstName() + "  " + data.getLastName();
                 holder.tvName.setText(fullName);
                 holder.tvPosition.setText(data.getPositionName());
                 holder.tvDeparture.setText(data.getDepartmentName());

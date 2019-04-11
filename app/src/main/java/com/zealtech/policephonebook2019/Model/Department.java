@@ -37,6 +37,8 @@ public class Department extends BaseFilterItem implements Serializable {
     String updateDate;
     int views;
     String website;
+    String icon;
+    String image;
 
     public String getAddress() {
         return address;
@@ -297,5 +299,19 @@ public class Department extends BaseFilterItem implements Serializable {
         this.website = website;
     }
 
+    public String getIcon() {
+        return icon;
+    }
 
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }

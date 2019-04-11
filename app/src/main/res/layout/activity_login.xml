@@ -62,7 +62,7 @@
             android:layout_toEndOf="@+id/username_icon"
             android:layout_toRightOf="@+id/username_icon"
             android:hint="รหัสบัตรประชาชน"
-            android:text="dev1"
+            android:text="zealtech"
             android:textSize="15sp"
             android:padding="10dp"
             android:gravity="right" />
@@ -112,6 +112,7 @@
             android:layout_toRightOf="@+id/login_password"
             android:hint="รหัสผ่าน วันเดือนปีเกิด"
             android:padding="10dp"
+            android:inputType="textPassword"
             android:text="zeal1tech"
             android:textSize="15sp"
             android:gravity="right"/>

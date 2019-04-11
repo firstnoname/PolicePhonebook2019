@@ -132,6 +132,8 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
         this.apiPoliceMasterData = dataSet;
 //        Log.d(TAG, String.valueOf(apiPoliceMasterData.size()));
 
+        //Todo Create model to store the data to be use in layout.
+
         mAdapter = new AdapterPhoneList(getActivity(), apiPoliceMasterData, true);
 
         recyclerView.setAdapter(mAdapter);

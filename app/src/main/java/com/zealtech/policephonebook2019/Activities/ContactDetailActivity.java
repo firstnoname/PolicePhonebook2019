@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +42,7 @@ public class ContactDetailActivity extends AppCompatActivity {
     private TextView tvName, tvPosition, tvDepartment, tvTel1, tvTel2, tvBack, tvUpdatedate;
     private ImageView imgFavorite, imgClose, imgProfile;
     private RelativeLayout relativeLayoutBackground;
+    private LinearLayout linearPositionSection;
     private int position;
     private String image_url;
     private String fullName, strPosition, department, tel1, tel2, rankName;
@@ -68,6 +70,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         imgClose = findViewById(R.id.imgBack);
         tvBack = findViewById(R.id.tvBack);
         tvUpdatedate = findViewById(R.id.tv_contact_update_date);
+        linearPositionSection = findViewById(R.id.position_section);
 
         policeMasterData = (ArrayList<PoliceMasterData>) getIntent().getSerializableExtra("contact_detail");
         position = getIntent().getIntExtra("position", 0);
@@ -77,7 +80,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         callRankApi();
 
         image_url = ApplicationConfig.getImageUrl() + policeMasterData.get(position).getImageProfile();
-        fullName = policeMasterData.get(position).getFirstName() + "  " + policeMasterData.get(position).getLastName();
+        fullName = policeMasterData.get(position).getRankName() + " " + policeMasterData.get(position).getFirstName() + "  " + policeMasterData.get(position).getLastName();
         strPosition = policeMasterData.get(position).getPositionName();
         department = policeMasterData.get(position).getDepartmentName();
         rankName = policeMasterData.get(position).getRankName();
@@ -105,9 +108,13 @@ public class ContactDetailActivity extends AppCompatActivity {
         if (policeMasterData.get(position).getImageProfile() != null) {
             Glide.with(this).load(image_url).into(imgProfile);
         }
+
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
         tvDepartment.setText(department);
+
+        //Check position tag isEmpty ?
+
 
 //        Todo: Don't have update date in PoliceMasterData.
 
