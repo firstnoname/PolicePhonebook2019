@@ -80,9 +80,10 @@
 
                             <TextView
                                 android:id="@+id/tv_contact_department"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
+                                android:gravity="center_horizontal"
                                 android:layout_marginTop="10dp"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
                                 android:textSize="14sp"
@@ -93,15 +94,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:gravity="center_horizontal"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="4dp"
+                                android:gravity="center_horizontal">
 
                                 <TextView
                                     android:id="@+id/user_rank"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_marginTop="10dp"
                                     android:textSize="14sp"
                                     android:text="ทดสอบ"
                                     android:background="@drawable/tv_red_tag"
@@ -110,7 +109,7 @@
                                     android:paddingRight="4dp"
                                     android:paddingTop="1dp"
                                     android:paddingBottom="1dp"
-                                    android:visibility="visible" />
+                                    android:visibility="gone" />
 
                             </LinearLayout>
 

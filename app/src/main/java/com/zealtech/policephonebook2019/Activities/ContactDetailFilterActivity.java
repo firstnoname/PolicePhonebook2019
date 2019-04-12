@@ -98,7 +98,10 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
             imgTel.setClickable(false);
         }
 
-        callRankApi();
+//        callRankApi();
+        if (policeMasterData.get(position).getColor() != null) {
+            relativeLayoutBackground.setBackgroundColor(Color.parseColor(policeMasterData.get(position).getColor()));
+        }
 
         if (policeMasterData.get(position).getImageProfile() != null) {
             Glide.with(this).load(image_url).into(imgProfile);
@@ -256,7 +259,11 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         String json = mPref.getString("ProfileObject", "");
         ProfileH mProfile = gson.fromJson(json, ProfileH.class);
 
-        token = mProfile.getToken();
+        if (mProfile != null) {
+            token = mProfile.getToken();
+        } else {
+            token = "";
+        }
 
     }
 

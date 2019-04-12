@@ -23,6 +23,7 @@ public class Police implements Serializable {
     String id;
     String createDate;
     String updateDate;
+    String color;
 
     public String getEditby() {
         return editby;
@@ -174,5 +175,13 @@ public class Police implements Serializable {
 
     public void setUpdateDate(String updateDate) {
         this.updateDate = updateDate;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

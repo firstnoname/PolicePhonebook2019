@@ -18,7 +18,9 @@ import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneList;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
+import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceMasterData;
+import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import org.json.JSONException;
@@ -47,6 +49,7 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
 
     //Vars
     public ArrayList<PoliceMasterData> apiPoliceMasterData = new ArrayList<>();
+    public ArrayList<Rank> ranks = new ArrayList<>();
 
     SearchView actionSearch;
 
@@ -93,10 +96,9 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-
                             apiPoliceMasterData.addAll(response.body().getData());
-                            setAdapter(apiPoliceMasterData);
-
+                            //Police master data come with no color string. so we have to check color before set data to adapter.
+                            checkColor();
                         } else {
                             Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -125,6 +127,48 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
                 Log.d(TAG, String.valueOf(t));
             }
         }); // end retrofit call.
+    }
+
+    private void checkColor() {
+        Call<ResponseRank> call = api.getRankMasterData("");
+        call.enqueue(new Callback<ResponseRank>() {
+            @Override
+            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            ranks.addAll(response.body().getData());
+                            for (int x = 0; x < apiPoliceMasterData.size(); x++) {
+                                for (int i = 0; i < ranks.size(); i++) {
+                                    if (apiPoliceMasterData.get(x).getRankId() == ranks.get(i).getRankId()) {
+                                        apiPoliceMasterData.get(x).setColor(ranks.get(i).getColor());
+                                    }
+                                }
+                            }
+                            setAdapter(apiPoliceMasterData);
+//                                    AdapterPhoneList.this.notifyDataSetChanged();
+                        } else {
+                            Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseRank> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
+            }
+        });
+
     }
 
 
@@ -167,7 +211,6 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
                 newList.add(apiPoliceMasterData.get(i));
             }
         }
-
 
         mAdapter = new AdapterPhoneList(getActivity(), newList);
         recyclerView.setAdapter(mAdapter);

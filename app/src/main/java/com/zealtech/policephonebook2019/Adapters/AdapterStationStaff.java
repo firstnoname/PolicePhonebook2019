@@ -55,31 +55,35 @@ public class AdapterStationStaff extends RecyclerView.Adapter<AdapterStationStaf
                     .into(viewHolder.imgProfile);
         }
 //        Log.d(TAG, IMAGE_URL + mPoliceList.get(i).getImageProfile());
-        fullName = mPoliceList.get(i).getFirstName() + "  " + mPoliceList.get(i).getLastName();
+        fullName = mPoliceList.get(i).getRankName() + " " + mPoliceList.get(i).getFirstName() + "  " + mPoliceList.get(i).getLastName();
         viewHolder.tvName.setText(fullName);
         viewHolder.tvPosition.setText(mPoliceList.get(i).getPositionName());
         viewHolder.tvDeparture.setText(mPoliceList.get(i).getDepartmentName());
 
-        String rankName = mPoliceList.get(i).getRankName();
-//        Set view_tab color from rank.
-        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
-            //Gold
-
-            viewHolder.imgProfile.setBorderColor(Color.YELLOW);
-            viewHolder.viewTab.setBackgroundResource(R.color.colorYellow);
-        } else if (rankName.equals("พล.ต.ต.")) {
-            //Blue sky
-            viewHolder.imgProfile.setBorderColor(Color.GREEN);
-            viewHolder.viewTab.setBackgroundResource(R.color.colorGreen);
-        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
-            //Blue
-            viewHolder.imgProfile.setBorderColor(Color.BLUE);
-            viewHolder.viewTab.setBackgroundResource(R.color.colorBlue);
-        } else {
-            //Red
-            viewHolder.imgProfile.setBorderColor(Color.RED);
-            viewHolder.viewTab.setBackgroundResource(R.color.colorRed);
+        if (mPoliceList.get(i).getColor() != null) {
+            viewHolder.viewTab.setBackgroundColor(Color.parseColor(mPoliceList.get(i).getColor()));
         }
+
+//        String rankName = mPoliceList.get(i).getRankName();
+////        Set view_tab color from rank.
+//        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
+//            //Gold
+//
+//            viewHolder.imgProfile.setBorderColor(Color.YELLOW);
+//            viewHolder.viewTab.setBackgroundResource(R.color.colorYellow);
+//        } else if (rankName.equals("พล.ต.ต.")) {
+//            //Blue sky
+//            viewHolder.imgProfile.setBorderColor(Color.GREEN);
+//            viewHolder.viewTab.setBackgroundResource(R.color.colorGreen);
+//        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
+//            //Blue
+//            viewHolder.imgProfile.setBorderColor(Color.BLUE);
+//            viewHolder.viewTab.setBackgroundResource(R.color.colorBlue);
+//        } else {
+//            //Red
+//            viewHolder.imgProfile.setBorderColor(Color.RED);
+//            viewHolder.viewTab.setBackgroundResource(R.color.colorRed);
+//        }
 
 //        Set label orange or red.
         if (mPoliceList.get(i).getTag() != null) {

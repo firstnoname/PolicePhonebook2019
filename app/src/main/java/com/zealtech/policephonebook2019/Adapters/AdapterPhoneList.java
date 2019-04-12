@@ -41,13 +41,11 @@ import retrofit2.Response;
 public class AdapterPhoneList extends RecyclerView.Adapter {
 
     private static final String TAG = "AdapterPhoneList";
-    Api api = AppUtils.getApiService();
+
     private ArrayList<? extends BaseItem> mPoliceInfo;
     private Context mContext;
-    private String rankName;
     private String fullName = "";
     private String IMAGE_URL = ApplicationConfig.getImageUrl();
-    private ArrayList<Rank> ranks = new ArrayList<>();
 
     public AdapterPhoneList(Context mContext, ArrayList<PoliceMasterData> mPoliceInfo) {
         this(mContext, mPoliceInfo, false);
@@ -121,45 +119,43 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
             BaseItem item = mPoliceInfo.get(holder.getAdapterPosition());
 
             if (item instanceof PoliceMasterData) {
-//            rankName = mPoliceInfo.get(i).getRankName();
                 PoliceMasterData data = (PoliceMasterData) item;
-                rankName = data.getRankName();
-                Call<ResponseRank> call = api.getRankMasterData("");
-                call.enqueue(new Callback<ResponseRank>() {
-                    @Override
-                    public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
-                        if (response.body() != null) {
-                            if (response.body().getCode().equalsIgnoreCase("OK")) {
-                                if (response.body().getCode().equals("OK")) {
-                                    ranks = response.body().getData();
-//                                    AdapterPhoneList.this.notifyDataSetChanged();
-                                } else {
-                                    Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                                }
-                            } else {
-                                Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-                            try {
-                                JSONObject jObjError = new JSONObject(response.errorBody().string());
+//                Call<ResponseRank> call = api.getRankMasterData("");
+//                call.enqueue(new Callback<ResponseRank>() {
+//                    @Override
+//                    public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+//                        if (response.body() != null) {
+//                            if (response.body().getCode().equalsIgnoreCase("OK")) {
+//                                if (response.body().getCode().equals("OK")) {
+//                                    ranks = response.body().getData();
+////                                    AdapterPhoneList.this.notifyDataSetChanged();
+//                                } else {
+//                                    Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+//                                }
+//                            } else {
+//                                Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+//                            }
+//                        } else {
+//                            try {
+//                                JSONObject jObjError = new JSONObject(response.errorBody().string());
+//
+//                            } catch (Exception e) {
+//                                Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<ResponseRank> call, Throwable t) {
+//                        Log.d("response", String.valueOf(t));
+//                    }
+//                });
 
-                            } catch (Exception e) {
-                                Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ResponseRank> call, Throwable t) {
-                        Log.d("response", String.valueOf(t));
-                    }
-                });
-
-                for (int x = 0; x < ranks.size(); x++) {
-                    if (rankName.equals(ranks.get(x).getShortName())) {
-                        holder.viewTab.setBackgroundColor(Color.parseColor(ranks.get(x).getColor()));
-                    }
-                }
+//                for (int x = 0; x < ranks.size(); x++) {
+//                    if (rankName.equals(ranks.get(x).getShortName())) {
+//                        holder.viewTab.setBackgroundColor(Color.parseColor(ranks.get(x).getColor()));
+//                    }
+//                }
 
                 if (data.getImageProfile() != null) {
                     Glide.with(mContext)
@@ -167,42 +163,46 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
                             .into(holder.imgProfile);
                 }
 
+                if (data.getColor() != null) {
+                    holder.viewTab.setBackgroundColor(Color.parseColor(data.getColor()));
+                }
+
                 fullName = data.getRankName() + " " + data.getFirstName() + "  " + data.getLastName();
                 holder.tvName.setText(fullName);
                 holder.tvPosition.setText(data.getPositionName());
                 holder.tvDeparture.setText(data.getDepartmentName());
 
-                if (data.getTag() != null) {
-                    //        Set label orange or red.
-                    for (int x = 0; x < data.getTag().size(); x++) {
-                        if (x == 0) {
-                            if (data.getTag().get(x).equals("ตม.")) {
-                                holder.tvPosition2.setVisibility(View.VISIBLE);
-                                holder.tvPosition2.setBackgroundResource(R.drawable.tv_red_tag);
-                                holder.tvPosition2.setText(data.getTag().get(x));
-                            }
-                            if (data.getTag().get(x).equals("ผบก.")) {
-                                holder.tvPosition2.setVisibility(View.VISIBLE);
-                                holder.tvPosition2.setBackgroundResource(R.drawable.tv_orange_tag);
-                                holder.tvPosition2.setText(data.getTag().get(x));
-                            }
-                        }
-
-                        if (x == 1) {
-                            if (data.getTag().get(x).equals("ผบก.")) {
-                                holder.tvPosition1.setVisibility(View.VISIBLE);
-                                holder.tvPosition1.setBackgroundResource(R.drawable.tv_orange_tag);
-                                holder.tvPosition1.setText(data.getTag().get(x));
-                            }
-                            if (data.getTag().get(x).equals("ตม.")) {
-                                holder.tvPosition1.setVisibility(View.VISIBLE);
-                                holder.tvPosition1.setBackgroundResource(R.drawable.tv_red_tag);
-                                holder.tvPosition1.setText(data.getTag().get(x));
-                            }
-                        }
-
-                    }// end for loop.
-                }
+//                if (data.getTag() != null) {
+//                    //        Set label orange or red.
+//                    for (int x = 0; x < data.getTag().size(); x++) {
+//                        if (x == 0) {
+//                            if (data.getTag().get(x).equals("ตม.")) {
+//                                holder.tvPosition2.setVisibility(View.VISIBLE);
+//                                holder.tvPosition2.setBackgroundResource(R.drawable.tv_red_tag);
+//                                holder.tvPosition2.setText(data.getTag().get(x));
+//                            }
+//                            if (data.getTag().get(x).equals("ผบก.")) {
+//                                holder.tvPosition2.setVisibility(View.VISIBLE);
+//                                holder.tvPosition2.setBackgroundResource(R.drawable.tv_orange_tag);
+//                                holder.tvPosition2.setText(data.getTag().get(x));
+//                            }
+//                        }
+//
+//                        if (x == 1) {
+//                            if (data.getTag().get(x).equals("ผบก.")) {
+//                                holder.tvPosition1.setVisibility(View.VISIBLE);
+//                                holder.tvPosition1.setBackgroundResource(R.drawable.tv_orange_tag);
+//                                holder.tvPosition1.setText(data.getTag().get(x));
+//                            }
+//                            if (data.getTag().get(x).equals("ตม.")) {
+//                                holder.tvPosition1.setVisibility(View.VISIBLE);
+//                                holder.tvPosition1.setBackgroundResource(R.drawable.tv_red_tag);
+//                                holder.tvPosition1.setText(data.getTag().get(x));
+//                            }
+//                        }
+//
+//                    }// end for loop.
+//                }
 
                 holder.parent_layout.setOnClickListener(new View.OnClickListener() {
                     @Override

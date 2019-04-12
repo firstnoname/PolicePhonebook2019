@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.zealtech.policephonebook2019.Adapters.AdapterFavoriteList;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
+import com.zealtech.policephonebook2019.Config.RealmMigrations;
 import com.zealtech.policephonebook2019.Model.Police;
 import com.zealtech.policephonebook2019.Model.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
@@ -25,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
 
 /**
@@ -76,6 +78,7 @@ public class FavoriteRecentFragment extends Fragment {
 
 
         Realm.init(getContext());
+
         Realm realm = Realm.getDefaultInstance();
         final RealmResults<PoliceHistory> policeHistories = realm.where(PoliceHistory.class).findAll();
 
@@ -97,6 +100,7 @@ public class FavoriteRecentFragment extends Fragment {
                 mPolice.setWorkPhoneNumber(policeHistories.get(i).getWorkPhoneNumber());
                 mPolice.setUpdateDate(policeHistories.get(i).getUpdateDate());
                 mPolice.setId(policeHistories.get(i).getId());
+                mPolice.setColor(policeHistories.get(i).getColor());
 
                 mPolices.add(mPolice);
 
@@ -116,4 +120,9 @@ public class FavoriteRecentFragment extends Fragment {
         recyclerView.setAdapter(mAdapter);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Realm.getDefaultInstance().close();
+    }
 }

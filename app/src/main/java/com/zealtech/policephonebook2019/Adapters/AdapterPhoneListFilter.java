@@ -72,43 +72,47 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
         holder.tvPosition.setText(mPoliceInfo.get(i).getPositionName());
         holder.tvDeparture.setText(mPoliceInfo.get(i).getDepartmentName());
 
-        String rankName = mPoliceInfo.get(i).getRankName();
-//        Set view_tab color from rank.
-        Call<ResponseRank> call = api.getRankMasterData("");
-        call.enqueue(new Callback<ResponseRank>() {
-            @Override
-            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
-                if (response.body() != null) {
-                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-                        if (response.body().getCode().equals("OK")) {
-                            ranks = response.body().getData();
-                        } else {
-                            Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    try {
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-
-                    } catch (Exception e) {
-                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseRank> call, Throwable t) {
-                Log.d("response", String.valueOf(t));
-            }
-        });
-
-        for (int x = 0; x < ranks.size(); x++) {
-            if (rankName.equals(ranks.get(x).getShortName())) {
-                holder.viewTab.setBackgroundColor(Color.parseColor(ranks.get(x).getColor()));
-            }
+        if (mPoliceInfo.get(i).getColor() != null) {
+            holder.viewTab.setBackgroundColor(Color.parseColor(mPoliceInfo.get(i).getColor()));
         }
+
+//        String rankName = mPoliceInfo.get(i).getRankName();
+//        Set view_tab color from rank.
+//        Call<ResponseRank> call = api.getRankMasterData("");
+//        call.enqueue(new Callback<ResponseRank>() {
+//            @Override
+//            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+//                if (response.body() != null) {
+//                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+//                        if (response.body().getCode().equals("OK")) {
+//                            ranks = response.body().getData();
+//                        } else {
+//                            Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+//                        }
+//                    } else {
+//                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+//                    }
+//                } else {
+//                    try {
+//                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+//
+//                    } catch (Exception e) {
+//                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ResponseRank> call, Throwable t) {
+//                Log.d("response", String.valueOf(t));
+//            }
+//        });
+//
+//        for (int x = 0; x < ranks.size(); x++) {
+//            if (rankName.equals(ranks.get(x).getShortName())) {
+//                holder.viewTab.setBackgroundColor(Color.parseColor(ranks.get(x).getColor()));
+//            }
+//        }
 //        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
 //            //Gold
 ////            holder.imgProfile.setBorderColor(Color.YELLOW);

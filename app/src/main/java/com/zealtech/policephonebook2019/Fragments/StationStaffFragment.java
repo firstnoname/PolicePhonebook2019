@@ -17,7 +17,9 @@ import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterStationStaff;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Police;
+import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
+import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import org.json.JSONException;
@@ -40,6 +42,7 @@ public class StationStaffFragment extends Fragment {
     public static final String KEY_MESSAGE = "message";
     private String departmentId = "";
     private ArrayList<Police> mPoliceList = new ArrayList<>();
+    private ArrayList<Rank> ranks = new ArrayList<>();
 
     private Api api = AppUtils.getApiService();
     private RecyclerView.Adapter adapter;
@@ -75,7 +78,7 @@ public class StationStaffFragment extends Fragment {
                         if (response.body().getCode().equals("OK")) {
                             mPoliceList.addAll(response.body().getData().getContent());
 //                            Log.d(TAG, String.valueOf(mPoliceList.get(0).getFirstName()));
-                            setDataToLayout(mPoliceList);
+                            checkColor();
                         } else {
                             Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -103,6 +106,48 @@ public class StationStaffFragment extends Fragment {
             @Override
             public void onFailure(Call<ResponsePoliceList> call, Throwable t) {
 
+            }
+        });
+    }
+
+    private void checkColor() {
+
+        Call<ResponseRank> call = api.getRankMasterData("");
+        call.enqueue(new Callback<ResponseRank>() {
+            @Override
+            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            ranks.addAll(response.body().getData());
+                            for (int x = 0; x < mPoliceList.size(); x++) {
+                                for (int i = 0; i < ranks.size(); i++) {
+                                    if (mPoliceList.get(x).getRankId() == ranks.get(i).getRankId()) {
+                                        mPoliceList.get(x).setColor(ranks.get(i).getColor());
+                                    }
+                                }
+                            }
+                            setDataToLayout(mPoliceList);
+//                                    AdapterPhoneList.this.notifyDataSetChanged();
+                        } else {
+                            Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseRank> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
             }
         });
     }

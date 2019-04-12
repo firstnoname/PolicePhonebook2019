@@ -1,8 +1,5 @@
 package com.zealtech.policephonebook2019.Model;
 
-import java.util.ArrayList;
-
-import io.realm.RealmList;
 import io.realm.RealmObject;
 
 public class PoliceHistory extends RealmObject {
@@ -24,6 +21,7 @@ public class PoliceHistory extends RealmObject {
     String id;
     String createDate;
     String updateDate;
+    String color;
 
     public String getEditby() {
         return editby;
@@ -160,5 +158,13 @@ public class PoliceHistory extends RealmObject {
 
     public void setUpdateDate(String updateDate) {
         this.updateDate = updateDate;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

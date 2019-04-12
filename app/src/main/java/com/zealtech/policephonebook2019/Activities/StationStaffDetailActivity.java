@@ -1,5 +1,6 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -66,18 +67,8 @@ public class StationStaffDetailActivity extends AppCompatActivity {
 
         tel2 = policeData.get(position).getPhoneNumber();
 
-        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
-            //Gold
-            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg01);
-        } else if (rankName.equals("พล.ต.ต.")) {
-            //Blue sky
-            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg02);
-        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
-            //Blue
-            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg03);
-        } else {
-            //Red
-            relativeLayoutBackground.setBackgroundResource(R.mipmap.bg04);
+        if (policeData.get(position).getColor() != null) {
+            relativeLayoutBackground.setBackgroundColor(Color.parseColor(policeData.get(position).getColor()));
         }
 
         if (policeData.get(position).getImageProfile() != null) {

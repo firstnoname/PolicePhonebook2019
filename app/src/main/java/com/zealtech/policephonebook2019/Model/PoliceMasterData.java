@@ -18,6 +18,7 @@ public class PoliceMasterData extends BaseItem implements Serializable {
     int rankId;
     ArrayList<String> tag;
     String id;
+    String color;
 
     public ArrayList<PoliceMasterData> getContent() {
         return content;
@@ -122,4 +123,11 @@ public class PoliceMasterData extends BaseItem implements Serializable {
         return getFirstName().replaceAll("[^a-zA-Z0-9ก-ฮ]", "");
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }

@@ -27,6 +27,7 @@ import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.Province;
 import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
+import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import org.json.JSONException;
@@ -70,6 +71,7 @@ public class SearchFragment extends Fragment{
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     ArrayList<Police> mPolice = new ArrayList<>();
+    ArrayList<Rank> ranks = new ArrayList<>();
 
     public SearchFragment() {
         // Required empty public constructor
@@ -228,7 +230,8 @@ public class SearchFragment extends Fragment{
                         if (response.body().getCode().equals("OK")) {
                             tvListSize.setText(response.body().getData().getContent().size() + "รายการ");
                             mPolice.addAll(response.body().getData().getContent());
-                            setAdapter(mPolice);
+                            checkColor();
+
                         } else {
                             Toast.makeText(getContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -257,6 +260,49 @@ public class SearchFragment extends Fragment{
                 Log.d(TAG, String.valueOf(t));
             }
         });
+    }
+
+    private void checkColor() {
+
+        Call<ResponseRank> call = api.getRankMasterData("");
+        call.enqueue(new Callback<ResponseRank>() {
+            @Override
+            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            ranks.addAll(response.body().getData());
+                            for (int x = 0; x < mPolice.size(); x++) {
+                                for (int i = 0; i < ranks.size(); i++) {
+                                    if (mPolice.get(x).getRankId() == ranks.get(i).getRankId()) {
+                                        mPolice.get(x).setColor(ranks.get(i).getColor());
+                                    }
+                                }
+                            }
+                            setAdapter(mPolice);
+//                                    AdapterPhoneList.this.notifyDataSetChanged();
+                        } else {
+                            Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseRank> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
+            }
+        });
+
     }
 
 

@@ -32,6 +32,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -154,24 +155,38 @@ public class ContactDetailActivity extends AppCompatActivity {
             }
         });
 
+
         Realm.init(this);
+        RealmConfiguration config = new RealmConfiguration.Builder().name("sample.realm")
+                .schemaVersion(1).build();
+
+        Realm.setDefaultConfiguration(config);
+        Realm.getInstance(config);
+
         mRealm = Realm.getDefaultInstance();
-        final RealmResults<PoliceHistory> policeHistories = mRealm.where(PoliceHistory.class).contains("id", policeMasterData.get(position).getId()).findAll();
+
+        final RealmResults<PoliceHistory> policeHistories = mRealm.where(PoliceHistory.class)
+                .contains("id", policeMasterData.get(position).getId()).findAll();
+
+        mRealm.beginTransaction();
+//        mRealm.deleteAll();
 
         if (policeHistories.size() == 0) {
-            mRealm.beginTransaction();
-            //        mRealm.deleteAll();
+
             PoliceHistory mPoliceHistory = mRealm.createObject(PoliceHistory.class);
             mPoliceHistory.setImageProfile(policeMasterData.get(position).getImageProfile());
             mPoliceHistory.setFirstName(policeMasterData.get(position).getFirstName());
             mPoliceHistory.setLastName(policeMasterData.get(position).getLastName());
             mPoliceHistory.setDepartmentName(policeMasterData.get(position).getDepartmentName());
-            mPoliceHistory.setPositionName(policeMasterData.get(position).getDepartmentName());
+            mPoliceHistory.setPositionName(policeMasterData.get(position).getPositionName());
             mPoliceHistory.setRankName(policeMasterData.get(position).getRankName());
             mPoliceHistory.setRankId(policeMasterData.get(position).getRankId());
             mPoliceHistory.setId(policeMasterData.get(position).getId());
-            mRealm.commitTransaction();
+            mPoliceHistory.setColor(policeMasterData.get(position).getColor());
+
         }
+
+        mRealm.commitTransaction();
 
     }
 
@@ -179,52 +194,58 @@ public class ContactDetailActivity extends AppCompatActivity {
 
         checkLogin();
 
-        Call<ResponseFavorite> call = api.getFavorite(token);
-        call.enqueue(new Callback<ResponseFavorite>() {
-            @Override
-            public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
-                if (response.body() != null) {
-                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-                        if (response.body().getCode().equals("OK")) {
-                            for (int i = 0; i < response.body().getData().size(); i++) {
-                                String apiId = response.body().getData().get(i).getId();
-                                String selectedId = policeMasterData.get(position).getId();
-                                if (selectedId.equals(apiId)) {
+        if (token.equals(null)) {
+            Call<ResponseFavorite> call = api.getFavorite(token);
+            call.enqueue(new Callback<ResponseFavorite>() {
+                @Override
+                public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
+                    if (response.body() != null) {
+                        if (response.body().getCode().equalsIgnoreCase("OK")) {
+                            if (response.body().getCode().equals("OK")) {
+                                for (int i = 0; i < response.body().getData().size(); i++) {
+                                    String apiId = response.body().getData().get(i).getId();
+                                    String selectedId = policeMasterData.get(position).getId();
+                                    if (selectedId.equals(apiId)) {
 //                                    Toast.makeText(ContactDetailFilterActivity.this, "True", Toast.LENGTH_SHORT).show();
-                                    imgFavorite.setImageResource(R.mipmap.star_ac);
-                                } else {
+                                        imgFavorite.setImageResource(R.mipmap.star_ac);
+                                    } else {
 //                                    Toast.makeText(ContactDetailFilterActivity.this, selectedId + " : " + apiId, Toast.LENGTH_SHORT).show();
-                                    imgFavorite.setImageResource(R.mipmap.star);
+                                        imgFavorite.setImageResource(R.mipmap.star);
+                                    }
                                 }
+                            } else {
+                                Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    try {
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-                        if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
-                            Log.d(TAG, String.valueOf(jObjError.get("code")));
-                        } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
-                            Log.d(TAG, String.valueOf(jObjError.get("code")));
+                        try {
+                            JSONObject jObjError = new JSONObject(response.errorBody().string());
+                            if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
+                                Log.d(TAG, String.valueOf(jObjError.get("code")));
+                            } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                                Log.d(TAG, String.valueOf(jObjError.get("code")));
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
                     }
                 }
-            }
 
-            @Override
-            public void onFailure(Call<ResponseFavorite> call, Throwable t) {
-                Log.d(TAG, String.valueOf(call));
-                Log.d(TAG, String.valueOf(t));
-            }
-        });
+                @Override
+                public void onFailure(Call<ResponseFavorite> call, Throwable t) {
+                    Log.d(TAG, String.valueOf(call));
+                    Log.d(TAG, String.valueOf(t));
+                }
+            });
+        } else {
+
+        }
+
+
     }
 
     private void checkLogin() {
@@ -233,7 +254,11 @@ public class ContactDetailActivity extends AppCompatActivity {
         String json = mPref.getString("ProfileObject", "");
         ProfileH mProfile = gson.fromJson(json, ProfileH.class);
 
-        token = mProfile.getToken();
+        if (mProfile != null) {
+            token = mProfile.getToken();
+        } else {
+            token = "";
+        }
 
     }
 
@@ -360,5 +385,6 @@ public class ContactDetailActivity extends AppCompatActivity {
             });
         }
     }
+
 
 }
