@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
                     searchFragment.setDropDownPosition((Position) item);
                 }
             }
-        } else if (requestCode == 2) {
+        } else if (requestCode == 2 && resultCode == -1) {
             if (data != null) {
                 searchFragment.setDropDownDepartment((Department) data.getSerializableExtra("departmentSelected"));
             }

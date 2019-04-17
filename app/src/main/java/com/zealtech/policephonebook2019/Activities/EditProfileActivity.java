@@ -132,14 +132,11 @@ public class EditProfileActivity extends AppCompatActivity {
                 editedLastname = edtLastname.getText().toString().trim();
                 editedPhoneNumber = edtPhone.getText().toString().trim();
 
-//                if (imgProfile.equals(null)) {
-//                    pushEditedProfileWithoutImgProfile();
-//                } else {
-//                    pushEditedProfile();
-//                }
-
-                pushEditedProfileWithoutImgProfile();
-//                pushEditedProfile();
+                if (imgProfile == null) {
+                    pushEditedProfileWithoutImgProfile();
+                } else {
+                    pushEditedProfile();
+                }
 
             }
         });
@@ -310,7 +307,8 @@ public class EditProfileActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseProfile> call, Throwable t) {
-
+                Log.d(TAG, call.toString());
+                Log.d(TAG, t.toString());
             }
         });
     }
@@ -379,26 +377,18 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     private void setValueImage(Uri uri) {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        byte[] newImage = outputStream.toByteArray();
 
         String path = uri.getPath();
 
 //        Create temp file to write new bitmap(scale/compress image) for upload
         try {
             File uploadFile = new File(getApplicationContext().getCacheDir(), path);
-            FileOutputStream fos = new FileOutputStream(uploadFile);
-            fos.write(newImage);
-            fos.flush();
-            fos.close();
 
             RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"), uploadFile);
             imgProfile = MultipartBody.Part.createFormData("imageProfile", uploadFile.getName(), requestBody);
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+
         }
 
     }

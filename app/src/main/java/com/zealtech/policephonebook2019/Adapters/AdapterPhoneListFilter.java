@@ -43,7 +43,6 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
     private ArrayList<Rank> ranks = new ArrayList<>();
     Api api = AppUtils.getApiService();
 
-
     public AdapterPhoneListFilter(Context mContext, ArrayList<Police> mPoliceInfo) {
         this.mPoliceInfo = mPoliceInfo;
         this.mContext = mContext;

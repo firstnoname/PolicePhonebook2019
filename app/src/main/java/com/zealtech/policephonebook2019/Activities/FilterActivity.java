@@ -136,13 +136,6 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
         });
     }
 
-    private void setAdapter(ArrayList<Department> mDepartmentList) {
-        RecyclerView recyclerView = findViewById(R.id.recycler_filter);
-        mAdapterDepartment = new AdapterDepartmentSearchFilter(this, mDepartmentList);
-        recyclerView.setAdapter(mAdapterDepartment);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-    }
-
     private void initProvince() {
         Call<ResponseProvince> call = api.getProvince();
         call.enqueue(new Callback<ResponseProvince>() {
@@ -254,8 +247,14 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
         baseFilterItems.addAll(dataSet);
 
         adapter = new AdapterFilterSearch(this, baseFilterItems, tagFilter);
-
         recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    private void setAdapter(ArrayList<Department> mDepartmentList) {
+        RecyclerView recyclerView = findViewById(R.id.recycler_filter);
+        mAdapterDepartment = new AdapterDepartmentSearchFilter(this, mDepartmentList);
+        recyclerView.setAdapter(mAdapterDepartment);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 

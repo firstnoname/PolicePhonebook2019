@@ -11,7 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Activities.FilterDepartmentActivity;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Department;
 
 import java.util.ArrayList;
@@ -23,6 +26,11 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
     int level = 1;
     private Activity mActivity;
     private ArrayList<Department> mDepartment;
+    private String image_url = ApplicationConfig.getImageUrl();
+
+    private int departmentId;
+    private String departmentName;
+
 
     public AdapterDepartmentSearchFilter(Activity activity, ArrayList<Department> mDepartment) {
         this.mActivity = activity;
@@ -40,7 +48,12 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
 
-        holder.imgInfo.setImageResource(resId);
+        if (mDepartment.get(i).getIcon() != null) {
+            image_url = ApplicationConfig.getImageUrl() + mDepartment.get(i).getIcon();
+            Glide.with(mActivity).load(image_url).into(holder.imgInfo);
+        } else {
+            holder.imgInfo.setImageResource(resId);
+        }
         holder.tvStation.setText(mDepartment.get(i).getDepartmentName());
 
         String tagArea = "";
@@ -51,43 +64,44 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
         }
 
         holder.tvArea.setText(tagArea);
+        if (mDepartment.get(i).getFlagTail().equals(false)) {
+            holder.imgNext.setVisibility(View.INVISIBLE);
+        }
 
         holder.layout_adapter_map_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Todo Cheating on select department. Search how to setResult from third activity to 1st activity.
-//                if (mDepartment.get(i).getFlagTail().equals(true)) {
-//                    level += 1;
-//                    String parentId = String.valueOf(mDepartment.get(i).getDepartmentId());
-//                    Intent intent = new Intent(mActivity, FilterDepartmentActivity.class);
-//                    intent.putExtra("level", level);
-//                    intent.putExtra("parentId", parentId);
-//                    intent.putExtra("subTitle", mDepartment.get(i).getDepartmentName());
-//                    mActivity.startActivity(intent);
-//
-//                    mActivity.finish();
-//                } else {
-//                    int departmentId = mDepartment.get(i).getDepartmentId();
-//                    String departmentName = mDepartment.get(i).getDepartmentName();
-//
-//                    Intent iEditProfile = new Intent();
-//                    iEditProfile.putExtra("departmentId", departmentId);
-//                    iEditProfile.putExtra("departmentName", departmentName);
-//                    mActivity.setResult(Activity.RESULT_OK, iEditProfile);
-//                    mActivity.finish();
-//                }
+                if (mDepartment.get(i).getFlagTail().equals(true)) {
+                    level += 1;
+                    String parentId = String.valueOf(mDepartment.get(i).getDepartmentId());
+                    Intent intent = new Intent(mActivity, FilterDepartmentActivity.class);
+                    intent.putExtra("level", level);
+                    intent.putExtra("parentId", parentId);
+                    intent.putExtra("subTitle", mDepartment.get(i).getDepartmentName());
+                    mActivity.startActivity(intent);
+                    mActivity.finish();
+                } else {
+                    departmentId = mDepartment.get(i).getDepartmentId();
+                    departmentName = mDepartment.get(i).getDepartmentName();
 
-                int departmentId = mDepartment.get(i).getDepartmentId();
-                String departmentName = mDepartment.get(i).getDepartmentName();
+                    Intent iEditProfile = new Intent();
+                    mDepartmentSelected.setDepartmentId(departmentId);
+                    mDepartmentSelected.setDepartmentName(departmentName);
+                    iEditProfile.putExtra("departmentSelected", mDepartmentSelected);
+                    mActivity.setResult(Activity.RESULT_OK, iEditProfile);
+                    mActivity.finish();
+                }
 
-                Intent iEditProfile = new Intent();
-                mDepartmentSelected.setDepartmentId(departmentId);
-                mDepartmentSelected.setDepartmentName(departmentName);
-                iEditProfile.putExtra("departmentSelected", mDepartmentSelected);
-//                iEditProfile.putExtra("departmentId", departmentId);
-//                iEditProfile.putExtra("departmentName", departmentName);
-                mActivity.setResult(Activity.RESULT_OK, iEditProfile);
-                mActivity.finish();
+//                int departmentId = mDepartment.get(i).getDepartmentId();
+//                String departmentName = mDepartment.get(i).getDepartmentName();
+//
+//                Intent iEditProfile = new Intent();
+//                mDepartmentSelected.setDepartmentId(departmentId);
+//                mDepartmentSelected.setDepartmentName(departmentName);
+//                iEditProfile.putExtra("departmentSelected", mDepartmentSelected);
+//                mActivity.setResult(Activity.RESULT_OK, iEditProfile);
+//                mActivity.finish();
             }
         });
     }
@@ -105,7 +119,7 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imgInfo;
+        ImageView imgInfo, imgNext;
         TextView tvStation, tvArea;
         ConstraintLayout layout_adapter_map_list;
 
@@ -116,7 +130,7 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
             tvStation = itemView.findViewById(R.id.tvStationPosition);
             tvArea = itemView.findViewById(R.id.tvArea);
             layout_adapter_map_list = itemView.findViewById(R.id.layout_adapter_map_list);
-
+            imgNext = itemView.findViewById(R.id.imgNext);
         }
     }
 

@@ -49,7 +49,7 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
         level = getIntent().getIntExtra("level", 1);
         departmentId = getIntent().getStringExtra("parentId");
         provinceId = getIntent().getStringExtra("provinceId");
-        if (provinceId.equals("0")) {
+        if (provinceId == "0") {
             provinceId = "";
         }
 

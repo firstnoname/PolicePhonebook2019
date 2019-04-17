@@ -144,7 +144,7 @@ public class SearchFragment extends Fragment{
         cvDepartment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent iDepartment = new Intent(getActivity(), FilterActivity.class);
+                Intent iDepartment = new Intent(getActivity(), FilterDepartmentActivity.class);
                 iDepartment.putExtra("tag", "department");
                 iDepartment.putExtra("provinceId", provinceId);
                 getActivity().startActivityForResult(iDepartment, 2);
@@ -185,14 +185,18 @@ public class SearchFragment extends Fragment{
     }
 
     public void setDropDownDepartment(Department item) {
-        selectDepartment = item;
-        tvDepartment.setText(selectDepartment.getDepartmentName());
-        if (selectDepartment.getDepartmentId() == 0) {
-            departmentId = "";
+        if (item != null) {
+            selectDepartment = item;
+            tvDepartment.setText(selectDepartment.getDepartmentName());
+            if (selectDepartment.getDepartmentId() == 0) {
+                departmentId = "";
+            } else {
+                departmentId = String.valueOf(selectDepartment.getDepartmentId());
+            }
+            onRefreshView();
         } else {
-            departmentId = String.valueOf(selectDepartment.getDepartmentId());
-        }
-        onRefreshView();
+            Toast.makeText(getActivity(), "Department empty", Toast.LENGTH_SHORT).show();
+        } 
     }
 
     public void setDropDownRank(Rank item) {
