@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -69,8 +70,6 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
         searchView = findViewById(R.id.search_filter);
         searchView.setOnQueryTextListener(this);
 
-
-
         tagFilter = getIntent().getStringExtra("tag");
 
         if (tagFilter != null) {
@@ -96,6 +95,13 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
                 initDepartment();
             }
         }
+
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void initDepartment() {
@@ -245,7 +251,6 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
 
         ArrayList<BaseFilterItem> baseFilterItems = new ArrayList<>();
         baseFilterItems.addAll(dataSet);
-
         adapter = new AdapterFilterSearch(this, baseFilterItems, tagFilter);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

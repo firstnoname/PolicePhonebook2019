@@ -20,6 +20,7 @@ public class PoliceMasterData extends BaseItem implements Serializable {
     String id;
     String color;
 
+
     public ArrayList<PoliceMasterData> getContent() {
         return content;
     }

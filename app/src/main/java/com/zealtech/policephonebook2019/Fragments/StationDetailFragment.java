@@ -58,9 +58,10 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
     private ImageView imgPhoneCall;
 
     private String departmentId = "";
+    String title;
     private ArrayList<DepartmentRoot> mDepartmentRoot = new ArrayList<>();
-    private Double latitude = 0.0;
-    private Double longitude = 0.0;
+    private Double latitude = 10.5204512;
+    private Double longitude = 99.1936077;
 
     Api api = AppUtils.getApiService();
 
@@ -189,6 +190,17 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
                         startActivity(i);
                     }
                 });
+            }
+        });
+
+        btnOpenMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                title = mDepartmentRoot.get(0).getDepartmentName();
+                Uri gmmIntentUri = Uri.parse("geo:" + latitude + "," + longitude + "?q=" + latitude + "," + longitude + "(" + title + ")");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
             }
         });
 

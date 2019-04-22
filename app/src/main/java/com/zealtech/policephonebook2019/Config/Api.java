@@ -50,7 +50,10 @@ public interface Api {
     Call<ResponseNotification> getNotifications(@Query("id") String id);
 
     @GET("getPolice")
-    Call<ResponsePoliceList> getPoliceList(@Query("departmentId") String departmentId, @Query("positionId") String positionId, @Query("rankId") String rankId);
+    Call<ResponsePoliceList> getPoliceList(@Query("departmentId") String departmentId,
+                                           @Query("positionId") String positionId,
+                                           @Query("rankId") String rankId,
+                                           @Query("keyWord") String keyword);
 
     @GET("getRankMasterData")
     Call<ResponseRank> getRankMasterData(@Query("id") String id);

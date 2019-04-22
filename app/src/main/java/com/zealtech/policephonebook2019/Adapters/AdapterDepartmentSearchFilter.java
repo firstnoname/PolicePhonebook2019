@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.FilterDepartmentActivity;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Department;
+import com.zealtech.policephonebook2019.Util.BusProvider;
 
 import java.util.ArrayList;
 
@@ -61,17 +63,20 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
             for (int x = 0; x < mDepartment.get(i).getTag().size(); x++) {
                 tagArea += mDepartment.get(i).getTag().get(x) + ", ";
             }
+            holder.tvArea.setText(tagArea);
+        } else {
+            holder.tvArea.setVisibility(View.GONE);
         }
 
-        holder.tvArea.setText(tagArea);
         if (mDepartment.get(i).getFlagTail().equals(false)) {
             holder.imgNext.setVisibility(View.INVISIBLE);
+            holder.tvStation.setGravity(Gravity.CENTER_VERTICAL);
         }
 
         holder.layout_adapter_map_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Todo Cheating on select department. Search how to setResult from third activity to 1st activity.
+
                 if (mDepartment.get(i).getFlagTail().equals(true)) {
                     level += 1;
                     String parentId = String.valueOf(mDepartment.get(i).getDepartmentId());
@@ -79,6 +84,7 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
                     intent.putExtra("level", level);
                     intent.putExtra("parentId", parentId);
                     intent.putExtra("subTitle", mDepartment.get(i).getDepartmentName());
+
                     mActivity.startActivity(intent);
                     mActivity.finish();
                 } else {
@@ -89,6 +95,9 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
                     mDepartmentSelected.setDepartmentId(departmentId);
                     mDepartmentSelected.setDepartmentName(departmentName);
                     iEditProfile.putExtra("departmentSelected", mDepartmentSelected);
+
+//                    BusProvider.getInstance().post("Hello");
+
                     mActivity.setResult(Activity.RESULT_OK, iEditProfile);
                     mActivity.finish();
                 }

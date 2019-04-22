@@ -120,42 +120,6 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
 
             if (item instanceof PoliceMasterData) {
                 PoliceMasterData data = (PoliceMasterData) item;
-//                Call<ResponseRank> call = api.getRankMasterData("");
-//                call.enqueue(new Callback<ResponseRank>() {
-//                    @Override
-//                    public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
-//                        if (response.body() != null) {
-//                            if (response.body().getCode().equalsIgnoreCase("OK")) {
-//                                if (response.body().getCode().equals("OK")) {
-//                                    ranks = response.body().getData();
-////                                    AdapterPhoneList.this.notifyDataSetChanged();
-//                                } else {
-//                                    Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-//                                }
-//                            } else {
-//                                Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-//                            }
-//                        } else {
-//                            try {
-//                                JSONObject jObjError = new JSONObject(response.errorBody().string());
-//
-//                            } catch (Exception e) {
-//                                Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-//                            }
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<ResponseRank> call, Throwable t) {
-//                        Log.d("response", String.valueOf(t));
-//                    }
-//                });
-
-//                for (int x = 0; x < ranks.size(); x++) {
-//                    if (rankName.equals(ranks.get(x).getShortName())) {
-//                        holder.viewTab.setBackgroundColor(Color.parseColor(ranks.get(x).getColor()));
-//                    }
-//                }
 
                 if (data.getImageProfile() != null) {
                     Glide.with(mContext)
@@ -172,42 +136,16 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
                 holder.tvPosition.setText(data.getPositionName());
                 holder.tvDeparture.setText(data.getDepartmentName());
 
-//                if (data.getTag() != null) {
-//                    //        Set label orange or red.
-//                    for (int x = 0; x < data.getTag().size(); x++) {
-//                        if (x == 0) {
-//                            if (data.getTag().get(x).equals("ตม.")) {
-//                                holder.tvPosition2.setVisibility(View.VISIBLE);
-//                                holder.tvPosition2.setBackgroundResource(R.drawable.tv_red_tag);
-//                                holder.tvPosition2.setText(data.getTag().get(x));
-//                            }
-//                            if (data.getTag().get(x).equals("ผบก.")) {
-//                                holder.tvPosition2.setVisibility(View.VISIBLE);
-//                                holder.tvPosition2.setBackgroundResource(R.drawable.tv_orange_tag);
-//                                holder.tvPosition2.setText(data.getTag().get(x));
-//                            }
-//                        }
-//
-//                        if (x == 1) {
-//                            if (data.getTag().get(x).equals("ผบก.")) {
-//                                holder.tvPosition1.setVisibility(View.VISIBLE);
-//                                holder.tvPosition1.setBackgroundResource(R.drawable.tv_orange_tag);
-//                                holder.tvPosition1.setText(data.getTag().get(x));
-//                            }
-//                            if (data.getTag().get(x).equals("ตม.")) {
-//                                holder.tvPosition1.setVisibility(View.VISIBLE);
-//                                holder.tvPosition1.setBackgroundResource(R.drawable.tv_red_tag);
-//                                holder.tvPosition1.setText(data.getTag().get(x));
-//                            }
-//                        }
-//
-//                    }// end for loop.
-//                }
+                if (data.getRankName() != "") {
+                    holder.tvPosition2.setVisibility(View.VISIBLE);
+                    holder.tvPosition2.setText(data.getRankName());
+                } else {
+                    holder.tvPosition2.setVisibility(View.GONE);
+                }
 
                 holder.parent_layout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //Toast.makeText(mContext, "onClick: clicked on: " + mPoliceInfo.get(i).getFirstName(), Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(mContext, ContactDetailActivity.class);
                         Bundle bundle = new Bundle();
@@ -215,8 +153,11 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
                         intent.putExtra("position", holder.getAdapterPosition());
                         intent.putExtras(bundle);
                         mContext.startActivity(intent);
+
                     }
                 });
+
+
             }
         }
     }

@@ -33,4 +33,5 @@
     <!--Tags-->
     <color name="tagRed">#8F0B18</color>
     <color name="tagOrange">#F0A334</color>
+    <color name="fontBlue">#03A9F4</color>
 </resources>

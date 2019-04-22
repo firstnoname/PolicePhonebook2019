@@ -17,18 +17,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
+import com.squareup.otto.Subscribe;
 import com.zealtech.policephonebook2019.Activities.FilterActivity;
 import com.zealtech.policephonebook2019.Activities.FilterDepartmentActivity;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.Police;
+import com.zealtech.policephonebook2019.Model.PoliceList;
 import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.Province;
 import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
+import com.zealtech.policephonebook2019.Util.BusProvider;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,7 +46,7 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SearchFragment extends Fragment{
+public class SearchFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     private static final String TAG = "SearchFragment";
 
@@ -54,6 +57,7 @@ public class SearchFragment extends Fragment{
     String provinceId = "";
     String positionId = "";
     String rankId = "";
+    String keyword = "";
 
     Province selectProvince = null;
     Department selectDepartment = null;
@@ -70,7 +74,7 @@ public class SearchFragment extends Fragment{
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    ArrayList<Police> mPolice = new ArrayList<>();
+    ArrayList<Police> mPolice;
     ArrayList<Rank> ranks = new ArrayList<>();
 
     public SearchFragment() {
@@ -86,6 +90,7 @@ public class SearchFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "create view");
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_search, container, false);
 
@@ -96,6 +101,7 @@ public class SearchFragment extends Fragment{
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Log.d(TAG, "view created");
 
         tvProvince = view.findViewById(R.id.tvProvince);
         tvDepartment = view.findViewById(R.id.tvDepartment);
@@ -151,6 +157,8 @@ public class SearchFragment extends Fragment{
             }
         });
 
+        searchView.setOnQueryTextListener(this);
+
         //If this activity has been call by adapter.
 //        tagFilter = getActivity().getIntent().getStringExtra("tagFilter");
 //        tagValue = getActivity().getIntent().getStringExtra("valueFilter");
@@ -160,11 +168,11 @@ public class SearchFragment extends Fragment{
 ////            tvPosition.setText(tagValue);
 //        }
 
-        onRefreshView();
+        onRefreshView(departmentId, positionId, rankId, keyword);
     }
 
     private void setAdapter(ArrayList<Police> dataSet) {
-        tvListSize.setText(dataSet.size() + " รายการ");
+        //tvListSize.setText(dataSet.size() + " รายการ");
         mAdapter = new AdapterPhoneListFilter(getActivity(), dataSet);
         recyclerView.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();
@@ -193,7 +201,7 @@ public class SearchFragment extends Fragment{
             } else {
                 departmentId = String.valueOf(selectDepartment.getDepartmentId());
             }
-            onRefreshView();
+            onRefreshView(departmentId, positionId, rankId, keyword);
         } else {
             Toast.makeText(getActivity(), "Department empty", Toast.LENGTH_SHORT).show();
         } 
@@ -208,7 +216,7 @@ public class SearchFragment extends Fragment{
             rankId = String.valueOf(selectRank.getRankId());
         }
 
-        onRefreshView();
+        onRefreshView(departmentId, positionId, rankId, keyword);
     }
 
     public void setDropDownPosition(Position item) {
@@ -220,19 +228,20 @@ public class SearchFragment extends Fragment{
             positionId = String.valueOf(selectPosition.getPositionId());
         }
 
-        onRefreshView();
+        onRefreshView(departmentId, positionId, rankId, keyword);
     }
 
-    private void onRefreshView() {
-
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId);
+    private void onRefreshView(String departmentId, String positionId, String rankId, String keyword) {
+        mPolice = new ArrayList<>();
+        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId, keyword);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-                            tvListSize.setText(response.body().getData().getContent().size() + "รายการ");
+                            //tvListSize.setText(response.body().getData().getContent().size() + "รายการ");
+                            tvListSize.setText(response.body().getData().getTotalElements() + " รายการ");
                             mPolice.addAll(response.body().getData().getContent());
                             checkColor();
 
@@ -309,5 +318,36 @@ public class SearchFragment extends Fragment{
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "resume");
+        BusProvider.getInstance().register(this);
 
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "pause");
+        BusProvider.getInstance().unregister(this);
+    }
+
+    @Subscribe
+    public void recievedMessage(String data) {
+        Log.d(TAG, data);
+    }
+
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        keyword = s;
+        onRefreshView(departmentId, positionId, rankId, keyword);
+        return true;
+    }
 }

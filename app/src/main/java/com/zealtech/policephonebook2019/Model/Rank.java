@@ -15,6 +15,7 @@ public class Rank extends BaseFilterItem implements Serializable {
     int sequence;
     String shortName;
     String updateDate;
+    String icon;
 
 
     @Override
@@ -107,5 +108,13 @@ public class Rank extends BaseFilterItem implements Serializable {
 
     public void setUpdateDate(String updateDate) {
         this.updateDate = updateDate;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }

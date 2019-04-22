@@ -10,8 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Config.ApplicationConfig;
+import com.zealtech.policephonebook2019.Model.Position;
+import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 
 import java.util.ArrayList;
@@ -25,6 +30,7 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
     private Activity mActivity;
     private String tagFilter;
     private String valueFilter = "";
+    private String IMAGE_URL = ApplicationConfig.getImageUrl();
 
     public AdapterFilterSearch(Activity mActivity, List<BaseFilterItem> mTag, String tagFilter) {
         this.mTag = mTag;
@@ -45,7 +51,26 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
-        viewHolder.imgInfo.setImageResource(R.mipmap.policestation_ic);
+
+        if (tagFilter.equals("rank")) {
+            Rank ranks = (Rank) mTag.get(i);
+            if (ranks.getIcon() != null) {
+                Glide.with(mActivity).load(IMAGE_URL + ranks.getIcon()).fitCenter().into(viewHolder.imgInfo);
+            } else {
+                viewHolder.imgInfo.setImageResource(R.mipmap.all_ic);
+            }
+        }
+        if (tagFilter == "position") {
+            Position positions = (Position) mTag.get(i);
+            if (positions.getIcon() != null) {
+                Glide.with(mActivity).load(IMAGE_URL + positions.getIcon()).fitCenter().into(viewHolder.imgInfo);
+            } else {
+                viewHolder.imgInfo.setImageResource(R.mipmap.all_ic);
+            }
+        }
+
+
+
         viewHolder.txtInfo.setText(mTag.get(i).getName());
 
         viewHolder.constraintLayout.setOnClickListener(new View.OnClickListener() {
