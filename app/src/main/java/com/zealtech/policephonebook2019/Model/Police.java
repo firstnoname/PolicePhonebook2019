@@ -169,7 +169,7 @@ public class Police implements Serializable {
         this.createDate = createDate;
     }
 
-    public String getUpdateDate() {
+        public String getUpdateDate() {
         return updateDate;
     }
 

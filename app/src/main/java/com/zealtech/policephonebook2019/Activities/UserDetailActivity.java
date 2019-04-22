@@ -95,7 +95,51 @@ public class UserDetailActivity extends AppCompatActivity {
         }*/
 
         tvPhone.setText(mProfile.getPhoneNumber());
-        tvUpdateDate.setText(mProfile.getUpdateDate());
+
+        String dateFormat = mProfile.getUpdateDate().substring(0,10);
+        String date = dateFormat.substring(8);
+        String month = dateFormat.substring(5);
+        month = month.substring(0, 2);
+        if (month.equals("01")) {
+            month = "มกราคม";
+        }
+        if (month.equals("02")) {
+            month = "กุมภาพันธ์";
+        }
+        if (month.equals("03")) {
+            month = "มีนาคม";
+        }
+        if (month.equals("04")) {
+            month = "เมษายน";
+        }
+        if (month.equals("05")) {
+            month = "พฤษภาคม";
+        }
+        if (month.equals("06")) {
+            month = "มิถุนายน";
+        }
+        if (month.equals("07")) {
+            month = "กรกฎาคม";
+        }
+        if (month.equals("08")) {
+            month = "สิงหาคม";
+        }
+        if (month.equals("09")) {
+            month = "กันยายน";
+        }
+        if (month.equals("10")) {
+            month = "ตุลาคม";
+        }
+        if (month.equals("11")) {
+            month = "พฤษจิกายน";
+        }
+        if (month.equals("12")) {
+            month = "ธันวาคม";
+        }
+        String year = dateFormat.substring(0, 4);
+
+        tvUpdateDate.setText("วันที่อัพเดทข้อมูล " + date + " " + month + " " + year);
+
         callRankApi();
 
         btnEditProfile.setOnClickListener(new View.OnClickListener() {

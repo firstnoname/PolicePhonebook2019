@@ -77,7 +77,7 @@ public class FavoriteRecentFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
 
-        Realm.init(getContext());
+        Realm.init(getActivity());
 
         Realm realm = Realm.getDefaultInstance();
         final RealmResults<PoliceHistory> policeHistories = realm.where(PoliceHistory.class).findAll();

@@ -31,6 +31,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.time.Month;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -51,6 +52,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
     private Boolean favTag = false;
     private String token = "";
     private String id = "";
+    private String updateDate = "";
 
     ArrayList<Police> policeMasterData = new ArrayList<>();
 
@@ -110,6 +112,49 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         tvPosition.setText(strPosition);
         tvDepartment.setText(department);
 //        Todo: Don't have update date in PoliceMasterData.
+        String dateFormat = policeMasterData.get(position).getUpdateDate().substring(0,10);
+        String date = dateFormat.substring(8);
+        String month = dateFormat.substring(5);
+        month = month.substring(0, 2);
+        if (month.equals("01")) {
+            month = "มกราคม";
+        }
+        if (month.equals("02")) {
+            month = "กุมภาพันธ์";
+        }
+        if (month.equals("03")) {
+            month = "มีนาคม";
+        }
+        if (month.equals("04")) {
+            month = "เมษายน";
+        }
+        if (month.equals("05")) {
+            month = "พฤษภาคม";
+        }
+        if (month.equals("06")) {
+            month = "มิถุนายน";
+        }
+        if (month.equals("07")) {
+            month = "กรกฎาคม";
+        }
+        if (month.equals("08")) {
+            month = "สิงหาคม";
+        }
+        if (month.equals("09")) {
+            month = "กันยายน";
+        }
+        if (month.equals("10")) {
+            month = "ตุลาคม";
+        }
+        if (month.equals("11")) {
+            month = "พฤษจิกายน";
+        }
+        if (month.equals("12")) {
+            month = "ธันวาคม";
+        }
+        String year = dateFormat.substring(0, 4);
+
+        tvUpdatedate.setText("วันที่อัพเดทข้อมูล " + date + " " + month + " " + year);
         
         isFavorite();
 
@@ -213,37 +258,37 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         });
     }
 
-    private void callRankApi() {
-        Call<ResponseRank> call = api.getRankMasterData("");
-        call.enqueue(new Callback<ResponseRank>() {
-            @Override
-            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
-                if (response.body() != null) {
-                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-                        if (response.body().getCode().equals("OK")) {
-                            checkRank(response.body().getData());
-                        } else {
-                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    try {
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-
-                    } catch (Exception e) {
-                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseRank> call, Throwable t) {
-                Log.d("response", String.valueOf(t));
-            }
-        });
-    }
+//    private void callRankApi() {
+//        Call<ResponseRank> call = api.getRankMasterData("");
+//        call.enqueue(new Callback<ResponseRank>() {
+//            @Override
+//            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+//                if (response.body() != null) {
+//                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+//                        if (response.body().getCode().equals("OK")) {
+//                            checkRank(response.body().getData());
+//                        } else {
+//                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+//                        }
+//                    } else {
+//                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+//                    }
+//                } else {
+//                    try {
+//                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+//
+//                    } catch (Exception e) {
+//                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ResponseRank> call, Throwable t) {
+//                Log.d("response", String.valueOf(t));
+//            }
+//        });
+//    }
 
     private void checkRank(ArrayList<Rank> data) {
         for (int i = 0; i < data.size(); i++) {

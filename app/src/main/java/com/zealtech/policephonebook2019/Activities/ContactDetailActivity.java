@@ -90,6 +90,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         strPosition = policeMasterData.get(position).getPositionName();
         department = policeMasterData.get(position).getDepartmentName();
         rankName = policeMasterData.get(position).getRankName();
+
 //        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
 //            //Gold
 //            relativeLayoutBackground.setBackgroundColor(Color.parseColor("#F5A623"));
