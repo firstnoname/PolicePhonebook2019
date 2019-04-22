@@ -56,7 +56,7 @@ public class NotificationActivity extends AppCompatActivity {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
                             mNotification.addAll(response.body().getData().getContent());
-//                            Log.d(TAG, mNotification.get(0).getTitle());
+//                            Log.d(TAG, mNotification.get(0).getReadGroup().get(0));
                             setAdapter(mNotification);
                         } else {
                             Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();

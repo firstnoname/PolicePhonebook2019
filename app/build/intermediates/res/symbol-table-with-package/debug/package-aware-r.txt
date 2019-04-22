@@ -1202,6 +1202,7 @@ id clip_vertical
 id collapseActionView
 id constraintLayout
 id constraintLayout2
+id constraint_scrollview
 id container
 id content
 id contentPanel
@@ -1483,8 +1484,8 @@ id tv_department_name
 id tv_info
 id tv_list_size
 id tv_name_user_profile
+id tv_noti_author
 id tv_noti_date
-id tv_noti_department
 id tv_noti_detail
 id tv_noti_title
 id tv_phone_profile

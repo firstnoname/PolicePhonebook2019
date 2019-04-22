@@ -1,15 +1,28 @@
 package com.zealtech.policephonebook2019.Model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Notification implements Serializable {
     String editBy;
     String title;
     String description;
+    ArrayList<String> readGroups;
+    ArrayList<String> picturesPath;
     String author;
     String id;
     String createDate;
     String updateDate;
+
+    Police authorProfile;
+
+    public Police getAuthorProfile() {
+        return authorProfile;
+    }
+
+    public void setAuthorProfile(Police authorProfile) {
+        this.authorProfile = authorProfile;
+    }
 
     public String getEditBy() {
         return editBy;
@@ -65,5 +78,21 @@ public class Notification implements Serializable {
 
     public void setUpdateDate(String updateDate) {
         this.updateDate = updateDate;
+    }
+
+    public ArrayList<String> getReadGroups() {
+        return readGroups;
+    }
+
+    public void setReadGroups(ArrayList<String> readGroups) {
+        this.readGroups = readGroups;
+    }
+
+    public ArrayList<String> getPicturesPath() {
+        return picturesPath;
+    }
+
+    public void setPicturesPath(ArrayList<String> picturesPath) {
+        this.picturesPath = picturesPath;
     }
 }

@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.NotificationDetail;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
@@ -43,9 +46,13 @@ public class AdapterNotification extends RecyclerView.Adapter<AdapterNotificatio
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
-        viewHolder.imgNoti.setImageResource(R.mipmap.noti_bl);
+        if (mNoti.get(i).getPicturesPath().get(0) != null) {
+            Glide.with(mContext).load(IMAGE_URL + mNoti.get(i).getPicturesPath().get(0)).fitCenter().into(viewHolder.imgNoti);
+            Log.d(TAG, IMAGE_URL + mNoti.get(i).getPicturesPath().get(0));
+        } else {
+            viewHolder.imgNoti.setImageResource(R.mipmap.noti_bl);
+        }
         viewHolder.tvNotiTitle.setText(mNoti.get(i).getTitle());
-        viewHolder.tvNotiDate.setText(mNoti.get(i).getCreateDate());
 
         viewHolder.parent_layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +64,50 @@ public class AdapterNotification extends RecyclerView.Adapter<AdapterNotificatio
                 mContext.startActivity(iNotiDetail);
             }
         });
+
+        String dateFormat = mNoti.get(0).getUpdateDate().substring(0,10);
+        String date = dateFormat.substring(8);
+        String month = dateFormat.substring(5);
+        month = month.substring(0, 2);
+        if (month.equals("01")) {
+            month = "มกราคม";
+        }
+        if (month.equals("02")) {
+            month = "กุมภาพันธ์";
+        }
+        if (month.equals("03")) {
+            month = "มีนาคม";
+        }
+        if (month.equals("04")) {
+            month = "เมษายน";
+        }
+        if (month.equals("05")) {
+            month = "พฤษภาคม";
+        }
+        if (month.equals("06")) {
+            month = "มิถุนายน";
+        }
+        if (month.equals("07")) {
+            month = "กรกฎาคม";
+        }
+        if (month.equals("08")) {
+            month = "สิงหาคม";
+        }
+        if (month.equals("09")) {
+            month = "กันยายน";
+        }
+        if (month.equals("10")) {
+            month = "ตุลาคม";
+        }
+        if (month.equals("11")) {
+            month = "พฤษจิกายน";
+        }
+        if (month.equals("12")) {
+            month = "ธันวาคม";
+        }
+        String year = dateFormat.substring(0, 4);
+
+        viewHolder.tvNotiDate.setText("วันที่อัพเดทข้อมูล " + date + " " + month + " " + year);
     }
 
     @Override
