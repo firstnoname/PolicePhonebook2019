@@ -50,9 +50,6 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
 
     private static final String TAG = "SearchFragment";
 
-    String tagFilter = "";
-    String tagValue = "";
-    int level = 1;
     String departmentId = "";
     String provinceId = "";
     String positionId = "";
@@ -159,20 +156,10 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
 
         searchView.setOnQueryTextListener(this);
 
-        //If this activity has been call by adapter.
-//        tagFilter = getActivity().getIntent().getStringExtra("tagFilter");
-//        tagValue = getActivity().getIntent().getStringExtra("valueFilter");
-//        if (tagFilter == "province") {
-//            tvProvince.setText(tagValue);
-//        } else {
-////            tvPosition.setText(tagValue);
-//        }
-
         onRefreshView(departmentId, positionId, rankId, keyword);
     }
 
     private void setAdapter(ArrayList<Police> dataSet) {
-        //tvListSize.setText(dataSet.size() + " รายการ");
         mAdapter = new AdapterPhoneListFilter(getActivity(), dataSet);
         recyclerView.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();
@@ -189,7 +176,6 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
             provinceId = selectProvince.getProvinceId();
         }
         //Set department dropdown.
-
     }
 
     public void setDropDownDepartment(Department item) {

@@ -64,10 +64,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView imgFavorite;
     @BindView(R.id.img_contact_us)
     ImageView imgContactUs;
-
     @BindView(R.id.tv_actionbar)
     TextView tvActionbarTitle;
-
     @BindView(R.id.imgUser)
     ImageView imgProfile;
 

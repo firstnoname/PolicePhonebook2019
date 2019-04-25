@@ -88,16 +88,33 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         id = policeMasterData.get(position).getId();
 
         tel1 = policeMasterData.get(position).getWorkPhoneNumber();
-        if (tel1 != null) {
+        if (tel1 != "") {
             tvTel1.setText(tel1);
+            imgTelWork.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Intent.ACTION_DIAL);
+                    i.setData(Uri.parse("tel:" + tel1));
+                    startActivity(i);
+                }
+            });
         } else {
+            tvTel1.setText("ไม่มีข้อมูล");
             imgTelWork.setClickable(false);
         }
         tel2 = policeMasterData.get(position).getPhoneNumber();
-        if (tel1 != null) {
+        if (tel2 != "") {
             tvTel2.setText(tel2);
+            imgTel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Intent.ACTION_DIAL);
+                    i.setData(Uri.parse("tel:" + tel2));
+                    startActivity(i);
+                }
+            });
         } else {
-            imgTel.setClickable(false);
+            //imgTel.setClickable(false);
         }
 
 //        callRankApi();
@@ -111,7 +128,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
         tvDepartment.setText(department);
-//        Todo: Don't have update date in PoliceMasterData.
+
         String dateFormat = policeMasterData.get(position).getUpdateDate().substring(0,10);
         String date = dateFormat.substring(8);
         String month = dateFormat.substring(5);
@@ -155,7 +172,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         String year = dateFormat.substring(0, 4);
 
         tvUpdatedate.setText("วันที่อัพเดทข้อมูล " + date + " " + month + " " + year);
-        
+
         isFavorite();
 
         imgClose.setOnClickListener(new View.OnClickListener() {
@@ -187,23 +204,6 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
             }
         });
 
-        imgTel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_DIAL);
-                i.setData(Uri.parse("tel:" + tel2));
-                startActivity(i);
-            }
-        });
-
-        imgTelWork.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_DIAL);
-                i.setData(Uri.parse("tel:" + tel1));
-                startActivity(i);
-            }
-        });
     }
 
     private void isFavorite() {

@@ -314,4 +314,6 @@ public class Department extends BaseFilterItem implements Serializable {
     public void setImage(String image) {
         this.image = image;
     }
+
+
 }

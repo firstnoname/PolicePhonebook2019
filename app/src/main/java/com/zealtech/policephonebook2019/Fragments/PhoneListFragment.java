@@ -18,8 +18,10 @@ import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneList;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
+import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceMasterData;
+import com.zealtech.policephonebook2019.Model.response.ResponsePosition;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
@@ -48,8 +50,9 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
     Api api = AppUtils.getApiService();
 
     //Vars
-    public ArrayList<PoliceMasterData> apiPoliceMasterData = new ArrayList<>();
+    public ArrayList<PoliceMasterData> apiPoliceMasterData;
     public ArrayList<Rank> ranks = new ArrayList<>();
+    public ArrayList<Position> positions = new ArrayList<>();
 
     SearchView actionSearch;
 
@@ -96,6 +99,7 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+                            apiPoliceMasterData = new ArrayList<>();
                             apiPoliceMasterData.addAll(response.body().getData());
                             //Police master data come with no color string. so we have to check color before set data to adapter.
                             checkColor();
@@ -145,7 +149,7 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
                                     }
                                 }
                             }
-                            setAdapter(apiPoliceMasterData);
+                            checkPosition();
 //                                    AdapterPhoneList.this.notifyDataSetChanged();
                         } else {
                             Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -169,6 +173,46 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
             }
         });
 
+    }
+
+    private void checkPosition() {
+        Call<ResponsePosition> call = api.getPositionMasterData("");
+        call.enqueue(new Callback<ResponsePosition>() {
+            @Override
+            public void onResponse(Call<ResponsePosition> call, Response<ResponsePosition> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            positions.addAll(response.body().getData());
+                            for (int x = 0; x < apiPoliceMasterData.size(); x++) {
+                                for (int i = 0; i < positions.size(); i++) {
+                                    if (apiPoliceMasterData.get(x).getPositionId() == positions.get(i).getPositionId()) {
+                                        apiPoliceMasterData.get(x).setTag(positions.get(i).getTag());
+                                    }
+                                }
+                            }
+                            setAdapter(apiPoliceMasterData);
+                        } else {
+                            Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponsePosition> call, Throwable t) {
+
+            }
+        });
     }
 
 
@@ -208,6 +252,21 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
             if (apiPoliceMasterData.get(i).getDepartmentName().contains(userInput)) {
                 newList.add(apiPoliceMasterData.get(i));
             }
+
+            if (apiPoliceMasterData.get(i).getRankName().contains(userInput)) {
+                newList.add(apiPoliceMasterData.get(i));
+            }
+
+            if (apiPoliceMasterData.get(i).getWorkPhoneNumber() != null) {
+                if (apiPoliceMasterData.get(i).getWorkPhoneNumber().contains(userInput)) {
+                    newList.add(apiPoliceMasterData.get(i));
+                }
+            }
+
+            if (apiPoliceMasterData.get(i).getPhoneNumber().contains(userInput)) {
+                newList.add(apiPoliceMasterData.get(i));
+            }
+
         }
 
         mAdapter = new AdapterPhoneList(getActivity(), newList);

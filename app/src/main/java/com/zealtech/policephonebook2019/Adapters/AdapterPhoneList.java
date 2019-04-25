@@ -136,11 +136,18 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
                 holder.tvPosition.setText(data.getPositionName());
                 holder.tvDeparture.setText(data.getDepartmentName());
 
-                if (data.getRankName() != "") {
-                    holder.tvPosition2.setVisibility(View.VISIBLE);
-                    holder.tvPosition2.setText(data.getRankName());
-                } else {
-                    holder.tvPosition2.setVisibility(View.GONE);
+//                if (data.getRankName() != "") {
+//                    holder.tvPosition2.setVisibility(View.VISIBLE);
+//                    holder.tvPosition2.setText(data.getRankName());
+//                } else {
+//                    holder.tvPosition2.setVisibility(View.GONE);
+//                }
+
+                if (data.getTag() != null) {
+                    for (int x = 0; x < data.getTag().size(); x++) {
+                        holder.tvPosition2.setVisibility(View.VISIBLE);
+                        holder.tvPosition2.setText(data.getTag().get(x));
+                    }
                 }
 
                 holder.parent_layout.setOnClickListener(new View.OnClickListener() {

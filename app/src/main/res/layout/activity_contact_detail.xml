@@ -142,7 +142,7 @@
                                         android:textColor="#000000" />
 
                                     <ImageView
-                                        android:id="@+id/img_tel_work"
+                                            android:id="@+id/img_tel_work"
                                         android:layout_width="64dp"
                                         android:layout_height="64dp"
                                         android:layout_gravity="center_horizontal"

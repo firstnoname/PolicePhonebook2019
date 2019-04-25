@@ -1,7 +1,9 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,7 +46,7 @@ public class ContactDetailActivity extends AppCompatActivity {
 
 
     private TextView tvName, tvPosition, tvDepartment, tvTel1, tvTel2, tvBack, tvUpdatedate;
-    private ImageView imgFavorite, imgClose, imgProfile;
+    private ImageView imgFavorite, imgClose, imgProfile, imgTelWork, imgTelPhone;
     private RelativeLayout relativeLayoutBackground;
     private LinearLayout linearPositionSection;
     private int position;
@@ -77,6 +79,8 @@ public class ContactDetailActivity extends AppCompatActivity {
         tvBack = findViewById(R.id.tvBack);
         tvUpdatedate = findViewById(R.id.tv_contact_update_date);
         linearPositionSection = findViewById(R.id.position_section);
+        imgTelWork = findViewById(R.id.img_tel_work);
+        imgTelPhone = findViewById(R.id.img_tel);
 
         policeMasterData = (ArrayList<PoliceMasterData>) getIntent().getSerializableExtra("contact_detail");
         position = getIntent().getIntExtra("position", 0);
@@ -90,6 +94,8 @@ public class ContactDetailActivity extends AppCompatActivity {
         strPosition = policeMasterData.get(position).getPositionName();
         department = policeMasterData.get(position).getDepartmentName();
         rankName = policeMasterData.get(position).getRankName();
+        tel1 = policeMasterData.get(position).getWorkPhoneNumber();
+        tel2 = policeMasterData.get(position).getPhoneNumber();
 
 //        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
 //            //Gold
@@ -119,6 +125,19 @@ public class ContactDetailActivity extends AppCompatActivity {
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
         tvDepartment.setText(department);
+        tvTel1.setText(tel1);
+        if (tel1 != null) {
+            tvTel1.setText(tel1);
+        } else {
+            tvTel1.setText("ไม่มีข้อมูล");
+            imgTelWork.setClickable(false);
+        }
+        tvTel2.setText(tel2);
+        if (tel1 != null) {
+            tvTel2.setText(tel2);
+        } else {
+            imgTelPhone.setClickable(false);
+        }
 
         //Check position tag isEmpty ?
 
@@ -188,6 +207,24 @@ public class ContactDetailActivity extends AppCompatActivity {
         }
 
         mRealm.commitTransaction();
+
+        imgTelPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:" + tel2));
+                startActivity(i);
+            }
+        });
+
+        imgTelWork.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:" + tel1));
+                startActivity(i);
+            }
+        });
 
     }
 

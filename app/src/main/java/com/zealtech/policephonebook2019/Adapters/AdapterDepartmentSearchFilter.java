@@ -68,7 +68,7 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
             holder.tvArea.setVisibility(View.GONE);
         }
 
-        if (mDepartment.get(i).getFlagTail().equals(false)) {
+        if (mDepartment.get(i).getFlagTail() == null || mDepartment.get(i).getFlagTail().equals(false)) {
             holder.imgNext.setVisibility(View.INVISIBLE);
             holder.tvStation.setGravity(Gravity.CENTER_VERTICAL);
         }
@@ -77,7 +77,7 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
             @Override
             public void onClick(View view) {
 
-                if (mDepartment.get(i).getFlagTail().equals(true)) {
+                if (mDepartment.get(i).getDepartmentName() != "ทั้งหมด" && mDepartment.get(i).getFlagTail().equals(true)) {
                     level += 1;
                     String parentId = String.valueOf(mDepartment.get(i).getDepartmentId());
                     Intent intent = new Intent(mActivity, FilterDepartmentActivity.class);
@@ -100,17 +100,11 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
 
                     mActivity.setResult(Activity.RESULT_OK, iEditProfile);
                     mActivity.finish();
+
+
                 }
 
-//                int departmentId = mDepartment.get(i).getDepartmentId();
-//                String departmentName = mDepartment.get(i).getDepartmentName();
-//
-//                Intent iEditProfile = new Intent();
-//                mDepartmentSelected.setDepartmentId(departmentId);
-//                mDepartmentSelected.setDepartmentName(departmentName);
-//                iEditProfile.putExtra("departmentSelected", mDepartmentSelected);
-//                mActivity.setResult(Activity.RESULT_OK, iEditProfile);
-//                mActivity.finish();
+
             }
         });
     }

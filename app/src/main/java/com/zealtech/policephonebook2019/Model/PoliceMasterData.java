@@ -16,10 +16,12 @@ public class PoliceMasterData extends BaseItem implements Serializable {
     String positionName;
     String rankName;
     int rankId;
+    int positionId;
+    String workPhoneNumber;
+    String phoneNumber;
     ArrayList<String> tag;
     String id;
     String color;
-
 
     public ArrayList<PoliceMasterData> getContent() {
         return content;
@@ -93,6 +95,14 @@ public class PoliceMasterData extends BaseItem implements Serializable {
         this.rankId = rankId;
     }
 
+    public int getPositionId() {
+        return positionId;
+    }
+
+    public void setPositionId(int positionId) {
+        this.positionId = positionId;
+    }
+
     public ArrayList<String> getTag() {
         return tag;
     }
@@ -120,10 +130,6 @@ public class PoliceMasterData extends BaseItem implements Serializable {
         this.id = id;
     }
 
-    public String getFirstNameAlphabetOnly() {
-        return getFirstName().replaceAll("[^a-zA-Z0-9ก-ฮ]", "");
-    }
-
     public String getColor() {
         return color;
     }
@@ -131,4 +137,29 @@ public class PoliceMasterData extends BaseItem implements Serializable {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public String getWorkPhoneNumber() {
+        return workPhoneNumber;
+    }
+
+    public void setWorkPhoneNumber(String workPhoneNumber) {
+        this.workPhoneNumber = workPhoneNumber;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+
+
+    public String getFirstNameAlphabetOnly() {
+        return getFirstName().replaceAll("[^a-zA-Z0-9ก-ฮ]", "");
+    }
+
+
+
 }

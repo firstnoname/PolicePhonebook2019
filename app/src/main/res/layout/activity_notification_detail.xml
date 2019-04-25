@@ -74,7 +74,7 @@
                 app:layout_constraintStart_toEndOf="@+id/img_icon_noti"
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/img_icon_noti"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
@@ -82,7 +82,7 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView14"
-                app:srcCompat="@mipmap/userfrofiledefualt" />
+                android:src="@mipmap/userfrofiledefualt" />
 
             <TextView
                 android:id="@+id/tv_noti_detail"

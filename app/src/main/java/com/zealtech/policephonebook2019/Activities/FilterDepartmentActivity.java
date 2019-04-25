@@ -60,7 +60,7 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-
+                            mDepartmentList.add(0, (Department) new Department().createTotalItem());
                             mDepartmentList.addAll(response.body().getData().getContent());
                             setAdapter(mDepartmentList);
 
