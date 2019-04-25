@@ -101,6 +101,7 @@ public class FavoriteRecentFragment extends Fragment {
                 mPolice.setUpdateDate(policeHistories.get(i).getUpdateDate());
                 mPolice.setId(policeHistories.get(i).getId());
                 mPolice.setColor(policeHistories.get(i).getColor());
+                mPolice.setUpdateDate(policeHistories.get(i).getUpdateDate());
 
                 mPolices.add(mPolice);
 

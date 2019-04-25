@@ -19,11 +19,14 @@ import com.example.policephonebook2019.R;
 import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
+import com.zealtech.policephonebook2019.Model.Police;
 import com.zealtech.policephonebook2019.Model.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
+import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponseFavorite;
+import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
@@ -57,6 +60,9 @@ public class ContactDetailActivity extends AppCompatActivity {
     private String id = "";
 
     ArrayList<PoliceMasterData> policeMasterData = new ArrayList<>();
+    ArrayList<Police> mPolice = new ArrayList<>();
+    ArrayList<Rank> ranks = new ArrayList<>();
+    ArrayList<Position> positions = new ArrayList<>();
 
     Api api = AppUtils.getApiService();
 
@@ -86,63 +92,8 @@ public class ContactDetailActivity extends AppCompatActivity {
         position = getIntent().getIntExtra("position", 0);
         id = policeMasterData.get(position).getId();
 
-//        Set rank color
-        callRankApi();
-
-        image_url = ApplicationConfig.getImageUrl() + policeMasterData.get(position).getImageProfile();
-        fullName = policeMasterData.get(position).getRankName() + " " + policeMasterData.get(position).getFirstName() + "  " + policeMasterData.get(position).getLastName();
-        strPosition = policeMasterData.get(position).getPositionName();
-        department = policeMasterData.get(position).getDepartmentName();
-        rankName = policeMasterData.get(position).getRankName();
-        tel1 = policeMasterData.get(position).getWorkPhoneNumber();
-        tel2 = policeMasterData.get(position).getPhoneNumber();
-
-//        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
-//            //Gold
-//            relativeLayoutBackground.setBackgroundColor(Color.parseColor("#F5A623"));
-//        } else if (rankName.equals("พล.ต.ต.")) {
-//            //Blue sky
-//            relativeLayoutBackground.setBackgroundColor(Color.parseColor("#0184C9"));
-//        } else if (rankName.equals("พล.ต.จ.")) {
-//            //Blue
-//            relativeLayoutBackground.setBackgroundColor(Color.parseColor("#0184C9"));
-//        } else if (rankName.equals("พ.ต.อ.(พิเศษ)")){
-//            //Red
-//            relativeLayoutBackground.setBackgroundColor(Color.parseColor("#2E2BD9"));
-//        } else if (rankName.equals("พ.ต.อ.")) {
-//            relativeLayoutBackground.setBackgroundColor(Color.parseColor("#2E2BD9"));
-//        } else if (rankName.equals("พ.ต.ท.")) {
-//            relativeLayoutBackground.setBackgroundColor(Color.parseColor("#2E2BD9"));
-//        } else if (rankName.equals("พ.ต.ต.")) {
-//            relativeLayoutBackground.setBackgroundColor(Color.parseColor("#A7181D"));
-//        } else if (rankName.equals())
-
-
-        if (policeMasterData.get(position).getImageProfile() != null) {
-            Glide.with(this).load(image_url).into(imgProfile);
-        }
-
-        tvName.setText(fullName);
-        tvPosition.setText(strPosition);
-        tvDepartment.setText(department);
-        tvTel1.setText(tel1);
-        if (tel1 != null) {
-            tvTel1.setText(tel1);
-        } else {
-            tvTel1.setText("ไม่มีข้อมูล");
-            imgTelWork.setClickable(false);
-        }
-        tvTel2.setText(tel2);
-        if (tel1 != null) {
-            tvTel2.setText(tel2);
-        } else {
-            imgTelPhone.setClickable(false);
-        }
-
-        //Check position tag isEmpty ?
-
-
-//        Todo: Don't have update date in PoliceMasterData.
+//        Fetch contact detail.
+        callUserDetail(id);
 
         isFavorite();
 
@@ -175,7 +126,91 @@ public class ContactDetailActivity extends AppCompatActivity {
             }
         });
 
+    }
 
+    private void callUserDetail(String id) {
+        Call<ResponsePoliceList> call = api.getPoliceList("", "", "", "", id);
+        call.enqueue(new Callback<ResponsePoliceList>() {
+            @Override
+            public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            mPolice.addAll(response.body().getData().getContent());
+                            checkColor();
+
+                        } else {
+                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
+                        } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                            Log.d(TAG, String.valueOf(jObjError.get("code")));
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponsePoliceList> call, Throwable t) {
+                Log.d(TAG, String.valueOf(call));
+                Log.d(TAG, String.valueOf(t));
+            }
+        });
+    }
+
+    private void checkColor() {
+        Call<ResponseRank> call = api.getRankMasterData("");
+        call.enqueue(new Callback<ResponseRank>() {
+            @Override
+            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            ranks.addAll(response.body().getData());
+                            for (int x = 0; x < mPolice.size(); x++) {
+                                for (int i = 0; i < ranks.size(); i++) {
+                                    if (mPolice.get(x).getRankId() == ranks.get(i).getRankId()) {
+                                        mPolice.get(x).setColor(ranks.get(i).getColor());
+                                    }
+                                }
+                            }
+                            setData(mPolice);
+                            saveHistory(mPolice);
+                        } else {
+                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseRank> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
+            }
+        });
+    }
+
+    private void saveHistory(ArrayList<Police> mPolice) {
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder().name("sample.realm")
                 .schemaVersion(1).build();
@@ -186,7 +221,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         mRealm = Realm.getDefaultInstance();
 
         final RealmResults<PoliceHistory> policeHistories = mRealm.where(PoliceHistory.class)
-                .contains("id", policeMasterData.get(position).getId()).findAll();
+                .contains("id", mPolice.get(0).getId()).findAll();
 
         mRealm.beginTransaction();
 //        mRealm.deleteAll();
@@ -194,39 +229,57 @@ public class ContactDetailActivity extends AppCompatActivity {
         if (policeHistories.size() == 0) {
 
             PoliceHistory mPoliceHistory = mRealm.createObject(PoliceHistory.class);
-            mPoliceHistory.setImageProfile(policeMasterData.get(position).getImageProfile());
-            mPoliceHistory.setFirstName(policeMasterData.get(position).getFirstName());
-            mPoliceHistory.setLastName(policeMasterData.get(position).getLastName());
-            mPoliceHistory.setDepartmentName(policeMasterData.get(position).getDepartmentName());
-            mPoliceHistory.setPositionName(policeMasterData.get(position).getPositionName());
-            mPoliceHistory.setRankName(policeMasterData.get(position).getRankName());
-            mPoliceHistory.setRankId(policeMasterData.get(position).getRankId());
-            mPoliceHistory.setId(policeMasterData.get(position).getId());
-            mPoliceHistory.setColor(policeMasterData.get(position).getColor());
+            mPoliceHistory.setImageProfile(mPolice.get(0).getImageProfile());
+            mPoliceHistory.setFirstName(mPolice.get(0).getFirstName());
+            mPoliceHistory.setLastName(mPolice.get(0).getLastName());
+            mPoliceHistory.setDepartmentName(mPolice.get(0).getDepartmentName());
+            mPoliceHistory.setPositionName(mPolice.get(0).getPositionName());
+            mPoliceHistory.setRankName(mPolice.get(0).getRankName());
+            mPoliceHistory.setRankId(mPolice.get(0).getRankId());
+            mPoliceHistory.setId(mPolice.get(0).getId());
+            mPoliceHistory.setColor(mPolice.get(0).getColor());
+            mPoliceHistory.setUpdateDate(mPolice.get(0).getUpdateDate());
 
         }
 
         mRealm.commitTransaction();
-
-        imgTelPhone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_DIAL);
-                i.setData(Uri.parse("tel:" + tel2));
-                startActivity(i);
-            }
-        });
-
-        imgTelWork.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_DIAL);
-                i.setData(Uri.parse("tel:" + tel1));
-                startActivity(i);
-            }
-        });
-
     }
+
+    private void setData(ArrayList<Police> mPolice) {
+        image_url = ApplicationConfig.getImageUrl() + mPolice.get(0).getImageProfile();
+        fullName = mPolice.get(0).getRankName() + " " + mPolice.get(0).getFirstName() + "  " + mPolice.get(0).getLastName();
+        strPosition = mPolice.get(0).getPositionName();
+        department = mPolice.get(0).getDepartmentName();
+        rankName = mPolice.get(0).getRankName();
+        tel1 = mPolice.get(0).getWorkPhoneNumber();
+        tel2 = mPolice.get(0).getPhoneNumber();
+
+        relativeLayoutBackground.setBackgroundColor(Color.parseColor(mPolice.get(0).getColor()));
+        if (mPolice.get(0).getImageProfile() != null) {
+            Glide.with(this).load(image_url).into(imgProfile);
+        }
+
+        tvName.setText(fullName);
+        tvPosition.setText(strPosition);
+        tvDepartment.setText(department);
+        tvTel1.setText(tel1);
+        if (tel1 != "") {
+            tvTel1.setText(tel1);
+        } else {
+            tvTel1.setText("ไม่มีข้อมูล");
+            imgTelWork.setClickable(false);
+        }
+        tvTel2.setText(tel2);
+        if (tel2 != "") {
+            tvTel2.setText(tel2);
+        } else {
+            tvTel2.setText("ไม่มีข้อมูล");
+            imgTelPhone.setClickable(false);
+        }
+
+        tvUpdatedate.setText(mPolice.get(0).getUpdateDate());
+    }
+
 
     private void isFavorite() {
 
@@ -300,49 +353,8 @@ public class ContactDetailActivity extends AppCompatActivity {
 
     }
 
-    private void callRankApi() {
-        Call<ResponseRank> call = api.getRankMasterData("");
-        call.enqueue(new Callback<ResponseRank>() {
-            @Override
-            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
-                if (response.body() != null) {
-                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-                        if (response.body().getCode().equals("OK")) {
-                            checkRank(response.body().getData());
-                        } else {
-                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    try {
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-
-                    } catch (Exception e) {
-                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseRank> call, Throwable t) {
-                Log.d("response", String.valueOf(t));
-            }
-        });
-    }
-
-    private void checkRank(ArrayList<Rank> data) {
-        for (int i = 0; i < data.size(); i++) {
-            if (rankName.equals(data.get(i).getShortName())) {
-                relativeLayoutBackground.setBackgroundColor(Color.parseColor(data.get(i).getColor()));
-            }
-        }
-    }
-
     private void addFavorite() {
         //Call api add fav.
-//        Toast.makeText(this, policeMasterData.get(position).getId(), Toast.LENGTH_SHORT).show();
         if (favTag.equals(true)) {
             Call<ResponseFavorite> call = api.addFavorite(id, token);
             call.enqueue(new Callback<ResponseFavorite>() {

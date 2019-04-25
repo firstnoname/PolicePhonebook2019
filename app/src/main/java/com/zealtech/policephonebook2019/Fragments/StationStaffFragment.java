@@ -17,8 +17,10 @@ import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterStationStaff;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Police;
+import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
+import com.zealtech.policephonebook2019.Model.response.ResponsePosition;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
@@ -43,6 +45,7 @@ public class StationStaffFragment extends Fragment {
     private String departmentId = "";
     private ArrayList<Police> mPoliceList = new ArrayList<>();
     private ArrayList<Rank> ranks = new ArrayList<>();
+    private ArrayList<Position> positions = new ArrayList<>();
 
     private Api api = AppUtils.getApiService();
     private RecyclerView.Adapter adapter;
@@ -69,7 +72,7 @@ public class StationStaffFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, "" ,"", "");
+        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, "" ,"", "", "");
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
@@ -127,7 +130,7 @@ public class StationStaffFragment extends Fragment {
                                     }
                                 }
                             }
-                            setDataToLayout(mPoliceList);
+                            checkPosition();
 //                                    AdapterPhoneList.this.notifyDataSetChanged();
                         } else {
                             Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -148,6 +151,46 @@ public class StationStaffFragment extends Fragment {
             @Override
             public void onFailure(Call<ResponseRank> call, Throwable t) {
                 Log.d("response", String.valueOf(t));
+            }
+        });
+    }
+
+    private void checkPosition() {
+        Call<ResponsePosition> call = api.getPositionMasterData("");
+        call.enqueue(new Callback<ResponsePosition>() {
+            @Override
+            public void onResponse(Call<ResponsePosition> call, Response<ResponsePosition> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            positions.addAll(response.body().getData());
+                            for (int x = 0; x < mPoliceList.size(); x++) {
+                                for (int i = 0; i < positions.size(); i++) {
+                                    if (mPoliceList.get(x).getPositionId() == positions.get(i).getPositionId()) {
+                                        mPoliceList.get(x).setTag(positions.get(i).getTag());
+                                    }
+                                }
+                            }
+                            setDataToLayout(mPoliceList);
+                        } else {
+                            Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponsePosition> call, Throwable t) {
+
             }
         });
     }

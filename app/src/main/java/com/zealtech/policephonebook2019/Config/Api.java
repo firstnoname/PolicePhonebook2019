@@ -53,7 +53,8 @@ public interface Api {
     Call<ResponsePoliceList> getPoliceList(@Query("departmentId") String departmentId,
                                            @Query("positionId") String positionId,
                                            @Query("rankId") String rankId,
-                                           @Query("keyWord") String keyword);
+                                           @Query("keyWord") String keyword,
+                                           @Query("id") String id);
 
     @GET("getRankMasterData")
     Call<ResponseRank> getRankMasterData(@Query("id") String id);
