@@ -19,6 +19,8 @@ import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Util.BusProvider;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 
 public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterDepartmentSearchFilter.ViewHolder> {
@@ -97,8 +99,9 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
                     iEditProfile.putExtra("departmentSelected", mDepartmentSelected);
 
 //                    BusProvider.getInstance().post("Hello");
+                    EventBus.getDefault().postSticky(mDepartmentSelected);
 
-                    mActivity.setResult(Activity.RESULT_OK, iEditProfile);
+                    //mActivity.setResult(Activity.RESULT_OK, iEditProfile);
                     mActivity.finish();
 
 

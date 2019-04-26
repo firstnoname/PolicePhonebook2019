@@ -33,6 +33,9 @@ import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 import com.zealtech.policephonebook2019.Model.response.ResponseProfile;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
@@ -68,6 +71,7 @@ public class EditProfileActivity extends AppCompatActivity {
     MultipartBody.Part imgProfile;
 
     private ProfileH mProfile = new ProfileH();
+    private Department mDepartment = null;
 
     private static final int PICK_IMAGE = 100;
     private static final int PICK_DEPARTMENT = 2;
@@ -140,6 +144,25 @@ public class EditProfileActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
+    public void onEvent(Department mDepartment) {
+        tvDepartment.setText(mDepartment.getDepartmentName());
+        selectedDepartment = mDepartment.getDepartmentId();
+    }
+
+    @Override
+    protected void onStop() {
+        EventBus.getDefault().removeAllStickyEvents();
+        EventBus.getDefault().unregister(this);
+        super.onStop();
     }
 
     private void pushEditedProfileWithoutImgProfile() {
@@ -333,7 +356,6 @@ public class EditProfileActivity extends AppCompatActivity {
                 imageUri = Uri.fromFile(f);
                 setValueImage(imageUri);
             }
-
         }
 
         //Check return dropdown result.
@@ -354,10 +376,15 @@ public class EditProfileActivity extends AppCompatActivity {
 
         }
 
-        if (resultCode == RESULT_OK && requestCode == PICK_DEPARTMENT) {
-            tvDepartment.setText(data.getStringExtra("departmentName"));
-            selectedDepartment = data.getIntExtra("departmentId", 0);
-        }
+//        if (resultCode == RESULT_OK && requestCode == PICK_DEPARTMENT) {
+//            if (data != null) {
+////                tvDepartment.setText(data.getStringExtra("departmentName"));
+////                selectedDepartment = data.getIntExtra("departmentId", 0);
+//                mDepartment = new Department();
+//                mDepartment = (Department) data.getSerializableExtra("departmentSelected");
+//                tvDepartment.setText(mDepartment.getDepartmentName());
+//            }
+//        }
 
     }
 

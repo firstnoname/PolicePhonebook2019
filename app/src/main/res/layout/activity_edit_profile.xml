@@ -232,7 +232,8 @@ android:layout_height="match_parent"
                     android:textSize="13sp"
                     android:text="ทดสอบ"
                     android:layout_marginLeft="4dp"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:maxLines="1"/>
 
                 <ImageView
                     android:layout_width="24dp"
@@ -281,7 +282,8 @@ android:layout_height="match_parent"
                     android:textSize="13sp"
                     android:text="ทดสอบ"
                     android:layout_marginLeft="4dp"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:maxLines="1"/>
 
                 <ImageView
                     android:layout_width="24dp"

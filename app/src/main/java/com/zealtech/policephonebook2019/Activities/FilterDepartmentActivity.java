@@ -30,6 +30,7 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
 
     private int level = 1;
     private String provinceId = "";
+    private String getDepartmentId = "";
     private String departmentId = "";
 
     private ArrayList<Department> mDepartmentList = new ArrayList<>();
@@ -48,6 +49,9 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
         //get data
         level = getIntent().getIntExtra("level", 1);
         departmentId = getIntent().getStringExtra("parentId");
+        if (departmentId == null) {
+            departmentId = "0";
+        }
         provinceId = getIntent().getStringExtra("provinceId");
         if (provinceId == "0") {
             provinceId = "";
@@ -60,7 +64,11 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-                            mDepartmentList.add(0, (Department) new Department().createTotalItem());
+//                            mDepartmentList.add(0, (Department) new Department().createTotalItem());
+                            Department defaultDepartment = new Department();
+                            defaultDepartment.setDepartmentId(Integer.parseInt(departmentId));
+                            defaultDepartment.setDepartmentName("ทั้งหมด");
+                            mDepartmentList.add(0, defaultDepartment);
                             mDepartmentList.addAll(response.body().getData().getContent());
                             setAdapter(mDepartmentList);
 
