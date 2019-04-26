@@ -30,7 +30,6 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
 
     private int level = 1;
     private String provinceId = "";
-    private String getDepartmentId = "";
     private String departmentId = "";
 
     private ArrayList<Department> mDepartmentList = new ArrayList<>();

@@ -1,13 +1,19 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -56,10 +63,12 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private static final String TAG = "EditProfileActivity";
 
+    public static final int PERMISSION_REQUEST_STORAGE = 88;
     private EditText edtName, edtLastname, edtPhone, edtTelWork;
     private Button btnEdit;
     private ImageView imgInfo;
     private TextView tvSelectPhoto, tvRank, tvDepartment, tvPosition, tvUpdateDate;
+    private ProgressBar mProgressBar;
 
     private String IMAGE_URL = ApplicationConfig.getImageUrl();
 
@@ -77,6 +86,7 @@ public class EditProfileActivity extends AppCompatActivity {
     private static final int PICK_DEPARTMENT = 2;
     private String img_path;
     Uri imageUri;
+    private File f;
 
     private Api api = AppUtils.getApiService();
 
@@ -96,6 +106,7 @@ public class EditProfileActivity extends AppCompatActivity {
         tvDepartment = findViewById(R.id.tv_department);
         tvUpdateDate = findViewById(R.id.tv_update_date);
         edtTelWork = findViewById(R.id.edt_tel_work);
+        mProgressBar = findViewById(R.id.progress_bar);
 
         //Get value from UserDetailActivity.
         mProfile = (ProfileH) getIntent().getSerializableExtra("user_profile");
@@ -114,12 +125,12 @@ public class EditProfileActivity extends AppCompatActivity {
         tvSelectPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openGallery();
+                checkStoragePermission();
             }
         });
         edtTelWork.setText(mProfile.getWorkPhoneNumber());
 
-
+        //Set default user data.
         selectedDepartment = mProfile.getDepartmentId();
         editedName = mProfile.getFirstName();
         id = mProfile.getId();
@@ -136,7 +147,7 @@ public class EditProfileActivity extends AppCompatActivity {
                 editedLastname = edtLastname.getText().toString().trim();
                 editedPhoneNumber = edtPhone.getText().toString().trim();
 
-                if (imgProfile == null) {
+                if (f == null) {
                     pushEditedProfileWithoutImgProfile();
                 } else {
                     pushEditedProfile();
@@ -144,6 +155,50 @@ public class EditProfileActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void checkStoragePermission() {
+        // Here, thisActivity is the current activity
+        if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            // Permission is not granted
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+                new AlertDialog.Builder(this)
+                        .setTitle("ต้องการใช้งานตำแหน่ง")
+                        .setMessage("แอพพลิเคชั่นนี้ต้องการใช้งานข้อมูลตำแหน่ง เพื่อแสดงแผนที่ของสถานีตำรวจ")
+                        .setPositiveButton("ต่อไป", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //Prompt the user once explanation has been shown
+                                ActivityCompat.requestPermissions(EditProfileActivity.this,
+                                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                        PERMISSION_REQUEST_STORAGE);
+                            }
+                        })
+                        .create()
+                        .show();
+            } else {
+                // No explanation needed; request the permission
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        PERMISSION_REQUEST_STORAGE);
+
+                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                // app-defined int constant. The callback method gets the
+                // result of the request.
+            }
+        } else {
+            // Permission has already been granted
+            Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+            startActivityForResult(gallery, PICK_IMAGE);
+        }
     }
 
     @Override
@@ -251,7 +306,13 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     private void pushEditedProfile() {
-        Call<ResponseProfile> call = api.editProfile(selectedDepartment, editedName, id, imgProfile,
+        mProgressBar.setVisibility(View.VISIBLE);
+        RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), f);
+        MultipartBody.Part body = MultipartBody.Part.createFormData("imageProfile", f.getName(), requestFile);
+//        RequestBody fileReqBody = MultipartBody.create(MediaType.parse("image/*"), f);
+//        imgProfile = MultipartBody.Part.createFormData("editProfile", f.getName(), fileReqBody);
+
+        Call<ResponseProfile> call = api.editProfile(selectedDepartment, editedName, id, body,
                 editedLastname, editedPhoneNumber, positionId, rankId, token);
         call.enqueue(new Callback<ResponseProfile>() {
             @Override
@@ -305,6 +366,7 @@ public class EditProfileActivity extends AppCompatActivity {
                             iUserDetail.putExtras(bundle);
                             startActivity(iUserDetail);
 
+                            mProgressBar.setVisibility(View.INVISIBLE);
                             finish();
 
                         } else {
@@ -336,26 +398,38 @@ public class EditProfileActivity extends AppCompatActivity {
         });
     }
 
-    private void openGallery() {
-        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
-        startActivityForResult(gallery, PICK_IMAGE);
-
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE && data != null) {
+//        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE && data != null) {
+//
+//            imgInfo.setImageURI(data.getData());
+//
+//            imageUri = data.getData();
+//            img_path = getRealPathFromURI(imageUri);
+//            if (img_path != null) {
+//                File f = new File(img_path);
+//                imageUri = Uri.fromFile(f);
+//                setValueImage(imageUri);
+//            }
+//        }
 
-            imgInfo.setImageURI(data.getData());
-
-            imageUri = data.getData();
-            img_path = getRealPathFromURI(imageUri);
-            if (img_path != null) {
-                File f = new File(img_path);
-                imageUri = Uri.fromFile(f);
-                setValueImage(imageUri);
+        try {
+            if (resultCode == RESULT_OK) {
+                if (requestCode == PICK_IMAGE) {
+                    Uri selectedImageUri = data.getData();
+                    //Get the path from the Uri.
+                    final String path = getPathFromURI(selectedImageUri);
+                    //Set the image in ImageView.
+                    imgInfo.setImageURI(selectedImageUri);
+                    if (path != null) {
+                        f = new File(path);
+//                        selectedImageUri = Uri.fromFile(f);
+                    }
+                }
             }
+        } catch (Exception e) {
+
         }
 
         //Check return dropdown result.
@@ -376,16 +450,19 @@ public class EditProfileActivity extends AppCompatActivity {
 
         }
 
-//        if (resultCode == RESULT_OK && requestCode == PICK_DEPARTMENT) {
-//            if (data != null) {
-////                tvDepartment.setText(data.getStringExtra("departmentName"));
-////                selectedDepartment = data.getIntExtra("departmentId", 0);
-//                mDepartment = new Department();
-//                mDepartment = (Department) data.getSerializableExtra("departmentSelected");
-//                tvDepartment.setText(mDepartment.getDepartmentName());
-//            }
-//        }
+    }
 
+    public String getPathFromURI(Uri contentUri) {
+        String res = null;
+        String[] proj = {MediaStore.Images.Media.DATA};
+        Cursor cursor = getContentResolver().query(contentUri, proj, null, null, null);
+        if (cursor.moveToFirst()) {
+            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            res = cursor.getString(column_index);
+        }
+        cursor.close();
+
+        return res;
     }
 
     public String getRealPathFromURI(Uri uri) {

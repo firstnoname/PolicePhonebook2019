@@ -26,10 +26,13 @@ public interface Api {
     Call<ResponseProvince> getProvince();
 
     @GET("getDepartment")
-    Call<ResponseDepartment> getDepartment(@Query("level") int level, @Query("parentId") String departmentId);
+    Call<ResponseDepartment> getDepartment(@Query("level") int level,
+                                           @Query("parentId") String departmentId);
 
     @GET("getDepartment")
-    Call<ResponseDepartment> getDepartment(@Query("level") int level, @Query("parentId") String departmentId, @Query("provinceId") String provinceId);
+    Call<ResponseDepartment> getDepartment(@Query("level") int level,
+                                           @Query("parentId") String departmentId,
+                                           @Query("provinceId") String provinceId);
 
     @GET("getDepartmentRoot")
     Call<ResponseDepartmentRoot> getDepartmentRoot(@Query("departmentId") String departmentId);
@@ -38,7 +41,8 @@ public interface Api {
     Call<ResponsePoliceMasterData> getPoliceMasterData();
 
     @POST("login")
-    Call<ResponseProfile> login(@Query("username") String username, @Query("password") String password);
+    Call<ResponseProfile> login(@Query("username") String username,
+                                @Query("password") String password);
 
     @POST("editPassword")
     Call<ResponseEditPassword> editPassword(@Query("newPassword") String newPassword,
@@ -71,20 +75,12 @@ public interface Api {
     @POST("removeFavorite")
     Call<ResponseFavorite> removeFavorite(@Query("id") String id, @Header("token") String token);
 
-    /*@POST("addFavorite")
-    Call<Response>*/
-    /*@Multipart
-    @POST("upload")
-    Call<ResponseUpload> upload(@Header("token") String token
-            , @Part MultipartBody.Part file, @Query("fileType") String fileType);*/
-
     @Multipart
     @POST("editProfile")
     Call<ResponseProfile> editProfile(@Query("departmentId") int departmentId,
                                       @Query("firstName") String firstName,
                                       @Query("id") String id,
                                       @Part MultipartBody.Part imageProfile,
-//                                      @Field("imageProfile") String imageProfile,
                                       @Query("lastName") String lastName,
                                       @Query("phoneNumber") String phoneNumber,
                                       @Query("positionId") int positionId,
@@ -92,7 +88,7 @@ public interface Api {
                                       @Header("token") String token);
 
     @POST("editProfile")
-        Call<ResponseProfile> editProfileWithoutImageProfile(@Query("departmentId") int departmentId,
+    Call<ResponseProfile> editProfileWithoutImageProfile(@Query("departmentId") int departmentId,
                                       @Query("firstName") String firstName,
                                       @Query("id") String id,
                                       @Query("lastName") String lastName,

@@ -1340,6 +1340,7 @@ id parent_matrix
 id percent
 id pin
 id position_section
+id progress_bar
 id progress_circular
 id progress_horizontal
 id radio

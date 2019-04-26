@@ -14,7 +14,7 @@ import java.lang.Override;
 public class SplashScreenActivity_ViewBinding implements Unbinder {
   private SplashScreenActivity target;
 
-  private View view2131296572;
+  private View view2131296573;
 
   @UiThread
   public SplashScreenActivity_ViewBinding(SplashScreenActivity target) {
@@ -27,7 +27,7 @@ public class SplashScreenActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.titleGroup, "method 'gotoMainAct'");
-    view2131296572 = view;
+    view2131296573 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -43,7 +43,7 @@ public class SplashScreenActivity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view2131296572.setOnClickListener(null);
-    view2131296572 = null;
+    view2131296573.setOnClickListener(null);
+    view2131296573 = null;
   }
 }
