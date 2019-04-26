@@ -20,6 +20,7 @@ import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Favorite;
 import com.zealtech.policephonebook2019.Model.Police;
+import com.zealtech.policephonebook2019.Model.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.Rank;
@@ -34,6 +35,9 @@ import java.io.IOException;
 import java.time.Month;
 import java.util.ArrayList;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+import io.realm.RealmResults;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -52,7 +56,8 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
     private Boolean favTag = false;
     private String token = "";
     private String id = "";
-    private String updateDate = "";
+
+    private Realm mRealm;
 
     ArrayList<Police> policeMasterData = new ArrayList<>();
 
@@ -79,6 +84,9 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
 
         policeMasterData = (ArrayList<Police>) getIntent().getSerializableExtra("contact_detail");
         position = getIntent().getIntExtra("position", 0);
+
+        //Save history.
+        saveHistory(policeMasterData, position);
 
         image_url = ApplicationConfig.getImageUrl() + policeMasterData.get(position).getImageProfile();
         fullName = policeMasterData.get(position).getRankName() + " " + policeMasterData.get(position).getFirstName() + "  " + policeMasterData.get(position).getLastName();
@@ -114,7 +122,8 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
                 }
             });
         } else {
-            //imgTel.setClickable(false);
+            tvTel2.setText("ไม่มีข้อมูล");
+            imgTel.setClickable(false);
         }
 
 //        callRankApi();
@@ -125,6 +134,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         if (policeMasterData.get(position).getImageProfile() != null) {
             Glide.with(this).load(image_url).into(imgProfile);
         }
+
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
         tvDepartment.setText(department);
@@ -210,6 +220,41 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
 
     }
 
+    private void saveHistory(ArrayList<Police> mPolice, int position) {
+        Realm.init(this);
+        RealmConfiguration config = new RealmConfiguration.Builder().name("sample.realm")
+                .schemaVersion(1).build();
+
+        Realm.setDefaultConfiguration(config);
+        Realm.getInstance(config);
+
+        mRealm = Realm.getDefaultInstance();
+
+        final RealmResults<PoliceHistory> policeHistories = mRealm.where(PoliceHistory.class)
+                .contains("id", mPolice.get(position).getId()).findAll();
+
+        mRealm.beginTransaction();
+//        mRealm.deleteAll();
+
+        if (policeHistories.size() == 0) {
+
+            PoliceHistory mPoliceHistory = mRealm.createObject(PoliceHistory.class);
+            mPoliceHistory.setImageProfile(mPolice.get(position).getImageProfile());
+            mPoliceHistory.setFirstName(mPolice.get(position).getFirstName());
+            mPoliceHistory.setLastName(mPolice.get(position).getLastName());
+            mPoliceHistory.setDepartmentName(mPolice.get(position).getDepartmentName());
+            mPoliceHistory.setPositionName(mPolice.get(position).getPositionName());
+            mPoliceHistory.setRankName(mPolice.get(position).getRankName());
+            mPoliceHistory.setRankId(mPolice.get(position).getRankId());
+            mPoliceHistory.setId(mPolice.get(position).getId());
+            mPoliceHistory.setColor(mPolice.get(position).getColor());
+            mPoliceHistory.setUpdateDate(mPolice.get(position).getUpdateDate());
+
+        }
+
+        mRealm.commitTransaction();
+    }
+
     private void isFavorite() {
         
         checkLogin();
@@ -260,46 +305,6 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
                 Log.d(TAG, String.valueOf(t));
             }
         });
-    }
-
-//    private void callRankApi() {
-//        Call<ResponseRank> call = api.getRankMasterData("");
-//        call.enqueue(new Callback<ResponseRank>() {
-//            @Override
-//            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
-//                if (response.body() != null) {
-//                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-//                        if (response.body().getCode().equals("OK")) {
-//                            checkRank(response.body().getData());
-//                        } else {
-//                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-//                        }
-//                    } else {
-//                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-//                    }
-//                } else {
-//                    try {
-//                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-//
-//                    } catch (Exception e) {
-//                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseRank> call, Throwable t) {
-//                Log.d("response", String.valueOf(t));
-//            }
-//        });
-//    }
-
-    private void checkRank(ArrayList<Rank> data) {
-        for (int i = 0; i < data.size(); i++) {
-            if (rankName.equals(data.get(i).getShortName())) {
-                relativeLayoutBackground.setBackgroundColor(Color.parseColor(data.get(i).getColor()));
-            }
-        }
     }
 
     private void checkLogin() {
