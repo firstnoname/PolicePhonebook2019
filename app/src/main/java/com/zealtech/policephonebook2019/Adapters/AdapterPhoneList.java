@@ -57,9 +57,9 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
             this.mPoliceInfo = createLabel(mPoliceInfo);
         } else {
             this.mPoliceInfo = mPoliceInfo;
-
         }
     }
+
 
     private ArrayList<? extends BaseItem> createLabel(ArrayList<PoliceMasterData> mPoliceInfo) {
         ArrayList<BaseItem> mPolicInfoWithLabel = new ArrayList<>();
@@ -77,6 +77,7 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
                 //Add Header
                 charFlag = data.getFirstNameAlphabetOnly().charAt(0);
                 mPolicInfoWithLabel.add(new HeaderItem(String.valueOf(charFlag)));
+
             }
             mPolicInfoWithLabel.add(data);
         }
@@ -113,6 +114,7 @@ public class AdapterPhoneList extends RecyclerView.Adapter {
             final LabelViewHolder holder = (LabelViewHolder) viewHolder;
 
             holder.tvItemRowLetter.setText(mPoliceInfo.get(i).getName());
+
         } else {
             final ItemViewHolder holder = (ItemViewHolder) viewHolder;
 

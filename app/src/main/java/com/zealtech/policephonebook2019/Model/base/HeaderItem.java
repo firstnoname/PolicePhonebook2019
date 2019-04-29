@@ -1,14 +1,22 @@
 package com.zealtech.policephonebook2019.Model.base;
 
-import android.content.res.Resources;
-
 public class HeaderItem extends BaseItem {
 
     private String name;
+    private String id;
 
     public HeaderItem(String name) {
         super(BaseItemType.HEADER);
         this.name = name;
+    }
+
+    @Override
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override

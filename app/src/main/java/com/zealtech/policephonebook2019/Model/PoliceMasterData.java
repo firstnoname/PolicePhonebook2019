@@ -15,6 +15,7 @@ public class PoliceMasterData extends BaseItem implements Serializable {
     String departmentName;
     String positionName;
     String rankName;
+    String rankFullName;
     int rankId;
     int positionId;
     String workPhoneNumber;
@@ -85,6 +86,14 @@ public class PoliceMasterData extends BaseItem implements Serializable {
 
     public void setRankName(String rankName) {
         this.rankName = rankName;
+    }
+
+    public String getRankFullName() {
+        return rankFullName;
+    }
+
+    public void setRankFullName(String rankFullName) {
+        this.rankFullName = rankFullName;
     }
 
     public int getRankId() {

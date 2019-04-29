@@ -5,13 +5,21 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
@@ -20,6 +28,8 @@ import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.Rank;
+import com.zealtech.policephonebook2019.Model.base.BaseItem;
+import com.zealtech.policephonebook2019.Model.base.HeaderItem;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceMasterData;
 import com.zealtech.policephonebook2019.Model.response.ResponsePosition;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
@@ -30,7 +40,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.Comparator;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -46,6 +57,9 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private LinearLayoutManager linearLayoutManager;
+    private LinearLayout layoutAlphabet;
+    private TextView tvAlphabet;
 
     Api api = AppUtils.getApiService();
 
@@ -80,9 +94,11 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
 
         recyclerView = view.findViewById(R.id.recycler_phone_list);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
+        //layoutManager = new LinearLayoutManager(getActivity());
+        linearLayoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(linearLayoutManager);
         actionSearch = view.findViewById(R.id.search_view);
+        layoutAlphabet = view.findViewById(R.id.layout_alphabet);
 
         actionSearch.setOnQueryTextListener(this);
 
@@ -146,6 +162,7 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
                                 for (int i = 0; i < ranks.size(); i++) {
                                     if (apiPoliceMasterData.get(x).getRankId() == ranks.get(i).getRankId()) {
                                         apiPoliceMasterData.get(x).setColor(ranks.get(i).getColor());
+                                        apiPoliceMasterData.get(x).setRankFullName(ranks.get(i).getRankName());
                                     }
                                 }
                             }
@@ -192,6 +209,7 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
                                 }
                             }
                             setAdapter(apiPoliceMasterData);
+                            createAlphabetRightSide(apiPoliceMasterData);
                         } else {
                             Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -215,6 +233,61 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
         });
     }
 
+    private void createAlphabetRightSide(final ArrayList<PoliceMasterData> apiPoliceMasterData) {
+        final ArrayList<BaseItem> mPolicInfoWithLabel = new ArrayList<>();
+        final ArrayList<BaseItem> allAlphabet = new ArrayList<>();
+
+        Collections.sort(apiPoliceMasterData, new Comparator<PoliceMasterData>() {
+            @Override
+            public int compare(PoliceMasterData o1, PoliceMasterData o2) {
+                return o1.getFirstNameAlphabetOnly().compareTo(o2.getFirstNameAlphabetOnly());
+            }
+        });
+
+        char charFlag = Character.MIN_VALUE;
+        for (PoliceMasterData data : apiPoliceMasterData) {
+            if (charFlag != data.getFirstNameAlphabetOnly().charAt(0)) {
+                //Add Header
+                charFlag = data.getFirstNameAlphabetOnly().charAt(0);
+                mPolicInfoWithLabel.add(new HeaderItem(String.valueOf(charFlag)));
+                allAlphabet.add(new HeaderItem(String.valueOf(charFlag)));
+            }
+            //mPolicInfoWithLabel.add(data);
+            allAlphabet.add(data);
+        }
+
+        mPolicInfoWithLabel.size();
+
+        for (final BaseItem alphabet : mPolicInfoWithLabel) {
+            tvAlphabet = new TextView(getActivity());
+
+            if (alphabet instanceof HeaderItem) {
+                LinearLayout.LayoutParams eventParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1.0f);
+                tvAlphabet.setText(alphabet.getName());
+                tvAlphabet.setTextSize(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
+                        5F,
+                        getContext().getResources().getDisplayMetrics()));
+                tvAlphabet.setTextColor(ContextCompat.getColor(getContext(), R.color.fontBlue));
+                tvAlphabet.setGravity(Gravity.CENTER);
+                tvAlphabet.setLayoutParams(eventParams);
+                layoutAlphabet.addView(tvAlphabet);
+
+                tvAlphabet.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        for (int i = 0; i < allAlphabet.size(); i++) {
+                            if (alphabet.getName().charAt(0) == allAlphabet.get(i).getName().charAt(0)) {
+                                Toast.makeText(getActivity(), alphabet.getName(), Toast.LENGTH_SHORT).show();
+                                linearLayoutManager.scrollToPositionWithOffset(i, 400);
+                                break;
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+    }
 
     private void setAdapter(ArrayList<PoliceMasterData> dataSet) {
         this.apiPoliceMasterData = dataSet;
@@ -264,6 +337,10 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
             }
 
             if (apiPoliceMasterData.get(i).getPhoneNumber().contains(userInput)) {
+                newList.add(apiPoliceMasterData.get(i));
+            }
+
+            if (apiPoliceMasterData.get(i).getRankFullName().contains(userInput)) {
                 newList.add(apiPoliceMasterData.get(i));
             }
 

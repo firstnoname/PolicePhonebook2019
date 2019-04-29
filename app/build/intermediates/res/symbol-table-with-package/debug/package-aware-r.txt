@@ -1182,6 +1182,7 @@ id btn_menu_favorite
 id btn_menu_map
 id btn_menu_phone_list
 id btn_menu_search
+id btn_openmap
 id btn_station_open_map
 id buttonPanel
 id cancel_action
@@ -1300,6 +1301,7 @@ id largeLabel
 id layout_adapter_filter_search
 id layout_adapter_map_list
 id layout_adapter_station_sub_list
+id layout_alphabet
 id layout_contact_detail
 id layout_item
 id left

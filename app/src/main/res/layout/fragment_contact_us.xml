@@ -317,17 +317,18 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/btn_openmap"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dip"
                     android:layout_gravity="right|bottom"
-                    android:gravity="center"
-                    android:padding="12dip"
+                    android:layout_marginBottom="20dip"
                     android:background="@drawable/button_custom_location"
                     android:clickable="true"
                     android:drawableLeft="@mipmap/location"
-                    android:text="เปิดแผนที่"
-                    android:elevation="3dp"/>
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:padding="12dip"
+                    android:text="เปิดแผนที่" />
             </RelativeLayout>
 
             <RelativeLayout
