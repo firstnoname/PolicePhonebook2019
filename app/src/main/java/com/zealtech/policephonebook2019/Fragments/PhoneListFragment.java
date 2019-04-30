@@ -56,7 +56,6 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager layoutManager;
     private LinearLayoutManager linearLayoutManager;
     private LinearLayout layoutAlphabet;
     private TextView tvAlphabet;
@@ -67,6 +66,9 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
     public ArrayList<PoliceMasterData> apiPoliceMasterData;
     public ArrayList<Rank> ranks = new ArrayList<>();
     public ArrayList<Position> positions = new ArrayList<>();
+
+    final ArrayList<BaseItem> mPolicInfoWithLabel = new ArrayList<>();
+    final ArrayList<BaseItem> allAlphabet = new ArrayList<>();
 
     SearchView actionSearch;
 
@@ -234,8 +236,7 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
     }
 
     private void createAlphabetRightSide(final ArrayList<PoliceMasterData> apiPoliceMasterData) {
-        final ArrayList<BaseItem> mPolicInfoWithLabel = new ArrayList<>();
-        final ArrayList<BaseItem> allAlphabet = new ArrayList<>();
+
 
         Collections.sort(apiPoliceMasterData, new Comparator<PoliceMasterData>() {
             @Override

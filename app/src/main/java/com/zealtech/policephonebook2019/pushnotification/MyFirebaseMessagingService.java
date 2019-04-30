@@ -17,6 +17,7 @@ import com.example.policephonebook2019.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.zealtech.policephonebook2019.Activities.MainActivity;
+import com.zealtech.policephonebook2019.Activities.NotificationActivity;
 import com.zealtech.policephonebook2019.Activities.NotificationDetail;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
@@ -91,7 +92,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 //            intent=AppUtils.openShop(this,contentType);
         } else {
 //            openMain = true;
-            intent = new Intent(this, Notification.class);
+            intent = new Intent(this, NotificationActivity.class);
 
         }
 
