@@ -35,7 +35,7 @@ public class UserDetailActivity extends AppCompatActivity {
 
     private Button btnEditProfile, btnLogout;
     private ImageView imgProfile, btnClose;
-    private TextView tvName, tvPosition, tvTel, tvPhone, tvUpdateDate, tvChangePass;
+    private TextView tvName, tvPosition, tvWorkPhone, tvPhone, tvUpdateDate, tvChangePass;
     private RelativeLayout relative_background;
 
 //    vars
@@ -56,8 +56,8 @@ public class UserDetailActivity extends AppCompatActivity {
         imgProfile = findViewById(R.id.img_user_profile);
         tvName = findViewById(R.id.tv_name_user_profile);
         tvPosition = findViewById(R.id.tv_position_name);
-        tvTel = findViewById(R.id.tv_tel_work);
         tvPhone = findViewById(R.id.tv_phone_profile);
+        tvWorkPhone = findViewById(R.id.tv_tel_work);
         tvUpdateDate = findViewById(R.id.tv_update_profile);
         btnEditProfile = findViewById(R.id.btn_edit_profile);
         btnClose = findViewById(R.id.img_close);
@@ -94,7 +94,13 @@ public class UserDetailActivity extends AppCompatActivity {
             tvTel.setText(mProfile.getWorkPhoneNumber());
         }*/
 
-        tvPhone.setText(mProfile.getPhoneNumber());
+        if (mProfile.getPhoneNumber().size() != 0) {
+            tvPhone.setText(mProfile.getPhoneNumber().get(0).getTel());
+        }
+
+        if (mProfile.getWorkPhoneNumber().size() != 0) {
+            tvWorkPhone.setText(mProfile.getWorkPhoneNumber().get(0).getTel());
+        }
 
         String dateFormat = mProfile.getUpdateDate().substring(0,10);
         String date = dateFormat.substring(8);

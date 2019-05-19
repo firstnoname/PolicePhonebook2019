@@ -67,8 +67,9 @@ public class StationStaffDetailActivity extends AppCompatActivity {
 //            tel1 = policeData.get(position).getDepartmentPhoneNumber().get(0);
 //        }
 
-        tel1 = policeData.get(position).getWorkPhoneNumber();
-        tel2 = policeData.get(position).getPhoneNumber();
+        tel1 = policeData.get(position).getWorkPhoneNumber().get(0).getTel();
+
+        tel2 = policeData.get(position).getPhoneNumber().get(0).getTel();
 
         if (policeData.get(position).getColor() != null) {
             relativeLayoutBackground.setBackgroundColor(Color.parseColor(policeData.get(position).getColor()));

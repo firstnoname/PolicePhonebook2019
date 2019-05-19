@@ -279,7 +279,7 @@ public class PhoneListFragment extends Fragment implements SearchView.OnQueryTex
                         for (int i = 0; i < allAlphabet.size(); i++) {
                             if (alphabet.getName().charAt(0) == allAlphabet.get(i).getName().charAt(0)) {
                                 Toast.makeText(getActivity(), alphabet.getName(), Toast.LENGTH_SHORT).show();
-                                linearLayoutManager.scrollToPositionWithOffset(i, 400);
+                                linearLayoutManager.scrollToPositionWithOffset(i, 180);
                                 break;
                             }
                         }

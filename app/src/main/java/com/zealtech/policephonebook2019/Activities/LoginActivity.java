@@ -107,6 +107,7 @@ public class LoginActivity extends AppCompatActivity {
                                         profileH.setPositionId(response.body().getData().getPositionId());
                                         profileH.setRankId(response.body().getData().getRankId());
                                         profileH.setPhoneNumber(response.body().getData().getPhoneNumber());
+                                        profileH.setWorkPhoneNumber(response.body().getData().getWorkPhoneNumber());
                                         profileH.setTag(response.body().getData().getTag());
                                         profileH.setDepartmentName(response.body().getData().getDepartmentName());
                                         profileH.setPositionName(response.body().getData().getPositionName());

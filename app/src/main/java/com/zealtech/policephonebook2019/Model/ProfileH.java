@@ -15,8 +15,8 @@ public class ProfileH implements Serializable {
     int departmentId;
     int positionId;
     int rankId;
-    String phoneNumber;
-    String workPhoneNumber;
+    ArrayList<PhoneNumber> phoneNumber;
+    ArrayList<WorkPhoneNumber> workPhoneNumber;
     ArrayList<String> tag;
     String departmentName;
     String positionName;
@@ -143,19 +143,19 @@ public class ProfileH implements Serializable {
         this.rankId = rankId;
     }
 
-    public String getPhoneNumber() {
+    public ArrayList<PhoneNumber> getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(ArrayList<PhoneNumber> phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getWorkPhoneNumber() {
+    public ArrayList<WorkPhoneNumber> getWorkPhoneNumber() {
         return workPhoneNumber;
     }
 
-    public void setWorkPhoneNumber(String workPhoneNumber) {
+    public void setWorkPhoneNumber(ArrayList<WorkPhoneNumber> workPhoneNumber) {
         this.workPhoneNumber = workPhoneNumber;
     }
 

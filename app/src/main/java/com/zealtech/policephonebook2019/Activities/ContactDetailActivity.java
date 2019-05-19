@@ -211,8 +211,9 @@ public class ContactDetailActivity extends AppCompatActivity {
 
     private void saveHistory(ArrayList<Police> mPolice) {
         Realm.init(this);
-        RealmConfiguration config = new RealmConfiguration.Builder().name("sample.realm")
-                .schemaVersion(1).build();
+
+        RealmConfiguration config = new RealmConfiguration.Builder().name("sample1.realm")
+                .schemaVersion(1).deleteRealmIfMigrationNeeded().build();
 
         Realm.setDefaultConfiguration(config);
         Realm.getInstance(config);
@@ -245,13 +246,25 @@ public class ContactDetailActivity extends AppCompatActivity {
     }
 
     private void setData(ArrayList<Police> mPolice) {
-        image_url = ApplicationConfig.getImageUrl() + mPolice.get(0).getImageProfile();
+        if (mPolice.get(0).getImageProfile() != "") {
+            image_url = ApplicationConfig.getImageUrl() + mPolice.get(0).getImageProfile();
+        }
+
         fullName = mPolice.get(0).getRankName() + " " + mPolice.get(0).getFirstName() + "  " + mPolice.get(0).getLastName();
         strPosition = mPolice.get(0).getPositionName();
         department = mPolice.get(0).getDepartmentName();
         rankName = mPolice.get(0).getRankName();
-        tel1 = mPolice.get(0).getWorkPhoneNumber();
-        tel2 = mPolice.get(0).getPhoneNumber();
+        if (mPolice.get(0).getWorkPhoneNumber().size() != 0) {
+            tel1 = mPolice.get(0).getWorkPhoneNumber().get(0).getTel();
+        } else {
+            tel1 = "ไม่มีข้อมูล";
+        }
+
+        if (mPolice.get(0).getPhoneNumber().size() != 0) {
+            tel2 = mPolice.get(0).getPhoneNumber().get(0).getTel();
+        } else {
+            tel2 = "ไม่มีข้อมูล";
+        }
 
         relativeLayoutBackground.setBackgroundColor(Color.parseColor(mPolice.get(0).getColor()));
         if (mPolice.get(0).getImageProfile() != null) {

@@ -1,5 +1,6 @@
 package com.zealtech.policephonebook2019.Config;
 
+import com.zealtech.policephonebook2019.Model.PhoneNumber;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartmentRoot;
 import com.zealtech.policephonebook2019.Model.response.ResponseEditPassword;
@@ -11,6 +12,8 @@ import com.zealtech.policephonebook2019.Model.response.ResponsePosition;
 import com.zealtech.policephonebook2019.Model.response.ResponseProfile;
 import com.zealtech.policephonebook2019.Model.response.ResponseProvince;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
+
+import java.util.ArrayList;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;
@@ -82,7 +85,7 @@ public interface Api {
                                       @Query("id") String id,
                                       @Part MultipartBody.Part imageProfile,
                                       @Query("lastName") String lastName,
-                                      @Query("phoneNumber") String phoneNumber,
+                                      @Query("PhoneNumber") String phoneNumber,
                                       @Query("positionId") int positionId,
                                       @Query("rankId") int rankId,
                                       @Header("token") String token);
@@ -93,6 +96,7 @@ public interface Api {
                                       @Query("id") String id,
                                       @Query("lastName") String lastName,
                                       @Query("phoneNumber") String phoneNumber,
+                                                         @Query("workPhoneNumber") String workPhoneNumber,
                                       @Query("positionId") int positionId,
                                       @Query("rankId") int rankId,
                                       @Header("token") String token);

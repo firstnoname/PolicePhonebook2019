@@ -95,7 +95,12 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         rankName = policeMasterData.get(position).getRankName();
         id = policeMasterData.get(position).getId();
 
-        tel1 = policeMasterData.get(position).getWorkPhoneNumber();
+        if (policeMasterData.get(position).getWorkPhoneNumber().size() != 0) {
+            tel1 = policeMasterData.get(position).getWorkPhoneNumber().get(0).getTel();
+        } else {
+            tel1 = "ไม่มีข้อมูล";
+        }
+
         if (tel1 != "") {
             tvTel1.setText(tel1);
             imgTelWork.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +115,12 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
             tvTel1.setText("ไม่มีข้อมูล");
             imgTelWork.setClickable(false);
         }
-        tel2 = policeMasterData.get(position).getPhoneNumber();
+
+        if (policeMasterData.get(position).getPhoneNumber().size() != 0) {
+            tel2 = policeMasterData.get(position).getPhoneNumber().get(0).getTel();
+        } else {
+            tel2 = "ไม่มีข้อมูล";
+        }
         if (tel2 != "") {
             tvTel2.setText(tel2);
             imgTel.setOnClickListener(new View.OnClickListener() {
@@ -222,8 +232,8 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
 
     private void saveHistory(ArrayList<Police> mPolice, int position) {
         Realm.init(this);
-        RealmConfiguration config = new RealmConfiguration.Builder().name("sample.realm")
-                .schemaVersion(1).build();
+        RealmConfiguration config = new RealmConfiguration.Builder().name("sample1.realm")
+                .schemaVersion(1).deleteRealmIfMigrationNeeded().build();
 
         Realm.setDefaultConfiguration(config);
         Realm.getInstance(config);

@@ -18,8 +18,8 @@ public class PoliceMasterData extends BaseItem implements Serializable {
     String rankFullName;
     int rankId;
     int positionId;
-    String workPhoneNumber;
-    String phoneNumber;
+    ArrayList<WorkPhoneNumber> workPhoneNumber;
+    ArrayList<PhoneNumber> phoneNumber;
     ArrayList<String> tag;
     String id;
     String color;
@@ -147,23 +147,21 @@ public class PoliceMasterData extends BaseItem implements Serializable {
         this.color = color;
     }
 
-    public String getWorkPhoneNumber() {
+    public ArrayList<WorkPhoneNumber> getWorkPhoneNumber() {
         return workPhoneNumber;
     }
 
-    public void setWorkPhoneNumber(String workPhoneNumber) {
+    public void setWorkPhoneNumber(ArrayList<WorkPhoneNumber> workPhoneNumber) {
         this.workPhoneNumber = workPhoneNumber;
     }
 
-    public String getPhoneNumber() {
+    public ArrayList<PhoneNumber> getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(ArrayList<PhoneNumber> phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
-
 
     public String getFirstNameAlphabetOnly() {
         return getFirstName().replaceAll("[^a-zA-Z0-9ก-ฮ]", "");

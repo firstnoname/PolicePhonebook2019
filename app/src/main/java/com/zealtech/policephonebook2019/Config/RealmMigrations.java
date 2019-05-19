@@ -14,6 +14,12 @@ public class RealmMigrations implements RealmMigration {
             final RealmObjectSchema policeSchema = schema.get("PoliceHistory");
             policeSchema.addField("color", String.class);
         }
+
+        if (oldVersion == 2) {
+            final RealmObjectSchema policeSchema = schema.get("PoliceHistory");
+            policeSchema.addField("color", String.class);
+
+        }
     }
 
     @Override

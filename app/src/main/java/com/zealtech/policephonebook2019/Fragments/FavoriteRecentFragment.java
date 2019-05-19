@@ -18,15 +18,18 @@ import com.zealtech.policephonebook2019.Adapters.AdapterFavoriteList;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
 import com.zealtech.policephonebook2019.Config.RealmMigrations;
+import com.zealtech.policephonebook2019.Model.PhoneNumber;
 import com.zealtech.policephonebook2019.Model.Police;
 import com.zealtech.policephonebook2019.Model.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
+import com.zealtech.policephonebook2019.Model.WorkPhoneNumber;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
+import io.realm.RealmModel;
 import io.realm.RealmResults;
 
 /**
@@ -96,8 +99,15 @@ public class FavoriteRecentFragment extends Fragment {
                 mPolice.setPositionName(policeHistories.get(i).getPositionName());
                 mPolice.setDepartmentName(policeHistories.get(i).getDepartmentName());
                 mPolice.setRankId(policeHistories.get(i).getRankId());
-                mPolice.setPhoneNumber(policeHistories.get(i).getPhoneNumber());
-                mPolice.setWorkPhoneNumber(policeHistories.get(i).getWorkPhoneNumber());
+                ArrayList<PhoneNumber> phoneNumber = new ArrayList<>();
+                PhoneNumber phoneNumber1 = new PhoneNumber();
+                phoneNumber1.setTel(policeHistories.get(i).getPhoneNumber());
+                phoneNumber.add(phoneNumber1);
+                mPolice.setPhoneNumber(phoneNumber);
+                ArrayList<WorkPhoneNumber> workPhoneNumber = new ArrayList<>();
+                WorkPhoneNumber workPhoneNumber1 = new WorkPhoneNumber();
+                workPhoneNumber1.setTel(policeHistories.get(i).getWorkPhoneNumber());
+                mPolice.setWorkPhoneNumber(workPhoneNumber);
                 mPolice.setUpdateDate(policeHistories.get(i).getUpdateDate());
                 mPolice.setId(policeHistories.get(i).getId());
                 mPolice.setColor(policeHistories.get(i).getColor());

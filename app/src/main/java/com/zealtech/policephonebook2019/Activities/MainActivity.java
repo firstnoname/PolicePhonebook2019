@@ -107,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
         if (json.equals("")) {
             imgProfile.setImageResource(R.mipmap.userfrofiledefualt);
         } else {
-//            Toast.makeText(activity, "User " + mProfile.getFirstName() + "has been log in", Toast.LENGTH_SHORT).show();
             String image_url = ApplicationConfig.getImageUrl() + mProfile.getImageProfile();
             Glide.with(this).load(image_url).into(imgProfile);
 

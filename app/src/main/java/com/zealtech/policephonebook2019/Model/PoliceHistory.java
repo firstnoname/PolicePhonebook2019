@@ -1,5 +1,8 @@
 package com.zealtech.policephonebook2019.Model;
 
+import java.util.ArrayList;
+
+import io.realm.RealmList;
 import io.realm.RealmObject;
 
 public class PoliceHistory extends RealmObject {
@@ -110,7 +113,6 @@ public class PoliceHistory extends RealmObject {
     public void setWorkPhoneNumber(String workPhoneNumber) {
         this.workPhoneNumber = workPhoneNumber;
     }
-
 
     public String getDepartmentName() {
         return departmentName;

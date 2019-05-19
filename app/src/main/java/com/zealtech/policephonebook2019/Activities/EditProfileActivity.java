@@ -32,6 +32,7 @@ import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Department;
+import com.zealtech.policephonebook2019.Model.PhoneNumber;
 import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.Province;
@@ -50,6 +51,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -75,7 +77,7 @@ public class EditProfileActivity extends AppCompatActivity {
     private String updateDate, updateTime;
 
 //    Selected list
-    private String editedName, id, editedLastname, editedPhoneNumber, token;
+    private String editedName, id, editedLastname, editedPhoneNumber, editedWorkPhoneNumber, token;
     private int selectedDepartment, positionId, rankId;
     MultipartBody.Part imgProfile;
 
@@ -115,7 +117,7 @@ public class EditProfileActivity extends AppCompatActivity {
         Glide.with(this).load(IMAGE_URL + mProfile.getImageProfile()).fitCenter().into(imgInfo);
         edtName.setText(mProfile.getFirstName());
         edtLastname.setText(mProfile.getLastName());
-        edtPhone.setText(mProfile.getPhoneNumber());
+        //edtPhone.setText(mProfile.getPhoneNumber().get(0).getTel());
         tvRank.setText(mProfile.getRankName());
         tvPosition.setText(mProfile.getPositionName());
         tvDepartment.setText(mProfile.getDepartmentName());
@@ -128,14 +130,33 @@ public class EditProfileActivity extends AppCompatActivity {
                 checkStoragePermission();
             }
         });
-        edtTelWork.setText(mProfile.getWorkPhoneNumber());
+
+        if (mProfile.getPhoneNumber().size() != 0) {
+            edtPhone.setText(mProfile.getPhoneNumber().get(0).getTel());
+        }else {
+            edtPhone.setText("");
+        }
+
+        if (mProfile.getWorkPhoneNumber().size() != 0) {
+            edtTelWork.setText(mProfile.getWorkPhoneNumber().get(0).getTel());
+        } else {
+            edtTelWork.setText("");
+        }
+
 
         //Set default user data.
         selectedDepartment = mProfile.getDepartmentId();
         editedName = mProfile.getFirstName();
         id = mProfile.getId();
         editedLastname = mProfile.getLastName();
-        editedPhoneNumber = mProfile.getPhoneNumber();
+        if (mProfile.getPhoneNumber().size() != 0) {
+            editedPhoneNumber = mProfile.getPhoneNumber().get(0).getTel();
+        }
+
+        if (mProfile.getWorkPhoneNumber().size() != 0) {
+            editedWorkPhoneNumber = mProfile.getWorkPhoneNumber().get(0).getTel();
+        }
+
         positionId = mProfile.getPositionId();
         rankId = mProfile.getRankId();
         token = mProfile.getToken();
@@ -145,8 +166,12 @@ public class EditProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 editedName = edtName.getText().toString().trim();
                 editedLastname = edtLastname.getText().toString().trim();
-                editedPhoneNumber = edtPhone.getText().toString().trim();
-
+//                ArrayList<PhoneNumber> phones = new ArrayList<>();
+//                PhoneNumber phoneNumber = new PhoneNumber();
+//                phoneNumber.setTel(edtPhone.getText().toString().trim());
+//                phones.add(phoneNumber);
+                editedPhoneNumber = "[{\"tel\":\"" + edtPhone.getText().toString().trim() + "\",\"telTo\":\"\"}]";
+                editedWorkPhoneNumber = "[{\"tel\":\"" + edtTelWork.getText().toString().trim() + "\",\"telTo\":\"\"}]";
                 if (f == null) {
                     pushEditedProfileWithoutImgProfile();
                 } else {
@@ -222,13 +247,14 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private void pushEditedProfileWithoutImgProfile() {
         Call<ResponseProfile> call = api.editProfileWithoutImageProfile(selectedDepartment, editedName, id,
-                    editedLastname, editedPhoneNumber, positionId, rankId, token);
+                    editedLastname, editedPhoneNumber, editedWorkPhoneNumber, positionId, rankId, token);
         call.enqueue(new Callback<ResponseProfile>() {
             @Override
             public void onResponse(Call<ResponseProfile> call, Response<ResponseProfile> response) {
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+                            Toast.makeText(EditProfileActivity.this, "บันทึกข้อมูล สำเร็จ", Toast.LENGTH_SHORT).show();
 //                              Get data from api.
                             mProfile.setEditBy(response.body().getData().getEditBy());
                             mProfile.setImageProfile(response.body().getData().getImageProfile());
@@ -241,6 +267,7 @@ public class EditProfileActivity extends AppCompatActivity {
                             mProfile.setPositionId(response.body().getData().getPositionId());
                             mProfile.setRankId(response.body().getData().getRankId());
                             mProfile.setPhoneNumber(response.body().getData().getPhoneNumber());
+                            mProfile.setWorkPhoneNumber(response.body().getData().getWorkPhoneNumber());
                             mProfile.setTag(response.body().getData().getTag());
                             mProfile.setDepartmentName(response.body().getData().getDepartmentName());
                             mProfile.setPositionName(response.body().getData().getPositionName());

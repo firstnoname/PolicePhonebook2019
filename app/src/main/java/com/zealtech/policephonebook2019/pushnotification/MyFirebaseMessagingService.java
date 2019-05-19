@@ -1,6 +1,5 @@
 package com.zealtech.policephonebook2019.pushnotification;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -19,6 +18,8 @@ import com.google.firebase.messaging.RemoteMessage;
 import com.zealtech.policephonebook2019.Activities.MainActivity;
 import com.zealtech.policephonebook2019.Activities.NotificationActivity;
 import com.zealtech.policephonebook2019.Activities.NotificationDetail;
+import com.zealtech.policephonebook2019.Helpers.Helper;
+import com.zealtech.policephonebook2019.Model.Notification;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import java.util.Map;
@@ -32,42 +33,26 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        // TODO: Handle FCM messages here.
-        // If the application is in the foreground handle both data and notification messages here.
-        // Also if you intend on generating your own notifications as a result of a received FCM
-        // message, here is where that should be initiated.
-        Log.d(TAG, "From: " + remoteMessage.getFrom());
-        Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
+        super.onMessageReceived(remoteMessage);
 
-//        MyPreferenceManager myPreferenceManager=new MyPreferenceManager(this);
-//        //Check if user is login
-//        if(!myPreferenceManager.getUserProfile().equals("0")) {
-//            // Check if message contains a data payload.
-//            if (remoteMessage.getData() != null) {
-                sendNotification(remoteMessage.getData());
-//            } else {
-//                sendNotificationFromWeb(remoteMessage.getNotification().getBody());
-//            }
-//        }
+        test(remoteMessage.getData(), remoteMessage);
+
     }
 
-    private void sendNotification(Map<String, String> messageBody) {
-
-     /*   sharedPref = this.getSharedPreferences(
-                getString(R.string.pref_id), Context.MODE_PRIVATE);
-
-        String editGroup = sharedPref.getString(getString(R.string.pref_editGroup), "");
-        ArrayList<String> editGroupArray = new ArrayList<String>(Arrays.asList(editGroup.split(",")));*/
-
+    public void test(Map<String, String> messageBody, RemoteMessage data) {
         String message = "";
         String title = "";
         String id = "";
         String contentType = "";
 
+        Map<String, String> handleMsg = data.getData();
+        String myCustomKey = handleMsg.get("key1");
+
+
         try {
-            message = messageBody.get("message");
+            message = data.getNotification().getBody();
             try {
-                title = messageBody.get("title");
+                title = data.getNotification().getTitle();
             } catch (Exception e) {
                 title = " ";
             }
@@ -84,22 +69,21 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             title_ = title;
         }
 
-        Intent intent = new Intent();
-        boolean openMain=false;
+        title = data.getNotification().getTitle();
+        message = data.getNotification().getBody();
+        Intent intent;
+        boolean openMain = false;
 
-        if (AppUtils.isAppRunning(this, "com.example.policephonebook2019")) {
-            openMain = false;
-//            intent=AppUtils.openShop(this,contentType);
+        if (Helper.isAppRunning(this, "com.zealtech.firebasenoti")) {
+            intent = new Intent(this, MainActivity.class);
         } else {
-//            openMain = true;
             intent = new Intent(this, NotificationActivity.class);
-
         }
 
         Bundle bundle = new Bundle();
 //        bundle.putString("notification", "notification");
 //        bundle.putString("messageBody", message);
-        bundle.putString("id", id);
+        bundle.putString("id", message);
 //        bundle.putString("contentType", contentType);
 //        bundle.putBoolean("openMain", openMain);
         intent.putExtras(bundle);
@@ -108,59 +92,24 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 PendingIntent.FLAG_ONE_SHOT);
 
         String channelId = "Default";
-        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, channelId)
-                .setSmallIcon(R.mipmap.icon_app)
+                .setSmallIcon(R.drawable.ic_launcher_background)
                 .setContentTitle(getString(R.string.app_name))
-                .setContentText(title_)
+                .setContentText(title)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
                 .setContentIntent(pendingIntent);
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(channelId, "Default channel", NotificationManager.IMPORTANCE_DEFAULT);
             notificationManager.createNotificationChannel(channel);
         }
 
         notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
-
-
     }
 
-    /*private void sendNotificationFromWeb(String messageBody) {
-
-        *//*sharedPref = this.getSharedPreferences(
-                getString(R.string.pref_id), Context.MODE_PRIVATE);
-
-        String editGroup = sharedPref.getString(getString(R.string.pref_editGroup), "");
-        ArrayList<String> editGroupArray = new ArrayList<String>(Arrays.asList(editGroup.split(",")));
-*//*
-        Intent intent;
-//
-
-        intent = new Intent(this, MainActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("notification", "notification");
-        bundle.putString("messageBody", messageBody);
-//        intent.putExtras(bundle);
-//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 *//* Request code *//*, intent,
-                PendingIntent.FLAG_ONE_SHOT);
-
-        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.mipmap.icon_app)
-                .setContentTitle(getString(R.string.app_name))
-                .setContentText(messageBody)
-                .setAutoCancel(true)
-                .setSound(defaultSoundUri);
-//                .setContentIntent(pendingIntent);
-
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
-        notificationManager.notify(0 *//* ID of notification *//*, notificationBuilder.build());
-    }*/
 }
