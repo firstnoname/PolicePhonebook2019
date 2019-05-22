@@ -24,6 +24,7 @@ public class Police implements Serializable {
     String createDate;
     String updateDate;
     String color;
+    ArrayList<DepartmentRoot> departmentRoot;
 
     public String getEditby() {
         return editby;
@@ -183,5 +184,13 @@ public class Police implements Serializable {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public ArrayList<DepartmentRoot> getDepartmentRoot() {
+        return departmentRoot;
+    }
+
+    public void setDepartmentRoot(ArrayList<DepartmentRoot> departmentRoot) {
+        this.departmentRoot = departmentRoot;
     }
 }

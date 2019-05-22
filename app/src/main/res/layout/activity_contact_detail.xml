@@ -79,6 +79,18 @@
                                 android:textSize="14sp" />
 
                             <TextView
+                                android:id="@+id/tv_contact_department_root"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
+                                android:textSize="14sp"
+                                android:textStyle="italic"
+                                android:textColor="@color/fontBlue"/>
+
+                            <TextView
                                 android:id="@+id/tv_contact_department"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

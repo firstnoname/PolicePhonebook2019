@@ -20,10 +20,12 @@ import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Fragments.ContactUsFragment;
 import com.zealtech.policephonebook2019.Fragments.FavoriteFragment;
+import com.zealtech.policephonebook2019.Fragments.MainSearchFragment;
 import com.zealtech.policephonebook2019.Fragments.MapListFragment;
 import com.zealtech.policephonebook2019.Fragments.PhoneListFragment;
 import com.zealtech.policephonebook2019.Fragments.SearchFragment;
 import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.Fragments.SearchFragmentV2;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.ProfileH;
@@ -52,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
     private int subscription;
 
     PhoneListFragment phoneListFragment;
+    MainSearchFragment mainSearchFragment;
     SearchFragment searchFragment;
+    SearchFragmentV2 searchFragmentV2;
     MapListFragment mapListFragment;
     ContactUsFragment contactUsFragment;
     FavoriteFragment favoriteFragment;
@@ -82,10 +86,15 @@ public class MainActivity extends AppCompatActivity {
         activity = MainActivity.this;
         context = MainActivity.this;
 
-        phoneListFragment = PhoneListFragment.newInstance();
+//        phoneListFragment = PhoneListFragment.newInstance();
+//
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.container, phoneListFragment, "PhoneListFragment");
+//        transaction.commit();
 
+        mainSearchFragment = MainSearchFragment.newInstance();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, phoneListFragment, "PhoneListFragment");
+        transaction.replace(R.id.container, mainSearchFragment, "MainSearchFragment");
         transaction.commit();
 
         //Set icon bottom of the view
@@ -144,10 +153,15 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_menu_phone_list)
     public void onBtnMenuPhoneListClicked() {
 
-        phoneListFragment = PhoneListFragment.newInstance();
+//        phoneListFragment = PhoneListFragment.newInstance();
+//
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.container, phoneListFragment, "PhoneListFragment");
+//        transaction.commit();
 
+        mainSearchFragment = MainSearchFragment.newInstance();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, phoneListFragment, "PhoneListFragment");
+        transaction.replace(R.id.container, mainSearchFragment, "MainSearchFragment");
         transaction.commit();
 
         current_frag = "PhoneList";
@@ -156,10 +170,16 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_menu_search)
     public void onBtnMenuSearchClicked() {
-        searchFragment = SearchFragment.newInstance();
+//        searchFragment = SearchFragment.newInstance();
+//
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.container, searchFragment, "SearchFragment");
+//        transaction.commit();
+
+        searchFragmentV2 = SearchFragmentV2.newInstance();
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, searchFragment, "SearchFragment");
+        transaction.replace(R.id.container, searchFragmentV2, "SearchFragment");
         transaction.commit();
 
         current_frag = "Search";
@@ -211,13 +231,13 @@ public class MainActivity extends AppCompatActivity {
                 BaseFilterItem item = (BaseFilterItem) data.getSerializableExtra("valueFilter");
 
                 if(item instanceof Province){
-                    searchFragment.setDropDownProvince((Province) item);
+                    searchFragmentV2.setDropDownProvince((Province) item);
                 } else if (item instanceof Department) {
-                    searchFragment.setDropDownDepartment((Department) item);
+                    searchFragmentV2.setDropDownDepartment((Department) item);
                 } else if (item instanceof Rank) {
-                    searchFragment.setDropDownRank((Rank) item);
+                    searchFragmentV2.setDropDownRank((Rank) item);
                 } else if (item instanceof Position) {
-                    searchFragment.setDropDownPosition((Position) item);
+                    searchFragmentV2.setDropDownPosition((Position) item);
                 }
             }
         }
@@ -238,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
     public void onEvent(Department mDepartment) {
-        searchFragment.setDropDownDepartment(mDepartment);
+        searchFragmentV2.setDropDownDepartment(mDepartment);
     }
 
     @Override

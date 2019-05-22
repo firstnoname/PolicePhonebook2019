@@ -24,7 +24,7 @@
     <string name="hint_new_password">กรอกรหัสผ่านใหม่</string>
 
     <!--Menu-->
-    <string name="menuNameList">รายชื่อ</string>
+    <string name="menuNameList">หน้าหลัก</string>
     <string name="menuSearch">ค้นหาขั้นสูง</string>
     <string name="menuMap">สถานีตำรวจ</string>
     <string name="menuFavoriteList">รายการโปรด</string>
@@ -33,7 +33,24 @@
     <string name="dont_have_data">ไม่มีข้อมูล</string>
 
     <string name="title_activity_maps">Map</string>
+    
+    <!--Order-->
+    <string name="order_rank">ลำดับยศ</string>
+    <string name="order_firstname">ตัวอักษร</string>
+    <string name="order_date">วันที่นำเข้าข้อมูล</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string name="main_hint_suggestion">
+        คำแนะนำในการค้นหา\n
+         -ชื่อ เช่น สมชาย\n
+         -นามสกุล เช่น รักชาติ\n
+         -ยศ เช่น พล.ต.ต. พลตำรวจตรี\n
+         -ตำแหน่ง เช่น ผบก. ผู้บังคับการ\n
+         -หน่วยงาน เช่น สท. กองสารนิเทศ\n
+         -หมายเลขโทรศัพท์ เช่น 02xxxxxxx หรือ 08xxxxxxxx\n
+        หากต้องการผลลัพธ์เพิ่มเติมให้ใช้เมนูค้นหาแบบละเอียด</string>
 
 
 </resources>

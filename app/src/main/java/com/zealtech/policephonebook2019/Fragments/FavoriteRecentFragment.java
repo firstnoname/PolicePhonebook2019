@@ -7,29 +7,22 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.zealtech.policephonebook2019.Adapters.AdapterFavoriteList;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
-import com.zealtech.policephonebook2019.Config.RealmMigrations;
 import com.zealtech.policephonebook2019.Model.PhoneNumber;
 import com.zealtech.policephonebook2019.Model.Police;
-import com.zealtech.policephonebook2019.Model.PoliceHistory;
+import com.zealtech.policephonebook2019.Model.Realm.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 import com.zealtech.policephonebook2019.Model.WorkPhoneNumber;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
-import io.realm.RealmModel;
 import io.realm.RealmResults;
 
 /**

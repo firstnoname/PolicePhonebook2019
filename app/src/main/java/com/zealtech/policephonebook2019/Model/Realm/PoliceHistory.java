@@ -1,4 +1,4 @@
-package com.zealtech.policephonebook2019.Model;
+package com.zealtech.policephonebook2019.Model.Realm;
 
 import java.util.ArrayList;
 

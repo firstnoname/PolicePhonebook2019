@@ -68,8 +68,8 @@ public class EditProfileActivity extends AppCompatActivity {
     public static final int PERMISSION_REQUEST_STORAGE = 88;
     private EditText edtName, edtLastname, edtPhone, edtTelWork;
     private Button btnEdit;
-    private ImageView imgInfo;
-    private TextView tvSelectPhoto, tvRank, tvDepartment, tvPosition, tvUpdateDate;
+    private ImageView imgInfo, imgClose;
+    private TextView tvSelectPhoto, tvRank, tvDepartment, tvPosition, tvUpdateDate, tvTitle;
     private ProgressBar mProgressBar;
 
     private String IMAGE_URL = ApplicationConfig.getImageUrl();
@@ -109,6 +109,10 @@ public class EditProfileActivity extends AppCompatActivity {
         tvUpdateDate = findViewById(R.id.tv_update_date);
         edtTelWork = findViewById(R.id.edt_tel_work);
         mProgressBar = findViewById(R.id.progress_bar);
+        tvTitle = findViewById(R.id.tv_actionbar_close);
+        imgClose = findViewById(R.id.img_close);
+
+        tvTitle.setText("แก้ไขข้อมูล");
 
         //Get value from UserDetailActivity.
         mProfile = (ProfileH) getIntent().getSerializableExtra("user_profile");
@@ -177,7 +181,13 @@ public class EditProfileActivity extends AppCompatActivity {
                 } else {
                     pushEditedProfile();
                 }
+            }
+        });
 
+        imgClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

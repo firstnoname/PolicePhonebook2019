@@ -20,7 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.zealtech.policephonebook2019.Activities.ChangePasswordActivity"></activity>
+        <activity android:name="com.zealtech.policephonebook2019.Activities.SearchResultActivity"></activity>
+        <activity android:name="com.zealtech.policephonebook2019.Activities.AdvanceSearchResultActivity"></activity>
+        <activity android:name="com.zealtech.policephonebook2019.Activities.ChangePasswordActivity" />
         <activity android:name="com.zealtech.policephonebook2019.Activities.FilterDepartmentActivity" />
         <activity android:name="com.zealtech.policephonebook2019.Activities.NotificationActivity" />
         <activity android:name="com.zealtech.policephonebook2019.Activities.ContactDetailFilterActivity" />

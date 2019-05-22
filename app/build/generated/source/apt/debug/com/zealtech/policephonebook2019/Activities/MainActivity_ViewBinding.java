@@ -16,21 +16,21 @@ import java.lang.Override;
 public class MainActivity_ViewBinding implements Unbinder {
   private MainActivity target;
 
-  private View view2131296396;
+  private View view2131296410;
 
-  private View view2131296393;
+  private View view2131296407;
 
-  private View view2131296328;
+  private View view2131296342;
 
-  private View view2131296304;
+  private View view2131296306;
+
+  private View view2131296307;
 
   private View view2131296305;
 
+  private View view2131296304;
+
   private View view2131296303;
-
-  private View view2131296302;
-
-  private View view2131296301;
 
   @UiThread
   public MainActivity_ViewBinding(MainActivity target) {
@@ -50,7 +50,7 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.tvActionbarTitle = Utils.findRequiredViewAsType(source, R.id.tv_actionbar, "field 'tvActionbarTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.imgUser, "field 'imgProfile' and method 'onImgUserClicked'");
     target.imgProfile = Utils.castView(view, R.id.imgUser, "field 'imgProfile'", ImageView.class);
-    view2131296396 = view;
+    view2131296410 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,7 +58,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.imgNoti, "method 'onImgNotiClicked'");
-    view2131296393 = view;
+    view2131296407 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -66,7 +66,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.container, "method 'onContainerClicked'");
-    view2131296328 = view;
+    view2131296342 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -74,7 +74,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_menu_phone_list, "method 'onBtnMenuPhoneListClicked'");
-    view2131296304 = view;
+    view2131296306 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -82,7 +82,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_menu_search, "method 'onBtnMenuSearchClicked'");
-    view2131296305 = view;
+    view2131296307 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -90,7 +90,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_menu_map, "method 'onBtnMenuMapClicked'");
-    view2131296303 = view;
+    view2131296305 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -98,7 +98,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_menu_favorite, "method 'onBtnMenuFavoriteClicked'");
-    view2131296302 = view;
+    view2131296304 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -106,7 +106,7 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_menu_contact_us, "method 'onBtnMenuContactUsClicked'");
-    view2131296301 = view;
+    view2131296303 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -130,21 +130,21 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.tvActionbarTitle = null;
     target.imgProfile = null;
 
-    view2131296396.setOnClickListener(null);
-    view2131296396 = null;
-    view2131296393.setOnClickListener(null);
-    view2131296393 = null;
-    view2131296328.setOnClickListener(null);
-    view2131296328 = null;
-    view2131296304.setOnClickListener(null);
-    view2131296304 = null;
+    view2131296410.setOnClickListener(null);
+    view2131296410 = null;
+    view2131296407.setOnClickListener(null);
+    view2131296407 = null;
+    view2131296342.setOnClickListener(null);
+    view2131296342 = null;
+    view2131296306.setOnClickListener(null);
+    view2131296306 = null;
+    view2131296307.setOnClickListener(null);
+    view2131296307 = null;
     view2131296305.setOnClickListener(null);
     view2131296305 = null;
+    view2131296304.setOnClickListener(null);
+    view2131296304 = null;
     view2131296303.setOnClickListener(null);
     view2131296303 = null;
-    view2131296302.setOnClickListener(null);
-    view2131296302 = null;
-    view2131296301.setOnClickListener(null);
-    view2131296301 = null;
   }
 }

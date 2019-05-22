@@ -1,9 +1,7 @@
 package com.zealtech.policephonebook2019.Activities;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,9 +18,8 @@ import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Police;
-import com.zealtech.policephonebook2019.Model.PoliceHistory;
+import com.zealtech.policephonebook2019.Model.Realm.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
-import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponseFavorite;
@@ -128,7 +125,7 @@ public class ContactDetailActivity extends AppCompatActivity {
     }
 
     private void callUserDetail(String id) {
-        Call<ResponsePoliceList> call = api.getPoliceList("", "", "", "", id);
+        Call<ResponsePoliceList> call = api.getPoliceList("", "", "", "", id, 4);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

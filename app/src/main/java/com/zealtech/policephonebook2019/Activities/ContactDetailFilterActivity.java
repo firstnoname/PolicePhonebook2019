@@ -6,6 +6,8 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,21 +20,16 @@ import com.example.policephonebook2019.R;
 import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
-import com.zealtech.policephonebook2019.Model.Favorite;
 import com.zealtech.policephonebook2019.Model.Police;
-import com.zealtech.policephonebook2019.Model.PoliceHistory;
-import com.zealtech.policephonebook2019.Model.PoliceMasterData;
+import com.zealtech.policephonebook2019.Model.Realm.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.ProfileH;
-import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponseFavorite;
-import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.time.Month;
 import java.util.ArrayList;
 
 import io.realm.Realm;
@@ -42,12 +39,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ContactDetailFilterActivity extends AppCompatActivity {
+public class ContactDetailFilterActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final String TAG = "ContactDetailActivity";
 
 
-    private TextView tvName, tvPosition, tvDepartment, tvTel1, tvTel2, tvBack, tvUpdatedate;
+    private TextView tvName, tvPosition, tvDepartment, tvDepartmentRoot, tvTel1, tvTel2, tvBack, tvUpdatedate;
     private ImageView imgFavorite, imgClose, imgProfile, imgTelWork, imgTel;
     private RelativeLayout relativeLayoutBackground;
     private int position;
@@ -73,6 +70,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         tvName = findViewById(R.id.tv_contact_name);
         tvPosition = findViewById(R.id.tv_contact_position);
         tvDepartment = findViewById(R.id.tv_contact_department);
+        tvDepartmentRoot = findViewById(R.id.tv_contact_department_root);
         tvTel1 = findViewById(R.id.tv_contact_tel);
         tvTel2 = findViewById(R.id.tv_contact_phone);
         imgFavorite = findViewById(R.id.imgFavorite);
@@ -81,6 +79,8 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         tvUpdatedate = findViewById(R.id.tv_contact_update_date);
         imgTelWork = findViewById(R.id.img_tel_work);
         imgTel = findViewById(R.id.img_tel);
+
+        tvDepartmentRoot.setOnClickListener(this);
 
         policeMasterData = (ArrayList<Police>) getIntent().getSerializableExtra("contact_detail");
         position = getIntent().getIntExtra("position", 0);
@@ -95,8 +95,12 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         rankName = policeMasterData.get(position).getRankName();
         id = policeMasterData.get(position).getId();
 
-        if (policeMasterData.get(position).getWorkPhoneNumber().size() != 0) {
-            tel1 = policeMasterData.get(position).getWorkPhoneNumber().get(0).getTel();
+        if (policeMasterData.get(position).getWorkPhoneNumber() != null) {
+            if (policeMasterData.get(position).getWorkPhoneNumber().size() != 0) {
+                tel1 = policeMasterData.get(position).getWorkPhoneNumber().get(0).getTel();
+            } else {
+                tel1 = "ไม่มีข้อมูล";
+            }
         } else {
             tel1 = "ไม่มีข้อมูล";
         }
@@ -116,11 +120,16 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
             imgTelWork.setClickable(false);
         }
 
-        if (policeMasterData.get(position).getPhoneNumber().size() != 0) {
-            tel2 = policeMasterData.get(position).getPhoneNumber().get(0).getTel();
+        if (policeMasterData.get(position).getPhoneNumber() != null) {
+            if (policeMasterData.get(position).getPhoneNumber().size() != 0) {
+                tel2 = policeMasterData.get(position).getPhoneNumber().get(0).getTel();
+            } else {
+                tel2 = "ไม่มีข้อมูล";
+            }
         } else {
             tel2 = "ไม่มีข้อมูล";
         }
+
         if (tel2 != "") {
             tvTel2.setText(tel2);
             imgTel.setOnClickListener(new View.OnClickListener() {
@@ -147,7 +156,30 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
 
         tvName.setText(fullName);
         tvPosition.setText(strPosition);
-        tvDepartment.setText(department);
+        tvDepartment.setSingleLine(false);
+        String departmentName = "";
+        String departmentNameRoot = "";
+        Boolean firstTime = true;
+        if (policeMasterData.get(position).getDepartmentRoot() != null) {
+            if (policeMasterData.get(position).getDepartmentRoot().size() != 0) {
+                for (int i = policeMasterData.get(position).getDepartmentRoot().size() - 1; i >= 0; i--) {
+                    if (firstTime == true) {
+//                        departmentNameRoot = policeMasterData.get(position).getDepartmentRoot().get(i).getDepartmentName();
+                        SpannableString content = new SpannableString(policeMasterData.get(position).getDepartmentRoot().get(i).getDepartmentName());
+                        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+                        tvDepartmentRoot.setText(content);
+                    } else {
+                        departmentName += policeMasterData.get(position).getDepartmentRoot().get(i).getDepartmentName();
+                        departmentName += "\n";
+                    }
+
+                    firstTime = false;
+                }
+
+                tvDepartment.setText(departmentName);
+
+            }
+        }
 
         if (policeMasterData.get(position).getUpdateDate() != null) {
             String dateFormat = policeMasterData.get(position).getUpdateDate().substring(0,10);
@@ -415,4 +447,16 @@ public class ContactDetailFilterActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tv_contact_department_root:
+                Intent intent = new Intent(this, StationDetailTabviewActivity.class);
+                intent.putExtra("departmentId", policeMasterData.get(position).getDepartmentId());
+                intent.putExtra("departmentName", policeMasterData.get(position).getDepartmentName());
+                this.startActivity(intent);
+                break;
+
+        }
+    }
 }

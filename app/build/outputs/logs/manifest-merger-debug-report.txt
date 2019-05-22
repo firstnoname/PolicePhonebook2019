@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-74:12
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-76:12
 MERGED from [io.realm:realm-android-library:5.10.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/realm-android-library-5.10.0.aar/67aa3fe3477cf5c33b297063977d71dd/AndroidManifest.xml:2:1-10:12
 MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/442ca8879d2949683f16d3c36e75f0d5/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/95867529c9d2a3c79352eee8b5a193b8/AndroidManifest.xml:17:1-22:12
@@ -64,20 +64,20 @@ MERGED from [com.android.support:interpolator:28.0.0] /Users/ifirst/.gradle/cach
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/1be9e4ab4b7f514edb13a3d2a7597c57/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/3b4ab5feb7fd2014f8146686ec898ec6/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/090cae264d844e8cb349bd364469dafc/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-74:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-76:12
+INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-76:12
 	package
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-74:12
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-76:12
 		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-74:12
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:1-76:12
 		INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:2:11-69
@@ -130,7 +130,7 @@ ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019
 	android:name
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:13:22-78
 application
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:15:5-72:19
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:15:5-74:19
 MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/442ca8879d2949683f16d3c36e75f0d5/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/442ca8879d2949683f16d3c36e75f0d5/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/ifirst/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/d5324936c73717b0879024963b4e9d66/AndroidManifest.xml:9:5-20
@@ -203,116 +203,124 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/ifirst/.gradle/c
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:21:9-65
 	android:usesCleartextTraffic
 		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:22:9-44
+activity#com.zealtech.policephonebook2019.Activities.SearchResultActivity
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:9-110
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:19-98
+activity#com.zealtech.policephonebook2019.Activities.AdvanceSearchResultActivity
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:9-117
+	android:name
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:19-105
 activity#com.zealtech.policephonebook2019.Activities.ChangePasswordActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:9-112
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:25:9-103
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:23:19-100
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:25:19-100
 activity#com.zealtech.policephonebook2019.Activities.FilterDepartmentActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:9-105
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:26:9-105
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:24:19-102
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:26:19-102
 activity#com.zealtech.policephonebook2019.Activities.NotificationActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:25:9-101
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:27:9-101
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:25:19-98
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:27:19-98
 activity#com.zealtech.policephonebook2019.Activities.ContactDetailFilterActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:26:9-108
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:28:9-108
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:26:19-105
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:28:19-105
 activity#com.zealtech.policephonebook2019.Activities.StationDetailTabviewActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:27:9-109
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:29:9-109
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:27:19-106
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:29:19-106
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:36:9-38:55
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:38:9-40:55
 	android:value
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:38:13-52
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:40:13-52
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:37:13-58
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:39:13-58
 activity#com.zealtech.policephonebook2019.Activities.StationStaffDetailActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:40:9-107
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:42:9-107
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:40:19-104
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:42:19-104
 activity#com.zealtech.policephonebook2019.Activities.MapsActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:41:9-43:59
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:43:9-45:59
 	android:label
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:43:13-56
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:45:13-56
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:42:13-84
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:44:13-84
 activity#com.zealtech.policephonebook2019.Activities.NotificationDetail
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:44:9-99
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:46:9-99
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:44:19-96
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:46:19-96
 activity#com.zealtech.policephonebook2019.Activities.FilterActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:45:9-95
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:47:9-95
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:45:19-92
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:47:19-92
 activity#com.zealtech.policephonebook2019.Activities.ContactDetailActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:46:9-102
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:48:9-102
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:46:19-99
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:48:19-99
 activity#com.zealtech.policephonebook2019.Activities.EditProfileActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:47:9-100
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:49:9-100
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:47:19-97
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:49:19-97
 activity#com.zealtech.policephonebook2019.Activities.UserDetailActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:48:9-99
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:50:9-99
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:48:19-96
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:50:19-96
 activity#com.zealtech.policephonebook2019.Activities.LoginActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:49:9-94
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:51:9-94
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:49:19-91
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:51:19-91
 activity#com.zealtech.policephonebook2019.Activities.StationDetailActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:50:9-102
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:52:9-102
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:50:19-99
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:52:19-99
 activity#com.zealtech.policephonebook2019.Activities.StationSubListActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:51:9-103
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:53:9-103
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:51:19-100
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:53:19-100
 activity#com.zealtech.policephonebook2019.Activities.MapStationListActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:52:9-103
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:54:9-103
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:52:19-100
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:54:19-100
 activity#com.zealtech.policephonebook2019.Activities.SplashScreenActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:53:9-59:20
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:55:9-61:20
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:53:19-98
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:55:19-98
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:54:13-58:29
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:56:13-60:29
 action#android.intent.action.MAIN
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:55:17-69
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:57:17-69
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:55:25-66
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:57:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:57:17-77
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:59:17-77
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:57:27-74
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:59:27-74
 activity#com.zealtech.policephonebook2019.Activities.MainActivity
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:60:9-93
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:62:9-93
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:60:19-90
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:62:19-90
 service#com.zealtech.policephonebook2019.pushnotification.FirebaseIDService
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:62:9-66:19
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:64:9-68:19
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:62:18-100
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:64:18-100
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:63:13-65:29
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:65:13-67:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:64:17-80
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:66:17-80
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:64:25-77
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:66:25-77
 service#com.zealtech.policephonebook2019.pushnotification.MyFirebaseMessagingService
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:67:9-71:19
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:69:9-73:19
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:67:18-109
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:69:18-109
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:68:13-70:29
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:70:13-72:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:69:17-78
+ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:71:17-78
 	android:name
-		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:69:25-75
+		ADDED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml:71:25-75
 uses-sdk
 INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/src/main/AndroidManifest.xml

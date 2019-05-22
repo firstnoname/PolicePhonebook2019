@@ -69,8 +69,8 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
 
     //Adapter
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private RecyclerView.Adapter mAdapter;
     ArrayList<Police> mPolice;
     ArrayList<Rank> ranks = new ArrayList<>();
 
@@ -89,7 +89,7 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
                              Bundle savedInstanceState) {
         Log.d(TAG, "create view");
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_search, container, false);
+        View v = inflater.inflate(R.layout.fragment_search_v2, container, false);
 
 
         return v;
@@ -219,7 +219,7 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
 
     private void onRefreshView(String departmentId, String positionId, String rankId, String keyword) {
         mPolice = new ArrayList<>();
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId, keyword, "");
+        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId, keyword, "", 4);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

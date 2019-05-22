@@ -3,6 +3,8 @@ package com.zealtech.policephonebook2019.Model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import io.realm.RealmObject;
+
 public class DepartmentRoot implements Serializable {
     String address;
     String createDate;

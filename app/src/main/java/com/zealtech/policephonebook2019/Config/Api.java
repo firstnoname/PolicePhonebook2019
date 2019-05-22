@@ -1,6 +1,5 @@
 package com.zealtech.policephonebook2019.Config;
 
-import com.zealtech.policephonebook2019.Model.PhoneNumber;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartmentRoot;
 import com.zealtech.policephonebook2019.Model.response.ResponseEditPassword;
@@ -12,8 +11,6 @@ import com.zealtech.policephonebook2019.Model.response.ResponsePosition;
 import com.zealtech.policephonebook2019.Model.response.ResponseProfile;
 import com.zealtech.policephonebook2019.Model.response.ResponseProvince;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
-
-import java.util.ArrayList;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;
@@ -61,7 +58,22 @@ public interface Api {
                                            @Query("positionId") String positionId,
                                            @Query("rankId") String rankId,
                                            @Query("keyWord") String keyword,
-                                           @Query("id") String id);
+                                           @Query("id") String id,
+                                           @Query("sort") int sort);
+
+    @GET("getPolice")
+    Call<ResponsePoliceList> getPoliceListFilter(@Query("departmentId") String departmentId,
+                                                 @Query("id") String id,
+                                                 @Query("keyWord") String keyword,
+                                                 @Query("keyWordDepartmentName") Boolean keyWordDepartmentName,
+                                                 @Query("keyWordFirstName") Boolean keyWordFirstName,
+                                                 @Query("keyWordLastName") Boolean keyWordLastName,
+                                                 @Query("keyWordPhoneNumber") Boolean keyWordPhoneNumber,
+                                                 @Query("keyWordPositionName") Boolean keyWordPositionName,
+                                                 @Query("keyWordRankName") Boolean keyWordRankName,
+                                                 @Query("page") Integer page,
+                                                 @Query("sizeContents") Integer sizeContents,
+                                                 @Query("sort") Integer sort);
 
     @GET("getRankMasterData")
     Call<ResponseRank> getRankMasterData(@Query("id") String id);
