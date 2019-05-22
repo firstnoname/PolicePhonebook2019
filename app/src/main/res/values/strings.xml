@@ -13,10 +13,10 @@
 
     <!--​Searchview-->
     <string name="searchviewPhoneList">ใส่ข้อมูลเช่น ชื่อ ยศ ตำแหน่ง</string>
-    <string name="hint_search_department">ค้นหาหน่วยงาน</string>
-    <string name="hint_search_position">ค้นหาตำแหน่ง</string>
-    <string name="hint_search_rank">ค้นหายศ</string>
-    <string name="hint_search_province">ค้นหาจังหวัด</string>
+    <string name="hint_search_department">พิมพ์ชื่อหน่วยงานที่คุณต้องการค้นหา</string>
+    <string name="hint_search_position">พิมพ์ชื่อตำแหน่งคุณต้องการค้นหา</string>
+    <string name="hint_search_rank">พิมพ์ชื่อยศที่คุณต้องการค้นหา</string>
+    <string name="hint_search_province">พิมพ์ชื่อจังหวัดที่คุณต้องการค้นหา</string>
 
     <!--Change password-->
     <string name="hint_current_password">กรอกรหัสผ่านเดิม</string>

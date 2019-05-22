@@ -86,7 +86,6 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
                     intent.putExtra("level", level);
                     intent.putExtra("parentId", parentId);
                     intent.putExtra("subTitle", mDepartment.get(i).getDepartmentName());
-
                     mActivity.startActivity(intent);
                     mActivity.finish();
                 } else {
@@ -104,9 +103,7 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
                     //mActivity.setResult(Activity.RESULT_OK, iEditProfile);
                     mActivity.finish();
 
-
                 }
-
 
             }
         });

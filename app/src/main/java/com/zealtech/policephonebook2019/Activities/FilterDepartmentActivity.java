@@ -4,8 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
-import android.widget.SearchView;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
@@ -31,11 +32,12 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
     private int level = 1;
     private String provinceId = "";
     private String departmentId = "";
+    private String rootDepName = "";
 
     private ArrayList<Department> mDepartmentList = new ArrayList<>();
     AdapterDepartmentSearchFilter mAdapterDepartment;
 
-    SearchView searchView;
+    android.support.v7.widget.SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
         setContentView(R.layout.activity_filter_department);
 
         searchView = findViewById(R.id.search_view);
+        searchView.setQueryHint(getResources().getString(R.string.hint_search_department));
         searchView.setOnQueryTextListener(this);
 
         //get data
@@ -55,6 +58,7 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
         if (provinceId == "0") {
             provinceId = "";
         }
+        rootDepName = getIntent().getStringExtra("subTitle");
 
         Call<ResponseDepartment> call = api.getDepartment(level, departmentId, provinceId);
         call.enqueue(new Callback<ResponseDepartment>() {
@@ -63,11 +67,19 @@ public class FilterDepartmentActivity extends AppCompatActivity implements Searc
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-//                            mDepartmentList.add(0, (Department) new Department().createTotalItem());
+                            if (level == 1) {
+                                mDepartmentList.add(0, (Department) new Department().createTotalItem());
+                            }
+
                             Department defaultDepartment = new Department();
                             defaultDepartment.setDepartmentId(Integer.parseInt(departmentId));
-                            defaultDepartment.setDepartmentName("ทั้งหมด");
-                            mDepartmentList.add(0, defaultDepartment);
+                            defaultDepartment.setDepartmentName(rootDepName);
+                            defaultDepartment.setFlagTail(false);
+//                            defaultDepartment.setDepartmentName("ทั้งหมด");
+//                            mDepartmentList.add(0, defaultDepartment);
+                            if (departmentId != "0") {
+                                mDepartmentList.add(0, defaultDepartment);
+                            }
                             mDepartmentList.addAll(response.body().getData().getContent());
                             setAdapter(mDepartmentList);
 

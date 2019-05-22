@@ -74,19 +74,19 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
 
         if (tagFilter != null) {
             if (tagFilter.equals("rank")) {
-                searchView.setQueryHint("ค้นหายศ");
+                searchView.setQueryHint(getResources().getString(R.string.hint_search_rank));
                 tvAbTitle.setText("ค้นหายศ");
                 initRank();
             } else if (tagFilter.equals("position")) {
-                searchView.setQueryHint("ค้นหาตำแหน่ง");
+                searchView.setQueryHint(getResources().getString(R.string.hint_search_position));
                 tvAbTitle.setText("ค้นหาตำแหน่ง");
                 initPosition();
             } else if (tagFilter.equals("province")) {
-                searchView.setQueryHint("ค้นหาจังหวัด");
+                searchView.setQueryHint(getResources().getString(R.string.hint_search_province));
                 tvAbTitle.setText("ค้นหาจังหวัด");
                 initProvince();
             } else if (tagFilter.equals("department")) {
-                searchView.setQueryHint("ค้นหาหน่วยงาน");
+                searchView.setQueryHint(getResources().getString(R.string.hint_search_department));
                 tvAbTitle.setText("ค้นหาหน่วยงาน");
                 provinceId = getIntent().getStringExtra("provinceId");
                 if (provinceId.equals("0")) {
@@ -150,7 +150,7 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-                            apiItemFilter.add(0, new Province().createTotalItem());
+//                            apiItemFilter.add(0, new Province().createTotalItem());
                             apiItemFilter.addAll(response.body().getData());
                             initRecyclerView(apiItemFilter);
                         } else {
