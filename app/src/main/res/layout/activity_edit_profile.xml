@@ -41,18 +41,20 @@
 
         <Button
             android:id="@+id/tv_select_photo"
-            android:layout_width="140dp"
+            android:layout_width="120dp"
             android:layout_height="35dp"
             android:layout_gravity="center"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="60dp"
             android:layout_weight="2"
             android:background="@drawable/button_custom_staff"
-            android:drawableLeft="@mipmap/choosephoto"
+            android:drawableLeft="@mipmap/choosepic"
             android:gravity="center"
-            android:paddingLeft="20dp"
+            android:paddingLeft="30dp"
             android:paddingRight="20dp"
             android:text="เลือกรูป"
+            android:fontFamily="@font/chatthai"
+            android:textSize="18sp"
             android:textColor="@color/fontWhite" />
 
     </LinearLayout>
@@ -68,7 +70,8 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/colorJustGrey">
 
             <TextView
                 android:id="@+id/textView2"
@@ -77,13 +80,15 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:text="ยศ"
+                android:fontFamily="@font/chatthai"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <RelativeLayout
                 android:id="@+id/spnRank"
                 android:layout_width="300dp"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -98,6 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
+                    android:orientation="horizontal"
                     android:onClick="selectRank">
 
                     <TextView
@@ -107,11 +113,13 @@
                         android:layout_marginLeft="4dp"
                         android:layout_weight="2"
                         android:text="ทดสอบ"
-                        android:textSize="13sp" />
+                        android:fontFamily="@font/chatthai"
+                        android:textSize="20sp"
+                        android:textColor="@color/fontBlue"/>
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="34dp"
+                        android:layout_height="match_parent"
                         android:scaleType="fitXY"
                         android:src="@mipmap/dropdown" />
 
@@ -139,17 +147,20 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:text="ชื่อ"
+                android:fontFamily="@font/chatthai"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <RelativeLayout
                 android:id="@+id/edtName"
                 android:layout_width="300dp"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight=".28"
+                android:padding="6dp"
                 android:background="@drawable/spinner_border"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -169,18 +180,21 @@
                     android:layout_marginEnd="0dp"
                     android:background="@android:color/transparent"
                     android:spinnerMode="dropdown"
-                    android:textSize="13sp" />
+                    android:fontFamily="@font/chatthai"
+                    android:textSize="20sp"
+                    android:textColor="@color/fontBlue"/>
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/relatvieName"
                 android:layout_width="300dp"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight=".28"
+                android:padding="6dp"
                 android:background="@drawable/spinner_border"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -200,7 +214,9 @@
                     android:layout_marginEnd="0dp"
                     android:background="@android:color/transparent"
                     android:spinnerMode="dropdown"
-                    android:textSize="13sp" />
+                    android:fontFamily="@font/chatthai"
+                    android:textSize="20sp"
+                    android:textColor="@color/fontBlue"/>
 
             </RelativeLayout>
 
@@ -211,17 +227,20 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:text="ตำแหน่ง"
+                android:fontFamily="@font/chatthai"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtName" />
 
             <RelativeLayout
                 android:id="@+id/spnPosition"
                 android:layout_width="300dp"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight=".28"
+
                 android:background="@drawable/spinner_border"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -242,7 +261,9 @@
                         android:layout_weight="2"
                         android:maxLines="1"
                         android:text="ทดสอบ"
-                        android:textSize="13sp" />
+                        android:fontFamily="@font/chatthai"
+                        android:textSize="20sp"
+                        android:textColor="@color/fontBlue"/>
 
                     <ImageView
                         android:layout_width="24dp"
@@ -261,13 +282,15 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:text="หน่วยงาน"
+                android:fontFamily="@font/chatthai"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spnPosition" />
 
             <RelativeLayout
                 android:id="@+id/spnDeparture"
                 android:layout_width="300dp"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -292,7 +315,9 @@
                         android:layout_weight="2"
                         android:maxLines="1"
                         android:text="ทดสอบ"
-                        android:textSize="13sp" />
+                        android:fontFamily="@font/chatthai"
+                        android:textSize="20sp"
+                        android:textColor="@color/fontBlue"/>
 
                     <ImageView
                         android:layout_width="24dp"
@@ -311,20 +336,22 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:text="เบอร์โทร(มือถือ)"
+                android:fontFamily="@font/chatthai"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spnDeparture" />
 
             <RelativeLayout
                 android:id="@+id/edtTel"
                 android:layout_width="300dp"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight=".28"
                 android:background="@drawable/spinner_border"
                 android:orientation="horizontal"
-                android:paddingLeft="4dp"
+                android:padding="6dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7">
@@ -342,7 +369,9 @@
                     android:layout_marginEnd="0dp"
                     android:background="@android:color/transparent"
                     android:inputType="textPersonName|phone"
-                    android:textSize="13sp" />
+                    android:fontFamily="@font/chatthai"
+                    android:textSize="20sp"
+                    android:textColor="@color/fontBlue"/>
 
             </RelativeLayout>
 
@@ -353,20 +382,22 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:text="เบอร์โทร(ที่ทำงาน)"
+                android:fontFamily="@font/chatthai"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtTel" />
 
             <RelativeLayout
                 android:id="@+id/relativeLayout"
                 android:layout_width="300dp"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight=".28"
                 android:background="@drawable/spinner_border"
                 android:orientation="horizontal"
-                android:paddingLeft="4dp"
+                android:padding="6dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12">
@@ -384,7 +415,9 @@
                     android:layout_marginEnd="0dp"
                     android:background="@android:color/transparent"
                     android:inputType="textPersonName|phone"
-                    android:textSize="13sp" />
+                    android:fontFamily="@font/chatthai"
+                    android:textSize="20sp"
+                    android:textColor="@color/fontBlue"/>
 
             </RelativeLayout>
 
@@ -397,7 +430,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/button_custom_staff"
-                android:drawableLeft="@mipmap/pencil"
+                android:drawableLeft="@mipmap/save"
                 android:gravity="center"
                 android:paddingLeft="80dp"
                 android:paddingRight="80dp"
@@ -426,6 +459,8 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:text="นามสกุล"
+                android:fontFamily="@font/chatthai"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/relatvieName" />
 

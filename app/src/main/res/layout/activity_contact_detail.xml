@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="20dp"
             android:orientation="vertical">
 
@@ -32,8 +32,8 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/img_contact_profile"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
                     android:layout_centerHorizontal="true"
                     android:elevation="1dp"
                     android:src="@mipmap/userfrofiledefualt" />
@@ -48,10 +48,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="65dp"
                         app:cardCornerRadius="10dp"
-                        app:contentPaddingBottom="15dp"
-                        app:contentPaddingLeft="15dp"
-                        app:contentPaddingRight="15dp"
-                        app:contentPaddingTop="15dp">
+                        app:contentPaddingBottom="0dp"
+                        app:contentPaddingLeft="0dp"
+                        app:contentPaddingRight="0dp"
+                        app:contentPaddingTop="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -63,10 +63,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="65dp"
+                                android:layout_marginTop="85dp"
                                 android:text="ชัชณัฐพล รัตน์นราทร"
-                                android:textSize="17sp"
-                                android:textStyle="bold" />
+                                android:fontFamily="@font/chatthai"
+                                android:textSize="26sp" />
 
                             <TextView
                                 android:id="@+id/tv_contact_position"
@@ -76,7 +76,8 @@
                                 android:layout_marginTop="10dp"
                                 android:text="ผบช.ประจำ สง.ผบ.ตร."
                                 android:textColor="#A6181D"
-                                android:textSize="14sp" />
+                                android:fontFamily="@font/chatthai"
+                                android:textSize="20sp" />
 
                             <TextView
                                 android:id="@+id/tv_contact_department_root"
@@ -86,8 +87,8 @@
                                 android:gravity="center_horizontal"
                                 android:layout_marginTop="10dp"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
-                                android:textSize="14sp"
-                                android:textStyle="italic"
+                                android:fontFamily="@font/chatthai"
+                                android:textSize="20sp"
                                 android:textColor="@color/fontBlue"/>
 
                             <TextView
@@ -98,8 +99,8 @@
                                 android:gravity="center_horizontal"
                                 android:layout_marginTop="10dp"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
-                                android:textSize="14sp"
-                                android:textStyle="italic" />
+                                android:fontFamily="@font/chatthai"
+                                android:textSize="20sp" />
 
                             <LinearLayout
                                 android:id="@+id/position_section"
@@ -125,25 +126,31 @@
 
                             </LinearLayout>
 
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorGrey"/>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="16dp"
-                                android:orientation="horizontal"
-                                android:padding="5dp">
+                                android:orientation="horizontal">
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:orientation="vertical">
+                                    android:orientation="vertical"
+                                    android:layout_margin="8dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:text="ที่ทำงาน (ภายใน)" />
+                                        android:text="ที่ทำงาน (ภายใน)"
+                                        android:fontFamily="@font/chatthai"
+                                        android:textSize="18sp"/>
 
                                     <TextView
                                         android:id="@+id/tv_contact_tel"
@@ -151,12 +158,14 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="ไม่มีข้อมูล"
-                                        android:textColor="#000000" />
+                                        android:fontFamily="@font/chatthai"
+                                        android:textSize="22sp"
+                                        android:textColor="@color/fontBlack" />
 
                                     <ImageView
                                                 android:id="@+id/img_tel_work"
-                                        android:layout_width="64dp"
-                                        android:layout_height="64dp"
+                                        android:layout_width="52dp"
+                                        android:layout_height="52dp"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="8dp"
                                         android:src="@mipmap/call" />
@@ -164,22 +173,25 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="1dp"
                                     android:layout_height="match_parent"
-                                    android:background="#B6B6B6"
-                                    android:padding="1dp"></LinearLayout>
+                                    android:background="@color/colorGrey"
+                                    android:padding="1dp"/>
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:orientation="vertical">
+                                    android:orientation="vertical"
+                                    android:layout_margin="8dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:text="มือถือ" />
+                                        android:text="มือถือ"
+                                        android:fontFamily="@font/chatthai"
+                                        android:textSize="18sp"/>
 
                                     <TextView
                                         android:id="@+id/tv_contact_phone"
@@ -187,12 +199,14 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="ไม่มีข้อมูล"
-                                        android:textColor="#000000" />
+                                        android:fontFamily="@font/chatthai"
+                                        android:textSize="22sp"
+                                        android:textColor="@color/fontBlack" />
 
                                     <ImageView
                                         android:id="@+id/img_tel"
-                                        android:layout_width="64dp"
-                                        android:layout_height="64dp"
+                                        android:layout_width="52dp"
+                                        android:layout_height="52dp"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="8dp"
                                         android:src="@mipmap/call" />
@@ -219,7 +233,9 @@
                     android:layout_marginTop="8dp"
                     android:gravity="right"
                     android:text="วันที่อัพเดตข้อมูล 15 กุมภาพันธ์ 2562"
-                    android:textColor="#fff" />
+                    android:textColor="@color/fontWhite"
+                    android:fontFamily="@font/chatthai"
+                    android:textSize="15sp"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -237,6 +253,8 @@
                 android:layout_marginBottom="32dp"
                 android:text="กลับไปหน้าหลัก"
                 android:textColor="#FFF"
+                android:fontFamily="@font/chatthai"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />

@@ -23,6 +23,7 @@ import com.zealtech.policephonebook2019.Model.WorkPhoneNumber;
 import java.util.ArrayList;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
 
 /**
@@ -74,6 +75,10 @@ public class FavoriteRecentFragment extends Fragment {
 
 
         Realm.init(getActivity());
+        RealmConfiguration config = new RealmConfiguration.Builder().name("sample1.realm")
+                .schemaVersion(1).deleteRealmIfMigrationNeeded().build();
+        Realm.setDefaultConfiguration(config);
+        Realm.getInstance(config);
 
         Realm realm = Realm.getDefaultInstance();
         final RealmResults<PoliceHistory> policeHistories = realm.where(PoliceHistory.class).findAll();

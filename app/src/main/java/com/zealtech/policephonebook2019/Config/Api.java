@@ -55,6 +55,7 @@ public interface Api {
 
     @GET("getPolice")
     Call<ResponsePoliceList> getPoliceList(@Query("departmentId") String departmentId,
+                                           @Query("provinceId") String provinceId,
                                            @Query("positionId") String positionId,
                                            @Query("rankId") String rankId,
                                            @Query("keyWord") String keyword,

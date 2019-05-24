@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -64,7 +65,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
 
     CardView cvProvince, cvRank, cvPosition, cvDepartment;
     TextView tvProvince, tvDepartment, tvRank, tvPosition;
-    SearchView searchView;
+    EditText searchView;
     Button btnSearch;
 
     Api api = AppUtils.getApiService();
@@ -151,7 +152,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
             }
         });
 
-        searchView.setOnQueryTextListener(this);
+//        searchView.setOnQueryTextListener(this);
 
         onRefreshView(departmentId, positionId, rankId, keyword);
     }
@@ -214,7 +215,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
 
     private void onRefreshView(String departmentId, String positionId, String rankId, String keyword) {
         mPolice = new ArrayList<>();
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId, keyword, "", 4);
+        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId, keyword, "", "",4);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
@@ -335,6 +336,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_search:
+                keyword = searchView.getText().toString().trim();
                 Intent i = new Intent(getActivity(), AdvanceSearchResultActivity.class);
                 i.putExtra("keyWord", keyword);
                 i.putExtra("province", provinceId);

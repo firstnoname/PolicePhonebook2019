@@ -118,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             String image_url = ApplicationConfig.getImageUrl() + mProfile.getImageProfile();
             Glide.with(this).load(image_url).into(imgProfile);
-
         }
     }
 

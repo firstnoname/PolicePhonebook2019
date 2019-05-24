@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/policestation_ic" />
@@ -28,7 +28,9 @@
         android:layout_marginEnd="8dp"
         android:maxLines="1"
         android:text="ตำรวจภูธรภาค ๑-๘ (ภ.๑-๘)"
-        android:textSize="15sp"
+        android:fontFamily="@font/chatthai"
+        android:textSize="20sp"
+        android:textColor="@color/fontBlack"
         app:layout_constraintEnd_toStartOf="@+id/imgNext"
         app:layout_constraintStart_toEndOf="@+id/imgStation"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,8 +44,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="นครบาล, ทั่วไป"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/chatthai"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toStartOf="@+id/imgNext"
         app:layout_constraintStart_toEndOf="@+id/imgStation"
         app:layout_constraintTop_toBottomOf="@+id/tvStationPosition" />
@@ -59,4 +62,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@mipmap/next"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

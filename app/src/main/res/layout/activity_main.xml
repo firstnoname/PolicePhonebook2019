@@ -51,8 +51,8 @@
 
             <ImageView
                 android:id="@+id/img_phone_list"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_phone_list" />
@@ -77,8 +77,8 @@
 
             <ImageView
                 android:id="@+id/img_search"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_search" />
@@ -103,8 +103,8 @@
 
             <ImageView
                 android:id="@+id/img_map"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_map" />
@@ -129,8 +129,8 @@
 
             <ImageView
                 android:id="@+id/img_favorite"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_favorite" />
@@ -155,8 +155,8 @@
 
             <ImageView
                 android:id="@+id/img_contact_us"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_contact" />

@@ -52,6 +52,18 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
 
+//        if (mDepartment.get(i).getFlagTail() != null) {
+//            if (mDepartment.get(i).getFlagTail() == false) {
+//                holder.layout_adapter_map_list.setBackgroundResource(R.color.fontBlue);
+//            }
+//        }
+
+        if (i == 0) {
+            holder.layout_adapter_map_list.setBackgroundResource(R.color.list_background);
+        } else {
+            holder.layout_adapter_map_list.setBackgroundResource(R.color.fontWhite);
+        }
+
         if (mDepartment.get(i).getIcon() != null) {
             image_url = ApplicationConfig.getImageUrl() + mDepartment.get(i).getIcon();
             Glide.with(mActivity).load(image_url).into(holder.imgInfo);
@@ -63,11 +75,17 @@ public class AdapterDepartmentSearchFilter extends RecyclerView.Adapter<AdapterD
         String tagArea = "";
         if (mDepartment.get(i).getTag() != null) {
             for (int x = 0; x < mDepartment.get(i).getTag().size(); x++) {
-                tagArea += mDepartment.get(i).getTag().get(x) + ", ";
+                if (mDepartment.get(i).getTag().size() - 1 == x) {
+                    tagArea += mDepartment.get(i).getTag().get(x);
+                } else {
+                    tagArea += mDepartment.get(i).getTag().get(x) + ", ";
+                }
             }
+
             holder.tvArea.setText(tagArea);
         } else {
             holder.tvArea.setVisibility(View.GONE);
+            holder.tvArea.setGravity(Gravity.CENTER);
         }
 
         if (mDepartment.get(i).getFlagTail() == null || mDepartment.get(i).getFlagTail().equals(false)) {

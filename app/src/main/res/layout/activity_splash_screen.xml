@@ -48,29 +48,10 @@
 
         <ImageView
             android:id="@+id/imgLogo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="300dp"
+            android:layout_height="350dp"
 
-            app:srcCompat="@mipmap/logoheader" />
+            app:srcCompat="@mipmap/splashscreenlogo" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/splashTitle1"
-            android:textColor="@color/fontWhite"
-            android:textSize="25sp"
-            app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/splashTitle2"
-            android:textColor="@color/fontWhite"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

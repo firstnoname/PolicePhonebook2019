@@ -55,6 +55,7 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
     public static final String KEY_MESSAGE = "message";
 
     private TextView tvStationPhone1, tvStationPhone2, tvStationAddress, btnOpenMap, tvAbTitle;
+    private TextView tvStationEmail, tvStationWeb, tvDepartmentName;
     private ImageView imgPhoneCall;
 
     private String departmentId = "";
@@ -93,6 +94,9 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
         btnOpenMap = view.findViewById(R.id.btn_station_open_map);
         tvAbTitle = view.findViewById(R.id.tv_actionbar_back);
         imgPhoneCall = view.findViewById(R.id.img_station_call);
+        tvStationEmail = view.findViewById(R.id.tv_station_email);
+        tvStationWeb = view.findViewById(R.id.tv_station_web);
+        tvDepartmentName = view.findViewById(R.id.tv_department_name);
 
         departmentId = getArguments().getString(KEY_MESSAGE);
 
@@ -210,21 +214,33 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
 
         this.mDepartmentRoot = dataDepartmentRoot;
 
-        String fullAddress = mDepartmentRoot.get(0).getAddress() + " ถ." + mDepartmentRoot.get(0).getRoad() + " แขวง " + mDepartmentRoot.get(0).getPostcode();
+//        String fullAddress = mDepartmentRoot.get(0).getAddress() + " ถ." + mDepartmentRoot.get(0).getRoad() + " แขวง " + mDepartmentRoot.get(0).getPostcode();
+        String fullAddress = mDepartmentRoot.get(0).getAddress();
+
+        tvDepartmentName.setText(mDepartmentRoot.get(0).getDepartmentName());
 
         if (!mDepartmentRoot.get(0).getPhoneNumbers().isEmpty()) {
-            tvStationPhone1.setText(mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTel() + " ต่อ " + mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTelTo());
+            if (mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTelTo() != null || mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTelTo() != "") {
+                tvStationPhone1.setText(mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTel() + " ต่อ " + mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTelTo());
+            } else {
+                tvStationPhone1.setText(mDepartmentRoot.get(0).getPhoneNumbers().get(0).getTel());
+            }
+
         } else {
-            tvStationPhone1.setText(" - ");
+            tvStationPhone1.setText(R.string.dont_have_data);
         }
 
         if (!mDepartmentRoot.get(0).getFaxes().isEmpty()) {
             tvStationPhone2.setText(mDepartmentRoot.get(0).getFaxes().get(0).getFaxNo());
         } else {
-            tvStationPhone2.setText(" - ");
+            tvStationPhone2.setText(R.string.dont_have_data);
         }
 
-        tvStationAddress.setText(fullAddress);
+        if (mDepartmentRoot.get(0).getAddress() != null) {
+            tvStationAddress.setText(fullAddress);
+        } else {
+            tvStationAddress.setText(R.string.dont_have_data);
+        }
 
         if (mDepartmentRoot.get(0).getLatitude() != null && mDepartmentRoot.get(0).getLongitude() != null) {
             if (!mDepartmentRoot.get(0).getLatitude().isEmpty() && !mDepartmentRoot.get(0).getLongitude().isEmpty()) {
@@ -234,6 +250,18 @@ public class StationDetailFragment extends Fragment implements OnMapReadyCallbac
         } else {
             latitude = 18.7988609;
             longitude = 99.0238646;
+        }
+
+        if (mDepartmentRoot.get(0).getWebsite() != null) {
+            tvStationWeb.setText(mDepartmentRoot.get(0).getWebsite());
+        } else {
+            tvStationWeb.setText(R.string.dont_have_data);
+        }
+
+        if (mDepartmentRoot.get(0).getEmail() != null) {
+            tvStationEmail.setText(mDepartmentRoot.get(0).getEmail());
+        } else {
+            tvStationEmail.setText(R.string.dont_have_data);
         }
 
     }

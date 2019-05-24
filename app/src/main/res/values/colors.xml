@@ -5,16 +5,17 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="colorDeepRed">#861142</color>
-    <color name="colorRed">#BF292A</color>
+    <color name="colorRed">#ff5657</color>
     <color name="colorOrange">#F56739</color>
-    <color name="colorYellow">#F5A623</color>
+    <color name="colorYellow">#ffb63d</color>
     <color name="colorDeepGreen">#34513B</color>
     <color name="colorBlueCoral">#01A3A3</color>
     <color name="colorPurple">#74559F</color>
     <color name="colorDeepBlue">#1D3461</color>
     <color name="colorBlue">#0153A1</color>
     <color name="colorGreen">#06646E</color>
-    <color name="colorGrey">#94AECA</color>
+    <color name="colorGrey">#e0e0e0</color>
+    <color name="colorJustGrey">#f9f9f9</color>
 
     <!--Actionbar gradient-->
     <color name="actStartRed">#65C7F7</color>
@@ -24,6 +25,8 @@
     <color name="fontWhite">#ffffff</color>
     <color name="fontBlack">#000000</color>
     <color name="fontGrey">#777777</color>
+    <color name="fontBlue">#2c358e</color>
+    <color name="fontDeepBlue">#0051d4</color>
 
     <!--Line-->
     <color name="line">#918F8F</color>
@@ -33,5 +36,8 @@
     <!--Tags-->
     <color name="tagRed">#8F0B18</color>
     <color name="tagOrange">#F0A334</color>
-    <color name="fontBlue">#03A9F4</color>
+
+    <!--Other color-->
+    <color name="list_background">#E4ECF0</color>
+
 </resources>

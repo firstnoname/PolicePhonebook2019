@@ -54,6 +54,12 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
 
+        if (i == 0) {
+            holder.layout_adapter_station_sub_list.setBackgroundResource(R.color.list_background);
+        } else {
+            holder.layout_adapter_station_sub_list.setBackgroundResource(R.color.fontWhite);
+        }
+
         if (mStationList.get(i).getIcon() != null) {
             image_url = ApplicationConfig.getImageUrl() + mStationList.get(i).getIcon();
             Glide.with(mContext).load(image_url).into(holder.imgInfo);

@@ -72,9 +72,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="75dp"
                         app:contentPaddingTop="15dp"
-                        app:contentPaddingRight="15dp"
-                        app:contentPaddingLeft="15dp"
-                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingRight="0dp"
+                        app:contentPaddingLeft="0dp"
+                        app:contentPaddingBottom="0dp"
                         app:cardCornerRadius="10dp">
 
                         <LinearLayout
@@ -87,8 +87,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="ชัชณัฐพล รัตน์นราทร"
-                                android:textStyle="bold"
-                                android:textSize="17sp"
+                                android:fontFamily="@font/chatthai"
+                                android:textSize="26sp"
                                 android:layout_marginTop="80dp"
                                 android:layout_gravity="center_horizontal"/>
 
@@ -97,39 +97,50 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="4dp"
                                 android:text="ผบช.ประจำ สง.ผบ.ตร."
                                 android:textColor="#A6181D"
-                                android:textSize="14sp" />
+                                android:fontFamily="@font/chatthai"
+                                android:textSize="20sp" />
 
                             <TextView
                                 android:id="@+id/tv_department_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
-                                android:textStyle="italic"
-                                android:textSize="14sp"
-                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/chatthai"
+                                android:textSize="20sp"
+                                android:layout_marginTop="4dp"
                                 android:layout_gravity="center_horizontal"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorGrey"
+                                android:layout_marginTop="8dp"/>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal"
-                                android:layout_gravity="center"
-                                android:padding="5dp"
-                                android:layout_marginTop="16dp">
+                                android:layout_gravity="center" >
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
-                                    android:layout_weight="1">
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginLeft="8dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="ที่ทำงาน (ภายใน)"
+                                        android:fontFamily="@font/chatthai"
+                                        android:textSize="18sp"
                                         android:layout_gravity="center_horizontal"/>
 
                                     <TextView
@@ -138,24 +149,34 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="@string/dont_have_data"
-                                        android:textColor="#000000" />
+                                        android:fontFamily="@font/chatthai"
+                                        android:textSize="22sp"
+                                        android:textColor="@color/fontBlack" />
 
                                 </LinearLayout>
+
                                 <LinearLayout
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="1dp"
                                     android:layout_height="match_parent"
                                     android:padding="1dp"
-                                    android:background="#B6B6B6"></LinearLayout>
+                                    android:background="@color/colorGrey"></LinearLayout>
+
                                 <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
-                                    android:layout_weight="1">
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginLeft="8dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="มือถือ"
+                                        android:fontFamily="@font/chatthai"
+                                        android:textSize="18sp"
                                         android:layout_gravity="center_horizontal"/>
 
                                     <TextView
@@ -164,7 +185,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="@string/dont_have_data"
-                                        android:textColor="#000000" />
+                                        android:fontFamily="@font/chatthai"
+                                        android:textSize="22sp"
+                                        android:textColor="@color/fontBlack" />
 
                                 </LinearLayout>
 
@@ -186,9 +209,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:gravity="right"
+                    android:gravity="center"
+                    android:fontFamily="@font/chatthai"
+                    android:textSize="17sp"
                     android:text="วันที่อัพเดตข้อมูล 15 กุมภาพันธ์ 2562"
-                    android:textColor="#A7A7A7" />
+                    android:textColor="@color/fontWhite" />
             </LinearLayout>
 
             <android.support.constraint.ConstraintLayout
@@ -199,17 +224,19 @@
                 <Button
                     android:id="@+id/btn_edit_profile"
                     android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="38dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@drawable/button_custom_staff"
+                    android:background="@drawable/button_custom_staff_rectangle"
                     android:text="แก้ไขข้อมูล"
                     android:drawableLeft="@mipmap/pencil"
                     android:layout_gravity="right|bottom"
                     android:gravity="center"
-                    android:paddingLeft="80dp"
-                    android:paddingRight="80dp"
+                    android:paddingLeft="90dp"
+                    android:paddingRight="90dp"
+                    android:fontFamily="@font/chatthai"
+                    android:textSize="20sp"
                     android:textColor="@color/fontWhite"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -226,7 +253,7 @@
                     android:background="@drawable/button_custom_location"
 
                     android:text="ออกจากระบบ"
-                    android:textColor="#FF9F9F"
+                    android:textColor="@color/colorRed"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -240,6 +267,8 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:text="เปลี่ยนรหัสผ่าน"
+                    android:fontFamily="@font/chatthai"
+                    android:textSize="20sp"
                     android:textColor="@color/fontWhite"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

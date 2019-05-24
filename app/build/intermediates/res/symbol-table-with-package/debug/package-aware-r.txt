@@ -649,6 +649,7 @@ color colorDeepGreen
 color colorDeepRed
 color colorGreen
 color colorGrey
+color colorJustGrey
 color colorOrange
 color colorPrimary
 color colorPrimaryDark
@@ -688,6 +689,7 @@ color error_color_material_dark
 color error_color_material_light
 color fontBlack
 color fontBlue
+color fontDeepBlue
 color fontGrey
 color fontWhite
 color foreground_material_dark
@@ -695,6 +697,7 @@ color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color line
+color list_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1069,6 +1072,7 @@ drawable avd_show_password
 drawable button_custom_blue
 drawable button_custom_location
 drawable button_custom_staff
+drawable button_custom_staff_rectangle
 drawable button_shape_white
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -1532,7 +1536,9 @@ id tv_position_name
 id tv_rank
 id tv_select_photo
 id tv_station_address
+id tv_station_email
 id tv_station_phone2
+id tv_station_web
 id tv_statoin_phone1
 id tv_tel_work
 id tv_update_date
@@ -1699,7 +1705,7 @@ mipmap cage_ic
 mipmap call
 mipmap check
 mipmap checked
-mipmap choosephoto
+mipmap choosepic
 mipmap close
 mipmap contact
 mipmap contact_ac
@@ -1708,6 +1714,7 @@ mipmap dropdown
 mipmap dropdown_blue
 mipmap fav
 mipmap fav_ac
+mipmap fax
 mipmap flag_ic
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -1728,12 +1735,14 @@ mipmap pencil
 mipmap people_ic
 mipmap phone
 mipmap policestation_ic
+mipmap save
 mipmap search
 mipmap search_ac
 mipmap search_white
 mipmap sheet_ic
 mipmap shield_ic
 mipmap sort
+mipmap splashscreenlogo
 mipmap star
 mipmap star_ac
 mipmap star_ic

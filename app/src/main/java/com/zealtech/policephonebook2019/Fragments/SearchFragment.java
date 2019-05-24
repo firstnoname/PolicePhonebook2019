@@ -219,7 +219,7 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
 
     private void onRefreshView(String departmentId, String positionId, String rankId, String keyword) {
         mPolice = new ArrayList<>();
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId, keyword, "", 4);
+        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, provinceId, positionId, rankId, keyword, "", 4);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

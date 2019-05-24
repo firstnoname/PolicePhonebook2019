@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,11 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
 //        Log.d(TAG, "onBindViewHolder: called");
 
+//        if (i == 0) {
+//            holder.layout_adapter_map_list.setBackgroundResource(R.color.list_background);
+//        } else {
+//            holder.layout_adapter_map_list.setBackgroundResource(R.color.fontWhite);
+//        }
 
         if (mDepartment.get(i).getIcon() != null) {
             image_url = ApplicationConfig.getImageUrl() + mDepartment.get(i).getIcon();
@@ -66,10 +72,18 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
         String tagArea = "";
         if (mDepartment.get(i).getTag() != null) {
             for (int x = 0; x < mDepartment.get(i).getTag().size(); x++) {
-                tagArea += mDepartment.get(i).getTag().get(x) + ", ";
+                if (mDepartment.get(i).getTag().size() - 1 == x) {
+                    tagArea += mDepartment.get(i).getTag().get(x);
+                } else {
+                    tagArea += mDepartment.get(i).getTag().get(x) + ", ";
+                }
             }
+
+            holder.tvArea.setText(tagArea);
+        } else {
+            holder.tvArea.setVisibility(View.GONE);
+            holder.tvArea.setGravity(Gravity.CENTER);
         }
-        holder.tvArea.setText(tagArea);
 
         if (mDepartment.get(i).getFlagTail().equals(false)) {
             holder.imgNext.setVisibility(View.INVISIBLE);
