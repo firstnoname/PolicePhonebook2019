@@ -64,7 +64,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
     Position selectPosition = null;
 
     CardView cvProvince, cvRank, cvPosition, cvDepartment;
-    TextView tvProvince, tvDepartment, tvRank, tvPosition;
+    TextView tvProvince, tvDepartment, tvRank, tvPosition, tvReset;
     EditText searchView;
     Button btnSearch;
 
@@ -97,9 +97,9 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
         tvDepartment = v.findViewById(R.id.tvDepartment);
         tvPosition = v.findViewById(R.id.tv_position);
         tvRank = v.findViewById(R.id.tvRank);
+        tvReset = v.findViewById(R.id.tv_reset);
 
         searchView = v.findViewById(R.id.search_view);
-
 
         return v;
     }
@@ -110,6 +110,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
         Log.d(TAG, "view created");
 
         btnSearch.setOnClickListener(this);
+        tvReset.setOnClickListener(this);
 
         cvProvince = view.findViewById(R.id.cardViewProvince);
         cvProvince.setOnClickListener(new View.OnClickListener() {
@@ -345,7 +346,17 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
                 i.putExtra("position", positionId);
                 startActivity(i);
                 break;
-
+            case R.id.tv_reset:
+                //reset filter
+                tvProvince.setText("ทั้งหมด");
+                provinceId = "";
+                tvDepartment.setText("ทั้งหมด");
+                departmentId = "";
+                tvRank.setText("ทั้งหมด");
+                rankId = "";
+                tvPosition.setText("ทั้งหมด");
+                positionId = "";
+                break;
         }
     }
 }

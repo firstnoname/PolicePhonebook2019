@@ -18,6 +18,7 @@
             android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="33dp"
+            android:theme="@style/AppSearchView"
             android:background="@color/colorSearchbar"
             android:layout_margin="8dp"
             app:iconifiedByDefault="false"

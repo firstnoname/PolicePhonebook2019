@@ -65,7 +65,7 @@
                                 android:layout_gravity="center_horizontal"
                                 android:layout_marginTop="85dp"
                                 android:text="ชัชณัฐพล รัตน์นราทร"
-                                android:fontFamily="@font/chatthai"
+                                android:fontFamily="@font/cschatthai"
                                 android:textSize="26sp" />
 
                             <TextView
@@ -76,7 +76,7 @@
                                 android:layout_marginTop="10dp"
                                 android:text="ผบช.ประจำ สง.ผบ.ตร."
                                 android:textColor="#A6181D"
-                                android:fontFamily="@font/chatthai"
+                                android:fontFamily="@font/cschatthai"
                                 android:textSize="20sp" />
 
                             <TextView
@@ -87,7 +87,7 @@
                                 android:gravity="center_horizontal"
                                 android:layout_marginTop="10dp"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
-                                android:fontFamily="@font/chatthai"
+                                android:fontFamily="@font/cschatthai"
                                 android:textSize="20sp"
                                 android:textColor="@color/fontBlue"/>
 
@@ -99,7 +99,7 @@
                                 android:gravity="center_horizontal"
                                 android:layout_marginTop="10dp"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
-                                android:fontFamily="@font/chatthai"
+                                android:fontFamily="@font/cschatthai"
                                 android:textSize="20sp" />
 
                             <LinearLayout
@@ -149,7 +149,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="ที่ทำงาน (ภายใน)"
-                                        android:fontFamily="@font/chatthai"
+                                        android:fontFamily="@font/cschatthai"
                                         android:textSize="18sp"/>
 
                                     <TextView
@@ -158,7 +158,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="ไม่มีข้อมูล"
-                                        android:fontFamily="@font/chatthai"
+                                        android:fontFamily="@font/cschatthai"
                                         android:textSize="22sp"
                                         android:textColor="@color/fontBlack" />
 
@@ -190,7 +190,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="มือถือ"
-                                        android:fontFamily="@font/chatthai"
+                                        android:fontFamily="@font/cschatthai"
                                         android:textSize="18sp"/>
 
                                     <TextView
@@ -199,7 +199,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="ไม่มีข้อมูล"
-                                        android:fontFamily="@font/chatthai"
+                                        android:fontFamily="@font/cschatthai"
                                         android:textSize="22sp"
                                         android:textColor="@color/fontBlack" />
 
@@ -234,7 +234,7 @@
                     android:gravity="right"
                     android:text="วันที่อัพเดตข้อมูล 15 กุมภาพันธ์ 2562"
                     android:textColor="@color/fontWhite"
-                    android:fontFamily="@font/chatthai"
+                    android:fontFamily="@font/cschatthai"
                     android:textSize="15sp"/>
             </LinearLayout>
 
@@ -253,7 +253,7 @@
                 android:layout_marginBottom="32dp"
                 android:text="กลับไปหน้าหลัก"
                 android:textColor="#FFF"
-                android:fontFamily="@font/chatthai"
+                android:fontFamily="@font/cschatthai"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

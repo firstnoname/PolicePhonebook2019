@@ -54,12 +54,6 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
 //        Log.d(TAG, "onBindViewHolder: called");
 
-//        if (i == 0) {
-//            holder.layout_adapter_map_list.setBackgroundResource(R.color.list_background);
-//        } else {
-//            holder.layout_adapter_map_list.setBackgroundResource(R.color.fontWhite);
-//        }
-
         if (mDepartment.get(i).getIcon() != null) {
             image_url = ApplicationConfig.getImageUrl() + mDepartment.get(i).getIcon();
             Glide.with(mContext).load(image_url).into(holder.imgInfo);
@@ -82,7 +76,7 @@ public class AdapterMapList extends RecyclerView.Adapter<AdapterMapList.ViewHold
             holder.tvArea.setText(tagArea);
         } else {
             holder.tvArea.setVisibility(View.GONE);
-            holder.tvArea.setGravity(Gravity.CENTER);
+            holder.tvStation.setGravity(Gravity.CENTER_VERTICAL);
         }
 
         if (mDepartment.get(i).getFlagTail().equals(false)) {

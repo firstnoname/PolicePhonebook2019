@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="รายการค้นหาล่าสุด"
-            android:fontFamily="@font/chatthai"
+            android:fontFamily="@font/cschatthai"
             android:textSize="20sp"/>
 
         <android.support.design.widget.TabItem
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="รายการโปรด"
-            android:fontFamily="@font/chatthai"
+            android:fontFamily="@font/cschatthai"
             android:textSize="20sp"/>
 
     </android.support.design.widget.TabLayout>

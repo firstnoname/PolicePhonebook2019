@@ -15,7 +15,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/chatthai"
+        android:fontFamily="@font/cschatthai"
         android:textSize="18sp"
         android:text="@string/main_hint_suggestion"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,10 +27,9 @@
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView6">
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <android.support.v7.widget.CardView
             android:id="@+id/cardViewProvince"
@@ -46,14 +45,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:layout_margin="4dp"
                 android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/cschatthai"
+                    android:paddingLeft="8dp"
                     android:text="จังหวัด : "
-                    android:fontFamily="@font/chatthai"
                     android:textSize="16sp" />
 
                 <TextView
@@ -61,23 +60,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cschatthai"
                     android:gravity="right"
                     android:text="ทั้งหมด"
                     android:textColor="@color/fontDeepBlue"
-                    android:fontFamily="@font/chatthai"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
                     android:background="#b7b7b7" />
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:scaleType="fitXY"
-                    android:layout_marginLeft="8dp"
                     android:src="@mipmap/dropdown_blue" />
             </LinearLayout>
 
@@ -97,14 +99,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:layout_margin="4dp"
                 android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/cschatthai"
+                    android:paddingLeft="8dp"
                     android:text="หน่วยงาน : "
-                    android:fontFamily="@font/chatthai"
                     android:textSize="16sp" />
 
                 <TextView
@@ -112,23 +114,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cschatthai"
                     android:gravity="right"
                     android:text="ทั้งหมด"
                     android:textColor="@color/fontDeepBlue"
-                    android:fontFamily="@font/chatthai"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
                     android:background="#b7b7b7" />
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:scaleType="fitXY"
-                    android:layout_marginLeft="8dp"
                     android:src="@mipmap/dropdown_blue" />
             </LinearLayout>
 
@@ -148,16 +153,17 @@
             app:layout_constraintTop_toBottomOf="@+id/cardViewDepartment">
 
             <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:layout_margin="4dp"
                 android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/cschatthai"
+                    android:paddingLeft="8dp"
                     android:text="ยศ : "
-                    android:fontFamily="@font/chatthai"
                     android:textSize="16sp" />
 
                 <TextView
@@ -165,23 +171,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cschatthai"
                     android:gravity="right"
                     android:text="ทั้งหมด"
                     android:textColor="@color/fontDeepBlue"
-                    android:fontFamily="@font/chatthai"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
                     android:background="#b7b7b7" />
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:scaleType="fitXY"
-                    android:layout_marginLeft="8dp"
                     android:src="@mipmap/dropdown_blue" />
 
             </LinearLayout>
@@ -194,24 +203,24 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+            app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
+                android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:layout_margin="4dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/cschatthai"
+                    android:paddingLeft="8dp"
                     android:text="ตำแหน่ง : "
-                    android:fontFamily="@font/chatthai"
                     android:textSize="16sp" />
 
                 <TextView
@@ -219,23 +228,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/cschatthai"
                     android:gravity="right"
                     android:text="ทั้งหมด"
                     android:textColor="@color/fontDeepBlue"
-                    android:fontFamily="@font/chatthai"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
                     android:background="#b7b7b7" />
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:scaleType="fitXY"
-                    android:layout_marginLeft="8dp"
                     android:src="@mipmap/dropdown_blue" />
             </LinearLayout>
 
@@ -248,35 +260,70 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:fontFamily="@font/cschatthai"
             android:text="ตัวกรอง"
-            android:fontFamily="@font/chatthai"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/cschatthai"
+            android:text="รีเซ็ต"
+            android:textColor="@color/fontBlue"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/cardViewProvince"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
     </android.support.constraint.ConstraintLayout>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView6"
+        android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/search_view"
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cardView6"
             android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:background="@color/colorSearchbar"
-            android:layout_margin="8dp"
-            android:paddingLeft="8dp"
-            app:iconifiedByDefault="false"
-            android:fontFamily="@font/chatthai"
-            android:hint="@string/searchviewPhoneList" />
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="@color/colorSearchbar"
+                    android:fontFamily="@font/cschatthai"
+                    android:hint="@string/searchviewPhoneList"
+                    android:paddingLeft="8dp"
+                    app:iconifiedByDefault="false" />
+            </android.support.v7.widget.CardView>
+
+        </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.CardView>
 
@@ -287,15 +334,17 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/button_custom_blue"
         android:drawableLeft="@mipmap/search_white"
+        android:fontFamily="@font/cschatthai"
         android:gravity="center"
         android:paddingLeft="140dp"
         android:paddingRight="140dp"
         android:text="ค้นหา"
         android:textColor="@color/fontWhite"
-        android:fontFamily="@font/chatthai"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView21"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
@@ -309,7 +358,7 @@
         android:layout_marginEnd="8dp"
         android:background="#C2C2C2"
         android:text="TextView"
-        android:fontFamily="@font/chatthai"
+        android:fontFamily="@font/cschatthai"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

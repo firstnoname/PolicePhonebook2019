@@ -31,7 +31,7 @@
         android:layout_marginBottom="8dp"
         android:maxLines="1"
         android:text="ส.ร.ฟ.ธนบุรี"
-        android:fontFamily="@font/chatthai"
+        android:fontFamily="@font/cschatthai"
         android:textSize="20sp"
         android:textColor="@color/fontBlack"
         app:layout_constraintBottom_toTopOf="@+id/textView18"

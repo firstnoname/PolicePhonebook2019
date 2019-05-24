@@ -1196,6 +1196,7 @@ id btn_sequence
 id btn_station_open_map
 id buttonPanel
 id cancel_action
+id cardView
 id cardView3
 id cardView6
 id cardViewDepartment
@@ -1223,6 +1224,7 @@ id constraintLayout3
 id constraintLayout4
 id constraintLayout5
 id constraintLayout6
+id constraintLayout7
 id constraint_scrollview
 id container
 id content
@@ -1337,6 +1339,8 @@ id light
 id line1
 id line3
 id linearLayout
+id linearLayout2
+id linearLayout3
 id listMode
 id list_item
 id login_password
@@ -1534,6 +1538,7 @@ id tv_position_1
 id tv_position_2
 id tv_position_name
 id tv_rank
+id tv_reset
 id tv_select_photo
 id tv_station_address
 id tv_station_email
@@ -1871,6 +1876,7 @@ style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
+style AppSearchView
 style AppTheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light

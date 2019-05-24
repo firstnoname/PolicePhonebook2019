@@ -16,6 +16,8 @@
         android:layout_marginBottom="16dp"
         android:textColor="@color/fontWhite"
         android:text="@string/splashTitle3"
+        android:textSize="16sp"
+        android:fontFamily="@font/cschatthai"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -29,6 +31,8 @@
         android:layout_marginBottom="24dp"
         android:textColor="@color/fontWhite"
         android:text="@string/splashTitle4"
+        android:fontFamily="@font/cschatthai"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

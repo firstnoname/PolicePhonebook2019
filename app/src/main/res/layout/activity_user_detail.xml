@@ -87,7 +87,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="ชัชณัฐพล รัตน์นราทร"
-                                android:fontFamily="@font/chatthai"
+                                android:fontFamily="@font/cschatthai"
                                 android:textSize="26sp"
                                 android:layout_marginTop="80dp"
                                 android:layout_gravity="center_horizontal"/>
@@ -100,7 +100,7 @@
                                 android:layout_marginTop="4dp"
                                 android:text="ผบช.ประจำ สง.ผบ.ตร."
                                 android:textColor="#A6181D"
-                                android:fontFamily="@font/chatthai"
+                                android:fontFamily="@font/cschatthai"
                                 android:textSize="20sp" />
 
                             <TextView
@@ -108,7 +108,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
-                                android:fontFamily="@font/chatthai"
+                                android:fontFamily="@font/cschatthai"
                                 android:textSize="20sp"
                                 android:layout_marginTop="4dp"
                                 android:layout_gravity="center_horizontal"/>
@@ -139,7 +139,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="ที่ทำงาน (ภายใน)"
-                                        android:fontFamily="@font/chatthai"
+                                        android:fontFamily="@font/cschatthai"
                                         android:textSize="18sp"
                                         android:layout_gravity="center_horizontal"/>
 
@@ -149,7 +149,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="@string/dont_have_data"
-                                        android:fontFamily="@font/chatthai"
+                                        android:fontFamily="@font/cschatthai"
                                         android:textSize="22sp"
                                         android:textColor="@color/fontBlack" />
 
@@ -175,7 +175,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="มือถือ"
-                                        android:fontFamily="@font/chatthai"
+                                        android:fontFamily="@font/cschatthai"
                                         android:textSize="18sp"
                                         android:layout_gravity="center_horizontal"/>
 
@@ -185,7 +185,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:text="@string/dont_have_data"
-                                        android:fontFamily="@font/chatthai"
+                                        android:fontFamily="@font/cschatthai"
                                         android:textSize="22sp"
                                         android:textColor="@color/fontBlack" />
 
@@ -210,7 +210,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:fontFamily="@font/chatthai"
+                    android:fontFamily="@font/cschatthai"
                     android:textSize="17sp"
                     android:text="วันที่อัพเดตข้อมูล 15 กุมภาพันธ์ 2562"
                     android:textColor="@color/fontWhite" />
@@ -235,7 +235,7 @@
                     android:gravity="center"
                     android:paddingLeft="90dp"
                     android:paddingRight="90dp"
-                    android:fontFamily="@font/chatthai"
+                    android:fontFamily="@font/cschatthai"
                     android:textSize="20sp"
                     android:textColor="@color/fontWhite"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -267,7 +267,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:text="เปลี่ยนรหัสผ่าน"
-                    android:fontFamily="@font/chatthai"
+                    android:fontFamily="@font/cschatthai"
                     android:textSize="20sp"
                     android:textColor="@color/fontWhite"
                     app:layout_constraintEnd_toEndOf="parent"

@@ -39,9 +39,10 @@
             android:layout_width="match_parent"
             android:layout_height="33dp"
             android:layout_margin="8dp"
+            android:theme="@style/AppSearchView"
             android:background="@color/colorSearchbar"
             app:iconifiedByDefault="false"
-            android:fontFamily="@font/chatthai"
+            android:fontFamily="@font/cschatthai"
             android:textSize="18sp"
             app:queryHint="@string/hint_search_department"
             app:queryBackground="@android:color/transparent">
