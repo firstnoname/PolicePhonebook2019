@@ -251,7 +251,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="32dp"
-                android:text="กลับไปหน้าหลัก"
+                android:text="@string/label_back"
                 android:textColor="#FFF"
                 android:fontFamily="@font/cschatthai"
                 android:textSize="18sp"

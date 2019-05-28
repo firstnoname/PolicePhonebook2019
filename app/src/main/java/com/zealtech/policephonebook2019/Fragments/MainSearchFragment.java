@@ -219,19 +219,22 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
                 }
                 break;
             case R.id.btn_search:
-
-                keyWord = textKeyword.getQuery().toString().trim();
-
-                Intent i = new Intent(getActivity(), SearchResultActivity.class);
-                i.putExtra("isNameChecked", isNameChecked);
-                i.putExtra("isLastnameChecked", isLastnameChecked);
-                i.putExtra("isRankChecked", isRankChecked);
-                i.putExtra("isPositionChecked", isPositionChecked);
-                i.putExtra("isDepartmentChecked", isDepartmentChecked);
-                i.putExtra("isPhoneNumberChecked", isPhoneNumberChecked);
-                i.putExtra("keyWord", keyWord);
-                startActivity(i);
+                intentResultSearch();
         }
+    }
+
+    private void intentResultSearch() {
+        keyWord = textKeyword.getQuery().toString().trim();
+
+        Intent i = new Intent(getActivity(), SearchResultActivity.class);
+        i.putExtra("isNameChecked", isNameChecked);
+        i.putExtra("isLastnameChecked", isLastnameChecked);
+        i.putExtra("isRankChecked", isRankChecked);
+        i.putExtra("isPositionChecked", isPositionChecked);
+        i.putExtra("isDepartmentChecked", isDepartmentChecked);
+        i.putExtra("isPhoneNumberChecked", isPhoneNumberChecked);
+        i.putExtra("keyWord", keyWord);
+        startActivity(i);
     }
 
     private void refreshList(String stringKeyWord) {
@@ -331,6 +334,9 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
 
     @Override
     public boolean onQueryTextSubmit(String s) {
+
+        intentResultSearch();
+
         return false;
     }
 

@@ -13,17 +13,22 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
 import com.squareup.otto.Subscribe;
 import com.zealtech.policephonebook2019.Activities.AdvanceSearchResultActivity;
+import com.zealtech.policephonebook2019.Activities.ContactDetailFilterActivity;
 import com.zealtech.policephonebook2019.Activities.FilterActivity;
 import com.zealtech.policephonebook2019.Activities.FilterDepartmentActivity;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
+import com.zealtech.policephonebook2019.Adapters.AdapterSearchviewSuggestion;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.Police;
@@ -56,7 +61,6 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
     String provinceId = "";
     String positionId = "";
     String rankId = "";
-    String keyword = "";
 
     Province selectProvince = null;
     Department selectDepartment = null;
@@ -65,13 +69,26 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
 
     CardView cvProvince, cvRank, cvPosition, cvDepartment;
     TextView tvProvince, tvDepartment, tvRank, tvPosition, tvReset;
-    EditText searchView;
+    SearchView textKeyword;
     Button btnSearch;
+    private EditText editText;
 
     Api api = AppUtils.getApiService();
 
+    private Boolean isNameChecked = false;
+    private Boolean isLastnameChecked = false;
+    private Boolean isRankChecked = false;
+    private Boolean isPositionChecked = false;
+    private Boolean isDepartmentChecked = false;
+    private Boolean isPhoneNumberChecked = false;
+    private int page = 0;
+    private int sizeContents = 30;
+
+    private String keyWord="";
+
     //Adapter
-    private RecyclerView.Adapter mAdapter;
+    ListView list;
+    AdapterSearchviewSuggestion adapterSuggestion;
     ArrayList<Police> mPolice;
     ArrayList<Rank> ranks = new ArrayList<>();
 
@@ -99,7 +116,10 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
         tvRank = v.findViewById(R.id.tvRank);
         tvReset = v.findViewById(R.id.tv_reset);
 
-        searchView = v.findViewById(R.id.search_view);
+        textKeyword = v.findViewById(R.id.search_view);
+        editText = textKeyword.findViewById(R.id.search_src_text);
+
+        list = v.findViewById(R.id.listview_suggestions);
 
         return v;
     }
@@ -111,6 +131,41 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
 
         btnSearch.setOnClickListener(this);
         tvReset.setOnClickListener(this);
+
+        //Hide search icon in SearchView.
+        textKeyword.setIconifiedByDefault(false);
+        ImageView searchIcon = textKeyword.findViewById(android.support.v7.appcompat.R.id.search_mag_icon);
+        searchIcon.setImageDrawable(null);
+        ImageView searchXIcon = textKeyword.findViewById(android.support.v7.appcompat.R.id.search_close_btn);
+
+        searchXIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText.setText("");
+                textKeyword.setQuery("", false);
+                list.setVisibility(View.GONE);
+            }
+        });
+
+        // Locate the EditText in listview_main.xml
+        textKeyword.setOnQueryTextListener(this);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ArrayList<Police> selectedPolice = new ArrayList<>();
+                Police selectedItem;
+                selectedItem = (Police) parent.getAdapter().getItem(position);
+                selectedPolice.add(selectedItem);
+                Intent intent = new Intent(getActivity(), ContactDetailFilterActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("contact_detail", selectedPolice);
+                intent.putExtra("position", 0);
+                intent.putExtras(bundle);
+                startActivity(intent);
+                list.setVisibility(View.GONE);
+            }
+        });
 
         cvProvince = view.findViewById(R.id.cardViewProvince);
         cvProvince.setOnClickListener(new View.OnClickListener() {
@@ -155,11 +210,29 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
 
 //        searchView.setOnQueryTextListener(this);
 
-        onRefreshView(departmentId, positionId, rankId, keyword);
+        onRefreshView(departmentId, positionId, rankId, keyWord);
     }
 
     private void setAdapter(ArrayList<Police> dataSet) {
+        int i;
+        ArrayList<Police> suggestionLists = new ArrayList<>();
 
+        if (dataSet.size() <= 5) {
+            for (i = 0; i < dataSet.size(); i++) {
+                if (dataSet.get(i) != null) {
+                    suggestionLists.add(dataSet.get(i));
+                }
+            }
+        } else {
+            for (i = 0; i < 5; i++) {
+                if (dataSet.get(i) != null) {
+                    suggestionLists.add(dataSet.get(i));
+                }
+            }
+        }
+
+        adapterSuggestion = new AdapterSearchviewSuggestion(getActivity(), suggestionLists);
+        list.setAdapter(adapterSuggestion);
     }
 
 
@@ -184,7 +257,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
             } else {
                 departmentId = String.valueOf(selectDepartment.getDepartmentId());
             }
-            onRefreshView(departmentId, positionId, rankId, keyword);
+            onRefreshView(departmentId, positionId, rankId, keyWord);
         } else {
             Toast.makeText(getActivity(), "Department empty", Toast.LENGTH_SHORT).show();
         } 
@@ -199,7 +272,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
             rankId = String.valueOf(selectRank.getRankId());
         }
 
-        onRefreshView(departmentId, positionId, rankId, keyword);
+        onRefreshView(departmentId, positionId, rankId, keyWord);
     }
 
     public void setDropDownPosition(Position item) {
@@ -211,7 +284,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
             positionId = String.valueOf(selectPosition.getPositionId());
         }
 
-        onRefreshView(departmentId, positionId, rankId, keyword);
+        onRefreshView(departmentId, positionId, rankId, keyWord);
     }
 
     private void onRefreshView(String departmentId, String positionId, String rankId, String keyword) {
@@ -323,28 +396,106 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
 
     @Override
     public boolean onQueryTextSubmit(String s) {
+
+        intentResultSearch();
+
         return false;
     }
 
     @Override
     public boolean onQueryTextChange(String s) {
-        keyword = s;
+        keyWord = s;
         //onRefreshView(departmentId, positionId, rankId, keyword);
+        if (s != "") {
+            refreshList(s);
+            list.setVisibility(View.VISIBLE);
+        } else {
+            list.setVisibility(View.GONE);
+        }
+
+        if (s.equals("")) {
+            list.setVisibility(View.GONE);
+        }
         return true;
+    }
+
+    private void refreshList(String stringKeyWord) {
+        Call<ResponsePoliceList> call = api.getPoliceListFilter("","",
+                stringKeyWord, isDepartmentChecked, isNameChecked, isLastnameChecked, isPhoneNumberChecked,
+                isPositionChecked, isRankChecked, page, sizeContents, 4);
+        call.enqueue(new Callback<ResponsePoliceList>() {
+            @Override
+            public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            mPolice = new ArrayList<>();
+                            mPolice.addAll(response.body().getData().getContent());
+                            checkColorSuggestion();
+                        } else {
+                            Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponsePoliceList> call, Throwable t) {
+                Log.d(TAG, String.valueOf(t));
+            }
+        });
+    }
+
+    private void checkColorSuggestion() {
+
+        Call<ResponseRank> call = api.getRankMasterData("");
+        call.enqueue(new Callback<ResponseRank>() {
+            @Override
+            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            ranks = new ArrayList<>();
+                            ranks.addAll(response.body().getData());
+                            for (int x = 0; x < mPolice.size(); x++) {
+                                for (int i = 0; i < ranks.size(); i++) {
+                                    if (mPolice.get(x).getRankId() == ranks.get(i).getRankId()) {
+                                        mPolice.get(x).setColor(ranks.get(i).getColor());
+                                    }
+                                }
+                            }
+                            setAdapter(mPolice);
+                        } else {
+                            Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseRank> call, Throwable t) {
+                Log.d("response", String.valueOf(t));
+            }
+        });
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_search:
-                keyword = searchView.getText().toString().trim();
-                Intent i = new Intent(getActivity(), AdvanceSearchResultActivity.class);
-                i.putExtra("keyWord", keyword);
-                i.putExtra("province", provinceId);
-                i.putExtra("department", departmentId);
-                i.putExtra("rank", rankId);
-                i.putExtra("position", positionId);
-                startActivity(i);
+                intentResultSearch();
                 break;
             case R.id.tv_reset:
                 //reset filter
@@ -358,5 +509,16 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
                 positionId = "";
                 break;
         }
+    }
+
+    private void intentResultSearch() {
+        keyWord = textKeyword.getQuery().toString().trim();
+        Intent i = new Intent(getActivity(), AdvanceSearchResultActivity.class);
+        i.putExtra("keyWord", keyWord);
+        i.putExtra("province", provinceId);
+        i.putExtra("department", departmentId);
+        i.putExtra("rank", rankId);
+        i.putExtra("position", positionId);
+        startActivity(i);
     }
 }

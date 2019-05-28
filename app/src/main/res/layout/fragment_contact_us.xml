@@ -64,7 +64,7 @@
                             android:padding="4dp"
                             android:text="กองสารนิเทศ"
                             android:fontFamily="@font/cschatthai"
-                            android:textSize="22sp"
+                            android:textSize="20sp"
                             android:textColor="#000000" />
 
                         <TextView
@@ -72,7 +72,7 @@
                             android:layout_height="wrap_content"
                             android:padding="4dp"
                             android:fontFamily="@font/cschatthai"
-                            android:textSize="22sp"
+                            android:textSize="20sp"
                             android:text="Public Affairs Division Thai Police"
                             android:textColor="#000000" />
                     </LinearLayout>
@@ -112,7 +112,7 @@
                             android:layout_height="wrap_content"
                             android:padding="4dp"
                             android:fontFamily="@font/cschatthai"
-                            android:textSize="20sp"
+                            android:textSize="18sp"
                             android:text="อาคาร 13 สำนักงานตำรวจแห่งชาติ ถนนพระราม 1"
                             android:textColor="#000000" />
 
@@ -121,7 +121,7 @@
                             android:layout_height="wrap_content"
                             android:padding="4dp"
                             android:fontFamily="@font/cschatthai"
-                            android:textSize="20sp"
+                            android:textSize="18sp"
                             android:text="แขวงวังใหม่ เขตปทุมวัน กรุงเทพฯ 10330"
                             android:textColor="#000000" />
                     </LinearLayout>
@@ -341,7 +341,6 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
-                    android:layout_marginBottom="20dip"
                     android:background="@drawable/button_custom_location"
                     android:clickable="true"
                     android:drawableLeft="@mipmap/location"
@@ -351,7 +350,9 @@
                     android:paddingLeft="50dp"
                     android:paddingRight="50dp"
                     android:paddingTop="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
             </RelativeLayout>
 
         </LinearLayout>

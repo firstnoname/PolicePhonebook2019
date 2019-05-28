@@ -30,7 +30,7 @@
         android:background="@color/colorBGGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView">
+        app:layout_constraintTop_toBottomOf="@+id/card">
 
         <android.support.v7.widget.CardView
             android:id="@+id/cardViewProvince"
@@ -259,7 +259,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/cschatthai"
             android:text="ตัวกรองการค้นหา"
@@ -272,7 +272,7 @@
             android:id="@+id/tv_reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/cschatthai"
@@ -286,47 +286,46 @@
 
     </android.support.constraint.ConstraintLayout>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="0dp"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="10dp"
+        android:background="@color/fontWhite"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <android.support.constraint.ConstraintLayout
+        <android.support.v7.widget.CardView
             android:id="@+id/cardView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.SearchView
+                android:id="@+id/search_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="33dp"
+                android:background="@color/colorSearchbar"
+                android:fontFamily="@font/cschatthai"
+                android:theme="@style/AppSearchView"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/searchviewPhoneList" />
 
-                <EditText
-                    android:id="@+id/search_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="33dp"
-                    android:background="@color/colorSearchbar"
-                    android:fontFamily="@font/cschatthai"
-                    android:hint="@string/searchviewPhoneList"
-                    android:paddingLeft="8dp"
-                    app:iconifiedByDefault="false" />
-            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
-        </android.support.constraint.ConstraintLayout>
 
-    </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
 
     <Button
         android:id="@+id/btn_search"
@@ -364,5 +363,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_search" />
+
+    <ListView
+        android:id="@+id/listview_suggestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
 
 </android.support.constraint.ConstraintLayout>

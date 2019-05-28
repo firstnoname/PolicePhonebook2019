@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
@@ -37,9 +39,29 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class StationStaffFragment extends Fragment {
+public class StationStaffFragment extends Fragment implements View.OnClickListener {
 
     private static final String TAG = "StationStaffFragment";
+
+    private TextView tvListSize;
+    private Button btnSequence, btnFirstName, btnCreateDate, btnDepartment;
+
+    private Boolean isNameChecked = false;
+    private Boolean isLastnameChecked = false;
+    private Boolean isRankChecked = false;
+    private Boolean isPositionChecked = false;
+    private Boolean isDepartmentChecked = false;
+    private Boolean isPhoneNumberChecked = false;
+
+    private int positionSequence = 3;
+    private int firstName = 4;
+    private int createDate = 5;
+    private int department = 1;
+    private int sort = 2;
+
+    private String keyWord;
+    private int page = 0;
+    private int sizeContents = 30;
 
     public static final String KEY_MESSAGE = "message";
     private String departmentId = "";
@@ -63,6 +85,17 @@ public class StationStaffFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_station_staff, container, false);
 
+        tvListSize = view.findViewById(R.id.tv_list_size);
+        btnSequence = view.findViewById(R.id.btn_sequence);
+        btnFirstName = view.findViewById(R.id.btn_alphabet);
+        btnCreateDate = view.findViewById(R.id.btn_date);
+        btnDepartment = view.findViewById(R.id.btn_department);
+
+        btnSequence.setOnClickListener(this);
+        btnDepartment.setOnClickListener(this);
+        btnFirstName.setOnClickListener(this);
+        btnCreateDate.setOnClickListener(this);
+
         departmentId = getArguments().getString(KEY_MESSAGE);
 
         return view;
@@ -72,15 +105,23 @@ public class StationStaffFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, "" ,"", "", "", "", 4);
+        refreshList(sort);
+
+    }
+
+    private void refreshList(int sort) {
+        Call<ResponsePoliceList> call = api.getPoliceListFilter(departmentId,"",
+                keyWord, isDepartmentChecked, isNameChecked, isLastnameChecked, isPhoneNumberChecked,
+                isPositionChecked, isRankChecked, page, sizeContents, sort);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+                            tvListSize.setText(response.body().getData().getTotalElements() + " รายการ");
+                            mPoliceList = new ArrayList<>();
                             mPoliceList.addAll(response.body().getData().getContent());
-//                            Log.d(TAG, String.valueOf(mPoliceList.get(0).getFirstName()));
                             checkColor();
                         } else {
                             Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -88,33 +129,17 @@ public class StationStaffFragment extends Fragment {
                     } else {
                         Toast.makeText(getActivity(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
                     }
-                } else {
-                    try {
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-                        if (jObjError.has("code") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
-                            Log.d(TAG, "ไม่พบผู้ใช้งาน");
-                        } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
-                            Log.d(TAG, "ไม่พบผู้ใช้งาน");
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        Log.d(TAG, e.toString());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                        Log.d(TAG, e.toString());
-                    }
                 }
             }
 
             @Override
             public void onFailure(Call<ResponsePoliceList> call, Throwable t) {
-
+                Log.d(TAG, String.valueOf(t));
             }
         });
     }
 
     private void checkColor() {
-
         Call<ResponseRank> call = api.getRankMasterData("");
         call.enqueue(new Callback<ResponseRank>() {
             @Override
@@ -202,5 +227,39 @@ public class StationStaffFragment extends Fragment {
         adapter = new AdapterStationStaff(getActivity(), mPoliceList);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_sequence:
+                refreshList(positionSequence);
+                btnSequence.setTextColor(getResources().getColor(R.color.fontDeepBlue));
+                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
+                break;
+            case R.id.btn_alphabet:
+                refreshList(firstName);
+                btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnFirstName.setTextColor(getResources().getColor(R.color.fontDeepBlue));
+                btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
+                break;
+            case R.id.btn_date:
+                refreshList(createDate);
+                btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnCreateDate.setTextColor(getResources().getColor(R.color.fontDeepBlue));
+                break;
+            case R.id.btn_department:
+                refreshList(department);
+                btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnDepartment.setTextColor(getResources().getColor(R.color.fontDeepBlue));
+                btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
+                break;
+        }
     }
 }

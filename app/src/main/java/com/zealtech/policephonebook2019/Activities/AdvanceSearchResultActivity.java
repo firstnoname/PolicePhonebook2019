@@ -38,7 +38,7 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
 
     private TextView tvListSize, titleBar;
     private ImageView btnBack;
-    private Button btnSequence, btnFirstName, btnCreateDate;
+    private Button btnSequence, btnFirstName, btnCreateDate, btnDepartment;
 
     private String departmentId = "";
     private String provinceId = "";
@@ -55,6 +55,7 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
     private int positionSequence = 3;
     private int firstName = 4;
     private int createDate = 5;
+    private int department = 1;
 
     private String keyWord;
     private int page = 0;
@@ -78,10 +79,12 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
         btnSequence = findViewById(R.id.btn_sequence);
         btnFirstName = findViewById(R.id.btn_alphabet);
         btnCreateDate = findViewById(R.id.btn_date);
+        btnDepartment = findViewById(R.id.btn_department);
 
         btnSequence.setOnClickListener(this);
         btnFirstName.setOnClickListener(this);
         btnCreateDate.setOnClickListener(this);
+        btnDepartment.setOnClickListener(this);
         btnBack.setOnClickListener(this);
 
         titleBar.setText("ผลการค้นหา");
@@ -120,21 +123,31 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
         switch (v.getId()) {
             case R.id.btn_sequence:
                 refreshList(positionSequence);
-                btnSequence.setTextColor(getResources().getColor(R.color.fontBlue));
+                btnSequence.setTextColor(getResources().getColor(R.color.fontDeepBlue));
+                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_alphabet:
                 refreshList(firstName);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnFirstName.setTextColor(getResources().getColor(R.color.fontBlue));
+                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnFirstName.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_date:
                 refreshList(createDate);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnCreateDate.setTextColor(getResources().getColor(R.color.fontBlue));
+                btnCreateDate.setTextColor(getResources().getColor(R.color.fontDeepBlue));
+                break;
+            case R.id.btn_department:
+                refreshList(department);
+                btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnDepartment.setTextColor(getResources().getColor(R.color.fontDeepBlue));
+                btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.tv_actionbar_back:
                 finish();

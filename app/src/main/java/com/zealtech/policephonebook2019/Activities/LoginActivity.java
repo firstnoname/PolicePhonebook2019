@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,12 +34,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "LoginActivity";
 
-    Button btnLogin;
-    EditText edtUsername, edtPassword;
+    private Button btnLogin;
+    private ImageView btnClose;
+    private EditText edtUsername, edtPassword;
     private String username, password;
 
     ProfileH profileH = new ProfileH();
@@ -51,6 +53,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btn_edit_profile);
         edtUsername = findViewById(R.id.username_input);
         edtPassword = findViewById(R.id.input_password);
+        btnClose = findViewById(R.id.img_close);
+
+        btnClose.setOnClickListener(this);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -176,4 +181,12 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.img_close:
+                finish();
+                break;
+        }
+    }
 }
