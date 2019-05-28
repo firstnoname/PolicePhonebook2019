@@ -16,6 +16,7 @@
     <color name="colorGreen">#06646E</color>
     <color name="colorGrey">#e0e0e0</color>
     <color name="colorJustGrey">#f9f9f9</color>
+    <color name="colorBGGrey">#e9f0f3</color>
 
     <!--Actionbar gradient-->
     <color name="actStartRed">#65C7F7</color>

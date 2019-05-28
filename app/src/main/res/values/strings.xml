@@ -38,6 +38,7 @@
     <string name="order_rank">ลำดับยศ</string>
     <string name="order_firstname">ตัวอักษร</string>
     <string name="order_date">วันที่นำเข้าข้อมูล</string>
+    <string name="order_department">ตำแหน่ง</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -63,21 +63,21 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="85dp"
+                                android:layout_marginTop="80dp"
                                 android:text="ชัชณัฐพล รัตน์นราทร"
+                                android:textColor="@color/fontBlack"
                                 android:fontFamily="@font/cschatthai"
-                                android:textSize="26sp" />
+                                android:textSize="24sp" />
 
                             <TextView
                                 android:id="@+id/tv_contact_position"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="10dp"
                                 android:text="ผบช.ประจำ สง.ผบ.ตร."
                                 android:textColor="#A6181D"
                                 android:fontFamily="@font/cschatthai"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
 
                             <TextView
                                 android:id="@+id/tv_contact_department_root"
@@ -85,10 +85,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center_horizontal"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="4dp"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
                                 android:fontFamily="@font/cschatthai"
-                                android:textSize="20sp"
+                                android:textSize="18sp"
                                 android:textColor="@color/fontBlue"/>
 
                             <TextView
@@ -97,10 +97,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center_horizontal"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="4dp"
                                 android:text="ตำรวจภูธรจังหวัดขอนแก่น ตำรวจภูธร ภาค 5"
                                 android:fontFamily="@font/cschatthai"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
 
                             <LinearLayout
                                 android:id="@+id/position_section"
@@ -159,13 +159,13 @@
                                         android:layout_gravity="center_horizontal"
                                         android:text="ไม่มีข้อมูล"
                                         android:fontFamily="@font/cschatthai"
-                                        android:textSize="22sp"
+                                        android:textSize="20sp"
                                         android:textColor="@color/fontBlack" />
 
                                     <ImageView
                                                 android:id="@+id/img_tel_work"
-                                        android:layout_width="52dp"
-                                        android:layout_height="52dp"
+                                        android:layout_width="48dp"
+                                        android:layout_height="48dp"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="8dp"
                                         android:src="@mipmap/call" />
@@ -200,13 +200,13 @@
                                         android:layout_gravity="center_horizontal"
                                         android:text="ไม่มีข้อมูล"
                                         android:fontFamily="@font/cschatthai"
-                                        android:textSize="22sp"
+                                        android:textSize="20sp"
                                         android:textColor="@color/fontBlack" />
 
                                     <ImageView
                                         android:id="@+id/img_tel"
-                                        android:layout_width="52dp"
-                                        android:layout_height="52dp"
+                                        android:layout_width="48dp"
+                                        android:layout_height="48dp"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="8dp"
                                         android:src="@mipmap/call" />

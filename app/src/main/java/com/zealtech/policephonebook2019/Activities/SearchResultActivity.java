@@ -58,7 +58,7 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Police> mPolice;
-    ArrayList<Rank> ranks;
+    private ArrayList<Rank> ranks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,21 +108,21 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
         switch (v.getId()) {
             case R.id.btn_sequence:
                 refreshList(positionSequence);
-                btnSequence.setTextColor(getResources().getColor(R.color.fontBlue));
+                btnSequence.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_alphabet:
                 refreshList(firstName);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnFirstName.setTextColor(getResources().getColor(R.color.fontBlue));
+                btnFirstName.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_date:
                 refreshList(createDate);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnCreateDate.setTextColor(getResources().getColor(R.color.fontBlue));
+                btnCreateDate.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 break;
             case R.id.tv_actionbar_back:
                 finish();

@@ -52,8 +52,8 @@
 
         <ImageView
             android:id="@+id/imgLogo"
-            android:layout_width="300dp"
-            android:layout_height="350dp"
+            android:layout_width="240dp"
+            android:layout_height="250dp"
 
             app:srcCompat="@mipmap/splashscreenlogo" />
 
