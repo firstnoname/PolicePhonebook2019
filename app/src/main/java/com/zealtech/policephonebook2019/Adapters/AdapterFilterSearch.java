@@ -17,6 +17,7 @@ import com.bumptech.glide.Glide;
 import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Position;
+import com.zealtech.policephonebook2019.Model.Province;
 import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 
@@ -56,6 +57,19 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
 
         String shortName = "";
+
+        if (tagFilter.equals("province")) {
+
+            Province provinces = (Province) mTag.get(i);
+
+            if (provinces.getProvinceName() != null) {
+                info = provinces.getProvinceName();
+                viewHolder.tvDetail.setVisibility(View.GONE);
+                viewHolder.txtInfo.setText(info);
+                viewHolder.txtInfo.setGravity(Gravity.CENTER_VERTICAL);
+            }
+
+        }
 
         if (tagFilter.equals("position")) {
 
