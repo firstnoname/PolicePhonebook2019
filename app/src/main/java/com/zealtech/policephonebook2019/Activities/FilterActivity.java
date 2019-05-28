@@ -150,7 +150,7 @@ public class FilterActivity extends AppCompatActivity implements SearchView.OnQu
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-//                            apiItemFilter.add(0, new Province().createTotalItem());
+                            apiItemFilter.add(0, new Province().createTotalItem());
                             apiItemFilter.addAll(response.body().getData());
                             initRecyclerView(apiItemFilter);
                         } else {

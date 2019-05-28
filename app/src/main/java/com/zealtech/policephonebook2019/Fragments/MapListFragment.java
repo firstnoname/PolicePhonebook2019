@@ -137,6 +137,13 @@ public class MapListFragment extends Fragment implements SearchView.OnQueryTextL
             if (mDepartmentList.get(i).getDepartmentName().contains(userInput)) {
                 newList.add(mDepartmentList.get(i));
             }
+            if (mDepartmentList.get(i).getTag() != null) {
+                for (int tagSize = 0; tagSize < mDepartmentList.get(i).getTag().size(); tagSize++) {
+                    if (mDepartmentList.get(i).getTag().get(tagSize).contains(userInput)) {
+                        newList.add(mDepartmentList.get(i));
+                    }
+                }
+            }
         }
 
         adapter.updateStationList(newList);

@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +46,7 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.adapter_station_sub_list, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.adapter_map_list, viewGroup, false);
         ViewHolder holder = new ViewHolder(view);
 
         return holder;
@@ -70,6 +71,22 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
         holder.tvStationName.setText(mStationList.get(i).getDepartmentName());
         if (mStationList.get(i).getFlagTail().equals(false)) {
             holder.imgNext.setVisibility(View.INVISIBLE);
+        }
+
+        String tagArea = "";
+        if (mStationList.get(i).getTag() != null) {
+            for (int x = 0; x < mStationList.get(i).getTag().size(); x++) {
+                if (mStationList.get(i).getTag().size() - 1 == x) {
+                    tagArea += mStationList.get(i).getTag().get(x);
+                } else {
+                    tagArea += mStationList.get(i).getTag().get(x) + ", ";
+                }
+            }
+
+            holder.tvArea.setText(tagArea);
+        } else {
+            holder.tvArea.setVisibility(View.GONE);
+            holder.tvStationName.setGravity(Gravity.CENTER_VERTICAL);
         }
 
         holder.layout_adapter_station_sub_list.setOnClickListener(new View.OnClickListener() {
@@ -107,16 +124,17 @@ public class AdapterStationSubList extends RecyclerView.Adapter<AdapterStationSu
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imgInfo;
-        TextView tvStationName;
+        TextView tvStationName, tvArea;
         ConstraintLayout layout_adapter_station_sub_list;
         ImageButton imgNext;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imgInfo = itemView.findViewById(R.id.imgStationSubList);
-            tvStationName = itemView.findViewById(R.id.tvStationSubList);
-            layout_adapter_station_sub_list = itemView.findViewById(R.id.layout_adapter_station_sub_list);
+            imgInfo = itemView.findViewById(R.id.imgStation);
+            tvStationName = itemView.findViewById(R.id.tvStationPosition);
+            tvArea = itemView.findViewById(R.id.tvArea);
+            layout_adapter_station_sub_list = itemView.findViewById(R.id.layout_adapter_map_list);
             imgNext = itemView.findViewById(R.id.imgNext);
 
         }

@@ -26,11 +26,12 @@
     <!--Menu-->
     <string name="menuNameList">หน้าหลัก</string>
     <string name="menuSearch">ค้นหาขั้นสูง</string>
-    <string name="menuMap">สถานีตำรวจ</string>
+    <string name="menuMap">แผนที่</string>
     <string name="menuFavoriteList">รายการโปรด</string>
     <string name="menuContactUs">ติดต่อเรา</string>
 
     <string name="dont_have_data">ไม่มีข้อมูล</string>
+    <string name="dont_have_data2">ยังไม่มีข้อมูล</string>
 
     <string name="title_activity_maps">Map</string>
     

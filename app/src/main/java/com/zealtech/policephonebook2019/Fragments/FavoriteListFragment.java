@@ -44,6 +44,8 @@ public class FavoriteListFragment extends Fragment {
 
     private String token = "";
 
+    private TextView tvHistory;
+
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -62,6 +64,8 @@ public class FavoriteListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_favorite_list, container, false);
+
+        tvHistory = view.findViewById(R.id.tvHistory);
 
         token = getArguments().getString(KEY_MESSAGE);
 
@@ -173,6 +177,9 @@ public class FavoriteListFragment extends Fragment {
     }
 
     private void setAdapter(ArrayList<Police> content) {
+        if (content.size() != 0) {
+            tvHistory.setVisibility(View.GONE);
+        }
         mAdapter = new AdapterPhoneListFilter(getActivity(), content);
         recyclerView.setAdapter(mAdapter);
     }

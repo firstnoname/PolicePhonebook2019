@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,8 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
     private String valueFilter = "";
     private String IMAGE_URL = ApplicationConfig.getImageUrl();
 
+    private String info, detail;
+
     public AdapterFilterSearch(Activity mActivity, List<BaseFilterItem> mTag, String tagFilter) {
         this.mTag = mTag;
         this.mActivity = mActivity;
@@ -52,16 +55,30 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
 
-        if (tagFilter.equals("rank")) {
-            Rank ranks = (Rank) mTag.get(i);
-            if (ranks.getIcon() != null) {
-                Glide.with(mActivity).load(IMAGE_URL + ranks.getIcon()).fitCenter().into(viewHolder.imgInfo);
-            } else {
-                viewHolder.imgInfo.setImageResource(R.mipmap.all_ic);
-            }
-        }
-        if (tagFilter == "position") {
+        String shortName = "";
+
+        if (tagFilter.equals("position")) {
+
             Position positions = (Position) mTag.get(i);
+
+            if (positions.getShortName() != null) {
+                shortName = "(" + positions.getShortName() + ")";
+            }
+
+            info = positions.getPositionName() + " " + shortName;
+
+            if (positions.getTag() != null) {
+                for (int tagSize = 0; tagSize < positions.getTag().size(); tagSize++) {
+                    viewHolder.tvDetail.setText(positions.getTag().get(tagSize));
+                }
+            } else {
+                viewHolder.tvDetail.setVisibility(View.GONE);
+            }
+
+            viewHolder.txtInfo.setText(info);
+            viewHolder.txtInfo.setGravity(Gravity.CENTER_VERTICAL);
+
+
             if (positions.getIcon() != null) {
                 Glide.with(mActivity).load(IMAGE_URL + positions.getIcon()).fitCenter().into(viewHolder.imgInfo);
             } else {
@@ -69,9 +86,27 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
             }
         }
 
+        if (tagFilter.equals("rank")) {
+
+            Rank ranks = (Rank) mTag.get(i);
+
+            if (ranks.getShortName() != null) {
+                shortName = "(" + ranks.getShortName() + ")";
+            }
+
+            info = ranks.getRankName() + " " + shortName;
+
+            viewHolder.tvDetail.setVisibility(View.GONE);
+            viewHolder.txtInfo.setText(info);
+            viewHolder.txtInfo.setGravity(Gravity.CENTER_VERTICAL);
 
 
-        viewHolder.txtInfo.setText(mTag.get(i).getName());
+            if (ranks.getIcon() != null) {
+                Glide.with(mActivity).load(IMAGE_URL + ranks.getIcon()).fitCenter().into(viewHolder.imgInfo);
+            } else {
+                viewHolder.imgInfo.setImageResource(R.mipmap.all_ic);
+            }
+        }
 
         viewHolder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +130,7 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imgInfo;
-        TextView txtInfo;
+        TextView txtInfo, tvDetail;
         ConstraintLayout constraintLayout;
 
         public ViewHolder(@NonNull View itemView) {
@@ -104,6 +139,7 @@ public class AdapterFilterSearch extends RecyclerView.Adapter<AdapterFilterSearc
             constraintLayout = itemView.findViewById(R.id.layout_adapter_filter_search);
             imgInfo = itemView.findViewById(R.id.img_info);
             txtInfo = itemView.findViewById(R.id.tv_info);
+            tvDetail = itemView.findViewById(R.id.tv_detail);
         }
     }
 

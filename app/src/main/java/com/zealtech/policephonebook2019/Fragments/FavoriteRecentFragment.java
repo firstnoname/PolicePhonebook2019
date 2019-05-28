@@ -118,7 +118,7 @@ public class FavoriteRecentFragment extends Fragment {
             setAdapter(mPolices);
 
         } else {
-            tvHistory.setText(R.string.dont_have_data);
+            tvHistory.setText(R.string.dont_have_data2);
         }
 
 
