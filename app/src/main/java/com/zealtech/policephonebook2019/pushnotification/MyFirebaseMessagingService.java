@@ -74,7 +74,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Intent intent;
         boolean openMain = false;
 
-        if (Helper.isAppRunning(this, "com.zealtech.firebasenoti")) {
+        if (Helper.isAppRunning(this, "com.example.policephonebook2019")) {
             intent = new Intent(this, MainActivity.class);
         } else {
             intent = new Intent(this, NotificationActivity.class);

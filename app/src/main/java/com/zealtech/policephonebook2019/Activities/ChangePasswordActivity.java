@@ -2,6 +2,8 @@ package com.zealtech.policephonebook2019.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -63,6 +65,29 @@ public class ChangePasswordActivity extends AppCompatActivity {
             }
         });
 
+        //Check space in EditText.
+        edtNewPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String str = edtNewPassword.getText().toString();
+                Log.d(TAG, str);
+                if (str.contains(" ")) {
+                    Toast.makeText(getApplicationContext(), "ไม่อนุญาติให้มีช่องว่าง", Toast.LENGTH_LONG).show();
+                    edtNewPassword.setText(edtNewPassword.getText().toString().replaceAll(" ", ""));
+                    edtNewPassword.setSelection(edtNewPassword.getText().length());
+                }
+            }
+        });
 
     }
 
