@@ -125,7 +125,7 @@ public class ContactDetailActivity extends AppCompatActivity {
     }
 
     private void callUserDetail(String id) {
-        Call<ResponsePoliceList> call = api.getPoliceList("", "", "", "", "", "",4);
+        Call<ResponsePoliceList> call = api.getPoliceList("", "", "", "", "", "",30,4);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

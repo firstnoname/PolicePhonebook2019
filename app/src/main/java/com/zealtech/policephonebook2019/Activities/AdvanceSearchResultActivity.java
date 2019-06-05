@@ -45,6 +45,7 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
     private String provinceId = "";
     private String positionId = "";
     private String rankId = "";
+    private int sizeContents = 120;
     private String keyword = "";
     private Boolean isNameChecked = false;
     private Boolean isLastnameChecked = false;
@@ -60,7 +61,6 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
 
     private String keyWord;
     private int page = 0;
-    private int sizeContents = 30;
 
     //Adapter
     private RecyclerView recyclerView;
@@ -157,7 +157,7 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
     }
 
     private void refreshList(int sort) {
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, provinceId, positionId, rankId, keyWord, "", sort);
+        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, provinceId, positionId, rankId, keyWord, "",sizeContents, sort);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

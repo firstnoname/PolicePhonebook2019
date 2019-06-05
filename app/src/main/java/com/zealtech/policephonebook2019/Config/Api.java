@@ -60,6 +60,7 @@ public interface Api {
                                            @Query("rankId") String rankId,
                                            @Query("keyWord") String keyword,
                                            @Query("id") String id,
+                                           @Query("sizeContents") Integer sizeContents,
                                            @Query("sort") int sort);
 
     @GET("getPolice")

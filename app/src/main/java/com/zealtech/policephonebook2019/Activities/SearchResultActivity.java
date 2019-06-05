@@ -53,7 +53,7 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
 
     private String keyWord;
     private int page = 0;
-    private int sizeContents = 30;
+    private int sizeContents = 120;
 
     //Adapter
     private RecyclerView recyclerView;
