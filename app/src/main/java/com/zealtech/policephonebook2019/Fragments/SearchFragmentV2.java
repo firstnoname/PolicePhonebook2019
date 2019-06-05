@@ -231,8 +231,11 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
             }
         }
 
-        adapterSuggestion = new AdapterSearchviewSuggestion(getActivity(), suggestionLists);
-        list.setAdapter(adapterSuggestion);
+        if (getActivity() != null) {
+            adapterSuggestion = new AdapterSearchviewSuggestion(getActivity(), suggestionLists);
+            list.setAdapter(adapterSuggestion);
+        }
+
     }
 
 

@@ -327,8 +327,10 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
             }
         }
 
-        adapterSuggestion = new AdapterSearchviewSuggestion(getActivity(), suggestionLists);
-        list.setAdapter(adapterSuggestion);
+        if (getActivity() != null) {
+            adapterSuggestion = new AdapterSearchviewSuggestion(getActivity(), suggestionLists);
+            list.setAdapter(adapterSuggestion);
+        }
 
     }
 

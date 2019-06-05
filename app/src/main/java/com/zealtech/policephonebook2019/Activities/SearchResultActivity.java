@@ -22,6 +22,7 @@ import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import org.json.JSONObject;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -153,7 +154,10 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-                            tvListSize.setText(response.body().getData().getTotalElements() + " รายการ");
+                            String size = response.body().getData().getTotalElements();
+                            double amount = Double.parseDouble(size);
+                            DecimalFormat format = new DecimalFormat("#,###");
+                            tvListSize.setText(format.format(amount) + " รายการ");
                             mPolice = new ArrayList<>();
                             mPolice.addAll(response.body().getData().getContent());
                             checkColor();

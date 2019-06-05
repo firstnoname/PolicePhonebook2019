@@ -21,7 +21,8 @@ public class AdapterSearchviewSuggestion extends BaseAdapter {
     public AdapterSearchviewSuggestion(Context mContext, ArrayList<Police> mPoliceInfo) {
         this.mContext = mContext;
         this.mPoliceInfo = mPoliceInfo;
-            inflater = LayoutInflater.from(mContext);
+
+        inflater = LayoutInflater.from(mContext);
     }
 
     public class ViewHolder {

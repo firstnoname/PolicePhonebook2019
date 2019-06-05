@@ -24,6 +24,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -164,8 +165,10 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
-                            //tvListSize.setText(response.body().getData().getContent().size() + "รายการ");
-                            tvListSize.setText(response.body().getData().getTotalElements() + " รายการ");
+                            String size = response.body().getData().getTotalElements();
+                            double amount = Double.parseDouble(size);
+                            DecimalFormat format = new DecimalFormat("#,###");
+                            tvListSize.setText(format.format(amount) + " รายการ");
                             mPolice.addAll(response.body().getData().getContent());
                             checkColor();
 
