@@ -54,8 +54,8 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
 
     private Api api = AppUtils.getApiService();
 
-    private Boolean isNameChecked = false;
-    private Boolean isLastnameChecked = false;
+    private Boolean isNameChecked = true;
+    private Boolean isLastnameChecked = true;
     private Boolean isRankChecked = false;
     private Boolean isPositionChecked = false;
     private Boolean isDepartmentChecked = false;

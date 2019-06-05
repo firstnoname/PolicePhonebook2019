@@ -1,5 +1,6 @@
 package com.zealtech.policephonebook2019.Activities;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -37,7 +38,7 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
 
     private TextView tvListSize, titleBar;
     private ImageView btnBack;
-    private Button btnSequence, btnFirstName, btnCreateDate, btnDepartment;
+    private Button btnSequence, btnFirstName, btnCreateDate, btnPosition;
 
     private Boolean isNameChecked = false;
     private Boolean isLastnameChecked = false;
@@ -50,10 +51,13 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
     private int firstName = 4;
     private int createDate = 5;
     private int department = 1;
+    private int rankSequence = 2;
 
     private String keyWord;
     private int page = 0;
-    private int sizeContents = 120;
+    private int sizeContents = 100;
+
+    private boolean isLoading = false;
 
     //Adapter
     private RecyclerView recyclerView;
@@ -73,10 +77,10 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
         btnSequence = findViewById(R.id.btn_sequence);
         btnFirstName = findViewById(R.id.btn_alphabet);
         btnCreateDate = findViewById(R.id.btn_date);
-        btnDepartment = findViewById(R.id.btn_department);
+        btnPosition = findViewById(R.id.btn_position);
 
         btnSequence.setOnClickListener(this);
-        btnDepartment.setOnClickListener(this);
+        btnPosition.setOnClickListener(this);
         btnFirstName.setOnClickListener(this);
         btnCreateDate.setOnClickListener(this);
         btnBack.setOnClickListener(this);
@@ -96,7 +100,9 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
         isDepartmentChecked = getIntent().getExtras().getBoolean("isDepartmentChecked");
         isPhoneNumberChecked = getIntent().getExtras().getBoolean("isPhoneNumberChecked");
 
-        refreshList(0);
+        refreshList(rankSequence);
+
+//        initScrollListener();
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,30 +117,30 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_sequence:
-                refreshList(positionSequence);
+                refreshList(rankSequence);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontDeepBlue));
-                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnPosition.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_alphabet:
                 refreshList(firstName);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnPosition.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_date:
                 refreshList(createDate);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnPosition.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 break;
-            case R.id.btn_department:
-                refreshList(department);
+            case R.id.btn_position:
+                refreshList(positionSequence);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnDepartment.setTextColor(getResources().getColor(R.color.fontDeepBlue));
+                btnPosition.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
@@ -195,7 +201,12 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
                                     }
                                 }
                             }
-                            setAdapter(mPolice);
+                            if (sizeContents == 100) {
+                                setAdapter(mPolice);
+                            } else {
+                                updateAdapter(mPolice);
+                            }
+
 //                                    AdapterPhoneList.this.notifyDataSetChanged();
                         } else {
                             Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -221,11 +232,75 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
 
     }
 
-    private void setAdapter(ArrayList<Police> mPolice) {
-        mAdapter = new AdapterPhoneListFilter(getApplicationContext(), mPolice);
-        recyclerView.setAdapter(mAdapter);
+    private void updateAdapter(ArrayList<Police> mPolice) {
         mAdapter.notifyDataSetChanged();
     }
 
+    private void setAdapter(ArrayList<Police> mPolice) {
+        mAdapter = new AdapterPhoneListFilter(getApplicationContext(), mPolice);
+        recyclerView.setAdapter(mAdapter);
+//        mAdapter.notifyDataSetChanged();
+    }
+
+    private void initScrollListener() {
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+
+                if (!isLoading) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == mPolice.size() - 1) {
+                        loadMore();
+                        isLoading = true;
+                    }
+                }
+            }
+        });
+    }
+
+    private void loadMore() {
+        sizeContents += sizeContents;
+
+        Call<ResponsePoliceList> call = api.getPoliceListFilter("","",
+                keyWord, isDepartmentChecked, isNameChecked, isLastnameChecked, isPhoneNumberChecked,
+                isPositionChecked, isRankChecked, page, sizeContents, 2);
+        call.enqueue(new Callback<ResponsePoliceList>() {
+            @Override
+            public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
+                if (response.body() != null) {
+                    if (response.body().getCode().equalsIgnoreCase("OK")) {
+                        if (response.body().getCode().equals("OK")) {
+                            String size = response.body().getData().getTotalElements();
+                            double amount = Double.parseDouble(size);
+                            DecimalFormat format = new DecimalFormat("#,###");
+                            tvListSize.setText(format.format(amount) + " รายการ");
+                            mPolice = new ArrayList<>();
+                            mPolice.addAll(response.body().getData().getContent());
+                            checkColor();
+                        } else {
+                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponsePoliceList> call, Throwable t) {
+                Log.d(TAG, String.valueOf(t));
+            }
+        });
+
+//        mAdapter.notifyDataSetChanged();
+        isLoading = false;
+    }
 
 }

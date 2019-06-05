@@ -36,7 +36,8 @@
     <string name="title_activity_maps">Map</string>
     
     <!--Order-->
-    <string name="order_rank">ลำดับยศ</string>
+    <string name="order_title"><u>ตัวเลือกการค้นหา</u></string>
+    <string name="order_rank">ยศ</string>
     <string name="order_firstname">ตัวอักษร</string>
     <string name="order_date">วันที่นำเข้าข้อมูล</string>
     <string name="order_department">ตำแหน่ง</string>

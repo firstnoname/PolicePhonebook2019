@@ -39,13 +39,13 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
 
     private TextView tvListSize, titleBar;
     private ImageView btnBack;
-    private Button btnSequence, btnFirstName, btnCreateDate, btnDepartment;
+    private Button btnSequence, btnFirstName, btnCreateDate, btnPosition;
 
     private String departmentId = "";
     private String provinceId = "";
     private String positionId = "";
     private String rankId = "";
-    private int sizeContents = 120;
+    private int sizeContents = 100;
     private String keyword = "";
     private Boolean isNameChecked = false;
     private Boolean isLastnameChecked = false;
@@ -58,6 +58,7 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
     private int firstName = 4;
     private int createDate = 5;
     private int department = 1;
+    private int rankSequence = 2;
 
     private String keyWord;
     private int page = 0;
@@ -80,12 +81,12 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
         btnSequence = findViewById(R.id.btn_sequence);
         btnFirstName = findViewById(R.id.btn_alphabet);
         btnCreateDate = findViewById(R.id.btn_date);
-        btnDepartment = findViewById(R.id.btn_department);
+        btnPosition = findViewById(R.id.btn_position);
 
         btnSequence.setOnClickListener(this);
         btnFirstName.setOnClickListener(this);
         btnCreateDate.setOnClickListener(this);
-        btnDepartment.setOnClickListener(this);
+        btnPosition.setOnClickListener(this);
         btnBack.setOnClickListener(this);
 
         titleBar.setText("ผลการค้นหา");
@@ -123,30 +124,30 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_sequence:
-                refreshList(positionSequence);
+                refreshList(rankSequence);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontDeepBlue));
-                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnPosition.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_alphabet:
                 refreshList(firstName);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnPosition.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_date:
                 refreshList(createDate);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnDepartment.setTextColor(getResources().getColor(R.color.fontGrey));
+                btnPosition.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 break;
-            case R.id.btn_department:
-                refreshList(department);
+            case R.id.btn_position:
+                refreshList(positionSequence);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
-                btnDepartment.setTextColor(getResources().getColor(R.color.fontDeepBlue));
+                btnPosition.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
