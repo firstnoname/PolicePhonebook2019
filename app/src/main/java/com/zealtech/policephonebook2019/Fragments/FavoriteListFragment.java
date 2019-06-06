@@ -17,8 +17,11 @@ import com.example.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterFavoriteList;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
 import com.zealtech.policephonebook2019.Config.Api;
+import com.zealtech.policephonebook2019.Model.PhoneNumber;
 import com.zealtech.policephonebook2019.Model.Police;
 import com.zealtech.policephonebook2019.Model.Rank;
+import com.zealtech.policephonebook2019.Model.Realm.PoliceHistory;
+import com.zealtech.policephonebook2019.Model.WorkPhoneNumber;
 import com.zealtech.policephonebook2019.Model.response.ResponseFavorite;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
@@ -30,6 +33,9 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+import io.realm.RealmResults;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -83,14 +89,76 @@ public class FavoriteListFragment extends Fragment {
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-        callApi();
+        if (token != "") {
+            callApi();
+        } else {
+            callRealm();
+        }
 
     }
+
 
     @Override
     public void onResume() {
         super.onResume();
 
+    }
+
+    private void callRealm() {
+        Realm.init(getActivity());
+        RealmConfiguration config = new RealmConfiguration.Builder().name("sample1.realm")
+                .schemaVersion(1).deleteRealmIfMigrationNeeded().build();
+        Realm.setDefaultConfiguration(config);
+        Realm.getInstance(config);
+
+        Realm realm = Realm.getDefaultInstance();
+        final RealmResults<PoliceHistory> policeHistories = realm.where(PoliceHistory.class)
+                .contains("favoriteType", "favorite")
+                .findAll();
+
+        if (policeHistories.size() != 0) {
+            tvHistory.setVisibility(View.GONE);
+            Police mPoliceOneRow;
+            ArrayList<Police> mPolices = new ArrayList<>();
+
+            for (int i = 0; i < policeHistories.size(); i++) {
+                mPoliceOneRow = new Police();
+                mPoliceOneRow.setImageProfile(policeHistories.get(i).getImageProfile());
+                mPoliceOneRow.setRankName(policeHistories.get(i).getRankName());
+                mPoliceOneRow.setFirstName(policeHistories.get(i).getFirstName());
+                mPoliceOneRow.setLastName(policeHistories.get(i).getLastName());
+                mPoliceOneRow.setPositionName(policeHistories.get(i).getPositionName());
+                mPoliceOneRow.setDepartmentName(policeHistories.get(i).getDepartmentName());
+                mPoliceOneRow.setRankId(policeHistories.get(i).getRankId());
+                ArrayList<PhoneNumber> phoneNumber = new ArrayList<>();
+                PhoneNumber phoneNumber1 = new PhoneNumber();
+                phoneNumber1.setTel(policeHistories.get(i).getPhoneNumber());
+                phoneNumber.add(phoneNumber1);
+                mPoliceOneRow.setPhoneNumber(phoneNumber);
+                ArrayList<WorkPhoneNumber> workPhoneNumber = new ArrayList<>();
+                WorkPhoneNumber workPhoneNumber1 = new WorkPhoneNumber();
+                workPhoneNumber1.setTel(policeHistories.get(i).getWorkPhoneNumber());
+                mPoliceOneRow.setWorkPhoneNumber(workPhoneNumber);
+                mPoliceOneRow.setUpdateDate(policeHistories.get(i).getUpdateDate());
+                mPoliceOneRow.setId(policeHistories.get(i).getId());
+                mPoliceOneRow.setColor(policeHistories.get(i).getColor());
+                mPoliceOneRow.setUpdateDate(policeHistories.get(i).getUpdateDate());
+
+//                Log.d(TAG, policeHistories.get(i).getFavoriteType());
+
+                mPolices.add(mPoliceOneRow);
+                mPolice.add(mPoliceOneRow);
+
+                checkColor();
+
+
+            }
+
+            setAdapter(mPolices);
+
+        } else {
+            tvHistory.setText(R.string.dont_have_data2);
+        }
     }
 
     private void callApi() {

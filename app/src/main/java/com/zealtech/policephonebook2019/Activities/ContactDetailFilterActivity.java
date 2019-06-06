@@ -20,9 +20,11 @@ import com.example.policephonebook2019.R;
 import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
+import com.zealtech.policephonebook2019.Model.PhoneNumber;
 import com.zealtech.policephonebook2019.Model.Police;
-import com.zealtech.policephonebook2019.Model.Realm.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.ProfileH;
+import com.zealtech.policephonebook2019.Model.Realm.PoliceHistory;
+import com.zealtech.policephonebook2019.Model.WorkPhoneNumber;
 import com.zealtech.policephonebook2019.Model.response.ResponseFavorite;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
@@ -39,11 +41,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ContactDetailFilterActivity extends AppCompatActivity implements View.OnClickListener{
+public class ContactDetailFilterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "ContactDetailActivity";
-
-
+    ArrayList<Police> policeMasterData = new ArrayList<>();
+    Api api = AppUtils.getApiService();
     private TextView tvName, tvPosition, tvDepartment, tvDepartmentRoot, tvTel1, tvTel2, tvBack, tvUpdatedate;
     private ImageView imgFavorite, imgClose, imgProfile, imgTelWork, imgTel;
     private RelativeLayout relativeLayoutBackground;
@@ -53,12 +55,9 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
     private Boolean favTag = false;
     private String token = "";
     private String id = "";
-
+    private String favoriteTypeHistory = "history";
+    private String favoriteTypeFavorite = "favorite";
     private Realm mRealm;
-
-    ArrayList<Police> policeMasterData = new ArrayList<>();
-
-    Api api = AppUtils.getApiService();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,7 +181,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
         }
 
         if (policeMasterData.get(position).getUpdateDate() != null) {
-            String dateFormat = policeMasterData.get(position).getUpdateDate().substring(0,10);
+            String dateFormat = policeMasterData.get(position).getUpdateDate().substring(0, 10);
             String date = dateFormat.substring(8);
             String month = dateFormat.substring(5);
             month = month.substring(0, 2);
@@ -226,7 +225,6 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
 
             tvUpdatedate.setText("วันที่อัพเดทข้อมูล " + date + " " + month + " " + year);
         }
-
 
 
         isFavorite();
@@ -291,6 +289,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
             mPoliceHistory.setId(mPolice.get(position).getId());
             mPoliceHistory.setColor(mPolice.get(position).getColor());
             mPoliceHistory.setUpdateDate(mPolice.get(position).getUpdateDate());
+            mPoliceHistory.setFavoriteType(favoriteTypeHistory);
 
         }
 
@@ -298,83 +297,29 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
     }
 
     private void isFavorite() {
-        
+
         checkLogin();
-        
-        Call<ResponseFavorite> call = api.getFavorite(token);
-        call.enqueue(new Callback<ResponseFavorite>() {
-            @Override
-            public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
-                if (response.body() != null) {
-                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-                        if (response.body().getCode().equals("OK")) {
-                            for (int i = 0; i < response.body().getData().size(); i++) {
-                                String apiId = response.body().getData().get(i).getId();
-                                String selectedId = policeMasterData.get(position).getId();
-                                if (selectedId.equals(apiId)) {
-//                                    Toast.makeText(ContactDetailFilterActivity.this, "True", Toast.LENGTH_SHORT).show();
-                                    imgFavorite.setImageResource(R.mipmap.star_ac);
-                                } else {
-//                                    Toast.makeText(ContactDetailFilterActivity.this, selectedId + " : " + apiId, Toast.LENGTH_SHORT).show();
-                                    imgFavorite.setImageResource(R.mipmap.star);
-                                }
-                            }
-                        } else {
-                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    try {
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-                        if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
-                            Log.d(TAG, String.valueOf(jObjError.get("code")));
-                        } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
-                            Log.d(TAG, String.valueOf(jObjError.get("code")));
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
 
-            @Override
-            public void onFailure(Call<ResponseFavorite> call, Throwable t) {
-                Log.d(TAG, String.valueOf(call));
-                Log.d(TAG, String.valueOf(t));
-            }
-        });
-    }
-
-    private void checkLogin() {
-        SharedPreferences mPref = getSharedPreferences("user_info", MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = mPref.getString("ProfileObject", "");
-        ProfileH mProfile = gson.fromJson(json, ProfileH.class);
-
-        if (mProfile != null) {
-            token = mProfile.getToken();
-        } else {
-            token = "";
-        }
-
-    }
-
-    private void addFavorite() {
-        //Call api add fav.
-//        Toast.makeText(this, policeMasterData.get(position).getId(), Toast.LENGTH_SHORT).show();
-        if (favTag.equals(true)) {
-            Call<ResponseFavorite> call = api.addFavorite(id, token);
+        if (token != "") {
+            //If was login.
+            Call<ResponseFavorite> call = api.getFavorite(token);
             call.enqueue(new Callback<ResponseFavorite>() {
                 @Override
                 public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
                     if (response.body() != null) {
                         if (response.body().getCode().equalsIgnoreCase("OK")) {
                             if (response.body().getCode().equals("OK")) {
-                                Toast.makeText(ContactDetailFilterActivity.this, "Save favorite successful", Toast.LENGTH_SHORT).show();
+                                for (int i = 0; i < response.body().getData().size(); i++) {
+                                    String apiId = response.body().getData().get(i).getId();
+                                    String selectedId = policeMasterData.get(position).getId();
+                                    if (selectedId.equals(apiId)) {
+//                                    Toast.makeText(ContactDetailFilterActivity.this, "True", Toast.LENGTH_SHORT).show();
+                                        imgFavorite.setImageResource(R.mipmap.star_ac);
+                                    } else {
+//                                    Toast.makeText(ContactDetailFilterActivity.this, selectedId + " : " + apiId, Toast.LENGTH_SHORT).show();
+                                        imgFavorite.setImageResource(R.mipmap.star);
+                                    }
+                                }
                             } else {
                                 Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                             }
@@ -391,59 +336,240 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Log.d(TAG, String.valueOf(e));
                         } catch (IOException e) {
                             e.printStackTrace();
-                            Log.d(TAG, String.valueOf(e));
-
                         }
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ResponseFavorite> call, Throwable t) {
-
+                    Log.d(TAG, String.valueOf(call));
+                    Log.d(TAG, String.valueOf(t));
                 }
             });
         } else {
-            Call<ResponseFavorite> call = api.removeFavorite(id, token);
-            call.enqueue(new Callback<ResponseFavorite>() {
-                @Override
-                public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
-                    if (response.body() != null) {
-                        if (response.body().getCode().equalsIgnoreCase("OK")) {
-                            if (response.body().getCode().equals("OK")) {
-//                                Toast.makeText(ContactDetailFilterActivity.this, "Remove favorite successful", Toast.LENGTH_SHORT).show();
+            //If not login.
+            Realm.init(this);
+            RealmConfiguration config = new RealmConfiguration.Builder().name("sample1.realm")
+                    .schemaVersion(1).deleteRealmIfMigrationNeeded().build();
+            Realm.setDefaultConfiguration(config);
+            Realm.getInstance(config);
+
+            Realm realm = Realm.getDefaultInstance();
+            final RealmResults<PoliceHistory> policeFavorite = realm.where(PoliceHistory.class)
+                    .contains("id",policeMasterData.get(position).getId())
+//                    .and().contains("favoriteType", favoriteTypeFavorite)
+                    .findAll();
+
+            if (policeFavorite.size() != 0) {
+                Police mPolice;
+                ArrayList<Police> mPolices = new ArrayList<>();
+
+                for (int i = 0; i < policeFavorite.size(); i++) {
+                    mPolice = new Police();
+                    mPolice.setImageProfile(policeFavorite.get(i).getImageProfile());
+                    mPolice.setRankName(policeFavorite.get(i).getRankName());
+                    mPolice.setFirstName(policeFavorite.get(i).getFirstName());
+                    mPolice.setLastName(policeFavorite.get(i).getLastName());
+                    mPolice.setPositionName(policeFavorite.get(i).getPositionName());
+                    mPolice.setDepartmentName(policeFavorite.get(i).getDepartmentName());
+                    mPolice.setRankId(policeFavorite.get(i).getRankId());
+                    ArrayList<PhoneNumber> phoneNumber = new ArrayList<>();
+                    PhoneNumber phoneNumber1 = new PhoneNumber();
+                    phoneNumber1.setTel(policeFavorite.get(i).getPhoneNumber());
+                    phoneNumber.add(phoneNumber1);
+                    mPolice.setPhoneNumber(phoneNumber);
+                    ArrayList<WorkPhoneNumber> workPhoneNumber = new ArrayList<>();
+                    WorkPhoneNumber workPhoneNumber1 = new WorkPhoneNumber();
+                    workPhoneNumber1.setTel(policeFavorite.get(i).getWorkPhoneNumber());
+                    mPolice.setWorkPhoneNumber(workPhoneNumber);
+                    mPolice.setUpdateDate(policeFavorite.get(i).getUpdateDate());
+                    mPolice.setId(policeFavorite.get(i).getId());
+                    mPolice.setColor(policeFavorite.get(i).getColor());
+                    mPolice.setUpdateDate(policeFavorite.get(i).getUpdateDate());
+                    if (policeFavorite.get(i).getFavoriteType().equals(favoriteTypeFavorite)) {
+                        imgFavorite.setImageResource(R.mipmap.star_ac);
+                    } else {
+                        imgFavorite.setImageResource(R.mipmap.star);
+                    }
+                    mPolices.add(mPolice);
+
+                    Log.d(TAG, policeFavorite.get(i).getFirstName() + " " + policeFavorite.get(i).getFavoriteType());
+
+                }
+            }
+        }
+
+    }
+
+    private void checkLogin() {
+
+        SharedPreferences mPref = getSharedPreferences("user_info", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = mPref.getString("ProfileObject", "");
+        ProfileH mProfile = gson.fromJson(json, ProfileH.class);
+
+        if (mProfile != null) {
+            token = mProfile.getToken();
+        } else {
+            token = "";
+        }
+
+    }
+
+    private void addFavorite() {
+        if (token != "") {
+            //Save favorite with login.
+            //Call api add fav.
+            if (favTag.equals(true)) {
+                Call<ResponseFavorite> call = api.addFavorite(id, token);
+                call.enqueue(new Callback<ResponseFavorite>() {
+                    @Override
+                    public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
+                        if (response.body() != null) {
+                            if (response.body().getCode().equalsIgnoreCase("OK")) {
+                                if (response.body().getCode().equals("OK")) {
+                                    Toast.makeText(ContactDetailFilterActivity.this, "Save favorite successful", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
                             } else {
-//                                Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        try {
-                            JSONObject jObjError = new JSONObject(response.errorBody().string());
-                            if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
-                                Log.d(TAG, String.valueOf(jObjError.get("code")));
-                            } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
-                                Log.d(TAG, String.valueOf(jObjError.get("code")));
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            Log.d(TAG, String.valueOf(e));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            Log.d(TAG, String.valueOf(e));
+                            try {
+                                JSONObject jObjError = new JSONObject(response.errorBody().string());
+                                if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
+                                    Log.d(TAG, String.valueOf(jObjError.get("code")));
+                                } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                                    Log.d(TAG, String.valueOf(jObjError.get("code")));
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Log.d(TAG, String.valueOf(e));
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                                Log.d(TAG, String.valueOf(e));
 
+                            }
                         }
                     }
+
+                    @Override
+                    public void onFailure(Call<ResponseFavorite> call, Throwable t) {
+
+                    }
+                });
+            } else {
+                Call<ResponseFavorite> call = api.removeFavorite(id, token);
+                call.enqueue(new Callback<ResponseFavorite>() {
+                    @Override
+                    public void onResponse(Call<ResponseFavorite> call, Response<ResponseFavorite> response) {
+                        if (response.body() != null) {
+                            if (response.body().getCode().equalsIgnoreCase("OK")) {
+                                if (response.body().getCode().equals("OK")) {
+//                                Toast.makeText(ContactDetailFilterActivity.this, "Remove favorite successful", Toast.LENGTH_SHORT).show();
+                                } else {
+//                                Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            } else {
+                                Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            try {
+                                JSONObject jObjError = new JSONObject(response.errorBody().string());
+                                if (jObjError.has("code") && jObjError.get("code").equals("no_user_found")) {
+                                    Log.d(TAG, String.valueOf(jObjError.get("code")));
+                                } else if (jObjError.has("message") && jObjError.get("message").equals("ไม่พบผู้ใช้งาน")) {
+                                    Log.d(TAG, String.valueOf(jObjError.get("code")));
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Log.d(TAG, String.valueOf(e));
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                                Log.d(TAG, String.valueOf(e));
+
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseFavorite> call, Throwable t) {
+
+                    }
+                });
+            }
+        } else {
+            //Save favorite without login.
+            if (favTag.equals(true)) {
+                //Save favorite.
+                Realm.init(this);
+                RealmConfiguration config = new RealmConfiguration.Builder().name("sample1.realm")
+                        .schemaVersion(1).deleteRealmIfMigrationNeeded().build();
+
+                Realm.setDefaultConfiguration(config);
+                Realm.getInstance(config);
+
+                mRealm = Realm.getDefaultInstance();
+
+                final RealmResults<PoliceHistory> policeHistories = mRealm.where(PoliceHistory.class)
+                        .contains("id", policeMasterData.get(position).getId()).findAll();
+
+                mRealm.beginTransaction();
+//        mRealm.deleteAll();
+
+                if (policeHistories.size() != 0) {
+
+//                    PoliceHistory mPoliceHistory = mRealm.createObject(PoliceHistory.class);
+//                    mPoliceHistory.setImageProfile(policeMasterData.get(position).getImageProfile());
+//                    mPoliceHistory.setFirstName(policeMasterData.get(position).getFirstName());
+//                    mPoliceHistory.setLastName(policeMasterData.get(position).getLastName());
+//                    mPoliceHistory.setDepartmentName(policeMasterData.get(position).getDepartmentName());
+//                    mPoliceHistory.setPositionName(policeMasterData.get(position).getPositionName());
+//                    mPoliceHistory.setRankName(policeMasterData.get(position).getRankName());
+//                    mPoliceHistory.setRankId(policeMasterData.get(position).getRankId());
+//                    mPoliceHistory.setId(policeMasterData.get(position).getId());
+//                    mPoliceHistory.setColor(policeMasterData.get(position).getColor());
+//                    mPoliceHistory.setUpdateDate(policeMasterData.get(position).getUpdateDate());
+//                    mPoliceHistory.setFavoriteType(favoriteTypeFavorite);
+
+                    policeHistories.get(0).setFavoriteType(favoriteTypeFavorite);
+
                 }
 
-                @Override
-                public void onFailure(Call<ResponseFavorite> call, Throwable t) {
+                mRealm.commitTransaction();
+            } else {
+                //Unsave favorite.
+                Realm.init(this);
+                RealmConfiguration config = new RealmConfiguration.Builder().name("sample1.realm")
+                        .schemaVersion(1).deleteRealmIfMigrationNeeded().build();
 
-                }
-            });
+                Realm.setDefaultConfiguration(config);
+                Realm.getInstance(config);
+
+                mRealm = Realm.getDefaultInstance();
+
+//                final RealmResults<PoliceHistory> policeFavorite = mRealm.where(PoliceHistory.class)
+//                        .contains("id", policeMasterData.get(position).getId()).findAll();
+//
+//                mRealm.beginTransaction();
+
+                mRealm.executeTransaction(new Realm.Transaction() {
+                    @Override
+                    public void execute(Realm realm) {
+                        RealmResults<PoliceHistory> policeFavorite = mRealm.where(PoliceHistory.class)
+                                .contains("id", policeMasterData.get(position).getId())
+                                .and().contains("favoriteType", favoriteTypeFavorite)
+                                .findAll();
+//                        policeFavorite.deleteAllFromRealm();
+                        policeFavorite.get(position).setFavoriteType(favoriteTypeHistory);
+                    }
+                });
+
+//                mRealm.commitTransaction();
+            }
         }
     }
 

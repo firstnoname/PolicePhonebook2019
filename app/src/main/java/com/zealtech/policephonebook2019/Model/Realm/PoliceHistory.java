@@ -25,6 +25,7 @@ public class PoliceHistory extends RealmObject {
     String createDate;
     String updateDate;
     String color;
+    String favoriteType;
 
     public String getEditby() {
         return editby;
@@ -168,5 +169,13 @@ public class PoliceHistory extends RealmObject {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String getFavoriteType() {
+        return favoriteType;
+    }
+
+    public void setFavoriteType(String favoriteType) {
+        this.favoriteType = favoriteType;
     }
 }
