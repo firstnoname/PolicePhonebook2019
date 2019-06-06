@@ -34,6 +34,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
+        Log.d("MessagingService", "Message from : " + remoteMessage.getFrom());
+
+        if (remoteMessage.getData().size() > 0) {
+            Log.d("MessagingService", "Message data payload : " + remoteMessage.getData());
+        }
 
         test(remoteMessage.getData(), remoteMessage);
 
@@ -47,7 +52,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         Map<String, String> handleMsg = data.getData();
         String myCustomKey = handleMsg.get("key1");
-
 
         try {
             message = data.getNotification().getBody();
@@ -74,10 +78,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Intent intent;
         boolean openMain = false;
 
-        if (Helper.isAppRunning(this, "com.example.policephonebook2019")) {
-            intent = new Intent(this, MainActivity.class);
-        } else {
+        if (Helper.isAppRunning(this, "com.zealtech.firebasenoti")) {
+            Log.d("MessagingService", "App is running");
             intent = new Intent(this, NotificationActivity.class);
+        } else {
+            Log.d("MessagingService", "App not running");
+            intent = new Intent(this, MainActivity.class);
         }
 
         Bundle bundle = new Bundle();

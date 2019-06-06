@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\iFirst\\StudioProjects\\PolicePhonebook2019\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-2\\files-2.1\\7a0800602f3a164b25e45e362a87f86f\\res\\values-v24\\values-v24.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/85cd30ff80870f0666b582fa9a1bbdc2/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-2\\files-2.1\\57507652cc4330daf2d360b052ede068\\res\\values-v24\\values-v24.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/f91bd98aa04ae758c028cd6ddf600f57/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

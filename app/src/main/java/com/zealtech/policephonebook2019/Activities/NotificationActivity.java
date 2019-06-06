@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policephonebook2019.R;
@@ -40,6 +41,8 @@ public class NotificationActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private TextView tvActionbar;
+    private ImageView imgLogoHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,10 @@ public class NotificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_notification);
 
         imgClose = findViewById(R.id.img_close);
+        tvActionbar = findViewById(R.id.tv_actionbar_close);
+        imgLogoHeader = findViewById(R.id.img_header);
+        tvActionbar.setText("แจ้งเตือน");
+        imgLogoHeader.setVisibility(View.VISIBLE);
 
         Call<ResponseNotification> call = api.getNotifications("");
         call.enqueue(new Callback<ResponseNotification>() {

@@ -1,10 +1,21 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\iFirst\\StudioProjects\\PolicePhonebook2019\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-2\\files-2.1\\1044ec27f151c26c6fc58043aa2e062b\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/85cd30ff80870f0666b582fa9a1bbdc2/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    }
+                },
+                {
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/3456233f6a8157d55bcb40203c2d377d/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,17 +31,6 @@
                         "endLines": "39",
                         "endColumns": "12",
                         "endOffsets": "2791"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\iFirst\\.gradle\\caches\\transforms-2\\files-2.1\\7a0800602f3a164b25e45e362a87f86f\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
-                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
-                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
-                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
                     }
                 }
             ]

@@ -642,6 +642,7 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color colorAccent
+color colorBGGrey
 color colorBlue
 color colorBlueCoral
 color colorDeepBlue
@@ -1182,6 +1183,7 @@ id bottom
 id btn_alphabet
 id btn_change_password
 id btn_date
+id btn_department
 id btn_edit
 id btn_edit_profile
 id btn_logout
@@ -1191,12 +1193,13 @@ id btn_menu_map
 id btn_menu_phone_list
 id btn_menu_search
 id btn_openmap
+id btn_position
 id btn_search
 id btn_sequence
 id btn_station_open_map
 id buttonPanel
 id cancel_action
-id cardView
+id card
 id cardView3
 id cardView6
 id cardViewDepartment
@@ -1226,7 +1229,9 @@ id constraintLayout5
 id constraintLayout6
 id constraintLayout7
 id constraint_scrollview
+id constraint_searchview
 id container
+id container_searchview
 id content
 id contentPanel
 id coordinator
@@ -1287,6 +1292,7 @@ id ifRoom
 id image
 id imageView
 id imageView2
+id imageView3
 id imgBack
 id imgFavorite
 id imgLogo
@@ -1306,6 +1312,7 @@ id img_close
 id img_contact_profile
 id img_contact_us
 id img_favorite
+id img_header
 id img_icon_noti
 id img_info
 id img_map
@@ -1343,6 +1350,7 @@ id linearLayout2
 id linearLayout3
 id listMode
 id list_item
+id listview_suggestions
 id login_password
 id lvStation
 id main_content
@@ -1357,6 +1365,7 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id name
 id navigation_header_container
 id never
 id none
@@ -1525,6 +1534,7 @@ id tv_contact_update_date
 id tv_create_date
 id tv_department
 id tv_department_name
+id tv_detail
 id tv_info
 id tv_list_size
 id tv_name_user_profile
@@ -1666,6 +1676,7 @@ layout fragment_station_detail
 layout fragment_station_staff
 layout item_row
 layout layout_tab
+layout list_view_items
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1726,6 +1737,7 @@ mipmap ic_launcher_round
 mipmap icon_app
 mipmap location
 mipmap locationarrow
+mipmap logo_v2
 mipmap logoheader
 mipmap logopadtp
 mipmap mail
@@ -1802,6 +1814,7 @@ string abc_toolbar_collapse_description
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
+string change_password
 string character_counter_content_description
 string character_counter_pattern
 string common_google_play_services_enable_button
@@ -1824,6 +1837,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
 string dont_have_data
+string dont_have_data2
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string fcm_fallback_notification_channel_label
@@ -1844,6 +1858,7 @@ string hint_search_department
 string hint_search_position
 string hint_search_province
 string hint_search_rank
+string label_back
 string main_hint_suggestion
 string menuContactUs
 string menuFavoriteList
@@ -1852,8 +1867,10 @@ string menuNameList
 string menuSearch
 string mtrl_chip_close_icon_content_description
 string order_date
+string order_department
 string order_firstname
 string order_rank
+string order_title
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

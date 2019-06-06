@@ -128,7 +128,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         profileH.setUpdateDate(response.body().getData().getUpdateDate());
                                         profileH.setEnable(response.body().getData().getEnable());
 
-                                        //                                Save shared preferences.
+                                        //Save shared preferences.
                                         SharedPreferences mPrefs = getSharedPreferences("user_info", MODE_PRIVATE);
                                         SharedPreferences.Editor prefsEditor = mPrefs.edit();
                                         Gson gson = new Gson();
@@ -140,7 +140,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         FirebaseMessaging.getInstance().unsubscribeFromTopic("1");
                                         FirebaseMessaging.getInstance().subscribeToTopic("2");
 
-                                        //                              Display user detail page.
+                                        //Display user detail page.
                                         Intent iUserDetail = new Intent(getApplicationContext(), UserDetailActivity.class);
                                         Bundle bundle = new Bundle();
                                         bundle.putSerializable("user_profile", profileH);
