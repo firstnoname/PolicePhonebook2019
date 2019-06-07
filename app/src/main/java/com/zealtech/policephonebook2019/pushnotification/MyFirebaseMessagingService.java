@@ -80,10 +80,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         if (Helper.isAppRunning(this, "com.zealtech.firebasenoti")) {
             Log.d("MessagingService", "App is running");
-            intent = new Intent(this, NotificationActivity.class);
+            intent = new Intent(this, MainActivity.class);
         } else {
             Log.d("MessagingService", "App not running");
-            intent = new Intent(this, MainActivity.class);
+            intent = new Intent(this, NotificationActivity.class);
         }
 
         Bundle bundle = new Bundle();
