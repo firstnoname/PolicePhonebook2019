@@ -295,7 +295,7 @@
                             android:padding="4dp"
                             android:fontFamily="@font/cschatthai"
                             android:textSize="20sp"
-                            android:text="saranitet@royalthaipolice.go.th"
+                            android:text="newpolicephonebook@gmail.com"
                             android:textColor="#000000" />
 
                     </LinearLayout>
