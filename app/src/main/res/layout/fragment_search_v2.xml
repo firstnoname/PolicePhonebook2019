@@ -262,7 +262,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/cschatthai"
-            android:text="ตัวกรองการค้นหา"
+            android:text="@string/label_filter_search"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -276,7 +276,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/cschatthai"
-            android:text="รีเซ็ต"
+            android:text="@string/label_reset"
             android:textColor="@color/fontDeepBlue"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/cardViewProvince"
@@ -368,9 +368,11 @@
         android:id="@+id/listview_suggestions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/fontWhite"
+        android:elevation="20dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card" />
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"></ListView>
 
 </android.support.constraint.ConstraintLayout>

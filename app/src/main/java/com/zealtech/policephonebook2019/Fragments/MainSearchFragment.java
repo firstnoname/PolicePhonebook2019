@@ -147,14 +147,19 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
                 ArrayList<Police> selectedPolice = new ArrayList<>();
                 Police selectedItem;
                 selectedItem = (Police) parent.getAdapter().getItem(position);
-                selectedPolice.add(selectedItem);
-                Intent intent = new Intent(getActivity(), ContactDetailFilterActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("contact_detail", selectedPolice);
-                intent.putExtra("position", 0);
-                intent.putExtras(bundle);
-                startActivity(intent);
-                list.setVisibility(View.GONE);
+                if (selectedItem != null) {
+                    selectedPolice.add(selectedItem);
+                    Intent intent = new Intent(getActivity(), ContactDetailFilterActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("contact_detail", selectedPolice);
+                    intent.putExtra("position", 0);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                    list.setVisibility(View.GONE);
+                } else {
+                    intentResultSearch();
+                }
+
             }
         });
 
@@ -224,7 +229,7 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
     }
 
     private void intentResultSearch() {
-        keyWord = textKeyword.getQuery().toString().trim();
+//        keyWord = textKeyword.getQuery().toString().trim();
 
         Intent i = new Intent(getActivity(), SearchResultActivity.class);
         i.putExtra("isNameChecked", isNameChecked);
@@ -310,7 +315,8 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
     }
 
     private void setAdapter(ArrayList<Police> mPolice) {
-        int i;
+        int i = 0;
+
         ArrayList<Police> suggestionLists = new ArrayList<>();
 
         if (mPolice.size() <= 5) {
@@ -327,8 +333,10 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
             }
         }
 
+        suggestionLists.add(null);
+
         if (getActivity() != null) {
-            adapterSuggestion = new AdapterSearchviewSuggestion(getActivity(), suggestionLists);
+            adapterSuggestion = new AdapterSearchviewSuggestion(getActivity(), suggestionLists, keyWord);
             list.setAdapter(adapterSuggestion);
         }
 
@@ -345,6 +353,9 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
     @Override
     public boolean onQueryTextChange(String s) {
         if (s != "") {
+            keyWord = textKeyword.getQuery().toString().trim();
+            isNameChecked = false;
+            isLastnameChecked = false;
             refreshList(s);
             list.setVisibility(View.VISIBLE);
         } else {

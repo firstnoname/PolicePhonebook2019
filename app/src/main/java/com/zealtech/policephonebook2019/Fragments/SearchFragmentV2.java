@@ -156,14 +156,18 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
                 ArrayList<Police> selectedPolice = new ArrayList<>();
                 Police selectedItem;
                 selectedItem = (Police) parent.getAdapter().getItem(position);
-                selectedPolice.add(selectedItem);
-                Intent intent = new Intent(getActivity(), ContactDetailFilterActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("contact_detail", selectedPolice);
-                intent.putExtra("position", 0);
-                intent.putExtras(bundle);
-                startActivity(intent);
-                list.setVisibility(View.GONE);
+                if (selectedItem != null) {
+                    selectedPolice.add(selectedItem);
+                    Intent intent = new Intent(getActivity(), ContactDetailFilterActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("contact_detail", selectedPolice);
+                    intent.putExtra("position", 0);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                    list.setVisibility(View.GONE);
+                } else {
+                    intentResultSearch();
+                }
             }
         });
 
@@ -231,8 +235,10 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
             }
         }
 
+        suggestionLists.add(null);
+
         if (getActivity() != null) {
-            adapterSuggestion = new AdapterSearchviewSuggestion(getActivity(), suggestionLists);
+            adapterSuggestion = new AdapterSearchviewSuggestion(getActivity(), suggestionLists, keyWord);
             list.setAdapter(adapterSuggestion);
         }
 
@@ -408,7 +414,6 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
     @Override
     public boolean onQueryTextChange(String s) {
         keyWord = s;
-        //onRefreshView(departmentId, positionId, rankId, keyword);
         if (s != "") {
             refreshList(s);
             list.setVisibility(View.VISIBLE);

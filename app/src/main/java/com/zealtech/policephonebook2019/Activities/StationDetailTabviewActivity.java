@@ -45,8 +45,8 @@ public class StationDetailTabviewActivity extends AppCompatActivity {
         stationName = getIntent().getStringExtra("departmentName");
 
         adapter = new PagerAdapter(getSupportFragmentManager(), departmentId);
-        adapter.AddFragment(new StationDetailFragment(), "ข้อมูลสถานี");
         adapter.AddFragment(new StationStaffFragment(), "เจ้าหน้าที่ในหน่วยงาน");
+        adapter.AddFragment(new StationDetailFragment(), "ข้อมูลการติดต่อ");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

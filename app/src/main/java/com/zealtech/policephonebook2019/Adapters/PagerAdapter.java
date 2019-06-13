@@ -31,19 +31,19 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int i) {
 
         if (i == 0) {
-            //StationDetail
-            stationDetailFragment = new StationDetailFragment();
-            Bundle bundle = new Bundle();
-            bundle.putString("message", departmentId);
-            stationDetailFragment.setArguments(bundle);
-            return stationDetailFragment;
-        } else {
             //StationStaff
             stationStaffFragment = new StationStaffFragment();
             Bundle bundle = new Bundle();
             bundle.putString("message", departmentId);
             stationStaffFragment.setArguments(bundle);
             return stationStaffFragment;
+        } else {
+            //StationDetail
+            stationDetailFragment = new StationDetailFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("message", departmentId);
+            stationDetailFragment.setArguments(bundle);
+            return stationDetailFragment;
         }
     }
 

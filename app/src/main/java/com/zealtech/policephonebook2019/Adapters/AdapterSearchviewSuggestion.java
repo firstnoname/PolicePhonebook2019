@@ -17,10 +17,12 @@ public class AdapterSearchviewSuggestion extends BaseAdapter {
     Context mContext;
     LayoutInflater inflater;
     private ArrayList<Police> mPoliceInfo;
+    private String keyword;
 
-    public AdapterSearchviewSuggestion(Context mContext, ArrayList<Police> mPoliceInfo) {
+    public AdapterSearchviewSuggestion(Context mContext, ArrayList<Police> mPoliceInfo, String keyword) {
         this.mContext = mContext;
         this.mPoliceInfo = mPoliceInfo;
+        this.keyword = keyword;
 
         inflater = LayoutInflater.from(mContext);
     }
@@ -56,7 +58,13 @@ public class AdapterSearchviewSuggestion extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.name.setText(mPoliceInfo.get(position).getRankName() + mPoliceInfo.get(position).getFirstName() + " " + mPoliceInfo.get(position).getLastName());
+        if (mPoliceInfo.get(position) != null) {
+            holder.name.setText(mPoliceInfo.get(position).getRankName() + mPoliceInfo.get(position).getFirstName() + " " + mPoliceInfo.get(position).getLastName());
+            holder.name.setTextColor(mContext.getResources().getColor(R.color.fontBlack));
+        } else {
+            holder.name.setText("ดูผลลัพธ์ทั้งหมดของ \"" + keyword + "\"");
+            holder.name.setTextColor(mContext.getResources().getColor(R.color.fontDeepBlue));
+        }
 
         return convertView;
     }
