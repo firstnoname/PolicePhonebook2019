@@ -3,17 +3,15 @@ package com.zealtech.policephonebook2019.Activities;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Police;
-import com.zealtech.policephonebook2019.Model.PoliceMasterData;
 
 import java.util.ArrayList;
 

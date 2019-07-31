@@ -1,6 +1,5 @@
 package com.zealtech.policephonebook2019.Activities;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,14 +11,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
-import com.zealtech.policephonebook2019.Manager.UserManager;
 import com.zealtech.policephonebook2019.Model.ProfileH;
 import com.zealtech.policephonebook2019.Model.response.ResponseProfile;
 import com.zealtech.policephonebook2019.Util.AppUtils;
@@ -28,7 +25,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;

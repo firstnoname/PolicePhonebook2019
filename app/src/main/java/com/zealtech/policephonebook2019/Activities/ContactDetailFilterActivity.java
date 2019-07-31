@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.google.gson.Gson;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
@@ -226,7 +226,6 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
             tvUpdatedate.setText("วันที่อัพเดทข้อมูล " + date + " " + month + " " + year);
         }
 
-
         isFavorite();
 
         imgClose.setOnClickListener(new View.OnClickListener() {
@@ -315,9 +314,11 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
                                     if (selectedId.equals(apiId)) {
 //                                    Toast.makeText(ContactDetailFilterActivity.this, "True", Toast.LENGTH_SHORT).show();
                                         imgFavorite.setImageResource(R.mipmap.star_ac);
+                                        favTag = true;
                                     } else {
 //                                    Toast.makeText(ContactDetailFilterActivity.this, selectedId + " : " + apiId, Toast.LENGTH_SHORT).show();
                                         imgFavorite.setImageResource(R.mipmap.star);
+                                        favTag = false;
                                     }
                                 }
                             } else {
@@ -390,12 +391,14 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
                     mPolice.setUpdateDate(policeFavorite.get(i).getUpdateDate());
                     if (policeFavorite.get(i).getFavoriteType().equals(favoriteTypeFavorite)) {
                         imgFavorite.setImageResource(R.mipmap.star_ac);
+                        favTag = true;
                     } else {
                         imgFavorite.setImageResource(R.mipmap.star);
+                        favTag = false;
                     }
                     mPolices.add(mPolice);
 
-                    Log.d(TAG, policeFavorite.get(i).getFirstName() + " " + policeFavorite.get(i).getFavoriteType());
+//                    Log.d(TAG, policeFavorite.get(i).getFirstName() + " " + policeFavorite.get(i).getFavoriteType());
 
                 }
             }
@@ -461,6 +464,8 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
 
                     }
                 });
+                // Alert when added favorite complete.
+                Toast.makeText(this, "บันทึกรายการโปรดสำเร็จ", Toast.LENGTH_SHORT).show();
             } else {
                 Call<ResponseFavorite> call = api.removeFavorite(id, token);
                 call.enqueue(new Callback<ResponseFavorite>() {
@@ -469,7 +474,7 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
                         if (response.body() != null) {
                             if (response.body().getCode().equalsIgnoreCase("OK")) {
                                 if (response.body().getCode().equals("OK")) {
-//                                Toast.makeText(ContactDetailFilterActivity.this, "Remove favorite successful", Toast.LENGTH_SHORT).show();
+                                    // remove favorite success.
                                 } else {
 //                                Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                                 }
@@ -500,6 +505,8 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
 
                     }
                 });
+                // Alert when added favorite complete.
+                Toast.makeText(this, "ลบออกจากรายการโปรดสำเร็จ", Toast.LENGTH_SHORT).show();
             }
         } else {
             //Save favorite without login.
@@ -514,6 +521,8 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
 
                 mRealm = Realm.getDefaultInstance();
 
+                // Query polices in realm.
+                // If found the same ID will return more than
                 final RealmResults<PoliceHistory> policeHistories = mRealm.where(PoliceHistory.class)
                         .contains("id", policeMasterData.get(position).getId()).findAll();
 
@@ -537,11 +546,17 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
 
                     policeHistories.get(0).setFavoriteType(favoriteTypeFavorite);
 
+                    // Alert when added favorite complete.
+                    Toast.makeText(this, "บันทึกเข้ารายการโปรดสำเร็จ", Toast.LENGTH_SHORT).show();
+
                 }
+
+                // View realm path
+//                Log.d(TAG, "path: " + mRealm.getPath());
 
                 mRealm.commitTransaction();
             } else {
-                //Unsave favorite.
+                // Unsave favorite.
                 Realm.init(this);
                 RealmConfiguration config = new RealmConfiguration.Builder().name("sample1.realm")
                         .schemaVersion(1).deleteRealmIfMigrationNeeded().build();
@@ -554,7 +569,10 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
 //                final RealmResults<PoliceHistory> policeFavorite = mRealm.where(PoliceHistory.class)
 //                        .contains("id", policeMasterData.get(position).getId()).findAll();
 //
+//                Log.d(TAG, String.valueOf(policeFavorite.size()));
+//
 //                mRealm.beginTransaction();
+//                mRealm.commitTransaction();
 
                 mRealm.executeTransaction(new Realm.Transaction() {
                     @Override
@@ -563,12 +581,19 @@ public class ContactDetailFilterActivity extends AppCompatActivity implements Vi
                                 .contains("id", policeMasterData.get(position).getId())
                                 .and().contains("favoriteType", favoriteTypeFavorite)
                                 .findAll();
-//                        policeFavorite.deleteAllFromRealm();
-                        policeFavorite.get(position).setFavoriteType(favoriteTypeHistory);
+
+                        // Delete police was favorite.
+                        if (policeFavorite.size() > 0) {
+                            Log.d(TAG, policeFavorite.get(0).getFirstName());
+                            policeFavorite.deleteAllFromRealm();
+                        }
                     }
                 });
 
-//                mRealm.commitTransaction();
+                // Alert when added favorite complete.
+                Toast.makeText(this, "ลบออกจากรายการโปรดสำเร็จ", Toast.LENGTH_SHORT).show();
+
+
             }
         }
     }

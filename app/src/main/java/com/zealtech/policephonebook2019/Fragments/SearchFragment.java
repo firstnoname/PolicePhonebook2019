@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.squareup.otto.Subscribe;
 import com.zealtech.policephonebook2019.Activities.FilterActivity;
 import com.zealtech.policephonebook2019.Activities.FilterDepartmentActivity;
@@ -24,7 +24,6 @@ import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.Police;
-import com.zealtech.policephonebook2019.Model.PoliceList;
 import com.zealtech.policephonebook2019.Model.Position;
 import com.zealtech.policephonebook2019.Model.Province;
 import com.zealtech.policephonebook2019.Model.Rank;

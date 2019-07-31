@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import com.zealtech.policephonebook2019.Adapters.AdapterMapList;
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;

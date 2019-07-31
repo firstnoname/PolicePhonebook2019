@@ -5,9 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Model.Police;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class AdapterSearchviewSuggestion extends BaseAdapter {
 
     public class ViewHolder {
         TextView name;
+        ImageView imgNext;
     }
 
     @Override
@@ -53,6 +55,7 @@ public class AdapterSearchviewSuggestion extends BaseAdapter {
             holder = new ViewHolder();
             convertView = inflater.inflate(R.layout.list_view_items, null);
             holder.name = convertView.findViewById(R.id.name);
+            holder.imgNext = convertView.findViewById(R.id.imageNext);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -64,6 +67,7 @@ public class AdapterSearchviewSuggestion extends BaseAdapter {
         } else {
             holder.name.setText("ดูผลลัพธ์ทั้งหมดของ \"" + keyword + "\"");
             holder.name.setTextColor(mContext.getResources().getColor(R.color.fontDeepBlue));
+            holder.imgNext.setVisibility(View.GONE);
         }
 
         return convertView;

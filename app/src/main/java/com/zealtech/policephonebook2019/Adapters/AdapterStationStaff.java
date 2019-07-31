@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.policephonebook2019.R;
-import com.zealtech.policephonebook2019.Activities.StationStaffDetailActivity;
+import com.zealtech.policephonebook2019.Activities.ContactDetailFilterActivity;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.Police;
 
@@ -54,7 +54,7 @@ public class AdapterStationStaff extends RecyclerView.Adapter<AdapterStationStaf
                     .load(IMAGE_URL + mPoliceList.get(i).getImageProfile())
                     .into(viewHolder.imgProfile);
         }
-//        Log.d(TAG, IMAGE_URL + mPoliceList.get(i).getImageProfile());
+//        Log.d(TAG, IMAGE_URL + mPoliceList.get(i).getImageProfile())เรื่อ;
         fullName = mPoliceList.get(i).getRankName() + " " + mPoliceList.get(i).getFirstName() + "  " + mPoliceList.get(i).getLastName();
         viewHolder.tvName.setText(fullName);
         viewHolder.tvPosition.setText(mPoliceList.get(i).getPositionName());
@@ -76,7 +76,8 @@ public class AdapterStationStaff extends RecyclerView.Adapter<AdapterStationStaf
             public void onClick(View view) {
                 //Toast.makeText(mContext, "onClick: clicked on: " + mPoliceInfo.get(i).getFirstName(), Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(mContext, StationStaffDetailActivity.class);
+//                Intent intent = new Intent(mContext, StationStaffDetailActivity.class);
+                Intent intent = new Intent(mContext, ContactDetailFilterActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("contact_detail", mPoliceList);
                 intent.putExtra("position", i);

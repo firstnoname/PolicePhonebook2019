@@ -14,16 +14,16 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/cschatthai"
-        android:textSize="18sp"
         android:gravity="left"
         android:textColor="@color/fontBlack"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageNext"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageNext"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="8dp"

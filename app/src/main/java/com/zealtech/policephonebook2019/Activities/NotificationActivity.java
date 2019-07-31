@@ -10,11 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterNotification;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Notification;
-import com.zealtech.policephonebook2019.Model.NotificationList;
 import com.zealtech.policephonebook2019.Model.response.ResponseNotification;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 

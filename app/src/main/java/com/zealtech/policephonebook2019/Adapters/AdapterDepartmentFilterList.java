@@ -2,7 +2,7 @@ package com.zealtech.policephonebook2019.Adapters;
 
 import android.app.Activity;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Model.Department;
 
 import java.util.ArrayList;

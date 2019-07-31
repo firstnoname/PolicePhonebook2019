@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterDepartmentSearchFilter;
 import com.zealtech.policephonebook2019.Adapters.AdapterFilterSearch;
 import com.zealtech.policephonebook2019.Config.Api;
@@ -29,7 +29,6 @@ import com.zealtech.policephonebook2019.Util.AppUtils;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.ContactDetailFilterActivity;
 import com.zealtech.policephonebook2019.Activities.SearchResultActivity;
 import com.zealtech.policephonebook2019.Adapters.AdapterSearchviewSuggestion;

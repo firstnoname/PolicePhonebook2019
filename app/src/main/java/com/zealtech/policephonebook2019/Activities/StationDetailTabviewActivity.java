@@ -1,8 +1,6 @@
 package com.zealtech.policephonebook2019.Activities;
 
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.PagerAdapter;
 import com.zealtech.policephonebook2019.Fragments.StationDetailFragment;
 import com.zealtech.policephonebook2019.Fragments.StationStaffFragment;

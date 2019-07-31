@@ -7,12 +7,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
 import com.zealtech.policephonebook2019.Model.PhoneNumber;
 import com.zealtech.policephonebook2019.Model.Police;
@@ -122,6 +123,18 @@ public class FavoriteRecentFragment extends Fragment {
         }
 
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+//        Log.d("Favorite recent", "onResume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+//        Log.d("Favorite recent", "onPause");
     }
 
     private void setAdapter(ArrayList<Police> content) {

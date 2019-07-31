@@ -3,7 +3,6 @@ package com.zealtech.policephonebook2019.Model;
 import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class Province extends BaseFilterItem implements Serializable {
 

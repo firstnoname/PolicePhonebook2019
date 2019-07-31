@@ -1,8 +1,5 @@
 package com.zealtech.policephonebook2019.Model.Realm;
 
-import java.util.ArrayList;
-
-import io.realm.RealmList;
 import io.realm.RealmObject;
 
 public class PoliceHistory extends RealmObject {

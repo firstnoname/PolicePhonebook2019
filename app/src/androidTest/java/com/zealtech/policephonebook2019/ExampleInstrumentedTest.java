@@ -1,4 +1,4 @@
-package com.example.policephonebook2019;
+package com.zealtech.policephonebook2019;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -2,11 +2,9 @@ package com.zealtech.policephonebook2019.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +12,10 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.google.gson.Gson;
-import com.zealtech.policephonebook2019.Activities.StationDetailActivity;
 import com.zealtech.policephonebook2019.Activities.StationDetailTabviewActivity;
 import com.zealtech.policephonebook2019.Activities.StationSubListActivity;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;

@@ -4,7 +4,6 @@ import com.zealtech.policephonebook2019.Model.DepartmentFaxes;
 import com.zealtech.policephonebook2019.Model.DepartmentPhoneNumbers;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 import io.realm.RealmList;
 

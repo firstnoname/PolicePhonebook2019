@@ -12,15 +12,12 @@ import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.zealtech.policephonebook2019.Activities.MainActivity;
 import com.zealtech.policephonebook2019.Activities.NotificationActivity;
-import com.zealtech.policephonebook2019.Activities.NotificationDetail;
 import com.zealtech.policephonebook2019.Helpers.Helper;
-import com.zealtech.policephonebook2019.Model.Notification;
-import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import java.util.Map;
 

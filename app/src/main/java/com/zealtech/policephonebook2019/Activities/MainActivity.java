@@ -24,7 +24,7 @@ import com.zealtech.policephonebook2019.Fragments.MainSearchFragment;
 import com.zealtech.policephonebook2019.Fragments.MapListFragment;
 import com.zealtech.policephonebook2019.Fragments.PhoneListFragment;
 import com.zealtech.policephonebook2019.Fragments.SearchFragment;
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Fragments.SearchFragmentV2;
 import com.zealtech.policephonebook2019.Model.Department;
 import com.zealtech.policephonebook2019.Model.Position;
@@ -92,13 +92,15 @@ public class MainActivity extends AppCompatActivity {
 //        transaction.replace(R.id.container, phoneListFragment, "PhoneListFragment");
 //        transaction.commit();
 
-        mainSearchFragment = MainSearchFragment.newInstance();
+//        mainSearchFragment = MainSearchFragment.newInstance();
+        searchFragmentV2 = SearchFragmentV2.newInstance();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, mainSearchFragment, "MainSearchFragment");
+//        transaction.replace(R.id.container, mainSearchFragment, "MainSearchFragment");
+        transaction.replace(R.id.container, searchFragmentV2, "SearchFragmentV2");
         transaction.commit();
 
         //Set icon bottom of the view
-        current_frag = "PhoneList";
+        current_frag = "Search";
         setMenuIcon();
 
         //Check login

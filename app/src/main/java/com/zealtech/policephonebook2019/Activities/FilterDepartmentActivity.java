@@ -6,14 +6,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterDepartmentSearchFilter;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Department;
-import com.zealtech.policephonebook2019.Model.base.BaseFilterItem;
 import com.zealtech.policephonebook2019.Model.response.ResponseDepartment;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 

@@ -3,7 +3,7 @@ package com.zealtech.policephonebook2019.Activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 
 public class MapStationListActivity extends AppCompatActivity {
 

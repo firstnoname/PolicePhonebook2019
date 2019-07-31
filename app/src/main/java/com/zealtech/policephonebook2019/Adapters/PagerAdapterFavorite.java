@@ -10,9 +10,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.zealtech.policephonebook2019.Fragments.FavoriteListFragment;
 import com.zealtech.policephonebook2019.Fragments.FavoriteRecentFragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class PagerAdapterFavorite extends FragmentPagerAdapter {
 
     private String token, history;

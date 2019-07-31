@@ -1290,9 +1290,9 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageNext
 id imageView
 id imageView2
-id imageView3
 id imgBack
 id imgFavorite
 id imgLogo
@@ -1849,7 +1849,6 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_maps_key
 string google_storage_bucket
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string hint_comfirm_new_password
 string hint_current_password
@@ -1859,6 +1858,8 @@ string hint_search_position
 string hint_search_province
 string hint_search_rank
 string label_back
+string label_filter_search
+string label_reset
 string main_hint_suggestion
 string menuContactUs
 string menuFavoriteList

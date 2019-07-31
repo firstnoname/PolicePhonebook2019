@@ -7,36 +7,25 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.policephonebook2019.R;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Activities.ContactDetailActivity;
-import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Model.PoliceMasterData;
-import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.base.BaseItem;
 import com.zealtech.policephonebook2019.Model.base.BaseItemType;
 import com.zealtech.policephonebook2019.Model.base.HeaderItem;
-import com.zealtech.policephonebook2019.Model.response.ResponseRank;
-import com.zealtech.policephonebook2019.Util.AppUtils;
-
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class AdapterPhoneList extends RecyclerView.Adapter {
 

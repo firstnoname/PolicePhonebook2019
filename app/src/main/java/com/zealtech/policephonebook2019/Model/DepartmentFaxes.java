@@ -2,8 +2,6 @@ package com.zealtech.policephonebook2019.Model;
 
 import java.io.Serializable;
 
-import io.realm.RealmObject;
-
 public class DepartmentFaxes implements Serializable {
     String faxNo;
     String faxTo;

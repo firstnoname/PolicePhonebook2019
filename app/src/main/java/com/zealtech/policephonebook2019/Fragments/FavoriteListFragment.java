@@ -13,8 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.policephonebook2019.R;
-import com.zealtech.policephonebook2019.Adapters.AdapterFavoriteList;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.PhoneNumber;
@@ -23,7 +22,6 @@ import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.Realm.PoliceHistory;
 import com.zealtech.policephonebook2019.Model.WorkPhoneNumber;
 import com.zealtech.policephonebook2019.Model.response.ResponseFavorite;
-import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
@@ -89,19 +87,31 @@ public class FavoriteListFragment extends Fragment {
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
+//        if (token != "") {
+//            callApi();
+//        } else {
+//            callRealm();
+//        }
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mPolice.clear();
         if (token != "") {
             callApi();
         } else {
             callRealm();
         }
+        Log.d("Favorite list", "onResume");
 
     }
 
-
     @Override
-    public void onResume() {
-        super.onResume();
-
+    public void onPause() {
+        super.onPause();
+        Log.d("Favorite list", "onPause");
     }
 
     private void callRealm() {
@@ -120,6 +130,8 @@ public class FavoriteListFragment extends Fragment {
             tvHistory.setVisibility(View.GONE);
             Police mPoliceOneRow;
             ArrayList<Police> mPolices = new ArrayList<>();
+
+            mPolices.clear();
 
             for (int i = 0; i < policeHistories.size(); i++) {
                 mPoliceOneRow = new Police();
@@ -151,7 +163,6 @@ public class FavoriteListFragment extends Fragment {
 
                 checkColor();
 
-
             }
 
             setAdapter(mPolices);
@@ -169,6 +180,7 @@ public class FavoriteListFragment extends Fragment {
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+                            mPolice.clear();
                             mPolice.addAll(response.body().getData());
 //                            setAdapter(response.body().getData());
                             checkColor();
@@ -210,6 +222,7 @@ public class FavoriteListFragment extends Fragment {
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
+                            ranks.clear();
                             ranks.addAll(response.body().getData());
                             for (int x = 0; x < mPolice.size(); x++) {
                                 for (int i = 0; i < ranks.size(); i++) {
@@ -248,7 +261,10 @@ public class FavoriteListFragment extends Fragment {
         if (content.size() != 0) {
             tvHistory.setVisibility(View.GONE);
         }
+
         mAdapter = new AdapterPhoneListFilter(getActivity(), content);
         recyclerView.setAdapter(mAdapter);
+
+        Log.d("Favorite counter", String.valueOf(content.size()));
     }
 }

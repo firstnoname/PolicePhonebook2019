@@ -1,4 +1,4 @@
-package com.example.policephonebook2019;
+package com.zealtech.policephonebook2019;
 
 import org.junit.Test;
 
