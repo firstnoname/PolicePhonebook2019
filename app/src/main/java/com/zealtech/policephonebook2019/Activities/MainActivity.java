@@ -21,6 +21,7 @@ import com.zealtech.policephonebook2019.Config.ApplicationConfig;
 import com.zealtech.policephonebook2019.Fragments.ContactUsFragment;
 import com.zealtech.policephonebook2019.Fragments.FavoriteFragment;
 import com.zealtech.policephonebook2019.Fragments.MainSearchFragment;
+import com.zealtech.policephonebook2019.Fragments.MainSearchFragmentV2;
 import com.zealtech.policephonebook2019.Fragments.MapListFragment;
 import com.zealtech.policephonebook2019.Fragments.PhoneListFragment;
 import com.zealtech.policephonebook2019.Fragments.SearchFragment;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     PhoneListFragment phoneListFragment;
     MainSearchFragment mainSearchFragment;
+    MainSearchFragmentV2 mainSearchFragmentV2;
     SearchFragment searchFragment;
     SearchFragmentV2 searchFragmentV2;
     MapListFragment mapListFragment;
@@ -86,22 +88,24 @@ public class MainActivity extends AppCompatActivity {
         activity = MainActivity.this;
         context = MainActivity.this;
 
-//        phoneListFragment = PhoneListFragment.newInstance();
-//
-//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//        transaction.replace(R.id.container, phoneListFragment, "PhoneListFragment");
-//        transaction.commit();
-
 //        mainSearchFragment = MainSearchFragment.newInstance();
-        searchFragmentV2 = SearchFragmentV2.newInstance();
+        mainSearchFragmentV2 = MainSearchFragmentV2.newInstance();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//        transaction.replace(R.id.container, mainSearchFragment, "MainSearchFragment");
-        transaction.replace(R.id.container, searchFragmentV2, "SearchFragmentV2");
+        transaction.replace(R.id.container, mainSearchFragmentV2, "MainSearchFragmentV2");
         transaction.commit();
 
-        //Set icon bottom of the view
-        current_frag = "Search";
+        current_frag = "PhoneList";
         setMenuIcon();
+
+//        searchFragmentV2 = SearchFragmentV2.newInstance();
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+////        transaction.replace(R.id.container, mainSearchFragment, "MainSearchFragment");
+//        transaction.replace(R.id.container, searchFragmentV2, "SearchFragmentV2");
+//        transaction.commit();
+//
+//        //Set icon bottom of the view
+//        current_frag = "Search";
+//        setMenuIcon();
 
         //Check login
         checkLogin();
@@ -160,9 +164,14 @@ public class MainActivity extends AppCompatActivity {
 //        transaction.replace(R.id.container, phoneListFragment, "PhoneListFragment");
 //        transaction.commit();
 
-        mainSearchFragment = MainSearchFragment.newInstance();
+//        mainSearchFragment = MainSearchFragment.newInstance();
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.container, mainSearchFragment, "MainSearchFragment");
+//        transaction.commit();
+
+        mainSearchFragmentV2 = MainSearchFragmentV2.newInstance();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, mainSearchFragment, "MainSearchFragment");
+        transaction.replace(R.id.container, mainSearchFragmentV2, "MainSearchFragmentV2");
         transaction.commit();
 
         current_frag = "PhoneList";

@@ -4,24 +4,7 @@
             "outputFile": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/970ea581ff71af34781fc174d260d637/res/values-en-rGB/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "209",
-                        "endColumns": "107",
-                        "endOffsets": "316"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5412",
-                        "endColumns": "111",
-                        "endOffsets": "5519"
-                    }
-                },
-                {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/85cd30ff80870f0666b582fa9a1bbdc2/res/values-en-rGB/values-en-rGB.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/310d39827668f7e1b626af84ef16f664/res/values-en-rGB/values-en-rGB.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,41 @@
                     }
                 },
                 {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/3b7246c7476bb8baef75328167bcafa8/res/values-en-rGB/values.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/4347174c1a3d2e90fcbbe593dd0c6741/res/values-en-rGB/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "194",
+                        "endColumns": "104",
+                        "endOffsets": "298"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "5524",
+                        "endColumns": "108",
+                        "endOffsets": "5628"
+                    }
+                },
+                {
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/d20acd26bc817e5c912d0e8c616a9cf7/res/values-en-rGB/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "209",
+                        "endColumns": "107",
+                        "endOffsets": "316"
+                    },
+                    "to": {
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "5412",
+                        "endColumns": "111",
+                        "endOffsets": "5519"
+                    }
+                },
+                {
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/c83856cf7376422c7094cf19578e4bcf/res/values-en-rGB/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,24 +72,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/2d8074f4104eedb18fa2a46cb4a13521/res/values-en-rGB/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "196",
-                        "endOffsets": "447"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3904",
-                        "endColumns": "196",
-                        "endOffsets": "4096"
-                    }
-                },
-                {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/1aeb5e9e6b597a52a348e5646a591779/res/values-en-rGB/values-en-rGB.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/691ec5151d9b431d427dfa030d866c06/res/values-en-rGB/values-en-rGB.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -89,20 +89,20 @@
                     }
                 },
                 {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/452dd99c9f361299e9ae9bbe0753a1cf/res/values-en-rGB/values.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/6e371f505a99f935762a883d3382d6eb/res/values-en-rGB/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "194",
-                        "endColumns": "104",
-                        "endOffsets": "298"
+                        "startOffsets": "251",
+                        "endColumns": "196",
+                        "endOffsets": "447"
                     },
                     "to": {
-                        "startLines": "48",
+                        "startLines": "37",
                         "startColumns": "4",
-                        "startOffsets": "5524",
-                        "endColumns": "108",
-                        "endOffsets": "5628"
+                        "startOffsets": "3904",
+                        "endColumns": "196",
+                        "endOffsets": "4096"
                     }
                 }
             ]

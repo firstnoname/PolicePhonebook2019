@@ -12,7 +12,7 @@
     <string name="toolbarTitleMap">สถานีตำรวจ</string>
 
     <!--​Searchview-->
-    <string name="searchviewPhoneList">ใส่ข้อมูลเช่น ชื่อ ยศ ตำแหน่ง</string>
+    <string name="searchviewPhoneList">ใส่ข้อมูลเช่น ชื่อ ยศ ตำแหน่ง เบอร์โทรศัพท์</string>
     <string name="hint_search_department">พิมพ์ชื่อหน่วยงานที่คุณต้องการค้นหา</string>
     <string name="hint_search_position">พิมพ์ชื่อตำแหน่งคุณต้องการค้นหา</string>
     <string name="hint_search_rank">พิมพ์ชื่อยศที่คุณต้องการค้นหา</string>
@@ -24,7 +24,7 @@
     <string name="hint_new_password">กรอกรหัสผ่านใหม่</string>
 
     <!--Menu-->
-    <string name="menuNameList">หน้าหลัก</string>
+    <string name="menuNameList">ค้นหา</string>
     <string name="menuSearch">ค้นหาขั้นสูง</string>
     <string name="menuMap">หน่วยงาน</string>
     <string name="menuFavoriteList">รายการโปรด</string>
@@ -34,7 +34,7 @@
     <string name="dont_have_data2">ยังไม่มีข้อมูล</string>
 
     <string name="title_activity_maps">Map</string>
-    
+
     <!--Order-->
     <string name="order_title"><u>ตัวเลือกการค้นหา</u></string>
     <string name="order_rank">ยศ</string>
@@ -47,11 +47,11 @@
 
     <!--Other-->
     <string name="label_back"><u>กลับหน้าหลัก</u></string>
-    
+
     <!--Label-->
     <string name="label_filter_search"><u>ตัวกรองการค้นหา</u></string>
     <string name="label_reset"><u>รีเซ็ต</u></string>
-    
+
     <string name="main_hint_suggestion">
         คำแนะนำในการค้นหา\n
          - ชื่อ เช่น สมชาย\n
@@ -60,7 +60,10 @@
          - ตำแหน่ง เช่น ผบก. ผู้บังคับการ\n
          - หน่วยงาน เช่น สท. กองสารนิเทศ\n
          - หมายเลขโทรศัพท์ เช่น 02xxxxxxx หรือ 08xxxxxxxx\n
-        หากต้องการผลลัพธ์เพิ่มเติมให้ใช้เมนูค้นหาแบบละเอียด</string>
+         - หากต้องการผลลัพธ์แบบละเอียดให้กดปุ่ม \"ค้นหาขั้นสูง\" เพื่อแสดงตัวเลือก</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

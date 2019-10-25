@@ -4,7 +4,7 @@
             "outputFile": "/Users/ifirst/Documents/Android-Projects/Projects/PolicePhoneBook2019/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/85cd30ff80870f0666b582fa9a1bbdc2/res/values-land/values-land.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/310d39827668f7e1b626af84ef16f664/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/ae1441982e7ff2b9c5abe556afcc31af/res/values-land/values-land.xml",
+                    "source": "/Users/ifirst/.gradle/caches/transforms-2/files-2.1/ec23591c422afa15d62b4b9fb094eb31/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

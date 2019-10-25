@@ -1,4 +1,4 @@
-com.example.policephonebook2019
+com.zealtech.policephonebook2019
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1315,6 +1315,7 @@ id img_favorite
 id img_header
 id img_icon_noti
 id img_info
+id img_logo
 id img_map
 id img_noti
 id img_phone_call
@@ -1556,6 +1557,7 @@ id tv_station_phone2
 id tv_station_web
 id tv_statoin_phone1
 id tv_tel_work
+id tv_title_suggestion
 id tv_update_date
 id tv_update_profile
 id uniform
@@ -1668,6 +1670,7 @@ layout fragment_favorite
 layout fragment_favorite_list
 layout fragment_favorite_recent
 layout fragment_main_search
+layout fragment_main_search_fragment_v2
 layout fragment_map_list
 layout fragment_phone_list
 layout fragment_search
@@ -1849,6 +1852,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_maps_key
 string google_storage_bucket
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string hint_comfirm_new_password
 string hint_current_password
