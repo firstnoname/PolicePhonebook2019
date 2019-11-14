@@ -27,7 +27,8 @@ public interface Api {
 
     @GET("getDepartment")
     Call<ResponseDepartment> getDepartment(@Query("level") int level,
-                                           @Query("parentId") String departmentId);
+                                           @Query("parentId") String departmentId,
+                                           @Query("sizeContents") Integer sizeContents);
 
     @GET("getDepartment")
     Call<ResponseDepartment> getDepartment(@Query("level") int level,
@@ -74,6 +75,7 @@ public interface Api {
                                                  @Query("keyWordPositionName") Boolean keyWordPositionName,
                                                  @Query("keyWordRankName") Boolean keyWordRankName,
                                                  @Query("page") Integer page,
+                                                 @Query("role") Integer role,
                                                  @Query("sizeContents") Integer sizeContents,
                                                  @Query("sort") Integer sort);
 

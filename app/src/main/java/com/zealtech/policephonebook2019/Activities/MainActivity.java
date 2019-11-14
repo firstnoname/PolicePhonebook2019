@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
                 imgMap.setImageResource(R.mipmap.map);
                 imgFavorite.setImageResource(R.mipmap.fav);
                 imgContactUs.setImageResource(R.mipmap.contact);
-                tvActionbarTitle.setText(R.string.toolbarTitle);
+                tvActionbarTitle.setText(R.string.toolbarTitleSearch);
                 break;
             case "Search":
                 imgSearch.setImageResource(R.mipmap.advancesearch_ac);
@@ -297,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
                 imgMap.setImageResource(R.mipmap.map);
                 imgFavorite.setImageResource(R.mipmap.fav);
                 imgContactUs.setImageResource(R.mipmap.contact);
-                tvActionbarTitle.setText(R.string.toolbarTitle);
+                tvActionbarTitle.setText(R.string.toolbarTitleAdvanceSearch);
                 break;
             case "Map":
                 imgMap.setImageResource(R.mipmap.map_ac);
@@ -314,7 +314,7 @@ public class MainActivity extends AppCompatActivity {
                 imgPhoneList.setImageResource(R.mipmap.search);
                 imgMap.setImageResource(R.mipmap.map);
                 imgContactUs.setImageResource(R.mipmap.contact);
-                tvActionbarTitle.setText(R.string.toolbarTitle);
+                tvActionbarTitle.setText(R.string.toolbarTitleFavorite);
                 break;
             case "ContactUs":
                 imgContactUs.setImageResource(R.mipmap.contact_ac);
@@ -323,7 +323,7 @@ public class MainActivity extends AppCompatActivity {
                 imgPhoneList.setImageResource(R.mipmap.search);
                 imgMap.setImageResource(R.mipmap.map);
                 imgFavorite.setImageResource(R.mipmap.fav);
-                tvActionbarTitle.setText(R.string.toolbarTitle);
+                tvActionbarTitle.setText(R.string.toolbarContactUs);
                 break;
         }
     }

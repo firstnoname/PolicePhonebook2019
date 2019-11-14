@@ -245,7 +245,7 @@ public class MainSearchFragment extends Fragment implements View.OnClickListener
     private void refreshList(String stringKeyWord) {
         Call<ResponsePoliceList> call = api.getPoliceListFilter("","",
                 stringKeyWord, isDepartmentChecked, isNameChecked, isLastnameChecked, isPhoneNumberChecked,
-                isPositionChecked, isRankChecked, page, sizeContents, 4);
+                isPositionChecked, isRankChecked, page,2, sizeContents, 4);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

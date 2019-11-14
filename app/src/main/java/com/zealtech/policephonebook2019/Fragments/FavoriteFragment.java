@@ -66,7 +66,6 @@ public class FavoriteFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         checkLogin();
-//
     }
 
     @Override
@@ -76,9 +75,10 @@ public class FavoriteFragment extends Fragment {
     }
 
     private void callFragment() {
-            adapter = new PagerAdapterFavorite(getChildFragmentManager(), token, history);
-            viewPager.setAdapter(adapter);
-            tabLayout.setupWithViewPager(viewPager);
+        adapter = new PagerAdapterFavorite(getChildFragmentManager(), token, history);
+        viewPager.setAdapter(adapter);
+        viewPager.setCurrentItem(1);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     private void checkLogin() {

@@ -72,7 +72,7 @@ public class MapListFragment extends Fragment implements SearchView.OnQueryTextL
         searchView = view.findViewById(R.id.search_station);
         searchView.setOnQueryTextListener(this);
 
-        Call<ResponseDepartment> call = api.getDepartment(level, departmentId);
+        Call<ResponseDepartment> call = api.getDepartment(level, departmentId, 100);
         call.enqueue(new Callback<ResponseDepartment>() {
             @Override
             public void onResponse(Call<ResponseDepartment> call, Response<ResponseDepartment> response) {

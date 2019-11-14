@@ -153,7 +153,7 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
     private void refreshList(int sort) {
         Call<ResponsePoliceList> call = api.getPoliceListFilter("","",
                 keyWord, isDepartmentChecked, isNameChecked, isLastnameChecked, isPhoneNumberChecked,
-                isPositionChecked, isRankChecked, page, sizeContents, sort);
+                isPositionChecked, isRankChecked, page,2, sizeContents, sort);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
@@ -270,7 +270,7 @@ public class SearchResultActivity extends AppCompatActivity implements View.OnCl
 
         Call<ResponsePoliceList> call = api.getPoliceListFilter("","",
                 keyWord, isDepartmentChecked, isNameChecked, isLastnameChecked, isPhoneNumberChecked,
-                isPositionChecked, isRankChecked, page, sizeContents, 2);
+                isPositionChecked, isRankChecked, page, 2, sizeContents, 2);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

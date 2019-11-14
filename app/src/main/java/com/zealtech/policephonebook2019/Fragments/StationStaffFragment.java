@@ -110,7 +110,7 @@ public class StationStaffFragment extends Fragment implements View.OnClickListen
     private void refreshList(int sort) {
         Call<ResponsePoliceList> call = api.getPoliceListFilter(departmentId,"",
                 keyWord, isDepartmentChecked, isNameChecked, isLastnameChecked, isPhoneNumberChecked,
-                isPositionChecked, isRankChecked, page, sizeContents, sort);
+                isPositionChecked, isRankChecked, page, 2, sizeContents, sort);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

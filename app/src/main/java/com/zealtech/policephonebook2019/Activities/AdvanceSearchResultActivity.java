@@ -109,7 +109,7 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
         isPhoneNumberChecked = getIntent().getExtras().getBoolean("isPhoneNumberChecked");
 
 
-        refreshList(0);
+        refreshList(2);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

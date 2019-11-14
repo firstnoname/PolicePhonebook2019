@@ -121,7 +121,7 @@ public class MainSearchFragmentV2 extends Fragment implements SearchView.OnQuery
     private void refreshList(String stringKeyWord) {
         Call<ResponsePoliceList> call = api.getPoliceListFilter("","",
                 stringKeyWord, false, false, false, false,
-                false, false, 0, 100, 1);
+                false, false, 0, 2, 70, 2);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

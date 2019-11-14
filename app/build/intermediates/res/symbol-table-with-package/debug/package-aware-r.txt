@@ -1852,7 +1852,6 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_maps_key
 string google_storage_bucket
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string hint_comfirm_new_password
 string hint_current_password
@@ -1890,8 +1889,12 @@ string splashTitle3
 string splashTitle4
 string status_bar_notification_info_overflow
 string title_activity_maps
+string toolbarContactUs
 string toolbarTitle
+string toolbarTitleAdvanceSearch
+string toolbarTitleFavorite
 string toolbarTitleMap
+string toolbarTitleSearch
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

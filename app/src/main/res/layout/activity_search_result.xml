@@ -99,7 +99,8 @@
                 android:text="@string/order_department"
                 android:textColor="@color/fontGrey"
                 android:fontFamily="@font/cschatthai"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btn_alphabet"

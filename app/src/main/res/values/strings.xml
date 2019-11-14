@@ -9,7 +9,11 @@
 
     <!--Toolbar-->
     <string name="toolbarTitle">สมุดโทรศัพท์ตำรวจ 2562</string>
-    <string name="toolbarTitleMap">สถานีตำรวจ</string>
+    <string name="toolbarTitleMap">หน่วยงาน</string>
+    <string name="toolbarTitleSearch">ค้นหา</string>
+    <string name="toolbarTitleAdvanceSearch">ค้นหาขั้นสูง</string>
+    <string name="toolbarTitleFavorite">รายการโปรด</string>
+    <string name="toolbarContactUs">ติดต่อเรา</string>
 
     <!--​Searchview-->
     <string name="searchviewPhoneList">ใส่ข้อมูลเช่น ชื่อ ยศ ตำแหน่ง เบอร์โทรศัพท์</string>
@@ -61,9 +65,5 @@
          - หน่วยงาน เช่น สท. กองสารนิเทศ\n
          - หมายเลขโทรศัพท์ เช่น 02xxxxxxx หรือ 08xxxxxxxx\n
          - หากต้องการผลลัพธ์แบบละเอียดให้กดปุ่ม \"ค้นหาขั้นสูง\" เพื่อแสดงตัวเลือก</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
 </resources>

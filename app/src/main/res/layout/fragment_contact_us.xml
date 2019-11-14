@@ -62,7 +62,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="4dp"
-                            android:text="กองสารนิเทศ"
+                            android:text="กองสารนิเทศ สำนักงานตำรวจแห่งชาติ"
                             android:fontFamily="@font/cschatthai"
                             android:textSize="20sp"
                             android:textColor="#000000" />
@@ -73,7 +73,7 @@
                             android:padding="4dp"
                             android:fontFamily="@font/cschatthai"
                             android:textSize="20sp"
-                            android:text="Public Affairs Division Thai Police"
+                            android:text="Public Affairs Division , Royal Thai Police"
                             android:textColor="#000000" />
                     </LinearLayout>
 
@@ -160,7 +160,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="4dp"
-                            android:text="022529888"
+                            android:text="02-205-1857"
                             android:fontFamily="@font/cschatthai"
                             android:textSize="20sp"
                             android:textColor="#000000"
@@ -211,7 +211,7 @@
                             android:padding="4dp"
                             android:fontFamily="@font/cschatthai"
                             android:textSize="20sp"
-                            android:text="022529888"
+                            android:text="02-252-9887"
                             android:textColor="#000000" />
 
                     </LinearLayout>
