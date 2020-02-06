@@ -53,6 +53,8 @@ public class AdapterStationStaff extends RecyclerView.Adapter<AdapterStationStaf
             Glide.with(mContext)
                     .load(IMAGE_URL + mPoliceList.get(i).getImageProfile())
                     .into(viewHolder.imgProfile);
+        } else {
+            viewHolder.imgProfile.setImageResource(R.mipmap.userfrofiledefualt);
         }
 //        Log.d(TAG, IMAGE_URL + mPoliceList.get(i).getImageProfile())เรื่อ;
         fullName = mPoliceList.get(i).getRankName() + " " + mPoliceList.get(i).getFirstName() + "  " + mPoliceList.get(i).getLastName();

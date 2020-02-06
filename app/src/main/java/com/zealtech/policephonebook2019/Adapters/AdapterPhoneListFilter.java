@@ -59,6 +59,8 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
             Glide.with(mContext)
                     .load(IMAGE_URL + mPoliceInfo.get(i).getImageProfile())
                     .into(holder.imgProfile);
+        } else {
+            holder.imgProfile.setImageResource(R.mipmap.userfrofiledefualt);
         }
 
         fullName = mPoliceInfo.get(i).getRankName() + " " + mPoliceInfo.get(i).getFirstName() + "  " + mPoliceInfo.get(i).getLastName();
@@ -70,19 +72,6 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
         if (mPoliceInfo.get(i).getDepartmentRoot() != null) {
             if (mPoliceInfo.get(i).getDepartmentRoot().size() != 0) {
                 String depRoot = "";
-//            for (int y = 0; y < mPoliceInfo.get(i).getDepartmentRoot().size(); y++) {
-//                if (y == mPoliceInfo.get(i).getDepartmentRoot().size()-1) {
-//                    SpannableString content = new SpannableString(mPoliceInfo.get(i).getDepartmentRoot().get(y).getDepartmentName());
-//                    content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-//                    holder.tvDeparture.setText(content);
-//                }
-//                if (y == 1) {
-//                    depRoot = mPoliceInfo.get(i).getDepartmentRoot().get(y).getDepartmentName();
-//                }
-//                if (y == 2) {
-//                    depRoot += " / " + mPoliceInfo.get(i).getDepartmentRoot().get(y).getDepartmentName();
-//                }
-//            }
 
                 for (int y = mPoliceInfo.get(i).getDepartmentRoot().size() - 1; y >= 0; y--) {
                     if (y == mPoliceInfo.get(i).getDepartmentRoot().size() - 1) {
@@ -103,66 +92,9 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
             holder.viewTab.setBackgroundColor(Color.parseColor(mPoliceInfo.get(i).getColor()));
         }
 
-//        String rankName = mPoliceInfo.get(i).getRankName();
-//        Set view_tab color from rank.
-//        Call<ResponseRank> call = api.getRankMasterData("");
-//        call.enqueue(new Callback<ResponseRank>() {
-//            @Override
-//            public void onResponse(Call<ResponseRank> call, Response<ResponseRank> response) {
-//                if (response.body() != null) {
-//                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-//                        if (response.body().getCode().equals("OK")) {
-//                            ranks = response.body().getData();
-//                        } else {
-//                            Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-//                        }
-//                    } else {
-//                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-//                    }
-//                } else {
-//                    try {
-//                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-//
-//                    } catch (Exception e) {
-//                        Toast.makeText(mContext, "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseRank> call, Throwable t) {
-//                Log.d("response", String.valueOf(t));
-//            }
-//        });
-//
-//        for (int x = 0; x < ranks.size(); x++) {
-//            if (rankName.equals(ranks.get(x).getShortName())) {
-//                holder.viewTab.setBackgroundColor(Color.parseColor(ranks.get(x).getColor()));
-//            }
-//        }
-//        if (rankName.equals("พล.ต.อ.") || rankName.equals("พล.ต.ท.")) {
-//            //Gold
-////            holder.imgProfile.setBorderColor(Color.YELLOW);
-//            holder.viewTab.setBackgroundResource(R.color.colorYellow);
-//        } else if (rankName.equals("พล.ต.ต.")) {
-//            //Blue sky
-////            holder.imgProfile.setBorderColor(Color.GREEN);
-//            holder.viewTab.setBackgroundResource(R.color.colorGreen);
-//        } else if (rankName.equals("พ.ต.อ.") || rankName.equals("พ.ต.ท.")) {
-//            //Blue
-////            holder.imgProfile.setBorderColor(Color.BLUE);
-//            holder.viewTab.setBackgroundResource(R.color.colorBlue);
-//        } else {
-//            //Red
-////            holder.imgProfile.setBorderColor(Color.RED);
-//            holder.viewTab.setBackgroundResource(R.color.colorRed);
-//        }
-
         if (mPoliceInfo.get(i).getTag() != null) {
             //        Set label orange or red.
             for (int x = 0; x < mPoliceInfo.get(i).getTag().size(); x++) {
-//            Log.d("tag", i + " : " + x + " : " + polis.getTag().size());
-//            Log.d("tag", polis.getFirstName() + ":" + polis.getTag().get(x));
                 if (x == 0) {
                     if (mPoliceInfo.get(i).getTag().get(x).equals("ตม.")) {
                         holder.tvPosition2.setVisibility(View.VISIBLE);
@@ -195,8 +127,6 @@ public class AdapterPhoneListFilter extends RecyclerView.Adapter<AdapterPhoneLis
         holder.parent_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(mContext, "onClick: clicked on: " + mPoliceInfo.get(i).getFirstName(), Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(mContext, ContactDetailFilterActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("contact_detail", mPoliceInfo);

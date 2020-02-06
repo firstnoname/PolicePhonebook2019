@@ -112,16 +112,13 @@ public class MainSearchFragmentV2 extends Fragment implements SearchView.OnQuery
             recyclerView.setVisibility(View.GONE);
         }
 
-//        if (s.equals("")) {
-////            list.setVisibility(View.GONE);
-//        }
         return false;
     }
 
     private void refreshList(String stringKeyWord) {
-        Call<ResponsePoliceList> call = api.getPoliceListFilter("","",
+        Call<ResponsePoliceList> call = api.getPoliceListFilter("","", true,
                 stringKeyWord, false, false, false, false,
-                false, false, 0, 2, 70, 2);
+                false, false, 0, 2, 70, 4);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

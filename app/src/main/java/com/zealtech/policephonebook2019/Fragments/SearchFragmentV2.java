@@ -295,7 +295,11 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
 
     private void onRefreshView(String departmentId, String positionId, String rankId, String keyword) {
         mPolice = new ArrayList<>();
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId, keyword, "", "",120,4);
+//        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, positionId, rankId, keyword, "", "",120,4);
+        Call<ResponsePoliceList> call = api.getPoliceListFilter(departmentId, positionId, true, keyword,
+                false, false, false, false,
+                false, false, 0, 2, 70,
+                4);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
@@ -425,7 +429,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
     }
 
     private void refreshList(String stringKeyWord) {
-        Call<ResponsePoliceList> call = api.getPoliceListFilter("","",
+        Call<ResponsePoliceList> call = api.getPoliceListFilter("","", true,
                 stringKeyWord, isDepartmentChecked, isNameChecked, isLastnameChecked, isPhoneNumberChecked,
                 isPositionChecked, isRankChecked, page,2, sizeContents, 4);
         call.enqueue(new Callback<ResponsePoliceList>() {

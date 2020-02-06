@@ -158,7 +158,10 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
     }
 
     private void refreshList(int sort) {
-        Call<ResponsePoliceList> call = api.getPoliceList(departmentId, provinceId, positionId, rankId, keyWord, "",sizeContents, sort);
+        Call<ResponsePoliceList> call = api.getPoliceListFilter(departmentId, positionId, true, keyword,
+                false, false, false, false,
+                false, false, 0, 2, 100,
+                sort);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {

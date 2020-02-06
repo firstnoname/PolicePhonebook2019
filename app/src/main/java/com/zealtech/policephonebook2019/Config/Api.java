@@ -67,6 +67,7 @@ public interface Api {
     @GET("getPolice")
     Call<ResponsePoliceList> getPoliceListFilter(@Query("departmentId") String departmentId,
                                                  @Query("id") String id,
+                                                 @Query("searchName") Boolean searchName,
                                                  @Query("keyWord") String keyword,
                                                  @Query("keyWordDepartmentName") Boolean keyWordDepartmentName,
                                                  @Query("keyWordFirstName") Boolean keyWordFirstName,

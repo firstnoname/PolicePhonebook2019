@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
     public void onImgUserClicked() {
 //        Toast.makeText(this, "User login has clicked", Toast.LENGTH_SHORT).show();
         if (subscription == 2) {
-            //User are loged in.
+            //User was log in.
             Intent iUserDetail = new Intent(this, UserDetailActivity.class);
             Bundle bundle = new Bundle();
             bundle.putSerializable("user_profile", mProfile);
