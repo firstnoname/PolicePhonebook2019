@@ -80,6 +80,11 @@ public interface Api {
                                                  @Query("sizeContents") Integer sizeContents,
                                                  @Query("sort") Integer sort);
 
+    @GET("getPoliceOrderByKeyWord")
+    Call<ResponsePoliceList> getPoliceSortByName(@Query("keyWord") String keyWord,
+                                                 @Query("page") int page,
+                                                 @Query("sizeContents") int sizeContents);
+
     @GET("getRankMasterData")
     Call<ResponseRank> getRankMasterData(@Query("id") String id);
 
@@ -109,14 +114,14 @@ public interface Api {
 
     @POST("editProfile")
     Call<ResponseProfile> editProfileWithoutImageProfile(@Query("departmentId") int departmentId,
-                                      @Query("firstName") String firstName,
-                                      @Query("id") String id,
-                                      @Query("lastName") String lastName,
-                                      @Query("phoneNumber") String phoneNumber,
+                                                         @Query("firstName") String firstName,
+                                                         @Query("id") String id,
+                                                         @Query("lastName") String lastName,
+                                                         @Query("phoneNumber") String phoneNumber,
                                                          @Query("workPhoneNumber") String workPhoneNumber,
-                                      @Query("positionId") int positionId,
-                                      @Query("rankId") int rankId,
-                                      @Header("token") String token);
+                                                         @Query("positionId") int positionId,
+                                                         @Query("rankId") int rankId,
+                                                         @Header("token") String token);
 
 
 }

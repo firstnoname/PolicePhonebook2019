@@ -1,6 +1,7 @@
 package com.zealtech.policephonebook2019.Activities;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,13 +12,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Adapters.AdapterPhoneListFilter;
 import com.zealtech.policephonebook2019.Config.Api;
 import com.zealtech.policephonebook2019.Model.Police;
 import com.zealtech.policephonebook2019.Model.Rank;
 import com.zealtech.policephonebook2019.Model.response.ResponsePoliceList;
 import com.zealtech.policephonebook2019.Model.response.ResponseRank;
+import com.zealtech.policephonebook2019.R;
 import com.zealtech.policephonebook2019.Util.AppUtils;
 
 import org.json.JSONException;
@@ -34,18 +35,17 @@ import retrofit2.Response;
 public class AdvanceSearchResultActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "SearchResultActivity";
-
+    ArrayList<Rank> ranks;
+    //Pagination.
+    ArrayList<Police> polices = new ArrayList<>();
     private Api api = AppUtils.getApiService();
-
     private TextView tvListSize, titleBar;
     private ImageView btnBack;
     private Button btnSequence, btnFirstName, btnCreateDate, btnPosition;
-
     private String departmentId = "";
     private String provinceId = "";
     private String positionId = "";
     private String rankId = "";
-    private int sizeContents = 100;
     private String keyword = "";
     private Boolean isNameChecked = false;
     private Boolean isLastnameChecked = false;
@@ -53,22 +53,23 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
     private Boolean isPositionChecked = false;
     private Boolean isDepartmentChecked = false;
     private Boolean isPhoneNumberChecked = false;
-
     private int positionSequence = 3;
     private int firstName = 4;
     private int createDate = 5;
     private int department = 1;
     private int rankSequence = 2;
-
-    private String keyWord;
-    private int page = 0;
-
+    private int totalElements = 0;
+    private int mCurrentPage = 0;
+    private int mItemPerRow = 30;
+    private int page = 1;
+    private int sizeContents = 30;
+    private int sort = 2;
+    private boolean isRefresh = true;
     //Adapter
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Police> mPolice;
-    ArrayList<Rank> ranks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +97,7 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
 
-        keyWord = getIntent().getStringExtra("keyWord");
+        keyword = getIntent().getStringExtra("keyWord");
         departmentId = getIntent().getExtras().getString("department");
         provinceId = getIntent().getStringExtra("province");
         positionId = getIntent().getStringExtra("position");
@@ -108,13 +109,38 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
         isDepartmentChecked = getIntent().getExtras().getBoolean("isDepartmentChecked");
         isPhoneNumberChecked = getIntent().getExtras().getBoolean("isPhoneNumberChecked");
 
+        refreshList(sort);
 
-        refreshList(2);
+//        getData();
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager layoutManagerLastItem = LinearLayoutManager.class.cast(recyclerView.getLayoutManager());
+                int totalItemCount = layoutManagerLastItem.getItemCount();
+                int lastVisible = layoutManagerLastItem.findLastVisibleItemPosition();
+
+//                if(lastVisible == totalItemCount) {
+//                    Log.d("Item count", totalItemCount + " : " + lastVisible);
+//                } else {
+//                    Log.d("Item count", totalItemCount + " : " + lastVisible);
+//                }
+
+                boolean endHasBeenReached = lastVisible + 5 >= totalItemCount;
+                if (totalElements > totalItemCount && isRefresh) {
+                    if (totalItemCount > 0 && endHasBeenReached) {
+                        refreshList(sort);
+                        isRefresh = false;
+                    }
+                }
             }
         });
 
@@ -124,28 +150,32 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_sequence:
-                refreshList(rankSequence);
+                sort = rankSequence;
+                refreshList(sort);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnPosition.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_alphabet:
-                refreshList(firstName);
+                sort = firstName;
+                refreshList(sort);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnPosition.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontGrey));
                 break;
             case R.id.btn_date:
-                refreshList(createDate);
+                sort = createDate;
+                refreshList(sort);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnPosition.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnCreateDate.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 break;
             case R.id.btn_position:
-                refreshList(positionSequence);
+                sort = positionSequence;
+                refreshList(sort);
                 btnSequence.setTextColor(getResources().getColor(R.color.fontGrey));
                 btnPosition.setTextColor(getResources().getColor(R.color.fontDeepBlue));
                 btnFirstName.setTextColor(getResources().getColor(R.color.fontGrey));
@@ -158,14 +188,13 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
     }
 
     private void refreshList(int sort) {
-        Call<ResponsePoliceList> call = api.getPoliceListFilter(departmentId, positionId, true, keyword,
+        Call<ResponsePoliceList> call = api.getPoliceListFilter(this.departmentId, this.positionId, true, this.keyword,
                 false, false, false, false,
-                false, false, 0, 2, 100,
+                false, false, mCurrentPage, 2, sizeContents,
                 sort);
         call.enqueue(new Callback<ResponsePoliceList>() {
             @Override
             public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
-                mPolice = new ArrayList<>();
                 if (response.body() != null) {
                     if (response.body().getCode().equalsIgnoreCase("OK")) {
                         if (response.body().getCode().equals("OK")) {
@@ -173,7 +202,10 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
                             double amount = Double.parseDouble(size);
                             DecimalFormat format = new DecimalFormat("#,###");
                             tvListSize.setText(format.format(amount) + " รายการ");
+                            mPolice = new ArrayList<>();
                             mPolice.addAll(response.body().getData().getContent());
+                            totalElements = Integer.parseInt(response.body().getData().getTotalElements());
+                            page = Integer.parseInt(response.body().getData().getTotalPages());
                             checkColor();
 
                         } else {
@@ -205,33 +237,6 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
             }
         });
 
-//        Call<ResponsePoliceList> call = api.getPoliceListFilter("","",
-//                keyWord, isDepartmentChecked, isNameChecked, isLastnameChecked, isPhoneNumberChecked,
-//                isPositionChecked, isRankChecked, page, sizeContents, sort);
-//        call.enqueue(new Callback<ResponsePoliceList>() {
-//            @Override
-//            public void onResponse(Call<ResponsePoliceList> call, Response<ResponsePoliceList> response) {
-//                if (response.body() != null) {
-//                    if (response.body().getCode().equalsIgnoreCase("OK")) {
-//                        if (response.body().getCode().equals("OK")) {
-//                            tvListSize.setText(response.body().getData().getTotalElements() + " รายการ");
-//                            mPolice = new ArrayList<>();
-//                            mPolice.addAll(response.body().getData().getContent());
-//                            checkColor();
-//                        } else {
-//                            Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-//                        }
-//                    } else {
-//                        Toast.makeText(getApplicationContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponsePoliceList> call, Throwable t) {
-//                Log.d(TAG, String.valueOf(t));
-//            }
-//        });
     }
 
     private void checkColor() {
@@ -252,7 +257,8 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
                                     }
                                 }
                             }
-                            setAdapter(mPolice);
+//                            setAdapter(mPolice);
+                            getData();
 //                                    AdapterPhoneList.this.notifyDataSetChanged();
                         } else {
                             Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -282,6 +288,18 @@ public class AdvanceSearchResultActivity extends AppCompatActivity implements Vi
         mAdapter = new AdapterPhoneListFilter(getApplicationContext(), mPolice);
         recyclerView.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();
+        if (mPolice.size() > 30) {
+            recyclerView.scrollToPosition(mPolice.size() - 29);
+        };
+    }
+
+    private void getData() {
+        polices.addAll(mPolice);
+        mCurrentPage += 1;
+        if (mCurrentPage < page) {
+            isRefresh = true;
+        }
+        setAdapter(polices);
     }
 
 

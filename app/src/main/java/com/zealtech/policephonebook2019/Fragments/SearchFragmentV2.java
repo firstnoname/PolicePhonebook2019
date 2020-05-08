@@ -79,7 +79,7 @@ public class SearchFragmentV2 extends Fragment implements SearchView.OnQueryText
     private Boolean isDepartmentChecked = false;
     private Boolean isPhoneNumberChecked = false;
     private int page = 0;
-    private int sizeContents = 30;
+    private int sizeContents = 300;
 
     private String keyWord="";
 

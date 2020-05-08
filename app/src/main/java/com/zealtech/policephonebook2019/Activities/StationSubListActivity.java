@@ -85,7 +85,7 @@ public class StationSubListActivity extends AppCompatActivity implements SearchV
     }
 
     private void callApiGetDepartment() {
-        Call<ResponseDepartment> call = api.getDepartment(level, departmentId, 100);
+        Call<ResponseDepartment> call = api.getDepartment(level, departmentId, 300);
         call.enqueue(new Callback<ResponseDepartment>() {
             @Override
             public void onResponse(Call<ResponseDepartment> call, Response<ResponseDepartment> response) {

@@ -42,6 +42,14 @@ public class MapListFragment extends Fragment implements SearchView.OnQueryTextL
     int level = 1;
     String departmentId = "";
 
+    // Paging
+    private int totalElements = 0;
+    private int mCurrentPage = 0;
+    private int mItemPerRow = 30;
+    private int page = 1;
+    private int sizeContents = 30;
+    private boolean isRefresh = true;
+
 
     public MapListFragment() {
         // Required empty public constructor
@@ -72,7 +80,7 @@ public class MapListFragment extends Fragment implements SearchView.OnQueryTextL
         searchView = view.findViewById(R.id.search_station);
         searchView.setOnQueryTextListener(this);
 
-        Call<ResponseDepartment> call = api.getDepartment(level, departmentId, 100);
+        Call<ResponseDepartment> call = api.getDepartment(level, departmentId, 300);
         call.enqueue(new Callback<ResponseDepartment>() {
             @Override
             public void onResponse(Call<ResponseDepartment> call, Response<ResponseDepartment> response) {

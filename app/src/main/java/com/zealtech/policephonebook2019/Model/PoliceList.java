@@ -9,7 +9,7 @@ public class PoliceList implements Serializable {
 
     @SerializedName("content")
     ArrayList<Police> content;
-
+    String totalPages;
     String totalElements;
 
     public ArrayList<Police> getContent() {
@@ -18,6 +18,14 @@ public class PoliceList implements Serializable {
 
     public void setContent(ArrayList<Police> content) {
         this.content = content;
+    }
+
+    public String getTotalPages() {
+        return totalPages;
+    }
+
+    public void setTotalPages(String totalPages) {
+        this.totalPages = totalPages;
     }
 
     public String getTotalElements() {
